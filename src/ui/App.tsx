@@ -9,6 +9,7 @@ import { useEffect, useMemo, useState } from "react";
 import { genererSemaine, type Semaine } from "../core/semaine";
 import { nouvelleGraine } from "../core/rng";
 import { correctionEleve } from "../core/correction";
+import { nomFichier, semaineEnBlob } from "../export/docx";
 import { PROGRESSION } from "../data/progression";
 import { schemaParId } from "../data/schemas";
 import { CONTEXTES } from "../data/contextes";
@@ -17,6 +18,15 @@ import type { Niveau, Probleme } from "../core/types";
 const disponibles = PROGRESSION.filter((s) => s.schemas.length > 0);
 type Mode = "enseignant" | "eleve";
 type JourChoisi = "jour1" | "jour2" | "evaluation";
+
+async function telecharger(sem: Semaine) {
+  const blob = await semaineEnBlob(sem);
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = nomFichier(sem.numero, sem.titre);
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 10_000);
+}
 
 const cadre = { border: "1px solid #2e75b6", background: "#eaf2fb", padding: 12, margin: "8px 0", borderRadius: 4 };
 
@@ -115,7 +125,8 @@ export function App() {
 
       {mode === "enseignant" && typeof sem !== "string" && (
         <>
-          <p>{choixSemaine}<button onClick={() => setGraine(nouvelleGraine())}>Nouvelle graine</button></p>
+          <p>{choixSemaine}<button onClick={() => setGraine(nouvelleGraine())}>Nouvelle graine</button>{" "}
+            <button onClick={() => telecharger(sem)} style={{ fontWeight: "bold" }}>Exporter la semaine (.docx)</button></p>
           {([1, 2, 3] as Niveau[]).map((n) => {
             const ns = sem.niveaux[n]!;
             return (

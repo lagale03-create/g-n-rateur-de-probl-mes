@@ -3,8 +3,8 @@
 Application qui fonctionne entièrement dans le navigateur, hors ligne. Aucune donnée n'est envoyée sur Internet.
 Elle génère des séries hebdomadaires de problèmes à étapes, différenciées sur 3 niveaux (★, ★★, ★★★), avec leur corrigé.
 
-> **État actuel : étape 2 sur 6.** Le moteur, le vérificateur, 2 schémas et 6 contextes sont en place.
-> L'export Word (étape 3) et l'interface complète (étape 4) viennent ensuite.
+> **État actuel : étape 3 sur 6.** Le moteur, le vérificateur, 2 schémas, 6 contextes et l'export Word sont en place.
+> L'interface complète (étape 4) vient ensuite.
 
 ## Lancer l'application
 
@@ -14,7 +14,24 @@ npm run dev          # ouvre http://localhost:5173
 npm test             # lance tous les tests
 npm run build        # crée dist/index.html : un seul fichier, à ouvrir d'un double-clic
 npm run exemple -- 5 MAGRAINE   # écrit la semaine 5 en texte dans docs/exemple-S05.md
+npm run docx -- 5 MAGRAINE      # écrit la semaine 5 en Word dans docs/S05_Problemes_a_etapes_mixtes.docx
 ```
+
+## Export Word
+
+Dans l'application (mode enseignant), le bouton **« Exporter la semaine (.docx) »** télécharge un fichier
+nommé comme `S05_Problemes_a_etapes_mixtes.docx` :
+
+- A4, Arial 12, marges de 2 cm, pied de page « Semaine 5 · page N » ;
+- une section par niveau et par jour : chacune commence sur une nouvelle page, pour n'imprimer
+  que les pages d'un groupe (dans Word : Imprimer → Pages, ou « s3 » pour la 3e section) ;
+- en-tête : titre de la semaine (bleu foncé), niveau et jour (orange), « Prénom / Date », code de la fiche (graine) ;
+- ★ Jours 1 et 2 : 2 problèmes par page, chaque question guidée suivie d'une ligne de réponse ;
+- ★★, ★★★ et toutes les évaluations : 1 problème par page, cadre « Je cherche, je calcule : »
+  qui occupe la place disponible, puis « Ma phrase réponse : » et deux lignes ;
+- ★★★ : consigne « Attention : certaines informations ne servent à rien !… » en tête de fiche ;
+- corrigé enseignant à la fin (« NE PAS DISTRIBUER »), par niveau puis par jour : étapes nommées,
+  données parasites, réponse en gras.
 
 ## Mode élève
 
