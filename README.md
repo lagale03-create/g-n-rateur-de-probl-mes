@@ -16,6 +16,15 @@ npm run build        # crée dist/index.html : un seul fichier, à ouvrir d'un d
 npm run exemple -- 5 MAGRAINE   # écrit la semaine 5 en texte dans docs/exemple-S05.md
 ```
 
+## Mode élève
+
+Ajoutez `#eleve` à la fin de l'adresse (par exemple `index.html#eleve`) ou cliquez sur « Mode élève ».
+L'élève choisit sa semaine, son niveau et son jour. Sous chaque problème, le bouton
+**« Voir la correction »** affiche la correction complète, rédigée pour lui : chaque étape
+(« Je cherche : … » puis le calcul), les informations inutiles au niveau ★★★ et la phrase réponse.
+La correction n'est pas proposée pendant l'évaluation. Pour retrouver exactement les problèmes
+imprimés, l'élève doit utiliser la même graine que la fiche.
+
 ## Comment ça marche
 
 1. Un **schéma** décrit la structure mathématique d'un problème : ses variables, ses relations
