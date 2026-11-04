@@ -268,7 +268,7 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 **Problème 3 : Au zoo** (situations : Réitération, Différence, Groupement ; on cherche : nb_jours)
 
 - Réitération : 6 × 3 = 18 kg (viande pour les 3 lions en un jour)
-- Différence : 110 − 20 = 90 kg (viande pour tous les animaux en 5 jours)
+- Différence : 110 − 20 = 90 kg (total de viande à utiliser)
 - Groupement : 90 ÷ 18 = 5 (nombre de jours)
 - **Réponse : Le soigneur peut nourrir tous ces animaux pendant 5 jours.**
 
@@ -333,7 +333,7 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - Réitération : 3 × 12 = 36 L (eau pour les 12 adultes en un jour)
 - Réitération : 1 × 9 = 9 L (eau pour les 9 enfants en un jour)
 - Union : 36 + 9 = 45 L (eau pour tout le groupe en un jour)
-- Différence : 250 − 25 = 225 L (eau pour tout le groupe en 5 jours)
+- Différence : 250 − 25 = 225 L (total d'eau à utiliser)
 - Groupement : 225 ÷ 45 = 5 (nombre de jours)
 - *Données parasites :* Le refuge a été construit en 1935.
 - **Réponse : Le guide peut donner de l'eau à tout le groupe pendant 5 jours.**

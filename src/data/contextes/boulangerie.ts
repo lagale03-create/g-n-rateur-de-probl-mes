@@ -48,7 +48,7 @@ export const boulangerie: Contexte = {
         libelles: {
           ration: "[ress] pour [un:A] [A]",
           rationB: "[ress] pour [un:B] [B]",
-          consoA: "[ress] pour les {nA} [A:nA] d'une journée",
+          consoA: [{ vars: ["nA"], t: "[ress] pour les {nA} [A:nA] d'une journée" }, { t: "[ress] pour les [A:pl] d'une journée" }],
           consoB: "[ress] pour les {nB} [B:nB] d'une journée",
         },
         reponses: {

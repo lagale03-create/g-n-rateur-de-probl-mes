@@ -188,6 +188,8 @@ function construire(
   for (const d of [...inc.donnees, ...implicites(struct)]) connu[d] = monde[d];
   const sol = resoudre(struct.relations, connu, inc.inconnue);
   const tout = new Set(Object.keys(struct.variables));
+  // les libellés du corrigé ne citent que ce qui est déjà connu à cette étape
+  const connusEtape = new Set(inc.donnees);
   const etapes: Etape[] = [];
   const guidees: string[] = [];
   const guideesManquantes: string[] = [];
@@ -196,7 +198,8 @@ function construire(
     const fv = (n: string) => formatVar(n, envCorrige, false);
     const fn = (n: string) => nombreSeul(monde[n], grandeurs[n]);
     const calcul = e.op === "conv" ? `${fv(e.g)} = ${fv(e.cible)}` : `${fn(e.g)} ${e.op} ${fn(e.d)} = ${fv(e.cible)}`;
-    const vl = choisir(textes.libelles[e.cible], tout, niveau);
+    connusEtape.add(e.cible);
+    const vl = choisir(textes.libelles[e.cible], connusEtape, niveau);
     const libelle = vl ? rendre(vl.t, envCorrige).replace(/\.$/, "") : e.cible;
     const lib = libelle.charAt(0).toLowerCase() + libelle.slice(1);
     etapes.push({ situation: e.situation, calcul, libelle: lib, cible: e.cible, texte: `${e.situation} : ${calcul} (${lib})` });

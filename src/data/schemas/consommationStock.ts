@@ -135,11 +135,11 @@ export const consommationStock: Schema = {
     },
     libelles: {
       ration: "[ress] pour [un:A] [A] en un jour",
-      consoA: "[ress] pour les {nA} [A:nA] en un jour",
+      consoA: [{ vars: ["nA"], t: "[ress] pour les {nA} [A:nA] en un jour" }, { t: "[ress] pour les [A:pl] en un jour" }],
       rationB: "[ress] pour [un:B] [B] en un jour",
       consoB: "[ress] pour les {nB} [B:nB] en un jour",
       jour: "[ress] pour [tous] en un jour",
-      besoin: "[ress] pour [tous] en {nb_jours} jours",
+      besoin: [{ vars: ["nb_jours"], t: "[ress] pour [tous] en {nb_jours} jours" }, { t: "total [de:ress] à utiliser" }],
       stock: "[ress] [reserve] au départ",
       stockG: "[ress] [reserve] au départ",
       reste: "reste [de:ress] [reserve]",
