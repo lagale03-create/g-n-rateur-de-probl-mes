@@ -3,8 +3,8 @@
 Application qui fonctionne entièrement dans le navigateur, hors ligne. Aucune donnée n'est envoyée sur Internet.
 Elle génère des séries hebdomadaires de problèmes à étapes, différenciées sur 3 niveaux (★, ★★, ★★★), avec leur corrigé.
 
-> **État actuel : étape 3 sur 6.** Le moteur, le vérificateur, 2 schémas, 6 contextes et l'export Word sont en place.
-> L'interface complète (étape 4) vient ensuite.
+> **État actuel : étape 4 sur 6.** Le moteur, le vérificateur, 2 schémas, 6 contextes, l'export Word et ZIP
+> et l'interface sont en place. L'extension à toute la progression (étape 5) vient ensuite.
 
 ## Lancer l'application
 
@@ -16,6 +16,34 @@ npm run build        # crée dist/index.html : un seul fichier, à ouvrir d'un d
 npm run exemple -- 5 MAGRAINE   # écrit la semaine 5 en texte dans docs/exemple-S05.md
 npm run docx -- 5 MAGRAINE      # écrit la semaine 5 en Word dans docs/S05_Problemes_a_etapes_mixtes.docx
 ```
+
+## Interface
+
+Trois espaces, accessibles en haut de la page :
+
+**Préparer la semaine** (enseignant)
+- Réglages : semaine de la progression (les semaines « à venir » n'ont pas encore de schéma) ou **notion libre**
+  (titre + schémas à combiner), niveaux à générer, nombre de problèmes par jour (1 à 5), graine,
+  contextes à **exclure** et contexte **imposé** pour chaque problème.
+- Boutons : **Générer le Jour 1**, **Faire évoluer (Jour 2)**, **Créer l'évaluation**,
+  **Exporter la semaine (.docx)**, **Exporter la période (.zip)** (ou l'année complète).
+- Aperçu : un onglet par niveau ; chaque problème du Jour 1 est affiché à côté de son évolution du Jour 2,
+  avec son corrigé. Sur chaque problème :
+  - **Verrouiller** : le problème est conservé quand on régénère le Jour 1, même avec une autre graine
+    (son contexte est alors imposé aux autres niveaux) ;
+  - **Régénérer** : nouvelles données pour ce seul problème, même contexte ;
+  - **Modifier le texte** : énoncé, questions et phrase réponse. Le corrigé n'est pas recalculé :
+    pour changer un nombre, régénérez plutôt. **Rétablir le texte généré** annule les modifications.
+  - Un Jour 2 dont le Jour 1 a été régénéré est signalé : cliquez de nouveau sur « Faire évoluer ».
+- La préparation est enregistrée automatiquement **dans ce navigateur** (jamais envoyée) ;
+  « Tout effacer » repart de zéro.
+- L'export ZIP d'une période contient la semaine préparée (avec verrous et modifications) et les autres
+  semaines générées avec la même graine, plus un `LISEZMOI.txt` qui liste les semaines pas encore disponibles.
+
+**Problème isolé** : cochez les types de situations à combiner (par exemple Union + Groupement),
+choisissez le niveau, puis « Générer le problème ». « Autre version » en propose un autre ;
+« Exporter ce problème (.docx) » produit une fiche avec son corrigé. Si aucun schéma ne combine
+encore ces situations, les combinaisons les plus proches sont proposées.
 
 ## Export Word
 
@@ -36,7 +64,10 @@ nommé comme `S05_Problemes_a_etapes_mixtes.docx` :
 ## Mode élève
 
 Ajoutez `#eleve` à la fin de l'adresse (par exemple `index.html#eleve`) ou cliquez sur « Mode élève ».
-L'élève choisit sa semaine, son niveau et son jour. Sous chaque problème, le bouton
+Sur l'ordinateur où la semaine a été préparée, l'élève voit **la fiche de la classe** (avec les problèmes
+régénérés, verrouillés ou modifiés). Ailleurs, il saisit la semaine et le **code de la fiche** imprimé
+en haut de sa feuille. Attention : ce code ne reproduit que les problèmes générés directement, sans
+régénération ni modification. L'élève choisit ensuite son niveau et son jour. Sous chaque problème, le bouton
 **« Voir la correction »** affiche la correction complète, rédigée pour lui : chaque étape
 (« Je cherche : … » puis le calcul), les informations inutiles au niveau ★★★ et la phrase réponse.
 La correction n'est pas proposée pendant l'évaluation. Pour retrouver exactement les problèmes
@@ -130,6 +161,7 @@ Le test `tests/schemas.test.ts` le vérifie automatiquement sur 1 000 tirages pa
 src/core/      moteur, solveur, vérificateur, semaine, nombres exacts, graine
 src/langue/    formatage à la française, nombres en lettres, grammaire, gabarits
 src/data/      schémas, contextes, prénoms, progression des 36 semaines
-src/ui/        interface (provisoire)
+src/export/    export Word (docx) et ZIP (jszip)
+src/ui/        interface React : etat.ts (logique testée), Preparation, Isole, Eleve, Carte
 tests/         tests Vitest
 ```

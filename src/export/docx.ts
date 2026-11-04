@@ -9,8 +9,24 @@ import {
   PageNumber, Paragraph, ShadingType, Table, TableCell, TableRow, TextRun, WidthType,
   type ISectionOptions,
 } from "docx";
-import type { Semaine } from "../core/semaine";
 import type { Niveau, Probleme } from "../core/types";
+
+/** Ce que l'export accepte : une semaine complète, ou en cours (Jour 2 / évaluation pas encore créés). */
+export interface NiveauExport { jour1: readonly Probleme[]; jour2: readonly Probleme[]; evaluation?: Probleme }
+export interface SemaineExport {
+  numero: number;   // 0 = notion libre ou problème isolé
+  titre: string;
+  graine: string;
+  niveaux: Partial<Record<Niveau, NiveauExport>>;
+}
+type Semaine = SemaineExport;
+
+/** « Semaine 5 » ou, pour une notion libre, son titre. */
+export const libelleSemaine = (sem: SemaineExport) => (sem.numero > 0 ? `Semaine ${sem.numero}` : sem.titre);
+const titreComplet = (sem: SemaineExport) => (sem.numero > 0 ? `Semaine ${sem.numero} : ${sem.titre}` : sem.titre);
+const jours = (ns: NiveauExport) =>
+  ([["Jour 1", ns.jour1], ["Jour 2", ns.jour2], ["Évaluation", ns.evaluation ? [ns.evaluation] : []]] as const)
+    .filter(([, l]) => l.length > 0);
 
 // ---------- constantes de mise en page (en DXA : 1 cm = 567) ----------
 const CM = 567;
@@ -28,9 +44,9 @@ type NomJour = "Jour 1" | "Jour 2" | "Évaluation";
 /** Nom de fichier : « S08_Decimaux_et_monnaie.docx ». */
 export function nomFichier(numero: number, titre: string, ext = "docx"): string {
   const t = titre
-    .normalize("NFD").replace(/[̀-ͯ]/g, "")
-    .replace(/['’:,;!?().]/g, " ").trim().replace(/\s+/g, "_");
-  return `S${String(numero).padStart(2, "0")}_${t}.${ext}`;
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^A-Za-z0-9]+/g, " ").trim().replace(/\s+/g, "_");
+  return numero > 0 ? `S${String(numero).padStart(2, "0")}_${t}.${ext}` : `${t || "Problemes"}.${ext}`;
 }
 
 const etoiles = (n: Niveau) => "★".repeat(n);
@@ -40,7 +56,7 @@ const txt = (t: string, o: { bold?: boolean; italics?: boolean; color?: string; 
 
 function enTete(sem: Semaine, niveau: Niveau, jour: NomJour): Bloc[] {
   return [
-    new Paragraph({ spacing: { after: 60 }, children: [txt(`Semaine ${sem.numero} : ${sem.titre}`, { bold: true, color: BLEU_FONCE, size: 30 })] }),
+    new Paragraph({ spacing: { after: 60 }, children: [txt(titreComplet(sem), { bold: true, color: BLEU_FONCE, size: 30 })] }),
     new Paragraph({ spacing: { after: 120 }, children: [txt(`Niveau ${etoiles(niveau)} · ${jour}`, { bold: true, color: ORANGE, size: 26 })] }),
     new Paragraph({
       spacing: { after: 60 },
@@ -164,7 +180,7 @@ function pagesOuvertes(probs: readonly Probleme[], niveau: Niveau): Bloc[] {
 
 function corrige(sem: Semaine, niveaux: Niveau[]): Bloc[] {
   const blocs: Bloc[] = [
-    new Paragraph({ spacing: { after: 60 }, children: [txt(`Semaine ${sem.numero} : ${sem.titre}`, { bold: true, color: BLEU_FONCE, size: 30 })] }),
+    new Paragraph({ spacing: { after: 60 }, children: [txt(titreComplet(sem), { bold: true, color: BLEU_FONCE, size: 30 })] }),
     new Paragraph({
       spacing: { after: 240 },
       children: [txt("Corrigé enseignant · ", { bold: true, size: 28 }), txt("NE PAS DISTRIBUER", { bold: true, color: ROUGE, size: 28 })],
@@ -176,7 +192,7 @@ function corrige(sem: Semaine, niveaux: Niveau[]): Bloc[] {
     if (!ns) return;
     if (idx > 0) blocs.push(sautDePage());
     blocs.push(new Paragraph({ spacing: { before: 120, after: 120 }, keepNext: true, children: [txt(`Niveau ${etoiles(n)}`, { bold: true, color: ORANGE, size: 28 })] }));
-    for (const [nom, liste] of [["Jour 1", ns.jour1], ["Jour 2", ns.jour2], ["Évaluation", [ns.evaluation]]] as const) {
+    for (const [nom, liste] of jours(ns)) {
       blocs.push(new Paragraph({ spacing: { before: 200, after: 80 }, keepNext: true, children: [txt(nom, { bold: true, color: BLEU_FONCE, size: 24 })] }));
       liste.forEach((p, i) => {
         blocs.push(new Paragraph({
@@ -212,7 +228,7 @@ export function documentSemaine(sem: Semaine, o: OptionsExport = {}): Document {
   const pied = new Footer({
     children: [new Paragraph({
       alignment: AlignmentType.CENTER,
-      children: [new TextRun({ children: [`Semaine ${sem.numero} · page `, PageNumber.CURRENT], size: 18, color: GRIS })],
+      children: [new TextRun({ children: [`${libelleSemaine(sem)} · page `, PageNumber.CURRENT], size: 18, color: GRIS })],
     })],
   });
   const proprietes = {
@@ -224,7 +240,7 @@ export function documentSemaine(sem: Semaine, o: OptionsExport = {}): Document {
   const sections: ISectionOptions[] = [];
   for (const n of niveaux) {
     const ns = sem.niveaux[n]!;
-    for (const [nom, liste] of [["Jour 1", ns.jour1], ["Jour 2", ns.jour2], ["Évaluation", [ns.evaluation]]] as const) {
+    for (const [nom, liste] of jours(ns)) {
       const guide = n === 1 && nom !== "Évaluation";
       sections.push({
         properties: proprietes,
@@ -241,7 +257,7 @@ export function documentSemaine(sem: Semaine, o: OptionsExport = {}): Document {
 
   return new Document({
     creator: "Générateur de problèmes CM1-CM2",
-    title: `Semaine ${sem.numero} : ${sem.titre}`,
+    title: titreComplet(sem),
     styles: { default: { document: { run: { font: "Arial", size: TAILLE } } } },
     numbering: {
       config: [{

@@ -90,11 +90,12 @@ export function genererProbleme(dm: Demande): Probleme {
   const unites = { quantite: cs.unites?.quantite, grande: cs.unites?.grande };
 
   let candidats: Inconnue[];
-  if (jour === 2) {
-    candidats = dm.inconnue
-      ? struct.j2.filter((i) => i.inconnue === dm.inconnue)
-      : rngFor(dm.graine, dm.chemin, "inconnue").shuffle(struct.j2);
-    if (candidats.length === 0) throw new Error(`Inconnue inversée inconnue : ${dm.inconnue}`);
+  if (dm.inconnue) {
+    // inconnue imposée (Jour 2 choisi, ou mode « problème isolé »)
+    candidats = [struct.j1, ...struct.j2].filter((i) => i.inconnue === dm.inconnue);
+    if (candidats.length === 0) throw new Error(`Inconnue impossible pour ce schéma : ${dm.inconnue}`);
+  } else if (jour === 2) {
+    candidats = rngFor(dm.graine, dm.chemin, "inconnue").shuffle(struct.j2);
   } else candidats = [struct.j1];
 
   let derniereErreur: string[] = [];
