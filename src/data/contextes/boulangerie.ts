@@ -7,6 +7,57 @@ export const boulangerie: Contexte = {
   id: "boulangerie",
   titre: "À la boulangerie",
   schemas: {
+    "etats-transformations": {
+      mots: {
+        obj: { s: "baguette", g: "f" }, stock: "dans la boutique",
+        debut: "à 7 h", aj1: "Entre 7 h et 9 h, le boulanger en fait cuire", m1: "à 9 h",
+        re1: "Entre 9 h et midi, il en vend", m2: "à midi",
+        aj2: "Entre midi et 16 h, il en fait cuire encore", m3: "à 16 h",
+        re2: "Entre 16 h et 19 h, il en vend", fin: "à 19 h",
+        vp1: "ont été vendues entre 9 h et midi", vg2: "ont été cuites entre midi et 16 h", vp2: "ont été vendues entre 16 h et 19 h",
+      },
+      plages: {
+        1: { depart: { min: 20, max: 80 }, g1: { min: 20, max: 90 } },
+        2: { depart: { min: 50, max: 200 }, g1: { min: 80, max: 300 }, g2: { min: 50, max: 250 } },
+        3: { depart: { min: 100, max: 400 }, g1: { min: 200, max: 900 }, g2: { min: 150, max: 700 } },
+      },
+    },
+    "grands-nombres": {
+      mots: {
+        site1: { s: "la boulangerie du village", g: "f" }, site2: { s: "la boulangerie de la gare", g: "f" },
+        obj: { s: "baguette", g: "f" }, verbe: { s: "a vendu", p: "ont vendu" }, pp: "vendues",
+        per1: "en janvier", per2: "en février", per3: "en mars", periode: "sur ces deux mois", periode3: "sur ces trois mois",
+      },
+      plages: {
+        2: { A: { min: 12000, max: 30000 }, B: { min: 12000, max: 30000 }, D: { min: 12000, max: 30000 } },
+        3: { A: { min: 30000, max: 95000 }, B: { min: 30000, max: 95000 }, C: { min: 30000, max: 95000 }, D: { min: 30000, max: 95000 } },
+      },
+    },
+    lots: {
+      mots: {
+        lieu: "à la boulangerie", obj: { s: "croissant" }, contA: { s: "plaque", g: "f" }, contB: { s: "corbeille", g: "f" },
+        action: "le boulanger prépare", action2: "Il prépare aussi", vrac: "posés sur le comptoir",
+        retrait: "Il en vend", retraitSans: "Il en vend une partie", dest: "dans la matinée",
+        qd: "Combien de croissants le boulanger a-t-il vendus dans la matinée ?", ld: "croissants vendus dans la matinée",
+      },
+      plages: { 1: { a: { min: 6, max: 12 } }, 2: { a: { min: 12, max: 24 }, b: { min: 6, max: 15 } }, 3: { a: { min: 15, max: 30 }, b: { min: 8, max: 20 } } },
+    },
+    "division-reste": {
+      mots: {
+        intro: "Pour la fête de l'école, le boulanger prépare", persA: { s: "chouquette au sucre", p: "chouquettes au sucre", g: "f" },
+        persB: { s: "chouquette au chocolat", p: "chouquettes au chocolat", g: "f" }, pers: { s: "chouquette", g: "f" },
+        cont: { s: "boîte", g: "f" }, contient: "peut contenir",
+        prixPhrase: "Une boîte vide coûte", coutPhrase: "En tout, les boîtes coûtent",
+        qcout: "Combien le boulanger va-t-il payer pour les boîtes ?", rcout: "Le boulanger va payer",
+        remplir: "Il remplit", plein: "complètement", sans: "à part", dansCont: "dans les boîtes pleines",
+        absent: "sont abîmées et ne sont pas mises en boîte",
+      },
+      plages: {
+        1: { cap: { min: 6, max: 12 } },
+        2: { cap: { min: 10, max: 20 }, prix: { min: 0.5, max: 1.5, pas: 0.1 } },
+        3: { cap: { min: 12, max: 24 }, prix: { min: 0.5, max: 1.5, pas: 0.1 } },
+      },
+    },
     "consommation-stock": {
       mots: {
         lieu: "à la boulangerie",

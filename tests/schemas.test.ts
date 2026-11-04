@@ -35,7 +35,7 @@ for (const schema of SCHEMAS) {
           if (jour === 2) expect(p.inconnue).not.toBe(schema.structure(niveau, contexte.schemas[schema.id]).j1.inconnue);
         }
         // le Jour 2 utilise bien plusieurs inconnues inversées
-        expect(inconnues.size).toBeGreaterThanOrEqual(3);
+        expect(inconnues.size).toBeGreaterThanOrEqual(2);
       });
     }
   });

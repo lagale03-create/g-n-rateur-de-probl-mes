@@ -3,8 +3,10 @@
 Application qui fonctionne entièrement dans le navigateur, hors ligne. Aucune donnée n'est envoyée sur Internet.
 Elle génère des séries hebdomadaires de problèmes à étapes, différenciées sur 3 niveaux (★, ★★, ★★★), avec leur corrigé.
 
-> **État actuel : étape 4 sur 6.** Le moteur, le vérificateur, 2 schémas, 6 contextes, l'export Word et ZIP
-> et l'interface sont en place. L'extension à toute la progression (étape 5) vient ensuite.
+> **État actuel : étape 5 en cours.** La période 1 (semaines 1 à 7) est couverte, ainsi que les semaines 8 et 19.
+> Schémas : états et transformations, comparaison, grands nombres, lots (multiplication), division avec reste,
+> consommation et stock, achats et passage à l'unité. Contextes (11) : zoo, centre équestre, randonnée, cantine,
+> boulangerie, confitures, bibliothèque, piscine, journal de l'école, jardin, kermesse.
 
 ## Lancer l'application
 

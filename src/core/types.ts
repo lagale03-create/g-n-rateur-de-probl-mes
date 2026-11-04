@@ -34,7 +34,12 @@ export interface Plage { min: number | string; max: number | string; pas?: numbe
  * `noms` donne le type de situation selon la variable qu'on calcule.
  */
 export interface Relation {
-  type: "mul" | "add" | "conv";
+  /**
+   * mul : c = a × b   add : c = a + b   conv : c = a × facteur (conversion)
+   * ceil : c = a ÷ b arrondi au supérieur (« il faut 8 bus »)   quot : c = quotient entier de a ÷ b
+   * (ceil et quot ne se calculent que dans un sens : de a et b vers c)
+   */
+  type: "mul" | "add" | "conv" | "ceil" | "quot";
   c: string; a: string; b: string;
   noms?: Partial<Record<"a" | "b" | "c", Situation>>;
 }

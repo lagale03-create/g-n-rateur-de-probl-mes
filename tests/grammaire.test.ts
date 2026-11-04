@@ -23,5 +23,8 @@ describe("grammaire", () => {
       .toBe("Il y a 3 adultes et 1 adulte. Chaque adulte boit 2,5 L d'eau ?");
     expect(rendre("[le:t] [t], [le:a] [a], [un:t] [t]", env)).toBe("La tarte, l'arbre, une tarte");
     expect(rendre("{n} [A:n]", { ...env, lettres: new Set(["n"]) })).toBe("Trois adultes");
+    const e41 = { ...env, valeurs: { ...env.valeurs, k: Q.of(41) }, grandeurs: { ...env.grandeurs, k: "compte" as const }, lettres: new Set(["k"]) };
+    expect(rendre("il y a {k} [t:k].", e41)).toBe("Il y a quarante et une tartes.");
+    expect(rendre("combien de [A:pl] ? plus que [A] et de [t:pl]", env)).toBe("Combien d'adultes\u00A0? Plus qu'adulte et de tartes");
   });
 });

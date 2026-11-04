@@ -14,6 +14,12 @@ describe("nombres en lettres", () => {
     [80_000_000, "quatre-vingts millions"], [3_000_000_000, "trois milliards"],
   ];
   for (const [n, s] of cas) it(`${n} → ${s}`, () => expect(enLettres(n)).toBe(s));
+  it("féminin", () => {
+    expect(enLettres(41, { feminin: true })).toBe("quarante et une");
+    expect(enLettres(81, { feminin: true })).toBe("quatre-vingt-une");
+    expect(enLettres(1, { feminin: true })).toBe("une");
+    expect(enLettres(11, { feminin: true })).toBe("onze");
+  });
   it("orthographe rectifiée", () => {
     expect(enLettres(21, { rectifiee: true })).toBe("vingt-et-un");
     expect(enLettres(1247, { rectifiee: true })).toBe("mille-deux-cent-quarante-sept");

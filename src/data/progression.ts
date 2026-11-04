@@ -21,13 +21,13 @@ const P = (numero: number, periode: SemaineProg["periode"], titre: string, schem
 });
 
 export const PROGRESSION: SemaineProg[] = [
-  P(1, 1, "Structures additives"),
-  P(2, 1, "Grands nombres"),
-  P(3, 1, "Multiplication"),
-  P(4, 1, "Division et interprétation du reste"),
+  P(1, 1, "Structures additives", ["etats-transformations", "comparaison"]),
+  P(2, 1, "Grands nombres", ["grands-nombres"]),
+  P(3, 1, "Multiplication", ["lots"]),
+  P(4, 1, "Division et interprétation du reste", ["division-reste"]),
   P(5, 1, "Problèmes à étapes mixtes", ["consommation-stock", "achat-unite"], "consommation-stock"),
-  P(6, 1, "Synthèse de la période 1"),
-  P(7, 1, "Synthèse de la période 1 (bis)"),
+  P(6, 1, "Synthèse de la période 1", ["etats-transformations", "comparaison", "lots", "division-reste"], "lots"),
+  P(7, 1, "Synthèse de la période 1 (bis)", ["grands-nombres", "division-reste", "consommation-stock", "lots"], "consommation-stock"),
   P(8, 2, "Décimaux et monnaie", ["achat-unite"]),
   P(9, 2, "Longueurs"),
   P(10, 2, "Décimal × entier"),

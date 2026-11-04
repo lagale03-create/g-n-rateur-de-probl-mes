@@ -52,5 +52,7 @@ export function typographie(t: string): string {
     .replace(/\s*([?!:;])/g, " $1")
     .replace(/\s+([.,])/g, "$1")
     .replace(/'[ \t]+/g, "'")
+    // élision : « de exemplaires » → « d'exemplaires », « que Adam » → « qu'Adam » (mais « de onze »)
+    .replace(/\b([dD]e|[qQ]ue) (?!onze\b)(?=[aeiouyàâäéèêëîïôöùûüœæAEIOUYÀÂÉÈÊÎÔÛ])/g, (_, m: string) => m.slice(0, -1) + "'")
     .trim();
 }

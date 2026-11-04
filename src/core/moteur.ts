@@ -51,8 +51,11 @@ function choisirMots(cs: ContexteSchema, rng: Rng): Record<string, Mot> {
   for (const [k, v] of Object.entries(cs.mots)) {
     mots[k] = typeof v === "string" ? { s: v } : Array.isArray(v) ? rng.pick(v) : v;
   }
-  const p = rng.pick(PRENOMS);
-  mots.prenom = { s: p.s, g: p.g };
+  // trois prénoms différents (les problèmes de comparaison mettent en scène plusieurs enfants)
+  const [p1, p2, p3] = rng.shuffle(PRENOMS);
+  mots.prenom = { s: p1.s, g: p1.g };
+  mots.prenom2 = { s: p2.s, g: p2.g };
+  mots.prenom3 = { s: p3.s, g: p3.g };
   return mots;
 }
 
@@ -144,7 +147,7 @@ function construire(
   // nombres écrits en lettres (★★★) : 1 ou 2 effectifs entiers
   const lettres = new Set<string>();
   if (niveau === 3) {
-    const cand = inc.donnees.filter((d) => grandeurs[d] === "compte" && monde[d].isInteger && monde[d].cmp(2) >= 0 && monde[d].cmp(999) <= 0);
+    const cand = inc.donnees.filter((d) => grandeurs[d] === "compte" && monde[d].isInteger && monde[d].cmp(2) >= 0 && monde[d].cmp(999_999) <= 0);
     for (const d of rng.shuffle(cand).slice(0, rng.int(1, 2))) lettres.add(d);
   }
   const env: EnvRendu = { valeurs: monde, grandeurs, unites, mots, lettres };
@@ -198,7 +201,18 @@ function construire(
   for (const e of sol?.etapes ?? []) {
     const fv = (n: string) => formatVar(n, envCorrige, false);
     const fn = (n: string) => nombreSeul(monde[n], grandeurs[n]);
-    const calcul = e.op === "conv" ? `${fv(e.g)} = ${fv(e.cible)}` : `${fn(e.g)} ${e.op} ${fn(e.d)} = ${fv(e.cible)}`;
+    let calcul: string;
+    if (e.op === "conv") calcul = `${fv(e.g)} = ${fv(e.cible)}`;
+    else if (e.op === "ceil" || e.op === "quot") {
+      // division euclidienne, puis interprétation du reste
+      const a = monde[e.g], b = monde[e.d];
+      const qt = a.div(b).floor(), r = a.sub(qt.mul(b));
+      const base = `${fn(e.g)} ÷ ${fn(e.d)} = ${formatNombre(qt)}`;
+      if (r.n === 0) calcul = `${fn(e.g)} ÷ ${fn(e.d)} = ${fv(e.cible)}`;
+      else calcul = e.op === "ceil"
+        ? `${base} reste ${formatNombre(r)}, donc ${formatNombre(qt)} + 1 = ${fv(e.cible)}`
+        : `${base} reste ${formatNombre(r)}`;
+    } else calcul = `${fn(e.g)} ${e.op} ${fn(e.d)} = ${fv(e.cible)}`;
     connusEtape.add(e.cible);
     const vl = choisir(textes.libelles[e.cible], connusEtape, niveau);
     const libelle = vl ? rendre(vl.t, envCorrige).replace(/\.$/, "") : e.cible;

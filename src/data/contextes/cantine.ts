@@ -4,6 +4,26 @@ export const cantine: Contexte = {
   id: "cantine",
   titre: "À la cantine",
   schemas: {
+    "grands-nombres": {
+      mots: {
+        site1: { s: "la cuisine centrale de la ville", g: "f" }, site2: { s: "la cuisine centrale de la ville voisine", g: "f" },
+        obj: { s: "repas", p: "repas" }, verbe: { s: "a servi", p: "ont servi" }, pp: "servis",
+        per1: "en septembre", per2: "en octobre", per3: "en novembre", periode: "sur ces deux mois", periode3: "sur ces trois mois",
+      },
+      plages: {
+        2: { A: { min: 12000, max: 40000 }, B: { min: 12000, max: 40000 }, D: { min: 12000, max: 40000 } },
+        3: { A: { min: 120000, max: 400000 }, B: { min: 120000, max: 400000 }, C: { min: 120000, max: 400000 }, D: { min: 120000, max: 400000 } },
+      },
+    },
+    lots: {
+      mots: {
+        lieu: "à la cantine", obj: { s: "yaourt" }, contA: { s: "pack" }, contB: { s: "carton" },
+        action: "le cuisinier reçoit", action2: "Il reçoit aussi", vrac: "déjà dans le réfrigérateur",
+        retrait: "Il en sert", retraitSans: "Il en sert une partie", dest: "aux élèves à midi",
+        qd: "Combien de yaourts le cuisinier a-t-il servis aux élèves ?", ld: "yaourts servis aux élèves",
+      },
+      plages: { 1: { a: { min: 4, max: 8, pas: 2 } }, 2: { a: { min: 4, max: 12, pas: 2 }, b: { min: 24, max: 48, pas: 12 } }, 3: { a: { min: 4, max: 12, pas: 2 }, b: { min: 24, max: 60, pas: 12 } } },
+    },
     "consommation-stock": {
       mots: {
         lieu: "à la cantine",

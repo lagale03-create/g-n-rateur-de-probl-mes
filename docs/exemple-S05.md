@@ -14,13 +14,13 @@ b) Quelle quantité d'eau faut-il pour tout le groupe pendant 4 jours ?
 
 c) Quelle quantité d'eau restera-t-il dans les bidons du refuge au bout de ces 4 jours ?
 
-**Problème 2 : Les confitures**
+**Problème 2 : À la boulangerie**
 
-Au marché, sur le stand du producteur, 3 pots de confiture de fraises coûtent 12 €. Sacha achète 4 pots de confiture de fraises.
+À la boulangerie, 3 croissants coûtent 3 €. Yanis achète 4 croissants.
 
-a) Combien coûte un pot de confiture de fraises ?
+a) Combien coûte un croissant ?
 
-b) Combien Sacha va-t-il payer ?
+b) Combien Yanis va-t-il payer ?
 
 **Problème 3 : Au zoo**
 
@@ -32,13 +32,13 @@ b) Quelle masse de viande faut-il pour tous les animaux pendant 4 jours ?
 
 c) Quelle masse de viande restera-t-il dans la chambre froide au bout de ces 4 jours ?
 
-**Problème 4 : À la boulangerie**
+**Problème 4 : Les confitures**
 
-À la boulangerie, 5 croissants coûtent 7,50 €. Jade achète 8 croissants.
+Au marché, sur le stand du producteur, 5 pots de confiture de fraises coûtent 20 €. Yanis achète 8 pots de confiture de fraises.
 
-a) Combien coûte un croissant ?
+a) Combien coûte un pot de confiture de fraises ?
 
-b) Combien Jade va-t-elle payer ?
+b) Combien Yanis va-t-il payer ?
 
 ## Niveau ★ · Jour 2
 
@@ -52,13 +52,13 @@ b) Quelle quantité d'eau faut-il pour tout le groupe pendant 2 jours ?
 
 c) Quelle quantité d'eau y a-t-il dans les bidons du refuge au départ ?
 
-**Problème 2 : Les confitures**
+**Problème 2 : À la boulangerie**
 
-Au marché, sur le stand du producteur, 2 pots de confiture de fraises coûtent 12 €. Sacha a 42 €. Il dépense tout son argent pour acheter des pots de confiture de fraises.
+À la boulangerie, 2 croissants coûtent 4 €. Yanis a 14 €. Il dépense tout son argent pour acheter des croissants.
 
-a) Combien coûte un pot de confiture de fraises ?
+a) Combien coûte un croissant ?
 
-b) Combien de pots de confiture de fraises Sacha peut-il acheter ?
+b) Combien de croissants Yanis peut-il acheter ?
 
 **Problème 3 : Au zoo**
 
@@ -70,21 +70,21 @@ b) Quelle masse de viande le soigneur va-t-il utiliser en tout ?
 
 c) Pendant combien de jours le soigneur peut-il nourrir tous ces animaux ?
 
-**Problème 4 : À la boulangerie**
+**Problème 4 : Les confitures**
 
-À la boulangerie, Jade a payé 10 € pour 5 croissants.
+Au marché, sur le stand du producteur, Yanis a payé 30 € pour 5 pots de confiture de fraises.
 
-a) Combien coûte un croissant ?
+a) Combien coûte un pot de confiture de fraises ?
 
-b) Combien de croissants peut-on acheter avec 12 € ?
+b) Combien de pots de confiture de fraises peut-on acheter avec 36 € ?
 
 ## Niveau ★ · Évaluation
 
-**Problème 1 : À la cantine**
+**Problème 1 : Au centre équestre**
 
-À la cantine, il y a 3 tables de grands. Chaque table de grands mange 4 kg de pommes de terre par jour. La cuisinière dispose de 50 kg de pommes de terre dans la réserve. Elle doit préparer les repas pendant 4 jours.
+Au centre équestre, il y a 2 chevaux. Chaque cheval mange 11 kg de foin par jour. Le moniteur dispose de 140 kg de foin dans la grange. Il doit nourrir tous les animaux pendant 6 jours.
 
-**Quelle masse de pommes de terre restera-t-il dans la réserve au bout de ces 4 jours ?**
+**Quelle masse de foin restera-t-il dans la grange au bout de ces 6 jours ?**
 
 ## Niveau ★★ · Jour 1
 
@@ -94,11 +94,11 @@ Dans le groupe de randonnée, il y a 9 adultes. Chaque adulte boit 2 L d'eau pa
 
 **Quelle quantité d'eau restera-t-il dans les bidons du refuge au bout de ces 5 jours ?**
 
-**Problème 2 : Les confitures**
+**Problème 2 : À la boulangerie**
 
-Au marché, sur le stand du producteur, 3 pots de confiture de fraises coûtent 18 €. Sacha achète 9 pots de confiture de fraises et un bocal de compote à 5,50 €. Il paie avec un billet de 100 €.
+À la boulangerie, 3 croissants coûtent 4,50 €. Yanis achète 9 croissants et une tarte aux fraises à 9 €. Il paie avec un billet de 50 €.
 
-**Combien d'argent doit-on rendre à Sacha ?**
+**Combien d'argent doit-on rendre à Yanis ?**
 
 **Problème 3 : Au zoo**
 
@@ -106,11 +106,11 @@ Au zoo, il y a 4 lions. Chaque lion mange 9 kg de viande par jour. Il y a aussi
 
 **Quelle masse de viande restera-t-il dans la chambre froide au bout de ces 5 jours ?**
 
-**Problème 4 : À la boulangerie**
+**Problème 4 : Les confitures**
 
-À la boulangerie, 6 croissants coûtent 9 €. Jade achète 4 croissants et une tarte aux fraises à 13,50 €. Elle paie avec un billet de 20 €.
+Au marché, sur le stand du producteur, 6 pots de confiture de fraises coûtent 35,40 €. Yanis achète 4 pots de confiture de fraises et un bocal de compote à 9 €. Il paie avec un billet de 50 €.
 
-**Combien d'argent doit-on rendre à Jade ?**
+**Combien d'argent doit-on rendre à Yanis ?**
 
 ## Niveau ★★ · Jour 2
 
@@ -120,11 +120,11 @@ Dans le groupe de randonnée, il y a 12 adultes. Chaque adulte boit 3 L d'eau p
 
 **Pendant combien de jours le guide peut-il donner de l'eau à tout le groupe ?**
 
-**Problème 2 : Les confitures**
+**Problème 2 : À la boulangerie**
 
-Au marché, sur le stand du producteur, 5 pots de confiture de fraises coûtent 18,50 €. Sacha achète 11 pots de confiture de fraises et un bocal de compote. Le marché a lieu tous les samedis depuis 1980. Il paie avec un billet de 50 € et on lui rend 3,80 €.
+À la boulangerie, 5 croissants coûtent 5 €. Le four chauffe jusqu'à 240 °C. Yanis achète 11 croissants et une tarte aux fraises. Il paie avec un billet de 50 € et on lui rend 30 €.
 
-**Combien coûte le bocal de compote ?**
+**Combien coûte la tarte aux fraises ?**
 
 **Problème 3 : Au zoo**
 
@@ -132,19 +132,19 @@ Au zoo, il y a 6 lions. Chaque lion mange 8 kg de viande par jour. Il y a aussi
 
 **Quelle masse de viande y a-t-il dans la chambre froide au départ ?**
 
-**Problème 4 : À la boulangerie**
+**Problème 4 : Les confitures**
 
-À la boulangerie, 8 croissants coûtent 10,40 €. Jade achète 7 croissants et une tarte aux fraises. La boulangerie ouvre à 7 h. Elle paie avec un billet de 20 € et on lui rend 1,40 €.
+Au marché, sur le stand du producteur, 8 pots de confiture de fraises coûtent 39,20 €. Yanis achète 7 pots de confiture de fraises et un bocal de compote. Le marché a lieu tous les samedis depuis 2017. Il paie avec un billet de 50 € et on lui rend 9,70 €.
 
-**Combien coûte la tarte aux fraises ?**
+**Combien coûte le bocal de compote ?**
 
 ## Niveau ★★ · Évaluation
 
-**Problème 1 : À la cantine**
+**Problème 1 : Au centre équestre**
 
-À la cantine, il y a 8 tables de grands. Chaque table de grands mange 3 kg de pommes de terre par jour. Il y a aussi 9 tables de petits. Chaque table de petits mange 1 kg de pommes de terre par jour. La cuisinière dispose de 200 kg de pommes de terre dans la réserve. Elle doit préparer les repas pendant 6 jours.
+Au centre équestre, il y a 6 chevaux. Chaque cheval mange 9 kg de foin par jour. Il y a aussi 7 ânes. Chaque âne mange 3 kg de foin par jour. Le moniteur dispose de 550 kg de foin dans la grange. Il doit nourrir tous les animaux pendant 7 jours.
 
-**Quelle masse de pommes de terre restera-t-il dans la réserve au bout de ces 6 jours ?**
+**Quelle masse de foin restera-t-il dans la grange au bout de ces 7 jours ?**
 
 ## Niveau ★★★ · Jour 1
 
@@ -156,11 +156,11 @@ Dans le groupe de randonnée, il y a 11 adultes. Chaque adulte boit 1,5 L d'eau
 
 **Quelle quantité d'eau restera-t-il dans les bidons du refuge au bout de ces cinq jours ?**
 
-**Problème 2 : Les confitures**
+**Problème 2 : À la boulangerie**
 
-Au marché, sur le stand du producteur, 11 pots de confiture de fraises coûtent 48,40 €. Sacha achète neuf pots de confiture de fraises et 2 bocaux de compote à 6,10 € pièce. Le stand ouvre à 8 h 15. Il paie avec un billet de 100 €.
+À la boulangerie, 5 croissants coûtent 6,50 €. Yanis achète douze croissants et deux tartes aux fraises à 10,65 € pièce. Il paie avec un billet de 50 €. La boulangerie ouvre à 7 h 15.
 
-**Combien d'argent doit-on rendre à Sacha ?**
+**Combien d'argent doit-on rendre à Yanis ?**
 
 **Problème 3 : Au zoo**
 
@@ -168,11 +168,11 @@ Au zoo, il y a six lions. Chaque lion mange 6,5 kg de viande par jour. Il y a a
 
 **Quelle masse de viande restera-t-il dans la chambre froide au bout de ces 7 jours ?**
 
-**Problème 4 : À la boulangerie**
+**Problème 4 : Les confitures**
 
-À la boulangerie, huit croissants coûtent 11,60 €. Une baguette mesure environ 63 cm. Jade achète 13 croissants et 3 tartes aux fraises à 11,70 € pièce. Elle paie avec un billet de 100 €.
+Au marché, sur le stand du producteur, huit pots de confiture de fraises coûtent 47,20 €. Yanis achète 13 pots de confiture de fraises et 3 bocaux de compote à 7 € pièce. Le stand ouvre à 9 h. Il paie avec un billet de 100 €.
 
-**Combien d'argent doit-on rendre à Jade ?**
+**Combien d'argent doit-on rendre à Yanis ?**
 
 ## Niveau ★★★ · Jour 2
 
@@ -184,11 +184,11 @@ Dans le groupe de randonnée, il y a dix adultes. Chaque adulte boit 1,5 L d'ea
 
 **Quelle quantité d'eau y a-t-il dans les bidons du refuge au départ ?**
 
-**Problème 2 : Les confitures**
+**Problème 2 : À la boulangerie**
 
-Au marché, sur le stand du producteur, 11 pots de confiture de fraises coûtent 52,25 €. Le marché a lieu tous les samedis depuis 2006. Sacha achète 4 pots de confiture de fraises et deux bocaux de compote. Tous les bocaux de compote ont le même prix. Il paie avec un billet de 50 € et on lui rend 16,60 €.
+À la boulangerie, 11 croissants coûtent 13,75 €. Yanis achète 4 croissants et deux tartes aux fraises. Toutes les tartes aux fraises ont le même prix. Il paie avec un billet de 50 € et on lui rend 21 €. La boulangerie ouvre à 6 h 45.
 
-**Combien coûte un bocal de compote ?**
+**Combien coûte une tarte aux fraises ?**
 
 **Problème 3 : Au zoo**
 
@@ -196,21 +196,21 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 
 **Quelle masse de viande y a-t-il dans la chambre froide au départ ?**
 
-**Problème 4 : À la boulangerie**
+**Problème 4 : Les confitures**
 
-À la boulangerie, neuf croissants coûtent 10,80 €. Jade achète 4 croissants et 3 tartes aux fraises à 14,75 € pièce. Une baguette mesure environ 63 cm. Elle paie avec un seul billet et on lui rend 0,95 €. Le four chauffe jusqu'à 230 °C.
+Au marché, sur le stand du producteur, neuf pots de confiture de fraises coûtent 41,40 €. Chaque pot pèse 400 g. Le stand ouvre à 8 h 30. Yanis achète 4 pots de confiture de fraises et 4 bocaux de compote à 8,85 € pièce. Il paie avec un seul billet et on lui rend 46,20 €.
 
-**Quel billet Jade a-t-elle donné ?**
+**Quel billet Yanis a-t-il donné ?**
 
 ## Niveau ★★★ · Évaluation
 
 > *Attention : certaines informations ne servent à rien ! Surligne d'abord les données utiles.*
 
-**Problème 1 : À la cantine**
+**Problème 1 : Au centre équestre**
 
-À la cantine, il y a douze tables de grands. Chaque table de grands mange 2,5 kg de pommes de terre par jour. La salle mesure 18 m de long. Il y a aussi 6 tables de petits. Chaque table de petits mange 2 kg de pommes de terre par jour. La cuisinière dispose de 410 kg de pommes de terre dans la réserve. Elle doit préparer les repas pendant 9 jours.
+Au centre équestre, il y a onze chevaux. Chaque cheval mange 9,5 kg de foin par jour. Un cheval adulte pèse environ 450 kg. Il y a aussi 4 ânes. Chaque âne mange 5,5 kg de foin par jour. Le moniteur dispose de 1,9 t de foin dans la grange. Il doit nourrir tous les animaux pendant 12 jours.
 
-**Quelle masse de pommes de terre restera-t-il dans la réserve au bout de ces 9 jours ?**
+**Quelle masse de foin restera-t-il dans la grange au bout de ces 12 jours ?**
 
 ---
 
@@ -227,11 +227,11 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - Retrait : 50 − 48 = 2 L (reste d'eau dans les bidons du refuge)
 - **Réponse : Il restera 2 L d'eau dans les bidons du refuge.**
 
-**Problème 2 : Les confitures** (situations : Passage à l'unité, Réitération ; on cherche : prix2)
+**Problème 2 : À la boulangerie** (situations : Passage à l'unité, Réitération ; on cherche : prix2)
 
-- Passage à l'unité : 12 ÷ 3 = 4 € (prix d'un pot de confiture de fraises)
-- Réitération : 4 × 4 = 16 € (prix des 4 pots de confiture de fraises)
-- **Réponse : Sacha va payer 16 €.**
+- Passage à l'unité : 3 ÷ 3 = 1 € (prix d'un croissant)
+- Réitération : 1 × 4 = 4 € (prix des 4 croissants)
+- **Réponse : Yanis va payer 4 €.**
 
 **Problème 3 : Au zoo** (situations : Réitération, Retrait ; on cherche : reste)
 
@@ -240,11 +240,11 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - Retrait : 180 − 140 = 40 kg (reste de viande dans la chambre froide)
 - **Réponse : Il restera 40 kg de viande dans la chambre froide.**
 
-**Problème 4 : À la boulangerie** (situations : Passage à l'unité, Réitération ; on cherche : prix2)
+**Problème 4 : Les confitures** (situations : Passage à l'unité, Réitération ; on cherche : prix2)
 
-- Passage à l'unité : 7,50 ÷ 5 = 1,50 € (prix d'un croissant)
-- Réitération : 1,50 × 8 = 12 € (prix des 8 croissants)
-- **Réponse : Jade va payer 12 €.**
+- Passage à l'unité : 20 ÷ 5 = 4 € (prix d'un pot de confiture de fraises)
+- Réitération : 4 × 8 = 32 € (prix des 8 pots de confiture de fraises)
+- **Réponse : Yanis va payer 32 €.**
 
 ### Jour 2
 
@@ -255,11 +255,11 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - Recherche de l'état initial : 36 + 24 = 60 L (eau dans les bidons du refuge au départ)
 - **Réponse : Au départ, il y a 60 L d'eau dans les bidons du refuge.**
 
-**Problème 2 : Les confitures** (situations : Passage à l'unité, Groupement ; on cherche : n2)
+**Problème 2 : À la boulangerie** (situations : Passage à l'unité, Groupement ; on cherche : n2)
 
-- Passage à l'unité : 12 ÷ 2 = 6 € (prix d'un pot de confiture de fraises)
-- Groupement : 42 ÷ 6 = 7 (nombre de pots de confiture de fraises)
-- **Réponse : Sacha peut acheter 7 pots de confiture de fraises.**
+- Passage à l'unité : 4 ÷ 2 = 2 € (prix d'un croissant)
+- Groupement : 14 ÷ 2 = 7 (nombre de croissants)
+- **Réponse : Yanis peut acheter 7 croissants.**
 
 **Problème 3 : Au zoo** (situations : Réitération, Différence, Groupement ; on cherche : nb_jours)
 
@@ -268,20 +268,20 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - Groupement : 90 ÷ 18 = 5 (nombre de jours)
 - **Réponse : Le soigneur peut nourrir tous ces animaux pendant 5 jours.**
 
-**Problème 4 : À la boulangerie** (situations : Passage à l'unité, Groupement ; on cherche : n1)
+**Problème 4 : Les confitures** (situations : Passage à l'unité, Groupement ; on cherche : n1)
 
-- Passage à l'unité : 10 ÷ 5 = 2 € (prix d'un croissant)
-- Groupement : 12 ÷ 2 = 6 (nombre de croissants pour 12 €)
-- **Réponse : Avec 12 €, on peut acheter 6 croissants.**
+- Passage à l'unité : 30 ÷ 5 = 6 € (prix d'un pot de confiture de fraises)
+- Groupement : 36 ÷ 6 = 6 (nombre de pots de confiture de fraises pour 36 €)
+- **Réponse : Avec 36 €, on peut acheter 6 pots de confiture de fraises.**
 
 ### Évaluation
 
-**Problème 1 : À la cantine** (situations : Réitération, Retrait ; on cherche : reste)
+**Problème 1 : Au centre équestre** (situations : Réitération, Retrait ; on cherche : reste)
 
-- Réitération : 4 × 3 = 12 kg (pommes de terre pour les 3 tables de grands en un jour)
-- Réitération : 12 × 4 = 48 kg (pommes de terre pour toutes les tables en 4 jours)
-- Retrait : 50 − 48 = 2 kg (reste de pommes de terre dans la réserve)
-- **Réponse : Il restera 2 kg de pommes de terre dans la réserve.**
+- Réitération : 11 × 2 = 22 kg (foin pour les 2 chevaux en un jour)
+- Réitération : 22 × 6 = 132 kg (foin pour tous les animaux en 6 jours)
+- Retrait : 140 − 132 = 8 kg (reste de foin dans la grange)
+- **Réponse : Il restera 8 kg de foin dans la grange.**
 
 ## Niveau ★★
 
@@ -297,13 +297,13 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - *Données parasites :* Le sommet culmine à 2 500 m d'altitude.
 - **Réponse : Il restera 35 L d'eau dans les bidons du refuge.**
 
-**Problème 2 : Les confitures** (situations : Passage à l'unité, Réitération, Union, Différence ; on cherche : rendu)
+**Problème 2 : À la boulangerie** (situations : Passage à l'unité, Réitération, Union, Différence ; on cherche : rendu)
 
-- Passage à l'unité : 18 ÷ 3 = 6 € (prix d'un pot de confiture de fraises)
-- Réitération : 6 × 9 = 54 € (prix des 9 pots de confiture de fraises)
-- Union : 54 + 5,50 = 59,50 € (prix total des achats)
-- Différence : 100 − 59,50 = 40,50 € (monnaie rendue)
-- **Réponse : On doit rendre 40,50 € à Sacha.**
+- Passage à l'unité : 4,50 ÷ 3 = 1,50 € (prix d'un croissant)
+- Réitération : 1,50 × 9 = 13,50 € (prix des 9 croissants)
+- Union : 13,50 + 9 = 22,50 € (prix total des achats)
+- Différence : 50 − 22,50 = 27,50 € (monnaie rendue)
+- **Réponse : On doit rendre 27,50 € à Yanis.**
 
 **Problème 3 : Au zoo** (situations : Réitération, Union, Retrait ; on cherche : reste)
 
@@ -314,13 +314,13 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - Retrait : 250 − 230 = 20 kg (reste de viande dans la chambre froide)
 - **Réponse : Il restera 20 kg de viande dans la chambre froide.**
 
-**Problème 4 : À la boulangerie** (situations : Passage à l'unité, Réitération, Union, Différence ; on cherche : rendu)
+**Problème 4 : Les confitures** (situations : Passage à l'unité, Réitération, Union, Différence ; on cherche : rendu)
 
-- Passage à l'unité : 9 ÷ 6 = 1,50 € (prix d'un croissant)
-- Réitération : 1,50 × 4 = 6 € (prix des 4 croissants)
-- Union : 6 + 13,50 = 19,50 € (prix total des achats)
-- Différence : 20 − 19,50 = 0,50 € (monnaie rendue)
-- **Réponse : On doit rendre 0,50 € à Jade.**
+- Passage à l'unité : 35,40 ÷ 6 = 5,90 € (prix d'un pot de confiture de fraises)
+- Réitération : 5,90 × 4 = 23,60 € (prix des 4 pots de confiture de fraises)
+- Union : 23,60 + 9 = 32,60 € (prix total des achats)
+- Différence : 50 − 32,60 = 17,40 € (monnaie rendue)
+- **Réponse : On doit rendre 17,40 € à Yanis.**
 
 ### Jour 2
 
@@ -334,14 +334,14 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - *Données parasites :* Le refuge a été construit en 1935.
 - **Réponse : Le guide peut donner de l'eau à tout le groupe pendant 5 jours.**
 
-**Problème 2 : Les confitures** (situations : Passage à l'unité, Réitération, Différence ; on cherche : prixB)
+**Problème 2 : À la boulangerie** (situations : Passage à l'unité, Réitération, Différence ; on cherche : prixB)
 
-- Passage à l'unité : 18,50 ÷ 5 = 3,70 € (prix d'un pot de confiture de fraises)
-- Réitération : 3,70 × 11 = 40,70 € (prix des 11 pots de confiture de fraises)
-- Différence : 50 − 3,80 = 46,20 € (prix total des achats)
-- Différence : 46,20 − 40,70 = 5,50 € (prix d'un bocal de compote)
-- *Données parasites :* Le marché a lieu tous les samedis depuis 1980.
-- **Réponse : Le bocal de compote coûte 5,50 €.**
+- Passage à l'unité : 5 ÷ 5 = 1 € (prix d'un croissant)
+- Réitération : 1 × 11 = 11 € (prix des 11 croissants)
+- Différence : 50 − 30 = 20 € (prix total des achats)
+- Différence : 20 − 11 = 9 € (prix d'une tarte aux fraises)
+- *Données parasites :* Le four chauffe jusqu'à 240 °C.
+- **Réponse : La tarte aux fraises coûte 9 €.**
 
 **Problème 3 : Au zoo** (situations : Réitération, Union, Recherche de l'état initial ; on cherche : stock)
 
@@ -353,25 +353,25 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - *Données parasites :* Le zoo a ouvert ses portes en 2008.
 - **Réponse : Au départ, il y a 350 kg de viande dans la chambre froide.**
 
-**Problème 4 : À la boulangerie** (situations : Passage à l'unité, Réitération, Différence ; on cherche : prixB)
+**Problème 4 : Les confitures** (situations : Passage à l'unité, Réitération, Différence ; on cherche : prixB)
 
-- Passage à l'unité : 10,40 ÷ 8 = 1,30 € (prix d'un croissant)
-- Réitération : 1,30 × 7 = 9,10 € (prix des 7 croissants)
-- Différence : 20 − 1,40 = 18,60 € (prix total des achats)
-- Différence : 18,60 − 9,10 = 9,50 € (prix d'une tarte aux fraises)
-- *Données parasites :* La boulangerie ouvre à 7 h.
-- **Réponse : La tarte aux fraises coûte 9,50 €.**
+- Passage à l'unité : 39,20 ÷ 8 = 4,90 € (prix d'un pot de confiture de fraises)
+- Réitération : 4,90 × 7 = 34,30 € (prix des 7 pots de confiture de fraises)
+- Différence : 50 − 9,70 = 40,30 € (prix total des achats)
+- Différence : 40,30 − 34,30 = 6 € (prix d'un bocal de compote)
+- *Données parasites :* Le marché a lieu tous les samedis depuis 2017.
+- **Réponse : Le bocal de compote coûte 6 €.**
 
 ### Évaluation
 
-**Problème 1 : À la cantine** (situations : Réitération, Union, Retrait ; on cherche : reste)
+**Problème 1 : Au centre équestre** (situations : Réitération, Union, Retrait ; on cherche : reste)
 
-- Réitération : 3 × 8 = 24 kg (pommes de terre pour les 8 tables de grands en un jour)
-- Réitération : 1 × 9 = 9 kg (pommes de terre pour les 9 tables de petits en un jour)
-- Union : 24 + 9 = 33 kg (pommes de terre pour toutes les tables en un jour)
-- Réitération : 33 × 6 = 198 kg (pommes de terre pour toutes les tables en 6 jours)
-- Retrait : 200 − 198 = 2 kg (reste de pommes de terre dans la réserve)
-- **Réponse : Il restera 2 kg de pommes de terre dans la réserve.**
+- Réitération : 9 × 6 = 54 kg (foin pour les 6 chevaux en un jour)
+- Réitération : 3 × 7 = 21 kg (foin pour les 7 ânes en un jour)
+- Union : 54 + 21 = 75 kg (foin pour tous les animaux en un jour)
+- Réitération : 75 × 7 = 525 kg (foin pour tous les animaux en 7 jours)
+- Retrait : 550 − 525 = 25 kg (reste de foin dans la grange)
+- **Réponse : Il restera 25 kg de foin dans la grange.**
 
 ## Niveau ★★★
 
@@ -387,15 +387,15 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - *Données parasites :* Le sommet culmine à 1 550 m d'altitude.
 - **Réponse : Il restera 32,5 L d'eau dans les bidons du refuge.**
 
-**Problème 2 : Les confitures** (situations : Passage à l'unité, Réitération, Union, Différence ; on cherche : rendu)
+**Problème 2 : À la boulangerie** (situations : Passage à l'unité, Réitération, Union, Différence ; on cherche : rendu)
 
-- Passage à l'unité : 48,40 ÷ 11 = 4,40 € (prix d'un pot de confiture de fraises)
-- Réitération : 4,40 × 9 = 39,60 € (prix des 9 pots de confiture de fraises)
-- Réitération : 6,10 × 2 = 12,20 € (prix des 2 bocaux de compote)
-- Union : 39,60 + 12,20 = 51,80 € (prix total des achats)
-- Différence : 100 − 51,80 = 48,20 € (monnaie rendue)
-- *Données parasites :* Le stand ouvre à 8 h 15.
-- **Réponse : On doit rendre 48,20 € à Sacha.**
+- Passage à l'unité : 6,50 ÷ 5 = 1,30 € (prix d'un croissant)
+- Réitération : 1,30 × 12 = 15,60 € (prix des 12 croissants)
+- Réitération : 10,65 × 2 = 21,30 € (prix des 2 tartes aux fraises)
+- Union : 15,60 + 21,30 = 36,90 € (prix total des achats)
+- Différence : 50 − 36,90 = 13,10 € (monnaie rendue)
+- *Données parasites :* La boulangerie ouvre à 7 h 15.
+- **Réponse : On doit rendre 13,10 € à Yanis.**
 
 **Problème 3 : Au zoo** (situations : Réitération, Union, Conversion, Retrait ; on cherche : reste)
 
@@ -408,15 +408,15 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - *Données parasites :* Le zoo a ouvert ses portes en 1991.
 - **Réponse : Il restera 122 kg de viande dans la chambre froide.**
 
-**Problème 4 : À la boulangerie** (situations : Passage à l'unité, Réitération, Union, Différence ; on cherche : rendu)
+**Problème 4 : Les confitures** (situations : Passage à l'unité, Réitération, Union, Différence ; on cherche : rendu)
 
-- Passage à l'unité : 11,60 ÷ 8 = 1,45 € (prix d'un croissant)
-- Réitération : 1,45 × 13 = 18,85 € (prix des 13 croissants)
-- Réitération : 11,70 × 3 = 35,10 € (prix des 3 tartes aux fraises)
-- Union : 18,85 + 35,10 = 53,95 € (prix total des achats)
-- Différence : 100 − 53,95 = 46,05 € (monnaie rendue)
-- *Données parasites :* Une baguette mesure environ 63 cm.
-- **Réponse : On doit rendre 46,05 € à Jade.**
+- Passage à l'unité : 47,20 ÷ 8 = 5,90 € (prix d'un pot de confiture de fraises)
+- Réitération : 5,90 × 13 = 76,70 € (prix des 13 pots de confiture de fraises)
+- Réitération : 7 × 3 = 21 € (prix des 3 bocaux de compote)
+- Union : 76,70 + 21 = 97,70 € (prix total des achats)
+- Différence : 100 − 97,70 = 2,30 € (monnaie rendue)
+- *Données parasites :* Le stand ouvre à 9 h.
+- **Réponse : On doit rendre 2,30 € à Yanis.**
 
 ### Jour 2
 
@@ -430,15 +430,15 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - *Données parasites :* Le sommet culmine à 1 850 m d'altitude.
 - **Réponse : Au départ, il y a 240 L d'eau dans les bidons du refuge.**
 
-**Problème 2 : Les confitures** (situations : Passage à l'unité, Réitération, Différence, Partage ; on cherche : puB)
+**Problème 2 : À la boulangerie** (situations : Passage à l'unité, Réitération, Différence, Partage ; on cherche : puB)
 
-- Passage à l'unité : 52,25 ÷ 11 = 4,75 € (prix d'un pot de confiture de fraises)
-- Réitération : 4,75 × 4 = 19 € (prix des 4 pots de confiture de fraises)
-- Différence : 50 − 16,60 = 33,40 € (prix total des achats)
-- Différence : 33,40 − 19 = 14,40 € (prix des 2 bocaux de compote)
-- Partage : 14,40 ÷ 2 = 7,20 € (prix d'un bocal de compote)
-- *Données parasites :* Le marché a lieu tous les samedis depuis 2006.
-- **Réponse : Un bocal de compote coûte 7,20 €.**
+- Passage à l'unité : 13,75 ÷ 11 = 1,25 € (prix d'un croissant)
+- Réitération : 1,25 × 4 = 5 € (prix des 4 croissants)
+- Différence : 50 − 21 = 29 € (prix total des achats)
+- Différence : 29 − 5 = 24 € (prix des 2 tartes aux fraises)
+- Partage : 24 ÷ 2 = 12 € (prix d'une tarte aux fraises)
+- *Données parasites :* La boulangerie ouvre à 6 h 45.
+- **Réponse : Une tarte aux fraises coûte 12 €.**
 
 **Problème 3 : Au zoo** (situations : Réitération, Union, Recherche de l'état initial ; on cherche : stock)
 
@@ -450,24 +450,25 @@ Au zoo, il y a 4 lions. Chaque lion mange 8,5 kg de viande par jour. Le zoo ouv
 - *Données parasites :* Le parc s'étend sur 28 hectares. Le zoo ouvre à 9 h.
 - **Réponse : Au départ, il y a 1 700 kg de viande dans la chambre froide.**
 
-**Problème 4 : À la boulangerie** (situations : Passage à l'unité, Réitération, Union, Recherche de l'état initial ; on cherche : somme)
+**Problème 4 : Les confitures** (situations : Passage à l'unité, Réitération, Union, Recherche de l'état initial ; on cherche : somme)
 
-- Passage à l'unité : 10,80 ÷ 9 = 1,20 € (prix d'un croissant)
-- Réitération : 1,20 × 4 = 4,80 € (prix des 4 croissants)
-- Réitération : 14,75 × 3 = 44,25 € (prix des 3 tartes aux fraises)
-- Union : 4,80 + 44,25 = 49,05 € (prix total des achats)
-- Recherche de l'état initial : 49,05 + 0,95 = 50 € (billet donné)
-- *Données parasites :* Une baguette mesure environ 63 cm. Le four chauffe jusqu'à 230 °C.
-- **Réponse : Jade a donné un billet de 50 €.**
+- Passage à l'unité : 41,40 ÷ 9 = 4,60 € (prix d'un pot de confiture de fraises)
+- Réitération : 4,60 × 4 = 18,40 € (prix des 4 pots de confiture de fraises)
+- Réitération : 8,85 × 4 = 35,40 € (prix des 4 bocaux de compote)
+- Union : 18,40 + 35,40 = 53,80 € (prix total des achats)
+- Recherche de l'état initial : 53,80 + 46,20 = 100 € (billet donné)
+- *Données parasites :* Chaque pot pèse 400 g. Le stand ouvre à 8 h 30.
+- **Réponse : Yanis a donné un billet de 100 €.**
 
 ### Évaluation
 
-**Problème 1 : À la cantine** (situations : Réitération, Union, Retrait ; on cherche : reste)
+**Problème 1 : Au centre équestre** (situations : Réitération, Union, Conversion, Retrait ; on cherche : reste)
 
-- Réitération : 2,5 × 12 = 30 kg (pommes de terre pour les 12 tables de grands en un jour)
-- Réitération : 2 × 6 = 12 kg (pommes de terre pour les 6 tables de petits en un jour)
-- Union : 30 + 12 = 42 kg (pommes de terre pour toutes les tables en un jour)
-- Réitération : 42 × 9 = 378 kg (pommes de terre pour toutes les tables en 9 jours)
-- Retrait : 410 − 378 = 32 kg (reste de pommes de terre dans la réserve)
-- *Données parasites :* La salle mesure 18 m de long.
-- **Réponse : Il restera 32 kg de pommes de terre dans la réserve.**
+- Réitération : 9,5 × 11 = 104,5 kg (foin pour les 11 chevaux en un jour)
+- Réitération : 5,5 × 4 = 22 kg (foin pour les 4 ânes en un jour)
+- Union : 104,5 + 22 = 126,5 kg (foin pour tous les animaux en un jour)
+- Réitération : 126,5 × 12 = 1 518 kg (foin pour tous les animaux en 12 jours)
+- Conversion : 1,9 t = 1 900 kg (foin dans la grange au départ)
+- Retrait : 1 900 − 1 518 = 382 kg (reste de foin dans la grange)
+- *Données parasites :* Un cheval adulte pèse environ 450 kg.
+- **Réponse : Il restera 382 kg de foin dans la grange.**

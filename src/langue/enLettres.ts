@@ -9,7 +9,7 @@ const UNITES = ["zéro", "un", "deux", "trois", "quatre", "cinq", "six", "sept",
   "dix", "onze", "douze", "treize", "quatorze", "quinze", "seize"];
 const DIZAINES = ["", "dix", "vingt", "trente", "quarante", "cinquante", "soixante"];
 
-export interface OptionsLettres { rectifiee?: boolean }
+export interface OptionsLettres { rectifiee?: boolean; /** « vingt et une salades » */ feminin?: boolean }
 
 function moinsDeCent(n: number, final: boolean, sep: string): string {
   if (n <= 16) return UNITES[n];
@@ -54,5 +54,6 @@ export function enLettres(n: number, opts: OptionsLettres = {}): string {
   // « mille » est invariable et « cent/vingt » devant « mille » ne prennent pas de s
   if (milliers) parts.push(milliers === 1 ? "mille" : moinsDeMille(milliers, false, sep) + sep + "mille");
   if (reste) parts.push(moinsDeMille(reste, true, sep));
-  return parts.join(sep);
+  const s = parts.join(sep);
+  return opts.feminin ? s.replace(/(^|[ -])un$/, "$1une") : s;
 }

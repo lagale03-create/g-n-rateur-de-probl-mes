@@ -9,7 +9,7 @@ import type { Monde, Relation, Situation } from "./types";
 export interface EtapeBrute {
   rel: Relation;
   cible: string;
-  op: "×" | "÷" | "+" | "−" | "conv";
+  op: "×" | "÷" | "+" | "−" | "conv" | "ceil" | "quot";
   g: string;   // opérande gauche
   d: string;   // opérande droit
   situation: Situation;
@@ -19,6 +19,11 @@ export interface EtapeBrute {
 function calcule(rel: Relation, connu: Monde, cible: "a" | "b" | "c"): EtapeBrute {
   const { a, b, c } = rel;
   const noms = rel.noms ?? {};
+  if (rel.type === "ceil" || rel.type === "quot") {
+    const q = connu[a].div(connu[b]);
+    return { rel, cible: c, op: rel.type, g: a, d: b, valeur: rel.type === "ceil" ? q.ceil() : q.floor(),
+      situation: noms.c ?? "Groupement avec reste" };
+  }
   if (rel.type === "mul" || rel.type === "conv") {
     if (cible === "c") return { rel, cible: c, op: rel.type === "conv" ? "conv" : "×", g: a, d: b, valeur: connu[a].mul(connu[b]),
       situation: noms.c ?? (rel.type === "conv" ? "Conversion" : "Réitération") };
@@ -43,6 +48,8 @@ export function propager(relations: Relation[], connu: Monde, arret?: string): E
       const manque = (["a", "b", "c"] as const).find((x) => connu[rel[x]] === undefined)!;
       // une conversion ne se « divise » pas par son facteur
       if (rel.type === "conv" && manque === "b") continue;
+      // un arrondi ou un quotient entier ne se calcule pas « à l'envers »
+      if ((rel.type === "ceil" || rel.type === "quot") && manque !== "c") continue;
       const e = calcule(rel, connu, manque);
       connu[e.cible] = e.valeur;
       etapes.push(e);

@@ -77,6 +77,6 @@ describe("séance de préparation", () => {
   });
 
   it("message clair pour une semaine sans schéma", () => {
-    expect(() => genererJour1(sessionVide({ ...CONFIG_DEFAUT, numero: 1 }))).toThrow(/pas encore de schéma/);
+    expect(() => genererJour1(sessionVide({ ...CONFIG_DEFAUT, numero: 9 }))).toThrow(/pas encore de schéma/);
   });
 });

@@ -15,3 +15,10 @@ export function billet(total: Q, rng: Rng): Q {
   // le plus petit billet qui suffit, parfois le suivant
   return Q.of(billets[Math.min(i + (rng.chance(0.25) ? 1 : 0), billets.length - 1)]);
 }
+
+/** Entier tiré entre min% et max% de x (au moins 1), arrondi au multiple `pas`. */
+export function partDe(x: Q, rng: Rng, min = 0.2, max = 0.7, pas = 1): Q {
+  const lo = Math.max(1, Math.ceil((x.toNumber() * min) / pas));
+  const hi = Math.max(lo, Math.floor((x.toNumber() * max) / pas));
+  return Q.of(rng.int(lo, hi) * pas);
+}

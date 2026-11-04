@@ -58,7 +58,8 @@ export function verifier(b: Brouillon): string[] {
   for (const e of sol.etapes) {
     const g = connu[e.g] ?? monde[e.g], d = connu[e.d] ?? monde[e.d];
     if (e.op === "×" && !g.isInteger && !d.isInteger) err.push(`multiplication décimal × décimal (${e.cible})`);
-    if (e.op === "÷" && !d.isInteger) err.push(`division par un décimal (${e.cible})`);
+    if ((e.op === "÷" || e.op === "ceil" || e.op === "quot") && !d.isInteger) err.push(`division par un décimal (${e.cible})`);
+    if ((e.op === "ceil" || e.op === "quot") && !g.isInteger) err.push(`division avec reste d'un décimal (${e.cible})`);
   }
 
   // 5. toutes les données servent ; aucune inconnue n'est révélée

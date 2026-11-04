@@ -14,7 +14,7 @@ const gen = (num: number, graine: string) => {
 };
 
 describe("semaine", () => {
-  for (const num of [5, 8, 19]) {
+  for (const num of [1, 2, 3, 4, 5, 6, 7, 8, 19]) {
     for (let g = 0; g < 20; g++) {
       it(`S${num} graine ${g} : structure respectée`, () => {
         const s = gen(num, `G${g}`);

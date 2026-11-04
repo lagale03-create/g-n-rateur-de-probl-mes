@@ -29,13 +29,13 @@ export function uniteDe(g: Grandeur, unites: EnvRendu["unites"]): string {
   return "";
 }
 
-export function formatVar(nom: string, env: EnvRendu, lettresOk = true): string {
+export function formatVar(nom: string, env: EnvRendu, lettresOk = true, feminin = false): string {
   const v = env.valeurs[nom];
   if (!v) throw new Error(`Variable inconnue dans le gabarit : ${nom}`);
   const g = env.grandeurs[nom] ?? "compte";
   if (lettresOk && env.lettres.has(nom) && v.isInteger) {
     const u = uniteDe(g, env.unites);
-    return enLettres(v.toNumber()) + (g === "euro" ? " euros" : u ? " " + u : "");
+    return enLettres(v.toNumber(), { feminin }) + (g === "euro" ? " euros" : u ? " " + u : "");
   }
   if (g === "euro") return formatEuros(v);
   return formatMesure(v, uniteDe(g, env.unites));
@@ -59,7 +59,10 @@ export function variablesCitees(t: string): string[] {
 
 export function rendre(t: string, env: EnvRendu, opts: { lettres?: boolean } = {}): string {
   const lettresOk = opts.lettres ?? true;
-  let s = t.replace(/\{(\w+)\}/g, (_, nom: string) => formatVar(nom, env, lettresOk));
+  // « {n} [table:n] » : le nombre en lettres s'accorde avec un nom féminin (« vingt et une tables »)
+  let s = t.replace(/\{(\w+)\}(\s+\[(\w+):\1\])/g, (_, nom: string, suite: string, mot: string) =>
+    formatVar(nom, env, lettresOk, env.mots[mot]?.g === "f") + suite);
+  s = s.replace(/\{(\w+)\}/g, (_, nom: string) => formatVar(nom, env, lettresOk));
   s = s.replace(/\[(\w+)(?::(\w+))?\]/g, (_, a: string, b?: string) => {
     const getMot = (k: string) => {
       const m = env.mots[k];
