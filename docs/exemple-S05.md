@@ -84,11 +84,7 @@ b) Combien de croissants peut-on acheter avec 12 € ?
 
 À la cantine, il y a 3 tables de grands. Chaque table de grands mange 4 kg de pommes de terre par jour. La cuisinière dispose de 50 kg de pommes de terre dans la réserve. Elle doit préparer les repas pendant 4 jours.
 
-a) Quelle masse de pommes de terre les 3 tables de grands mangent-elles en tout chaque jour ?
-
-b) Quelle masse de pommes de terre faut-il pour toutes les tables pendant 4 jours ?
-
-c) Quelle masse de pommes de terre restera-t-il dans la réserve au bout de ces 4 jours ?
+**Quelle masse de pommes de terre restera-t-il dans la réserve au bout de ces 4 jours ?**
 
 ## Niveau ★★ · Jour 1
 

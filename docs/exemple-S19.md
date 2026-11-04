@@ -76,9 +76,7 @@ b) Combien de croissants peut-on acheter avec 2 € ?
 
 À la mairie, 3 tickets de cantine coûtent 12 €. Jade achète 10 tickets de cantine.
 
-a) Combien coûte un ticket de cantine ?
-
-b) Combien Jade va-t-elle payer ?
+**Combien Jade va-t-elle payer ?**
 
 ## Niveau ★★ · Jour 1
 

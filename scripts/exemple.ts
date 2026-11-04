@@ -26,7 +26,7 @@ L.push(`# Semaine ${num} : ${prog.titre}`, "", `Graine : \`${graine}\``, "");
 const probleme = (p: Probleme, i: number | string) => {
   L.push(`**Problème ${i} : ${p.titreContexte}**`, "");
   L.push(p.enonce, "");
-  if (p.niveau === 1) p.guidees.forEach((g, k) => L.push(`${String.fromCharCode(97 + k)}) ${g}`, ""));
+  if (p.guidees.length) p.guidees.forEach((g, k) => L.push(`${String.fromCharCode(97 + k)}) ${g}`, ""));
   else L.push(`**${p.question}**`, "");
 };
 

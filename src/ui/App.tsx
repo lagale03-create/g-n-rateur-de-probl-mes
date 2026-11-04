@@ -17,7 +17,7 @@ function Prob({ p, i }: { p: Probleme; i: number }) {
     <div style={{ border: "1px solid #2e75b6", background: "#eaf2fb", padding: 12, margin: "8px 0", borderRadius: 4 }}>
       <b>Problème {i} : {p.titreContexte}</b>
       <p>{p.enonce}</p>
-      {p.niveau === 1
+      {p.guidees.length > 0
         ? <ol type="a">{p.guidees.map((g, k) => <li key={k}>{g}</li>)}</ol>
         : <p><b>{p.question}</b></p>}
       <details>

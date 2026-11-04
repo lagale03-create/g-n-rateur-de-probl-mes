@@ -31,6 +31,9 @@ describe("semaine", () => {
             expect(p.monde).not.toEqual(ns.jour1[i].monde);
           });
           expect(ns.evaluation.contexteId).toBe(s.contexteEval);
+          // évaluation : question finale seule, même au niveau ★
+          expect(ns.evaluation.guidees).toHaveLength(0);
+          if (n === 1) ns.jour1.forEach((p) => expect(p.guidees.length).toBe(p.etapes.length));
         }
       });
     }

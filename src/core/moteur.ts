@@ -203,7 +203,8 @@ function construire(
     const libelle = vl ? rendre(vl.t, envCorrige).replace(/\.$/, "") : e.cible;
     const lib = libelle.charAt(0).toLowerCase() + libelle.slice(1);
     etapes.push({ situation: e.situation, calcul, libelle: lib, cible: e.cible, texte: `${e.situation} : ${calcul} (${lib})` });
-    if (niveau === 1) {
+    // ★ : questions guidées les Jours 1 et 2 ; l'évaluation n'a que la question finale
+    if (niveau === 1 && dm.jour !== "eval") {
       if (e.cible === inc.inconnue) guidees.push(question);
       else {
         const vg = choisir(textes.guidees[e.cible], donnees, niveau);
