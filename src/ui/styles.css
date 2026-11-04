@@ -86,3 +86,9 @@ h3.jour { color: var(--orange); font-size: 17px; margin: 18px 0 8px; }
 .eleve-corr p { margin: 4px 0; }
 ul.guidees { list-style: none; padding-left: 0; margin: 6px 0 0; }
 ul.guidees li { margin: 3px 0; }
+.visuel-tableau { border-collapse: collapse; background: #fff; margin: 8px 0; font-size: 14px; }
+.visuel-tableau caption { font-weight: bold; text-align: left; padding-bottom: 4px; }
+.visuel-tableau th, .visuel-tableau td { border: 1px solid #8a8a8a; padding: 4px 10px; text-align: center; }
+.visuel-tableau th[scope=row] { text-align: left; }
+.visuel-graphique { background: #fff; border: 1px solid var(--trait); border-radius: 6px; margin: 8px 0; max-width: 560px; }
+.visuel-graphique svg { width: 100%; height: auto; display: block; }

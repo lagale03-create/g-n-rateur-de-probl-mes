@@ -28,6 +28,10 @@ export function commenceParVoyelle(m: Mot): boolean {
 
 /** « de viande », « d'eau » */
 export function de(m: Mot): string {
+  // « le potager » → « du potager », « les fraisiers » → « des fraisiers »
+  if (/^le /i.test(m.s)) return "du " + m.s.slice(3);
+  if (/^les /i.test(m.s)) return "des " + m.s.slice(4);
+  if (/^(la |l')/i.test(m.s)) return "de " + m.s;
   return commenceParVoyelle(m) ? `d'${m.s}` : `de ${m.s}`;
 }
 /** « un croissant », « une tarte » */

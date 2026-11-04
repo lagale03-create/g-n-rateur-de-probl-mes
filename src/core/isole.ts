@@ -4,6 +4,7 @@
  */
 import { genererProbleme } from "./moteur";
 import { rngFor } from "./rng";
+import { habillage } from "./habillage";
 import type { Contexte, Niveau, Probleme, Schema, Situation } from "./types";
 
 export interface EntreeCatalogue {
@@ -22,9 +23,9 @@ export function catalogue(schemas: Schema[], contextes: Contexte[]): EntreeCatal
   if (c) return c;
   const res: EntreeCatalogue[] = [];
   for (const schema of schemas) {
-    for (const contexte of contextes.filter((x) => x.schemas[schema.id])) {
+    for (const contexte of contextes.filter((x) => habillage(schema, x))) {
       for (const niveau of [1, 2, 3] as Niveau[]) {
-        const st = schema.structure(niveau, contexte.schemas[schema.id]);
+        const st = schema.structure(niveau, habillage(schema, contexte)!);
         for (const inc of [st.j1, ...st.j2]) {
           try {
             const p = genererProbleme({ schema, contexte, niveau, jour: 1, graine: "catalogue", chemin: "c", inconnue: inc.inconnue });

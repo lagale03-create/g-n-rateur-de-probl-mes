@@ -4,7 +4,7 @@ import JSZip from "jszip";
 import { genererSemaine } from "../src/core/semaine";
 import { semaineProg } from "../src/data/progression";
 import { schemaParId } from "../src/data/schemas";
-import { CONTEXTES } from "../src/data/contextes";
+import { contextesPour } from "../src/data/contextes";
 import { CONSIGNE_3, nomFichier, semaineEnBuffer } from "../src/export/docx";
 
 const compte = (s: string, motif: string | RegExp) =>
@@ -13,7 +13,7 @@ const compte = (s: string, motif: string | RegExp) =>
 async function exporter(graine: string) {
   const p = semaineProg(5);
   const sem = genererSemaine({
-    numero: 5, titre: p.titre, graine, contextes: CONTEXTES,
+    numero: 5, titre: p.titre, graine, contextes: contextesPour(p.theme),
     schemas: p.schemas.map(schemaParId), principal: p.principal ? schemaParId(p.principal) : undefined,
   });
   const zip = await JSZip.loadAsync(await semaineEnBuffer(sem));

@@ -4,6 +4,62 @@ export const bibliotheque: Contexte = {
   id: "bibliotheque",
   titre: "À la bibliothèque",
   schemas: {
+    "achat-unite": {
+      mots: {
+        lieu: "à la brocante de la bibliothèque",
+        artA: [{ s: "livre de poche", p: "livres de poche" }, { s: "bande dessinée", p: "bandes dessinées", g: "f" }],
+        artB: [{ s: "dictionnaire" }, { s: "atlas", p: "atlas", voy: true }],
+      },
+      plages: {
+        1: { pu: { min: 1, max: 4 } }, 2: { pu: { min: 1, max: 4, pas: 0.1 }, prixB: { min: 5, max: 12, pas: 0.5 } },
+        3: { pu: { min: 1.2, max: 4, pas: 0.05 }, puB: { min: 5, max: 12, pas: 0.05 }, nB: { min: 2, max: 3 } },
+      },
+    },
+    trajet: {
+      mots: {
+        qui: { s: "le bibliobus", g: "m" }, verbe: "roule", e1: "jusqu'au premier village", e2: "jusqu'à l'école du hameau",
+        e3: "jusqu'à la maison de retraite", but: "au dernier arrêt", moyen: "sur les routes de campagne", moment1: "le matin", moment2: "l'après-midi",
+      },
+      plages: { 1: { v1: { min: 30, max: 60, pas: 5 } }, 2: { v1: { min: 30, max: 60, pas: 5 }, v2: { min: 20, max: 50, pas: 5 } }, 3: { v1: { min: 30, max: 60, pas: 2.5 }, v2: { min: 20, max: 50, pas: 2.5 } } },
+    },
+    decoupe: {
+      mots: { lieu: "à la bibliothèque", qui: { s: "la bibliothécaire", g: "f" }, matiere: { s: "film plastique", g: "m" }, rouleau: { s: "rouleau" }, objA: { s: "album", voy: true }, objB: { s: "dictionnaire" } },
+    },
+    durees: {
+      mots: {
+        lieu: "à la bibliothèque", qui: { s: "la classe", g: "f" }, a1: { s: "l'heure du conte", g: "f" },
+        a2: { s: "le choix des livres", g: "m" }, a3: { s: "la lecture silencieuse", g: "f" }, limite: "La bibliothèque ferme à",
+      },
+    },
+    fraction: {
+      mots: { ensemble: "à la bibliothèque", obj: { s: "livre" }, groupe1: "sont des romans", groupe2: "sont des bandes dessinées", groupe3: "sont des documentaires" },
+    },
+    "fractions-somme": {
+      mots: {
+        tout: { s: "le roman", g: "m" }, quantite: "compte", qA: "Lundi, [prenom] lit", qB: "Mardi, [il:prenom] lit", qC: "Mercredi, [il:prenom] lit",
+        qBq: "Quelle fraction du roman [prenom] a-t-[il:prenom] lue mardi ?", qreste: "Combien de pages [prenom] doit-[il:prenom] encore lire ?",
+      },
+      unites: { quantite: "pages" },
+    },
+    tarif: {
+      mots: { lieu: "à la médiathèque", qui: { s: "Zoé", g: "f" }, seance: { s: "film emprunté", p: "films empruntés" }, fixe: "d'inscription" },
+      plages: { 1: { pu: { min: 1, max: 3 }, fixe: { min: 10, max: 25, pas: 5 } }, 2: { pu: { min: 1, max: 3 }, fixe: { min: 10, max: 25, pas: 5 } }, 3: { pu: { min: 1, max: 3, pas: 0.5 }, fixe: { min: 10, max: 25, pas: 5 } } },
+    },
+    terrain: {
+      mots: { lieu: "à la bibliothèque", objet: { s: "la salle de lecture", g: "f" }, cloture: { s: "frise décorative", g: "f" }, ouverture: "la porte", revetement: { s: "moquette", g: "f" }, partie: { s: "le coin des tout-petits", g: "m" } },
+      plages: { 1: { L: { min: 5, max: 12 }, l: { min: 3, max: 8 } }, 2: { L: { min: 8, max: 20 }, l: { min: 5, max: 12 } }, 3: { L: { min: 8, max: 20, pas: 0.5 }, l: { min: 5, max: 12 } } },
+    },
+    serie: {
+      mots: {
+        titreG: "le nombre de livres prêtés chaque jour", obj: { s: "livre" },
+        c1: "lundi", c2: "mardi", c3: "mercredi", c4: "jeudi", c5: "vendredi", prixPhrase: "Pour chaque livre prêté, la mairie verse",
+        titreS: "les livres préférés des élèves", objS: { s: "élève", voy: true }, s1: "les romans", s2: "les BD", s3: "les albums", s4: "les documentaires",
+      },
+      plages: { 2: { pu: { min: 0.5, max: 2, pas: 0.5 } } },
+    },
+    proba: {
+      mots: { contenant: "la boîte à livres", objA: { s: "roman" }, objB: { s: "bande dessinée", p: "bandes dessinées", g: "f" }, objC: { s: "album", voy: true }, objet: { s: "livre" }, tirer: "prend", tirerInf: "prendre" },
+    },
     "etats-transformations": {
       mots: {
         obj: { s: "livre" }, stock: "sur les étagères",

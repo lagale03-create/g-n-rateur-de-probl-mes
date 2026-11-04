@@ -5,11 +5,16 @@
  * pour n'imprimer que les pages d'un groupe. Le corrigé enseignant est à la fin.
  */
 import {
-  AlignmentType, BorderStyle, Document, Footer, HeightRule, LevelFormat, Packer,
+  AlignmentType, BorderStyle, Document, Footer, HeightRule, ImageRun, LevelFormat, Packer,
   PageNumber, Paragraph, ShadingType, Table, TableCell, TableRow, TextRun, WidthType,
   type ISectionOptions,
 } from "docx";
-import type { Niveau, Probleme } from "../core/types";
+import type { Niveau, Probleme, Visuel } from "../core/types";
+import { HAUTEUR_G, LARGEUR_G, pngDuVisuel } from "./graphiques";
+
+/** Images des graphiques, par identifiant de problème (calculées avant la mise en page). */
+type Images = Map<string, Uint8Array>;
+let IMAGES: Images = new Map();
 
 /** Ce que l'export accepte : une semaine complète, ou en cours (Jour 2 / évaluation pas encore créés). */
 export interface NiveauExport { jour1: readonly Probleme[]; jour2: readonly Probleme[]; evaluation?: Probleme }
@@ -82,11 +87,13 @@ const HAUTEUR_CONSIGNE = 800;
 /** Cadre bleu clair à bordure bleue contenant l'énoncé. */
 function cadreEnonce(p: Probleme, numero: number, avecQuestion: boolean): Table {
   const bord = { style: BorderStyle.SINGLE, size: 12, color: BLEU };
-  const enfants = [
+  const enfants: Bloc[] = [
     new Paragraph({ spacing: { after: 100 }, children: [txt(`Problème ${numero} : ${p.titreContexte}`, { bold: true })] }),
     new Paragraph({ spacing: { after: avecQuestion ? 100 : 0, line: 300 }, children: [txt(p.enonce)] }),
   ];
+  if (p.visuel) enfants.push(...blocsVisuel(p.visuel, p.id));
   if (avecQuestion) enfants.push(new Paragraph({ spacing: { line: 300 }, children: [txt(p.question, { bold: true })] }));
+  if (!avecQuestion && p.visuel) enfants.push(new Paragraph({ children: [] }));
   return new Table({
     width: { size: LARGEUR, type: WidthType.DXA },
     columnWidths: [LARGEUR],
@@ -103,11 +110,47 @@ function cadreEnonce(p: Probleme, numero: number, avecQuestion: boolean): Table 
   });
 }
 
+/** Tableau (Word) ou graphique (image) inséré dans l'énoncé. */
+function blocsVisuel(v: Visuel, id: string): Bloc[] {
+  if (v.type === "tableau") {
+    const L = LARGEUR - 400;
+    const n = v.colonnes.length;
+    const larg = [Math.round(L * 0.3), ...Array(n - 1).fill(Math.floor((L * 0.7) / (n - 1)))];
+    const bord = { style: BorderStyle.SINGLE, size: 6, color: "7F7F7F" };
+    const cell = (t: string, i: number, entete: boolean) => new TableCell({
+      width: { size: larg[i], type: WidthType.DXA },
+      shading: { type: ShadingType.CLEAR, fill: entete ? "FFFFFF" : "FFFFFF", color: "auto" },
+      margins: { top: 60, bottom: 60, left: 100, right: 100 },
+      children: [new Paragraph({ alignment: i === 0 ? AlignmentType.LEFT : AlignmentType.CENTER, children: [txt(t, { bold: entete || i === 0 })] })],
+    });
+    return [
+      new Paragraph({ spacing: { before: 120, after: 60 }, children: [txt(v.titre, { bold: true })] }),
+      new Table({
+        width: { size: larg.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: larg,
+        borders: { top: bord, bottom: bord, left: bord, right: bord, insideHorizontal: bord, insideVertical: bord },
+        rows: [
+          new TableRow({ children: v.colonnes.map((c, i) => cell(c, i, true)) }),
+          ...v.lignes.map((l) => new TableRow({ children: [cell(l.label, 0, false), ...l.valeurs.map((x, i) => cell(x.texte, i + 1, false))] })),
+        ],
+      }),
+      new Paragraph({ spacing: { after: 100 }, children: [] }),
+    ];
+  }
+  const data = IMAGES.get(id);
+  if (!data) return [];
+  const w = 520, h = Math.round((w * HAUTEUR_G) / LARGEUR_G);
+  return [new Paragraph({
+    alignment: AlignmentType.CENTER, spacing: { before: 120, after: 120 },
+    children: [new ImageRun({ type: "png", data, transformation: { width: w, height: h }, altText: { title: v.titre, description: v.titre, name: v.titre } })],
+  })];
+}
+
 /** Estimation prudente de la hauteur d'un cadre d'énoncé (pour dimensionner l'espace de recherche). */
 export function hauteurEnonce(p: Probleme, avecQuestion: boolean): number {
   const lignes = (t: string) => Math.max(1, Math.ceil(t.length / 72));
   const n = 1 + lignes(p.enonce) + (avecQuestion ? lignes(p.question) : 0);
-  return n * 330 + 280 + 400;
+  const visuel = !p.visuel ? 0 : p.visuel.type === "tableau" ? 500 + 420 * (p.visuel.lignes.length + 1) : 5200;
+  return n * 330 + 280 + 400 + visuel;
 }
 
 function ligneReponse(avant = 640, variante = 0): Paragraph {
@@ -130,8 +173,10 @@ function sautDePage(): Paragraph {
 function pagesGuidees(probs: readonly Probleme[]): Bloc[] {
   const blocs: Bloc[] = [];
   probs.forEach((p, i) => {
-    if (i > 0 && i % 2 === 0) blocs.push(sautDePage());
-    if (i % 2 === 1) blocs.push(new Paragraph({ spacing: { before: 360 }, children: [] }));
+    // deux problèmes par page ; un problème avec un tableau ou un graphique prend une page entière
+    const seul = probs.some((x) => x.visuel && x.visuel.type !== "tableau");
+    if (i > 0 && (seul || i % 2 === 0)) blocs.push(sautDePage());
+    if (i % 2 === 1 && !seul) blocs.push(new Paragraph({ spacing: { before: 360 }, children: [] }));
     blocs.push(cadreEnonce(p, i + 1, false));
     p.guidees.forEach((g, k) => {
       blocs.push(new Paragraph({
@@ -270,12 +315,25 @@ export function documentSemaine(sem: Semaine, o: OptionsExport = {}): Document {
   });
 }
 
+/** Calcule les images des graphiques de la semaine. */
+async function preparerImages(sem: Semaine): Promise<Images> {
+  const m: Images = new Map();
+  for (const ns of Object.values(sem.niveaux)) {
+    for (const p of [...ns!.jour1, ...ns!.jour2, ...(ns!.evaluation ? [ns!.evaluation] : [])]) {
+      if (p.visuel && p.visuel.type !== "tableau") m.set(p.id, await pngDuVisuel(p.visuel));
+    }
+  }
+  return m;
+}
+
 /** Dans le navigateur : fichier prêt à télécharger. */
-export function semaineEnBlob(sem: Semaine, o?: OptionsExport): Promise<Blob> {
+export async function semaineEnBlob(sem: Semaine, o?: OptionsExport): Promise<Blob> {
+  IMAGES = await preparerImages(sem);
   return Packer.toBlob(documentSemaine(sem, o));
 }
 
 /** Dans Node (tests, scripts). */
-export function semaineEnBuffer(sem: Semaine, o?: OptionsExport): Promise<Buffer> {
+export async function semaineEnBuffer(sem: Semaine, o?: OptionsExport): Promise<Buffer> {
+  IMAGES = await preparerImages(sem);
   return Packer.toBuffer(documentSemaine(sem, o));
 }

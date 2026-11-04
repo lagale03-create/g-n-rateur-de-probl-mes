@@ -4,6 +4,46 @@ export const zoo: Contexte = {
   id: "zoo",
   titre: "Au zoo",
   schemas: {
+    "partage-frais": {
+      mots: {
+        occasion: "pour la sortie au zoo", qui: { s: "la coopérative de la classe", g: "f" },
+        depA: { s: "la location du car", g: "f" }, depB: { s: "les billets d'entrée", g: "m" }, depC: { s: "l'atelier du soigneur", g: "m" },
+        parts: { s: "famille", g: "f" }, aide: "La coopérative de l'école verse",
+      },
+    },
+    durees: {
+      mots: {
+        lieu: "au zoo", qui: { s: "la classe", g: "f" }, a1: { s: "la visite de la savane", g: "f" },
+        a2: { s: "le spectacle des otaries", g: "m" }, a3: { s: "le pique-nique", g: "m" }, limite: "Le car repart à",
+      },
+    },
+    fraction: {
+      mots: { ensemble: "au zoo", obj: { s: "animal", p: "animaux" }, groupe1: "vivent dans la savane", groupe2: "vivent dans la forêt", groupe3: "vivent au bord de l'eau" },
+    },
+    tarif: {
+      mots: { lieu: "au zoo", qui: { s: "la famille de Lina", g: "f" }, seance: { s: "visite", g: "f" }, fixe: "pour la carte de fidélité" },
+      plages: { 1: { pu: { min: 6, max: 12 } }, 2: { pu: { min: 6, max: 12 } }, 3: { pu: { min: 6, max: 12, pas: 0.5 } } },
+    },
+    terrain: {
+      mots: { lieu: "au zoo", objet: { s: "l'enclos des zèbres", g: "m" }, cloture: { s: "grillage", g: "m" }, ouverture: "le passage des soigneurs", revetement: { s: "gazon", g: "m" }, partie: { s: "la mare", g: "f" } },
+    },
+    volume: {
+      mots: { lieu: "au zoo", objet: { s: "l'aquarium des poissons clowns", g: "m" }, ress: { s: "eau", g: "f", voy: true }, seau: { s: "bidon" } },
+    },
+    serie: {
+      mots: {
+        titreG: "le nombre de visiteurs du zoo chaque jour de la semaine", obj: { s: "visiteur" },
+        c1: "lundi", c2: "mardi", c3: "mercredi", c4: "jeudi", c5: "vendredi", prixPhrase: "Un billet d'entrée coûte",
+        titreS: "les animaux préférés des visiteurs", objS: { s: "visiteur" }, s1: "les lions", s2: "les girafes", s3: "les singes", s4: "les pingouins",
+      },
+      plages: { 2: { pu: { min: 10, max: 20 } } },
+    },
+    proba: {
+      mots: { contenant: "le sac à surprises de la boutique", objA: { s: "peluche lion", p: "peluches lion", g: "f" }, objB: { s: "peluche girafe", p: "peluches girafe", g: "f" }, objC: { s: "peluche singe", p: "peluches singe", g: "f" }, objet: { s: "peluche", g: "f" }, tirer: "tire", tirerInf: "tirer" },
+    },
+    "deux-sortes": {
+      mots: { lieu: "dans l'enclos de la savane", sA: { s: "autruche", g: "f", voy: true }, sB: { s: "zèbre" }, unite: { s: "tête", g: "f" }, valeur: { s: "patte", g: "f" }, vA: "2", vB: "4", tous: "tous les animaux" },
+    },
     "etats-transformations": {
       mots: {
         obj: { s: "visiteur" }, stock: "dans le zoo",

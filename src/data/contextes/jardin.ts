@@ -4,6 +4,44 @@ export const jardin: Contexte = {
   id: "jardin",
   titre: "Au jardin de l'école",
   schemas: {
+    "achat-unite": {
+      mots: {
+        lieu: "à la jardinerie",
+        artA: [{ s: "sachet de graines", p: "sachets de graines" }, { s: "pot de fleurs", p: "pots de fleurs" }],
+        artB: [{ s: "arrosoir", voy: true }, { s: "sac de terreau", p: "sacs de terreau" }],
+      },
+      plages: {
+        1: { pu: { min: 1, max: 4 } }, 2: { pu: { min: 1, max: 4, pas: 0.1 }, prixB: { min: 6, max: 14, pas: 0.5 } },
+        3: { pu: { min: 1.15, max: 4, pas: 0.05 }, puB: { min: 6, max: 14, pas: 0.05 }, nB: { min: 2, max: 3 } },
+      },
+    },
+    decoupe: {
+      mots: { lieu: "au jardin de l'école", qui: { s: "le jardinier", g: "m" }, matiere: { s: "ficelle", g: "f" }, rouleau: { s: "pelote", g: "f" }, objA: { s: "pied de tomate", p: "pieds de tomate" }, objB: { s: "haricot grimpant", p: "haricots grimpants" } },
+    },
+    remplissage: {
+      mots: { lieu: "au jardin de l'école", qui: { s: "la maîtresse", g: "f" }, ress: { s: "terreau", g: "m" }, stockMot: "un sac", recA: { s: "petit pot", p: "petits pots", g: "m" }, recB: { s: "jardinière", g: "f" } },
+      unites: { grande: "kg", quantite: "g", facteur: 1000 },
+    },
+    fraction: {
+      mots: { ensemble: "au jardin de l'école", obj: { s: "plant" }, groupe1: "sont des tomates", groupe2: "sont des salades", groupe3: "sont des fraisiers" },
+    },
+    "fractions-somme": {
+      mots: {
+        tout: { s: "le potager", g: "m" }, quantite: "mesure", qA: "Les tomates occupent", qB: "Les salades occupent", qC: "Les fraisiers occupent",
+        qBq: "Quelle fraction du potager les salades occupent-elles ?", qreste: "Quelle surface du potager reste libre ?",
+      },
+      unites: { quantite: "m²" },
+    },
+    terrain: {
+      mots: { lieu: "au jardin de l'école", objet: { s: "le potager", g: "m" }, cloture: { s: "grillage", g: "m" }, ouverture: "la brouette", revetement: { s: "paillage", g: "m" }, partie: { s: "le composteur", g: "m" } },
+      plages: { 1: { L: { min: 4, max: 10 }, l: { min: 2, max: 6 } }, 2: { L: { min: 6, max: 15 }, l: { min: 3, max: 10 } }, 3: { L: { min: 6, max: 15, pas: 0.5 }, l: { min: 3, max: 10 } } },
+    },
+    volume: {
+      mots: { lieu: "au jardin de l'école", objet: { s: "le bac à compost", g: "m" }, ress: { s: "terreau", g: "m" }, seau: { s: "seau" } },
+    },
+    proba: {
+      mots: { contenant: "le sachet de graines mélangées", objA: { s: "graine de radis", p: "graines de radis", g: "f" }, objB: { s: "graine de carotte", p: "graines de carotte", g: "f" }, objC: { s: "graine de salade", p: "graines de salade", g: "f" }, objet: { s: "graine", g: "f" }, tirer: "prend", tirerInf: "prendre" },
+    },
     "etats-transformations": {
       mots: {
         obj: { s: "plant de salade", p: "plants de salade" }, stock: "dans la serre",

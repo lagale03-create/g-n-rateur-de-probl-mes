@@ -48,16 +48,20 @@ export function verifier(b: Brouillon): string[] {
     if (g === "facteur") continue;
     if (x.isNegative) err.push(`${v} négatif`);
     if ((donnees.includes(v) || v === inconnue) && x.cmp(0) <= 0) err.push(`${v} nul`);
-    if (g === "compte" && !x.isInteger) err.push(`${v} : quantité non entière (${x})`);
+    if ((g === "compte" || g === "duree" || g === "heure") && !x.isInteger) err.push(`${v} : quantité non entière (${x})`);
+    if (g === "heure" && x.cmp(24 * 60) >= 0) err.push(`${v} : heure après minuit`);
+    if (g === "fraction" || g === "proba") continue;
     if (g === "euro" && x.decimales > 2) err.push(`${v} : plus de 2 décimales en euros`);
     if (g === "euro" && niveau === 1 && x.decimales > 1 && !x.mul(2).isInteger) err.push(`${v} : prix trop complexe pour ★`);
-    if (g !== "euro" && g !== "compte" && x.decimales > (g === "quantiteGrande" ? 3 : maxDec)) err.push(`${v} : trop de décimales (${x})`);
+    if (g !== "euro" && g !== "compte" && g !== "pourcent" && x.decimales > (g === "quantiteGrande" ? 3 : maxDec)) err.push(`${v} : trop de décimales (${x})`);
   }
 
   // 4. pas de décimal × décimal ; on ne divise que par un entier
   for (const e of sol.etapes) {
     const g = connu[e.g] ?? monde[e.g], d = connu[e.d] ?? monde[e.d];
-    if (e.op === "×" && !g.isInteger && !d.isInteger) err.push(`multiplication décimal × décimal (${e.cible})`);
+    const frac = (n: string) => ["fraction", "proba"].includes(struct.variables[n]?.grandeur);
+    if (e.op === "×" && !g.isInteger && !d.isInteger && !frac(e.g) && !frac(e.d)) err.push(`multiplication décimal × décimal (${e.cible})`);
+    if (e.op === "×" && frac(e.g) && frac(e.d)) err.push(`produit de deux fractions (${e.cible})`);
     if ((e.op === "÷" || e.op === "ceil" || e.op === "quot") && !d.isInteger) err.push(`division par un décimal (${e.cible})`);
     if ((e.op === "ceil" || e.op === "quot") && !g.isInteger) err.push(`division avec reste d'un décimal (${e.cible})`);
   }
@@ -66,7 +70,8 @@ export function verifier(b: Brouillon): string[] {
   const utilisees = new Set(sol.etapes.flatMap((e) => [e.g, e.d]));
   for (const d of donnees) if (!utilisees.has(d)) err.push(`donnée inutile non voulue : ${d}`);
   for (const d of donnees) if (!b.citees.has(d)) err.push(`donnée absente du texte : ${d}`);
-  for (const c of b.citees) if (!donnees.includes(c)) err.push(`le texte révèle ${c}`);
+  const consts = [...implicites(struct), ...Object.keys(struct.variables).filter((k) => struct.variables[k].visible)];
+  for (const c of b.citees) if (!donnees.includes(c) && !consts.includes(c)) err.push(`le texte révèle ${c}`);
 
   // 6. les données parasites ne servent à rien et ne se confondent pas avec une donnée utile
   const valeursUtiles = vars.filter((v) => struct.variables[v].grandeur !== "facteur").map((v) => monde[v]);

@@ -2,20 +2,20 @@ import { describe, expect, it } from "vitest";
 import { genererSemaine } from "../src/core/semaine";
 import { semaineProg } from "../src/data/progression";
 import { schemaParId } from "../src/data/schemas";
-import { CONTEXTES } from "../src/data/contextes";
+import { contextesPour } from "../src/data/contextes";
 import type { Niveau } from "../src/core/types";
 
 const gen = (num: number, graine: string) => {
   const p = semaineProg(num);
   return genererSemaine({
-    numero: num, titre: p.titre, graine, contextes: CONTEXTES,
+    numero: num, titre: p.titre, graine, contextes: contextesPour(p.theme),
     schemas: p.schemas.map(schemaParId), principal: p.principal ? schemaParId(p.principal) : undefined,
   });
 };
 
 describe("semaine", () => {
-  for (const num of [1, 2, 3, 4, 5, 6, 7, 8, 19]) {
-    for (let g = 0; g < 20; g++) {
+  for (let num = 1; num <= 36; num++) {
+    for (let g = 0; g < 6; g++) {
       it(`S${num} graine ${g} : structure respectée`, () => {
         const s = gen(num, `G${g}`);
         expect(new Set(s.contextes).size).toBe(4);
@@ -33,7 +33,7 @@ describe("semaine", () => {
           expect(ns.evaluation.contexteId).toBe(s.contexteEval);
           // évaluation : question finale seule, même au niveau ★
           expect(ns.evaluation.guidees).toHaveLength(0);
-          if (n === 1) ns.jour1.forEach((p) => expect(p.guidees.length).toBe(p.etapes.length));
+          if (n === 1) ns.jour1.forEach((p) => expect(p.guidees.length).toBe(p.etapes.filter((e) => !e.situation.startsWith("Lecture")).length));
         }
       });
     }
@@ -41,7 +41,7 @@ describe("semaine", () => {
   it("contextes imposés et exclus", () => {
     const p = semaineProg(5);
     const s = genererSemaine({
-      numero: 5, titre: p.titre, graine: "X", contextes: CONTEXTES, schemas: p.schemas.map(schemaParId),
+      numero: 5, titre: p.titre, graine: "X", contextes: contextesPour(p.theme), schemas: p.schemas.map(schemaParId),
       imposes: ["zoo"], exclus: ["cantine"],
     });
     expect(s.contextes[0]).toBe("zoo");

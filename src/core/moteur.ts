@@ -7,12 +7,13 @@ import { Q } from "./rational";
 import { rngFor, Rng } from "./rng";
 import { propager, resoudre } from "./solveur";
 import { implicites, verifier } from "./verificateur";
+import { habillage } from "./habillage";
 import type {
   Contexte, ContexteSchema, Etape, Gabarit, Grandeur, Inconnue, Jour, Monde, Mot, Niveau,
-  Probleme, Schema, Structure,
+  Probleme, Schema, Structure, Visuel,
 } from "./types";
 import { choisir, formatVar, rendre, variablesCitees, type EnvRendu } from "../langue/rendu";
-import { formatAnnee, formatHeure, formatMesure, formatNombre } from "../langue/format";
+import { formatAnnee, formatDuree, formatHeure, formatMesure, formatNombre } from "../langue/format";
 import { PRENOMS } from "../data/prenoms";
 
 export const MAX_ESSAIS = 300;
@@ -46,8 +47,16 @@ function fusion(base: Gabarit, sur?: Partial<Gabarit>): Gabarit {
   };
 }
 
+const UNITES_LONGUES: Record<string, string> = {
+  g: "grammes", kg: "kilogrammes", t: "tonnes", cL: "centilitres", L: "litres", mL: "millilitres",
+  m: "mètres", cm: "centimètres", km: "kilomètres", min: "minutes",
+};
+
 function choisirMots(cs: ContexteSchema, rng: Rng): Record<string, Mot> {
   const mots: Record<string, Mot> = {};
+  // unités du contexte en toutes lettres : [uniteP] (petite), [uniteG] (grande)
+  if (cs.unites?.quantite) mots.uniteP = { s: UNITES_LONGUES[cs.unites.quantite] ?? cs.unites.quantite };
+  if (cs.unites?.grande) mots.uniteG = { s: UNITES_LONGUES[cs.unites.grande] ?? cs.unites.grande };
   for (const [k, v] of Object.entries(cs.mots)) {
     mots[k] = typeof v === "string" ? { s: v } : Array.isArray(v) ? rng.pick(v) : v;
   }
@@ -63,13 +72,14 @@ function choisirMots(cs: ContexteSchema, rng: Rng): Record<string, Mot> {
 export function tirerMonde(struct: Structure, cs: ContexteSchema, niveau: Niveau, rng: Rng): Monde {
   const w: Monde = {};
   for (const f of implicites(struct)) {
-    if (!cs.unites?.facteur) throw new Error("facteur de conversion manquant dans le contexte");
-    w[f] = Q.of(cs.unites.facteur);
+    const val = struct.variables[f].valeur ?? cs.unites?.facteur;
+    if (!val) throw new Error("facteur de conversion manquant dans le contexte");
+    w[f] = Q.of(val);
   }
   for (const t of struct.tirage) {
     if (t.f) w[t.v] = t.f(w, { rng, ctx: cs });
     else {
-      const p = cs.plages?.[niveau]?.[t.v] ?? t.plage;
+      const p = cs.plages?.[niveau]?.[t.cle ?? t.v] ?? t.plage;
       if (!p) throw new Error(`Aucune plage pour ${t.v}`);
       w[t.v] = rng.step(p.min, p.max, p.pas ?? 1);
     }
@@ -79,12 +89,14 @@ export function tirerMonde(struct: Structure, cs: ContexteSchema, niveau: Niveau
 }
 
 function nombreSeul(x: Q, g: Grandeur): string {
+  if (g === "duree") return formatDuree(x.toNumber());
+  if (g === "heure") return formatHeure(x.toNumber());
   return g === "euro" ? formatNombre(x, x.isInteger ? 0 : 2) : formatNombre(x);
 }
 
 export function genererProbleme(dm: Demande): Probleme {
   const { schema, contexte, niveau, jour } = dm;
-  const cs = contexte.schemas[schema.id];
+  const cs = habillage(schema, contexte);
   if (!cs) throw new Error(`Le contexte ${contexte.id} ne sait pas habiller le schéma ${schema.id}`);
   const struct = schema.structure(niveau, cs);
   const textes = fusion(schema.textes, cs.textes);
@@ -126,7 +138,13 @@ export function genererProbleme(dm: Demande): Probleme {
         continue;
       }
     }
-    const res = construire(dm, struct, textes, mots, grandeurs, unites, monde, inc, rng, essai);
+    let res: ReturnType<typeof construire>;
+    try {
+      res = construire(dm, struct, textes, mots, grandeurs, unites, monde, inc, rng, essai);
+    } catch (e) {
+      derniereErreur = [String(e)];
+      continue;
+    }
     if (res.erreurs.length === 0) return res.probleme;
     derniereErreur = res.erreurs;
   }
@@ -141,7 +159,8 @@ function construire(
   inc: Inconnue, rng: Rng, essai: number,
 ): { probleme: Probleme; erreurs: string[] } {
   const { niveau } = dm;
-  const donnees = new Set(inc.donnees);
+  // les variables « visibles » peuvent être citées comme des données
+  const donnees = new Set([...inc.donnees, ...Object.keys(struct.variables).filter((k) => struct.variables[k].visible)]);
   const erreurs: string[] = [];
 
   // nombres écrits en lettres (★★★) : 1 ou 2 effectifs entiers
@@ -150,7 +169,7 @@ function construire(
     const cand = inc.donnees.filter((d) => grandeurs[d] === "compte" && monde[d].isInteger && monde[d].cmp(2) >= 0 && monde[d].cmp(999_999) <= 0);
     for (const d of rng.shuffle(cand).slice(0, rng.int(1, 2))) lettres.add(d);
   }
-  const env: EnvRendu = { valeurs: monde, grandeurs, unites, mots, lettres };
+  const env: EnvRendu = { valeurs: monde, grandeurs, unites, mots, lettres, defs: struct.variables };
 
   // énoncé
   const citees = new Set<string>();
@@ -181,6 +200,30 @@ function construire(
   // les parasites s'intercalent après la première phrase
   for (const p of parasites) phrases.splice(rng.int(1, phrases.length), 0, p);
 
+  // tableau ou graphique : valeurs des données, « ? » pour l'inconnue, leurres tirés au hasard
+  let visuel: Visuel | undefined;
+  if (dm.schema.visuel) {
+    const spec = dm.schema.visuel(niveau);
+    const envSans: EnvRendu = { ...env, lettres: new Set() };
+    visuel = {
+      type: spec.type, titre: rendre(spec.titre, envSans), unite: spec.unite ? rendre(spec.unite, envSans) : undefined,
+      colonnes: spec.colonnes.map((c) => rendre(c, envSans)),
+      lignes: spec.lignes.map((l) => ({
+        label: rendre(l.label, envSans),
+        valeurs: l.cases.map((c) => {
+          if (typeof c === "string") {
+            if (donnees.has(c)) { citees.add(c); return { texte: formatVar(c, envSans, false), nombre: monde[c].toNumber() }; }
+            return { texte: "?", nombre: null };
+          }
+          if ("texte" in c) return { texte: rendre(c.texte, envSans), nombre: null };
+          const x = rng.step(c.leurre.min, c.leurre.max, c.leurre.pas ?? 1);
+          valeursPar.push(x);
+          return { texte: formatNombre(x), nombre: x.toNumber() };
+        }),
+      })),
+    };
+  }
+
   // question finale
   const vq = choisir(textes.questions[inc.inconnue], donnees, niveau);
   if (!vq) erreurs.push(`question manquante pour ${inc.inconnue}`);
@@ -198,11 +241,27 @@ function construire(
   const guidees: string[] = [];
   const guideesManquantes: string[] = [];
   const envCorrige: EnvRendu = { ...env, lettres: new Set() };
+  // lecture du tableau ou du graphique : on relève d'abord les données utiles
+  if (visuel) {
+    const lus: string[] = [];
+    visuel.lignes.forEach((l, li) => l.valeurs.forEach((v, ci) => {
+      const c = dm.schema.visuel!(niveau).lignes[li].cases[ci];
+      if (typeof c === "string" && inc.donnees.includes(c)) lus.push(`${[l.label, visuel!.colonnes[ci]].filter(Boolean).join(", ")} : ${v.texte}`);
+    }));
+    const situation = visuel.type === "tableau" ? "Lecture de tableau" : "Lecture de graphique";
+    etapes.push({ situation, calcul: lus.join(" ; "), libelle: "données utiles", cible: "", texte: `${situation} : ${lus.join(" ; ")}` });
+  }
   for (const e of sol?.etapes ?? []) {
     const fv = (n: string) => formatVar(n, envCorrige, false);
-    const fn = (n: string) => nombreSeul(monde[n], grandeurs[n]);
+    const fn = (n: string) => (grandeurs[n] === "fraction" ? formatVar(n, envCorrige, false) : nombreSeul(monde[n], grandeurs[n]));
     let calcul: string;
     if (e.op === "conv") calcul = `${fv(e.g)} = ${fv(e.cible)}`;
+    else if (grandeurs[e.cible] === "proba") calcul = `${fn(e.g)} cas favorables sur ${fn(e.d)} cas possibles : ${fv(e.cible)}`;
+    else if (e.op === "×" && (grandeurs[e.g] === "fraction" || grandeurs[e.d] === "fraction")) {
+      // « 3⁄4 de 28 = 21 »
+      const [f, x] = grandeurs[e.g] === "fraction" ? [e.g, e.d] : [e.d, e.g];
+      calcul = `${fv(f)} de ${fn(x)} = ${fv(e.cible)}`;
+    }
     else if (e.op === "ceil" || e.op === "quot") {
       // division euclidienne, puis interprétation du reste
       const a = monde[e.g], b = monde[e.d];
@@ -255,6 +314,7 @@ function construire(
     resultat: formatVar(inc.inconnue, envCorrige, false),
     reponse: vr ? rendre(vr.t, envCorrige) : "",
     situations,
+    visuel,
     monde: Object.fromEntries(Object.entries(monde).map(([k, v]) => [k, v.toString()])),
     essais: essai + 1,
   };

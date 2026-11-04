@@ -8,6 +8,7 @@
  */
 import { genererProbleme } from "./moteur";
 import { rngFor } from "./rng";
+import { compatible } from "./habillage";
 import type { Contexte, Niveau, Probleme, Schema } from "./types";
 
 export interface OptionsSemaine {
@@ -56,7 +57,7 @@ export function repartirContextes(o: OptionsSemaine): Plan {
     const impose = i < nb ? o.imposes?.[i] : undefined;
     const cands = impose ? dispo.filter((c) => c.id === impose) : ordre;
     for (const c of cands) {
-      if (choix.includes(c) || !c.schemas[schemaDe(i).id]) continue;
+      if (choix.includes(c) || !compatible(schemaDe(i), c)) continue;
       choix.push(c);
       if (essayer(i + 1)) return true;
       choix.pop();
@@ -73,7 +74,7 @@ export function repartirContextes(o: OptionsSemaine): Plan {
 /** Contexte de l'évaluation : compatible avec le schéma principal et absent du Jour 1. */
 export function contexteEvaluation(o: OptionsSemaine, utilises: string[], prefere?: Contexte): Contexte {
   const principal = principalDe(o);
-  const ok = (c: Contexte) => !utilises.includes(c.id) && !!c.schemas[principal.id] && !(o.exclus ?? []).includes(c.id);
+  const ok = (c: Contexte) => !utilises.includes(c.id) && compatible(principal, c) && !(o.exclus ?? []).includes(c.id);
   if (prefere && ok(prefere)) return prefere;
   const c = rngFor(o.graine, "contexte-eval").shuffle(o.contextes).find(ok);
   if (!c) throw new Error("Aucun contexte nouveau disponible pour l'évaluation.");

@@ -4,6 +4,47 @@ export const cantine: Contexte = {
   id: "cantine",
   titre: "À la cantine",
   schemas: {
+    remplissage: {
+      mots: { lieu: "à la cantine", qui: { s: "le cuisinier", g: "m" }, ress: { s: "soupe", g: "f" }, stockMot: "une marmite", recA: { s: "bol" }, recB: { s: "assiette creuse", p: "assiettes creuses", g: "f" } },
+      unites: { grande: "L", quantite: "cL", facteur: 100 },
+    },
+    durees: {
+      mots: {
+        lieu: "à la cantine", qui: { s: "le service", g: "m" }, a1: { s: "le premier service", g: "m" },
+        a2: { s: "le nettoyage des tables", g: "m" }, a3: { s: "le second service", g: "m" }, limite: "La classe reprend à",
+      },
+    },
+    fraction: {
+      mots: { ensemble: "dans l'école", obj: { s: "élève", voy: true }, groupe1: "mangent à la cantine", groupe2: "rentrent déjeuner chez eux", groupe3: "vont chez leur nourrice" },
+    },
+    "fractions-somme": {
+      mots: {
+        tout: { s: "le gâteau", g: "m" }, quantite: "pèse", qA: "Les CP mangent", qB: "Les CE1 mangent", qC: "Les CE2 mangent",
+        qBq: "Quelle fraction du gâteau les CE1 ont-ils mangée ?", qreste: "Quelle masse de gâteau reste-t-il ?",
+      },
+      unites: { quantite: "g" },
+    },
+    tarif: {
+      mots: { lieu: "à la cantine", qui: { s: "la famille de Malo", g: "f" }, seance: { s: "repas", p: "repas" }, fixe: "d'inscription" },
+      plages: { 1: { pu: { min: 3, max: 5 } }, 2: { pu: { min: 3, max: 5 } }, 3: { pu: { min: 2.5, max: 5, pas: 0.5 } } },
+    },
+    terrain: {
+      mots: { lieu: "à la cantine", objet: { s: "la salle à manger", g: "f" }, cloture: { s: "plinthe", g: "f" }, ouverture: "la porte", revetement: { s: "carrelage", g: "m" }, partie: { s: "le coin de la fontaine", g: "m" } },
+    },
+    serie: {
+      mots: {
+        titreG: "le nombre de repas servis à la cantine chaque jour", obj: { s: "repas", p: "repas" },
+        c1: "lundi", c2: "mardi", c3: "mercredi", c4: "jeudi", c5: "vendredi", prixPhrase: "Un repas coûte",
+        titreS: "les desserts choisis par les élèves", objS: { s: "élève", voy: true }, s1: "les fruits", s2: "les yaourts", s3: "les compotes", s4: "les gâteaux",
+      },
+      plages: { 2: { pu: { min: 3, max: 5, pas: 0.5 } } },
+    },
+    proba: {
+      mots: { contenant: "le panier de fruits", objA: { s: "pomme", g: "f" }, objB: { s: "poire", g: "f" }, objC: { s: "banane", g: "f" }, objet: { s: "fruit" }, tirer: "prend", tirerInf: "prendre" },
+    },
+    "deux-sortes": {
+      mots: { lieu: "à la cantine", sA: { s: "table de 4 places", p: "tables de 4 places", g: "f" }, sB: { s: "table de 6 places", p: "tables de 6 places", g: "f" }, unite: { s: "table", g: "f" }, valeur: { s: "place", g: "f" }, vA: "4", vB: "6", tous: "toutes les tables" },
+    },
     "grands-nombres": {
       mots: {
         site1: { s: "la cuisine centrale de la ville", g: "f" }, site2: { s: "la cuisine centrale de la ville voisine", g: "f" },

@@ -13,7 +13,8 @@ const TOUTES: Situation[] = [
   "Union", "Retrait", "Différence", "Comparaison", "Recherche de l'état initial", "Réitération", "Partage",
   "Groupement", "Groupement avec reste", "Fraction d'une quantité", "Retrouver le tout", "Passage à l'unité",
   "Linéarité multiplicative", "Linéarité additive", "Pourcentage", "Conversion", "Durée", "Périmètre", "Aire",
-  "Volume", "Lecture de tableau", "Probabilité", "Partage inégal", "Essais et ajustements",
+  "Volume", "Échelle", "Vitesse", "Lecture de tableau", "Lecture de graphique", "Probabilité", "Partage inégal",
+  "Essais et ajustements",
 ];
 
 export function Isole() {
@@ -45,13 +46,13 @@ export function Isole() {
         <h2>Situations à combiner</h2>
         <div className="situations">
           {TOUTES.map((s) => (
-            <label key={s} className={dispo.has(s) ? "" : "indispo"} title={dispo.has(s) ? "" : "Disponible à l'étape 5 (extension à toute la progression)"}>
+            <label key={s} className={dispo.has(s) ? "" : "indispo"} title={dispo.has(s) ? "" : "Aucun schéma ne produit encore cette situation"}>
               <input type="checkbox" disabled={!dispo.has(s)} checked={choix.includes(s)}
                 onChange={(e) => setChoix(e.target.checked ? [...choix, s] : choix.filter((x) => x !== s))} /> {s}
             </label>
           ))}
         </div>
-        <p className="aide">Les situations grisées arriveront avec les nouveaux schémas (étape 5).</p>
+        <p className="aide">Les situations grisées ne sont produites par aucun schéma à ce niveau de combinaison.</p>
         <div className="ligne">
           <span className="titre"><b>Niveau</b></span>
           {([1, 2, 3] as Niveau[]).map((n) => (

@@ -7,6 +7,38 @@ export const boulangerie: Contexte = {
   id: "boulangerie",
   titre: "À la boulangerie",
   schemas: {
+    trajet: {
+      mots: {
+        qui: { s: "le livreur", g: "m" }, verbe: "roule", e1: "jusqu'à l'école", e2: "jusqu'à la maison de retraite",
+        e3: "jusqu'au restaurant", but: "au dernier client", moyen: "en camionnette", moment1: "le matin", moment2: "l'après-midi",
+      },
+      plages: { 1: { v1: { min: 20, max: 50, pas: 5 } }, 2: { v1: { min: 20, max: 50, pas: 5 }, v2: { min: 30, max: 70, pas: 5 } }, 3: { v1: { min: 20, max: 50, pas: 2.5 }, v2: { min: 30, max: 70, pas: 2.5 } } },
+    },
+    decoupe: {
+      mots: { lieu: "à la boulangerie", qui: { s: "la boulangère", g: "f" }, matiere: { s: "ruban doré", g: "m" }, rouleau: { s: "rouleau" }, objA: { s: "boîte de gâteaux", p: "boîtes de gâteaux", g: "f" }, objB: { s: "sachet de chocolats", p: "sachets de chocolats" } },
+    },
+    remplissage: {
+      mots: { lieu: "à la boulangerie", qui: { s: "le boulanger", g: "m" }, ress: { s: "pâte", g: "f" }, stockMot: "un bac", recA: { s: "pâton de pain", p: "pâtons de pain" }, recB: { s: "pâton de brioche", p: "pâtons de brioche" } },
+      unites: { grande: "kg", quantite: "g", facteur: 1000 },
+    },
+    "fractions-somme": {
+      mots: {
+        tout: { s: "la tarte", g: "f" }, quantite: "pèse", qA: "[prenom] en mange", qB: "[prenom2] en mange", qC: "[prenom3] en mange",
+        qBq: "Quelle fraction de la tarte [prenom2] a-t-[il:prenom2] mangée ?", qreste: "Quelle masse de tarte reste-t-il ?",
+      },
+      unites: { quantite: "g" },
+    },
+    serie: {
+      mots: {
+        titreG: "le nombre de baguettes vendues chaque jour", obj: { s: "baguette", g: "f" },
+        c1: "lundi", c2: "mardi", c3: "mercredi", c4: "jeudi", c5: "vendredi", prixPhrase: "Une baguette coûte",
+        titreS: "les viennoiseries vendues le dimanche", objS: { s: "viennoiserie", g: "f" }, s1: "les croissants", s2: "les pains au chocolat", s3: "les chouquettes", s4: "les brioches",
+      },
+      plages: { 2: { pu: { min: 1, max: 1.5, pas: 0.1 } } },
+    },
+    "deux-sortes": {
+      mots: { lieu: "à la boulangerie", sA: { s: "boîte de 6 macarons", p: "boîtes de 6 macarons", g: "f" }, sB: { s: "boîte de 12 macarons", p: "boîtes de 12 macarons", g: "f" }, unite: { s: "boîte", g: "f" }, valeur: { s: "macaron" }, vA: "6", vB: "12", tous: "toutes les boîtes" },
+    },
     "etats-transformations": {
       mots: {
         obj: { s: "baguette", g: "f" }, stock: "dans la boutique",

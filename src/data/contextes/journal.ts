@@ -4,6 +4,21 @@ export const journal: Contexte = {
   id: "journal",
   titre: "Le journal de l'école",
   schemas: {
+    trajet: {
+      mots: {
+        qui: { s: "le facteur", g: "m" }, verbe: "parcourt", e1: "jusqu'à l'école", e2: "dans le quartier",
+        e3: "jusqu'à la mairie", but: "au bureau de poste", moyen: "à vélo", moment1: "le matin", moment2: "l'après-midi",
+      },
+      plages: { 1: { v1: { min: 10, max: 18 } }, 2: { v1: { min: 10, max: 18 }, v2: { min: 8, max: 15 } }, 3: { v1: { min: 10, max: 18, pas: 0.5 }, v2: { min: 8, max: 15, pas: 0.5 } } },
+    },
+    serie: {
+      mots: {
+        titreG: "le nombre de journaux vendus chaque jour", obj: { s: "journal", p: "journaux" },
+        c1: "lundi", c2: "mardi", c3: "mercredi", c4: "jeudi", c5: "vendredi", prixPhrase: "Un journal coûte",
+        titreS: "les rubriques préférées des lecteurs", objS: { s: "lecteur" }, s1: "les jeux", s2: "les sports", s3: "les blagues", s4: "les interviews",
+      },
+      plages: { 2: { pu: { min: 0.5, max: 2, pas: 0.5 } } },
+    },
     "etats-transformations": {
       mots: {
         obj: { s: "exemplaire", voy: true }, stock: "dans la classe",

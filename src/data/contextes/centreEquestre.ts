@@ -4,6 +4,42 @@ export const centreEquestre: Contexte = {
   id: "centre-equestre",
   titre: "Au centre équestre",
   schemas: {
+    trajet: {
+      mots: {
+        qui: { s: "la monitrice", g: "f" }, verbe: "parcourt", e1: "du centre jusqu'à la forêt", e2: "dans la forêt",
+        e3: "le long de la rivière", but: "à la ferme", moyen: "à cheval", moment1: "le matin", moment2: "l'après-midi",
+      },
+      plages: { 1: { v1: { min: 6, max: 12 } }, 2: { v1: { min: 6, max: 12 }, v2: { min: 5, max: 10 } }, 3: { v1: { min: 6, max: 12, pas: 0.5 }, v2: { min: 5, max: 10, pas: 0.5 } } },
+    },
+    decoupe: {
+      mots: { lieu: "au centre équestre", qui: { s: "la monitrice", g: "f" }, matiere: { s: "corde", g: "f" }, rouleau: { s: "rouleau" }, objA: { s: "longe", g: "f" }, objB: { s: "attache", g: "f", voy: true } },
+    },
+    "partage-frais": {
+      mots: {
+        occasion: "pour le concours d'équitation", qui: { s: "le centre", g: "m" },
+        depA: { s: "le transport des chevaux", g: "m" }, depB: { s: "l'inscription au concours", g: "f" }, depC: { s: "le repas", g: "m" },
+        parts: { s: "cavalier" }, aide: "Le club prend en charge",
+      },
+    },
+    durees: {
+      mots: {
+        lieu: "au centre équestre", qui: { s: "le groupe de cavaliers", g: "m" }, a1: { s: "le pansage des poneys", g: "m" },
+        a2: { s: "la leçon dans le manège", g: "f" }, a3: { s: "la balade", g: "f" }, limite: "Les parents arrivent à",
+      },
+    },
+    tarif: {
+      mots: { lieu: "au centre équestre", qui: { s: "Inès", g: "f" }, seance: { s: "cours" , p: "cours"}, fixe: "d'adhésion pour l'année" },
+      plages: { 1: { pu: { min: 10, max: 20 } }, 2: { pu: { min: 10, max: 18 } }, 3: { pu: { min: 10, max: 18, pas: 0.5 } } },
+    },
+    terrain: {
+      mots: { lieu: "au centre équestre", objet: { s: "le paddock", g: "m" }, cloture: { s: "barrière en bois", g: "f" }, ouverture: "le portail", revetement: { s: "sable", g: "m" }, partie: { s: "l'abreuvoir", g: "m" } },
+    },
+    volume: {
+      mots: { lieu: "au centre équestre", objet: { s: "l'abreuvoir", g: "m" }, ress: { s: "eau", g: "f", voy: true }, seau: { s: "seau" } },
+    },
+    "deux-sortes": {
+      mots: { lieu: "dans la prairie", sA: { s: "cavalier" }, sB: { s: "cheval", p: "chevaux" }, unite: { s: "tête", g: "f" }, valeur: { s: "jambe", g: "f" }, vA: "2", vB: "4", tous: "tous" },
+    },
     "consommation-stock": {
       mots: {
         lieu: "au centre équestre",

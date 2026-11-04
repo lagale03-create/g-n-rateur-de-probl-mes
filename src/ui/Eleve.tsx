@@ -7,11 +7,12 @@ import { useEffect, useMemo, useState } from "react";
 import { correctionEleve } from "../core/correction";
 import { genererSemaine } from "../core/semaine";
 import type { Niveau, Probleme } from "../core/types";
-import { CONTEXTES } from "../data/contextes";
+import { contextesPour } from "../data/contextes";
 import { PROGRESSION } from "../data/progression";
 import { schemaParId } from "../data/schemas";
 import type { SemaineExport } from "../export/docx";
 import { aDuContenu, versExport, type Session } from "./etat";
+import { Visuel } from "./Visuel";
 
 type JourChoisi = "jour1" | "jour2" | "evaluation";
 const disponibles = PROGRESSION.filter((s) => s.schemas.length > 0);
@@ -25,6 +26,7 @@ function ProbEleve({ p, i, correction }: { p: Probleme; i: number; correction: b
       <div className="enonce">
         <div className="titre">Problème {i} : {p.titreContexte}</div>
         <p>{p.enonce}</p>
+        {p.visuel && <Visuel v={p.visuel} />}
         {p.guidees.length > 0 ? <ul className="guidees">{p.guidees.map((g, k) => <li key={k}><b>{String.fromCharCode(97 + k)})</b> {g}</li>)}</ul> : <p><b>{p.question}</b></p>}
       </div>
       {correction && (
@@ -56,7 +58,7 @@ export function Eleve({ session }: { session: Session }) {
     const p = disponibles.find((s) => s.numero === num)!;
     try {
       return genererSemaine({
-        numero: num, titre: p.titre, graine: code, contextes: CONTEXTES,
+        numero: num, titre: p.titre, graine: code, contextes: contextesPour(p.theme),
         schemas: p.schemas.map(schemaParId), principal: p.principal ? schemaParId(p.principal) : undefined,
       });
     } catch (e) { return String(e); }

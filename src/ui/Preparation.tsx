@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { nouvelleGraine } from "../core/rng";
 import type { Niveau } from "../core/types";
-import { CONTEXTES } from "../data/contextes";
+import { contextesPour } from "../data/contextes";
 import { PROGRESSION } from "../data/progression";
 import { SCHEMAS, schemaParId } from "../data/schemas";
 import { nomFichier, semaineEnBlob } from "../export/docx";
@@ -55,12 +55,14 @@ export function Preparation({ session, setSession }: { session: Session; setSess
       const annee = exportPeriode === "annee";
       const semaines = annee ? PROGRESSION : PROGRESSION.filter((s) => String(s.periode) === exportPeriode);
       const preparees = c.source === "semaine" && aDuContenu(session) ? { [c.numero]: versExport(session) } : undefined;
-      const blob = await zipEnBlob({ semaines, graine: c.graine, schemaParId, contextes: CONTEXTES, preparees });
+      const blob = await zipEnBlob({ semaines, graine: c.graine, schemaParId, contextes: contextesPour, preparees });
       telechargerBlob(blob, nomZip(annee ? "Annee_complete" : `Periode_${exportPeriode}`));
     } catch (e) { setErreur(String(e)); } finally { setTravail(false); }
   };
 
   const nb = c.nbProblemes;
+  const theme = c.source === "semaine" ? PROGRESSION.find((x) => x.numero === c.numero)?.theme : undefined;
+  const CONTEXTES = contextesPour(theme);
   const { titre } = (() => { try { return titreSession(c); } catch { return { titre: "" }; } })();
   const niveauxGeneres = c.niveaux.filter((n) => session.niveaux[n]);
   const vu = niveauxGeneres.includes(niveauVu) ? niveauVu : niveauxGeneres[0];
@@ -85,7 +87,7 @@ export function Preparation({ session, setSession }: { session: Session; setSess
               {[1, 2, 3, 4, 5].map((per) => (
                 <optgroup key={per} label={`Période ${per}`}>
                   {PROGRESSION.filter((s) => s.periode === per).map((s) => (
-                    <option key={s.numero} value={s.numero}>S{s.numero} : {s.titre}{s.schemas.length ? "" : " (à venir)"}</option>
+                    <option key={s.numero} value={s.numero}>S{s.numero} : {s.titre}</option>
                   ))}
                 </optgroup>
               ))}

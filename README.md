@@ -3,10 +3,9 @@
 Application qui fonctionne entièrement dans le navigateur, hors ligne. Aucune donnée n'est envoyée sur Internet.
 Elle génère des séries hebdomadaires de problèmes à étapes, différenciées sur 3 niveaux (★, ★★, ★★★), avec leur corrigé.
 
-> **État actuel : étape 5 en cours.** La période 1 (semaines 1 à 7) est couverte, ainsi que les semaines 8 et 19.
-> Schémas : états et transformations, comparaison, grands nombres, lots (multiplication), division avec reste,
-> consommation et stock, achats et passage à l'unité. Contextes (11) : zoo, centre équestre, randonnée, cantine,
-> boulangerie, confitures, bibliothèque, piscine, journal de l'école, jardin, kermesse.
+Les 36 semaines de la progression sont couvertes : 32 schémas de problèmes, 11 contextes de la vie courante
+et 20 contextes pour les synthèses à thème (Noël, tournoi, aménagement de la cour, voyage de fin d'année),
+avec tableaux et graphiques pour les semaines de données.
 
 ## Lancer l'application
 
@@ -24,7 +23,7 @@ npm run docx -- 5 MAGRAINE      # écrit la semaine 5 en Word dans docs/S05_Prob
 Trois espaces, accessibles en haut de la page :
 
 **Préparer la semaine** (enseignant)
-- Réglages : semaine de la progression (les semaines « à venir » n'ont pas encore de schéma) ou **notion libre**
+- Réglages : semaine de la progression ou **notion libre**
   (titre + schémas à combiner), niveaux à générer, nombre de problèmes par jour (1 à 5), graine,
   contextes à **exclure** et contexte **imposé** pour chaque problème.
 - Boutons : **Générer le Jour 1**, **Faire évoluer (Jour 2)**, **Créer l'évaluation**,
@@ -92,6 +91,75 @@ imprimés, l'élève doit utiliser la même graine que la fiche.
 5. La **graine** (par exemple `DEMO-2026`) rend tout reproductible. Chaque problème a sa propre sous-graine,
    ce qui permettra de régénérer un seul problème sans toucher aux autres.
 
+## Progression annuelle
+
+Modifiable dans `src/data/progression.ts` (schémas de la semaine, schéma de l'évaluation, thème).
+Les 4 problèmes d'une semaine alternent ses schémas ; l'évaluation reprend le premier (ou celui indiqué).
+
+| Sem. | Période | Notion | Schémas | Thème |
+|---|---|---|---|---|
+| S1 | P1 | Structures additives | `etats-transformations`, `comparaison` |  |
+| S2 | P1 | Grands nombres | `grands-nombres` |  |
+| S3 | P1 | Multiplication | `lots` |  |
+| S4 | P1 | Division et interprétation du reste | `division-reste` |  |
+| S5 | P1 | Problèmes à étapes mixtes | `consommation-stock`, `division-reste` |  |
+| S6 | P1 | Synthèse de la période 1 | `etats-transformations`, `comparaison`, `lots`, `division-reste` |  |
+| S7 | P1 | Synthèse de la période 1 (bis) | `grands-nombres`, `division-reste`, `consommation-stock`, `lots` |  |
+| S8 | P2 | Décimaux et monnaie | `liste-courses`, `achat-unite` |  |
+| S9 | P2 | Longueurs | `parcours` |  |
+| S10 | P2 | Décimal × entier | `decoupe`, `achat-unite` |  |
+| S11 | P2 | Décimal ÷ entier | `partage-frais` |  |
+| S12 | P2 | Masses et contenances | `remplissage` |  |
+| S13 | P2 | Durées | `durees` |  |
+| S14 | P2 | Synthèse : la fête de Noël | `liste-courses`, `durees`, `decoupe`, `remplissage` | noel |
+| S15 | P3 | Fraction d'une quantité | `fraction-quantite` |  |
+| S16 | P3 | Retrouver le tout | `retrouver-tout` |  |
+| S17 | P3 | Addition et soustraction de fractions | `fractions-somme` |  |
+| S18 | P3 | Linéarité multiplicative | `linearite-mult` |  |
+| S19 | P3 | Passage à l'unité et linéarité additive | `achat-unite`, `linearite-add` |  |
+| S20 | P3 | Situations proportionnelles ou non | `tarif-affine`, `linearite-mult` |  |
+| S21 | P3 | Synthèse : le tournoi | `fraction-quantite`, `linearite-mult`, `division-reste`, `tarif-affine` | tournoi |
+| S22 | P4 | Périmètres | `perimetre` |  |
+| S23 | P4 | Aires | `aire` |  |
+| S24 | P4 | Périmètre et aire avec coûts | `perimetre-aire-couts` |  |
+| S25 | P4 | Volumes | `volume` |  |
+| S26 | P4 | Pourcentages | `pourcentage` |  |
+| S27 | P4 | Échelles et vitesse | `echelle`, `vitesse` |  |
+| S28 | P4 | Synthèse : l'aménagement de la cour | `perimetre`, `aire`, `volume`, `perimetre-aire-couts` | cour |
+| S29 | P5 | Tableaux à double entrée | `tableau` |  |
+| S30 | P5 | Graphiques | `graphique` |  |
+| S31 | P5 | Probabilités | `probabilite` |  |
+| S32 | P5 | Partages inégaux | `partage-inegal` |  |
+| S33 | P5 | Problèmes de recherche | `deux-sortes` |  |
+| S34 | P5 | Comparaison d'offres | `tarif-affine`, `offre-lot` |  |
+| S35 | P5 | Grand projet de fin d'année | `division-reste`, `tarif-affine`, `durees`, `partage-frais` | voyage |
+| S36 | P5 | Bilan et rallye | `consommation-stock`, `fraction-quantite`, `perimetre-aire-couts`, `deux-sortes` |  |
+
+## Les schémas et ce qu'on cherche au Jour 2
+
+Chaque schéma a sa structure pour ★, ★★ et ★★★ (le nombre d'étapes et la taille des nombres augmentent),
+une inconnue au Jour 1 et une ou deux inconnues « à l'envers » au Jour 2 (état initial, nombre de groupes,
+prix unitaire, durée, dimension, total à partir d'une fraction…). Les fichiers sont dans `src/data/schemas/`.
+
+Particularités :
+- **division avec reste** : arrondi au supérieur (« il faut 8 bus ») ou quotient et reste ;
+- **fractions** : affichées « 3⁄4 », dénominateurs 2, 4, 10 (★), puis 3, 5 (★★), puis 6, 8, 100 (★★★) ;
+- **durées** : « 9 h 15 + 45 min = 10 h » ;
+- **pourcentages** : 10 %, 20 %, 25 %, 50 %, calculés en passant par 1 % ;
+- **tableaux** (S29) : tableau à double entrée avec des cases inutiles (données parasites) ;
+- **graphiques** (S30) : diagramme en barres (★), courbe (★★), diagramme circulaire en % (★★★) ;
+- **probabilités** : « 3 chances sur 10 » ;
+- **essais et ajustements** (poules et lapins, tentes de 2 et 3 places, billets de 5 et 10 €…).
+
+## Tableaux et graphiques
+
+Un schéma peut décrire un `visuel` (tableau ou graphique) dont les cases sont des variables du problème
+(« ? » pour l'inconnue) ou des leurres. À l'écran, le graphique est dessiné en SVG ; dans le fichier Word,
+les tableaux sont de vrais tableaux Word et les graphiques des images PNG produites par le navigateur.
+Le corrigé commence par une étape « Lecture du tableau / du graphique » qui relève les données utiles.
+(Dans les scripts Node, sans navigateur, les graphiques sont dessinés sans texte : utilisez l'application
+pour imprimer les semaines 29 et 30.)
+
 ## Ajouter un contexte
 
 Copiez `src/data/contextes/zoo.ts`, renommez-le, puis ajoutez-le à la liste de `src/data/contextes/index.ts`.
@@ -123,6 +191,20 @@ export const piscine: Contexte = {
   ],
 };
 ```
+
+**Facettes partagées.** Plusieurs schémas réutilisent le même bloc de vocabulaire (champ `herite` du schéma) :
+
+| Bloc du contexte | Schémas qui l'utilisent |
+|---|---|
+| `achat-unite` (lieu, artA, artB, prix) | achats, liste de courses, linéarité multiplicative et additive, pourcentages, tableau, offre par lot |
+| `trajet` (qui, étapes, but, moyen) | parcours (longueurs), vitesse |
+| `terrain` (objet rectangulaire, clôture, revêtement) | périmètre, aire, périmètre et aire avec coûts, échelle |
+| `fraction` (ensemble, groupes) | fraction d'une quantité, retrouver le tout |
+| `comparaison` (obj, verbe) | comparaison, partages inégaux |
+| `tarif`, `volume`, `serie`, `proba`, `deux-sortes`, `decoupe`, `remplissage`, `durees`, `partage-frais`, `fractions-somme` | un schéma chacun |
+
+**Thèmes.** Un contexte avec `theme: "noel"` (ou `tournoi`, `cour`, `voyage`) n'est utilisé que pour les semaines
+de ce thème (`theme` dans la progression). Voir `src/data/contextes/themes.ts`.
 
 Les mots attendus par chaque schéma sont listés dans son champ `roles`.
 Un contexte peut aussi remplacer une phrase d'un schéma (champ `textes`) : voir `boulangerie.ts`.
@@ -163,7 +245,7 @@ Le test `tests/schemas.test.ts` le vérifie automatiquement sur 1 000 tirages pa
 src/core/      moteur, solveur, vérificateur, semaine, nombres exacts, graine
 src/langue/    formatage à la française, nombres en lettres, grammaire, gabarits
 src/data/      schémas, contextes, prénoms, progression des 36 semaines
-src/export/    export Word (docx) et ZIP (jszip)
+src/export/    export Word (docx), ZIP (jszip), graphiques (SVG / PNG)
 src/ui/        interface React : etat.ts (logique testée), Preparation, Isole, Eleve, Carte
 tests/         tests Vitest
 ```

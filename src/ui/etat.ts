@@ -7,7 +7,7 @@ import {
   contexteEvaluation, genererEvalUn, genererJ1Un, genererJ2Un, repartirContextes, type OptionsSemaine,
 } from "../core/semaine";
 import type { Niveau, Probleme } from "../core/types";
-import { CONTEXTES, contexteParId } from "../data/contextes";
+import { CONTEXTES_BASE, contexteParId, contextesPour } from "../data/contextes";
 import { PROGRESSION, semaineProg } from "../data/progression";
 import { schemaParId } from "../data/schemas";
 import type { SemaineExport } from "../export/docx";
@@ -57,7 +57,7 @@ export function optionsDe(c: Config): OptionsSemaine {
         + "Choisissez « Notion libre » pour combiner les schémas disponibles.");
     }
     return {
-      numero: c.numero, titre: prog.titre, graine: c.graine, contextes: CONTEXTES, nbProblemes: c.nbProblemes,
+      numero: c.numero, titre: prog.titre, graine: c.graine, contextes: contextesPour(prog.theme), nbProblemes: c.nbProblemes,
       schemas: prog.schemas.map(schemaParId), principal: prog.principal ? schemaParId(prog.principal) : undefined,
       imposes: Array.from({ length: c.nbProblemes }, (_, i) => c.imposes[i] ?? prog.contextes?.[i] ?? null),
       exclus: c.exclus, niveaux: c.niveaux,
@@ -65,7 +65,7 @@ export function optionsDe(c: Config): OptionsSemaine {
   }
   if (c.schemasLibres.length === 0) throw new Error("Choisissez au moins un schéma pour la notion libre.");
   return {
-    numero: 0, titre: c.titreLibre.trim() || "Notion libre", graine: c.graine, contextes: CONTEXTES,
+    numero: 0, titre: c.titreLibre.trim() || "Notion libre", graine: c.graine, contextes: CONTEXTES_BASE,
     nbProblemes: c.nbProblemes, schemas: c.schemasLibres.map(schemaParId), imposes: c.imposes, exclus: c.exclus, niveaux: c.niveaux,
   };
 }

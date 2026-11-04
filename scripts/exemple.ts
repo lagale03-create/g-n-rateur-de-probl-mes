@@ -6,7 +6,7 @@ import { writeFileSync } from "node:fs";
 import { genererSemaine } from "../src/core/semaine";
 import { semaineProg } from "../src/data/progression";
 import { schemaParId } from "../src/data/schemas";
-import { CONTEXTES } from "../src/data/contextes";
+import { contextesPour } from "../src/data/contextes";
 import type { Niveau, Probleme } from "../src/core/types";
 
 const num = Number(process.argv[2] ?? 5);
@@ -16,7 +16,7 @@ const sem = genererSemaine({
   numero: num, titre: prog.titre, graine,
   schemas: prog.schemas.map(schemaParId),
   principal: prog.principal ? schemaParId(prog.principal) : undefined,
-  contextes: CONTEXTES,
+  contextes: contextesPour(prog.theme),
 });
 
 const etoiles = (n: Niveau) => "★".repeat(n);

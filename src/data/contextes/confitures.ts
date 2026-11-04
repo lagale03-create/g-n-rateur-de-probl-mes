@@ -4,6 +4,37 @@ export const confitures: Contexte = {
   id: "confitures",
   titre: "Les confitures",
   schemas: {
+    trajet: {
+      mots: {
+        qui: { s: "le producteur", g: "m" }, verbe: "roule", e1: "de la ferme jusqu'au village", e2: "du village jusqu'à la ville",
+        e3: "dans la ville", but: "au marché", moyen: "en camionnette", moment1: "le matin", moment2: "ensuite",
+      },
+      plages: { 1: { v1: { min: 30, max: 60, pas: 5 } }, 2: { v1: { min: 30, max: 60, pas: 5 }, v2: { min: 20, max: 50, pas: 5 } }, 3: { v1: { min: 30, max: 60, pas: 2.5 }, v2: { min: 20, max: 50, pas: 2.5 } } },
+    },
+    decoupe: {
+      mots: { lieu: "chez le producteur", qui: { s: "la productrice", g: "f" }, matiere: { s: "ruban à carreaux", g: "m" }, rouleau: { s: "rouleau" }, objA: { s: "grand pot", p: "grands pots", g: "m" }, objB: { s: "petit pot", p: "petits pots", g: "m" } },
+    },
+    "partage-frais": {
+      mots: {
+        occasion: "pour fabriquer des confitures", qui: { s: "trois familles", g: "f" },
+        depA: { s: "l'achat des fraises", g: "m" }, depB: { s: "le sucre", g: "m" }, depC: { s: "les pots", g: "m" },
+        parts: { s: "famille", g: "f" }, aide: "Un voisin offre",
+      },
+    },
+    remplissage: {
+      mots: { lieu: "chez le producteur", qui: { s: "la productrice", g: "f" }, ress: { s: "confiture", g: "f" }, stockMot: "une bassine", recA: { s: "grand pot", p: "grands pots", g: "m" }, recB: { s: "petit pot", p: "petits pots", g: "m" } },
+      unites: { grande: "kg", quantite: "g", facteur: 1000 },
+    },
+    "fractions-somme": {
+      mots: {
+        tout: { s: "la récolte de fraises", g: "f" }, quantite: "pèse", qA: "Le producteur en vend au marché", qB: "Il en garde pour les confitures",
+        qC: "Il en offre à ses voisins", qBq: "Quelle fraction de la récolte le producteur garde-t-il pour les confitures ?", qreste: "Quelle masse de fraises reste-t-il ?",
+      },
+      unites: { quantite: "kg" },
+    },
+    proba: {
+      mots: { contenant: "le carton du producteur", objA: { s: "pot de fraises", p: "pots de fraises" }, objB: { s: "pot d'abricots", p: "pots d'abricots" }, objC: { s: "pot de myrtilles", p: "pots de myrtilles" }, objet: { s: "pot" }, tirer: "prend", tirerInf: "prendre" },
+    },
     "etats-transformations": {
       mots: {
         obj: { s: "pot de confiture", p: "pots de confiture" }, stock: "sur le stand",

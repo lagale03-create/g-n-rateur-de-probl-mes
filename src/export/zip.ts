@@ -1,6 +1,6 @@
 /**
  * Export ZIP d'une période (ou de l'année) : un fichier .docx par semaine.
- * Les semaines dont les schémas ne sont pas encore écrits sont listées dans LISEZMOI.txt.
+ * Un LISEZMOI.txt rappelle la graine utilisée.
  */
 import JSZip from "jszip";
 import { genererSemaine } from "../core/semaine";
@@ -12,7 +12,8 @@ export interface OptionsZip {
   semaines: SemaineProg[];
   graine: string;
   schemaParId: (id: string) => Schema;
-  contextes: Contexte[];
+  /** Contextes d'une semaine (selon son thème éventuel). */
+  contextes: (theme?: string) => Contexte[];
   /** Semaines déjà préparées dans l'interface (avec verrous et modifications) : elles remplacent la génération. */
   preparees?: Record<number, SemaineExport>;
 }
@@ -28,7 +29,7 @@ export async function construireZip(o: OptionsZip, binaire: (s: SemaineExport) =
         continue;
       }
       sem = genererSemaine({
-        numero: s.numero, titre: s.titre, graine: o.graine, contextes: o.contextes,
+        numero: s.numero, titre: s.titre, graine: o.graine, contextes: o.contextes(s.theme),
         schemas: s.schemas.map(o.schemaParId), principal: s.principal ? o.schemaParId(s.principal) : undefined,
         imposes: s.contextes,
       });

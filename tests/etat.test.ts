@@ -76,7 +76,7 @@ describe("séance de préparation", () => {
     expect(s.niveaux[1]!.jour1.every((e) => e.p.schemaId === "achat-unite")).toBe(true);
   });
 
-  it("message clair pour une semaine sans schéma", () => {
-    expect(() => genererJour1(sessionVide({ ...CONFIG_DEFAUT, numero: 9 }))).toThrow(/pas encore de schéma/);
+  it("toutes les semaines de la progression ont des schémas", () => {
+    for (let n = 1; n <= 36; n++) expect(() => genererJour1(sessionVide({ ...CONFIG_DEFAUT, numero: n }))).not.toThrow();
   });
 });

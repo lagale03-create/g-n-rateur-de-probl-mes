@@ -20,7 +20,7 @@ describe("problème isolé", () => {
     expect(r.ok && r.probleme.schemaId).toBe("achat-unite");
   });
   it("explique quand la combinaison n'existe pas encore", () => {
-    const r = genererIsole({ situations: ["Aire", "Union"], niveau: 2, graine: "X" }, SCHEMAS, CONTEXTES);
+    const r = genererIsole({ situations: ["Probabilité", "Volume"], niveau: 2, graine: "X" }, SCHEMAS, CONTEXTES);
     expect(r.ok).toBe(false);
     if (!r.ok) expect(r.proches.length).toBeGreaterThan(0);
   });

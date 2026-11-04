@@ -2,6 +2,7 @@
 import { useState } from "react";
 import type { Probleme } from "../core/types";
 import type { ChampsTexte } from "./etat";
+import { Visuel } from "./Visuel";
 
 export interface PropsCarte {
   p: Probleme;
@@ -47,6 +48,7 @@ export function Carte(pr: PropsCarte) {
         {edition ? null : (
           <>
             <p>{p.enonce}</p>
+            {p.visuel && <Visuel v={p.visuel} />}
             {p.guidees.length > 0
               ? <ul className="guidees">{p.guidees.map((g, k) => <li key={k}><b>{String.fromCharCode(97 + k)})</b> {g}</li>)}</ul>
               : <p><b>{p.question}</b></p>}

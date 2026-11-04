@@ -4,6 +4,49 @@ export const randonnee: Contexte = {
   id: "randonnee",
   titre: "La randonnée",
   schemas: {
+    trajet: {
+      mots: {
+        qui: { s: "le groupe", g: "m" }, verbe: "marche", e1: "du parking jusqu'au lac", e2: "du lac jusqu'à la cascade",
+        e3: "de la cascade jusqu'au refuge", but: "au refuge", moyen: "à pied", moment1: "le matin", moment2: "l'après-midi",
+      },
+      plages: {
+        1: { v1: { min: 3, max: 5 } }, 2: { v1: { min: 3, max: 5 }, v2: { min: 2, max: 4 } },
+        3: { v1: { min: 3, max: 5.5, pas: 0.5 }, v2: { min: 2, max: 4.5, pas: 0.5 } },
+      },
+    },
+    "partage-frais": {
+      mots: {
+        occasion: "pour la randonnée de trois jours", qui: { s: "le club", g: "m" },
+        depA: { s: "la location du minibus", g: "f" }, depB: { s: "l'essence", g: "f" }, depC: { s: "la nuit au refuge", g: "f" },
+        parts: { s: "famille", g: "f" }, aide: "La mairie donne une aide de",
+      },
+    },
+    remplissage: {
+      mots: { lieu: "avant la randonnée", qui: { s: "le guide", g: "m" }, ress: { s: "eau", g: "f", voy: true }, stockMot: "un bidon", recA: { s: "gourde", g: "f" }, recB: { s: "bouteille", g: "f" } },
+      unites: { grande: "L", quantite: "cL", facteur: 100 },
+    },
+    durees: {
+      mots: {
+        lieu: "pendant la randonnée", qui: { s: "le groupe", g: "m" }, a1: { s: "la montée jusqu'au col", g: "f" },
+        a2: { s: "la pause pique-nique", g: "f" }, a3: { s: "la descente jusqu'au village", g: "f" }, limite: "Le car repart du village à",
+      },
+    },
+    fraction: {
+      mots: { ensemble: "dans le club de randonnée", obj: { s: "randonneur" }, groupe1: "font la grande boucle", groupe2: "font la petite boucle", groupe3: "restent au refuge" },
+    },
+    "fractions-somme": {
+      mots: {
+        tout: { s: "le sentier", g: "m" }, quantite: "mesure", qA: "Le matin, le groupe parcourt", qB: "Après le pique-nique, il parcourt",
+        qC: "Avant la pause goûter, il parcourt encore", qBq: "Quelle fraction du sentier le groupe a-t-il parcourue après le pique-nique ?", qreste: "Combien de kilomètres reste-t-il à parcourir ?",
+      },
+      unites: { quantite: "km" },
+    },
+    tarif: {
+      mots: { lieu: "au loueur de vélos", qui: { s: "Monsieur Martin", g: "m" }, seance: { s: "heure", g: "f", voy: true }, fixe: "de caution non remboursée" },
+    },
+    "deux-sortes": {
+      mots: { lieu: "au camping", sA: { s: "tente de 2 places", p: "tentes de 2 places", g: "f" }, sB: { s: "tente de 3 places", p: "tentes de 3 places", g: "f" }, unite: { s: "tente", g: "f" }, valeur: { s: "place", g: "f" }, vA: "2", vB: "3", tous: "toutes les tentes" },
+    },
     comparaison: {
       mots: { lieu: "pendant la randonnée", obj: { s: "pomme de pin", p: "pommes de pin", g: "f" }, verbe: { s: "a ramassé", p: "ont ramassé" }, pp: "ramassées" },
       plages: {

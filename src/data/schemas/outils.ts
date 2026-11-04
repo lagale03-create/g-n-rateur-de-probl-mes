@@ -22,3 +22,26 @@ export function partDe(x: Q, rng: Rng, min = 0.2, max = 0.7, pas = 1): Q {
   const hi = Math.max(lo, Math.floor((x.toNumber() * max) / pas));
   return Q.of(rng.int(lo, hi) * pas);
 }
+
+// ---------- relations usuelles ----------
+import type { Relation, Situation, VarDef } from "../../core/types";
+
+export const N: VarDef = { grandeur: "compte" };
+export const E: VarDef = { grandeur: "euro" };
+export const mes = (unite: string): VarDef => ({ grandeur: "mesure", unite });
+export const constante = (valeur: number): VarDef => ({ grandeur: "facteur", valeur });
+
+/** c = a + b (on réunit ; à rebours : différence). */
+export const union = (c: string, a: string, b: string, nom: Situation = "Union"): Relation =>
+  ({ type: "add", c, a, b, noms: { c: nom, a: "Différence", b: "Différence" } });
+/** avant − retire = apres (retrait ; à rebours : recherche de l'état initial). */
+export const retrait = (avant: string, apres: string, retire: string): Relation =>
+  ({ type: "add", c: avant, a: apres, b: retire, noms: { c: "Recherche de l'état initial", a: "Retrait", b: "Différence" } });
+/** c = a × b (réitération ; à rebours : partage pour a, groupement pour b). */
+export const prod = (c: string, a: string, b: string, noms: Relation["noms"] = {}): Relation =>
+  ({ type: "mul", c, a, b, noms: { c: "Réitération", a: "Partage", b: "Groupement", ...noms } });
+/** grand = petit + écart (comparaison dans les deux sens). */
+export const ecart = (grand: string, petit: string, e: string): Relation =>
+  ({ type: "add", c: grand, a: petit, b: e, noms: { c: "Comparaison", a: "Comparaison", b: "Comparaison" } });
+/** c = a × facteur (conversion). */
+export const conv = (c: string, a: string, facteur: string): Relation => ({ type: "conv", c, a, b: facteur });

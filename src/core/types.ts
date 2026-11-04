@@ -15,7 +15,13 @@ export type Grandeur =
   | "euro"            // 2 décimales au maximum
   | "quantite"        // masse, contenance… dans l'unité du contexte (kg, L)
   | "quantiteGrande"  // même grandeur dans la grande unité (t) : sert aux conversions
-  | "facteur";        // constante de conversion (1 000), jamais affichée
+  | "mesure"          // longueur, aire, volume… dans l'unité donnée par `unite` (m, cm, m², dm³)
+  | "duree"           // durée en minutes : « 1 h 05 »
+  | "heure"           // heure de la journée en minutes depuis minuit : « 9 h 15 »
+  | "fraction"        // « 3⁄4 »
+  | "pourcent"        // « 25 % »
+  | "proba"           // « 3 chances sur 10 » (voir `ratio`)
+  | "facteur";        // constante (1 000, 2…), jamais affichée
 
 /** Types de situations, nommés dans le corrigé. */
 export type Situation =
@@ -23,7 +29,8 @@ export type Situation =
   | "Réitération" | "Partage" | "Groupement" | "Groupement avec reste"
   | "Fraction d'une quantité" | "Retrouver le tout" | "Passage à l'unité"
   | "Linéarité multiplicative" | "Linéarité additive" | "Pourcentage" | "Conversion"
-  | "Durée" | "Périmètre" | "Aire" | "Volume" | "Lecture de tableau" | "Probabilité"
+  | "Durée" | "Périmètre" | "Aire" | "Volume" | "Lecture de tableau" | "Lecture de graphique" | "Probabilité"
+  | "Échelle" | "Vitesse"
   | "Partage inégal" | "Essais et ajustements";
 
 export interface Plage { min: number | string; max: number | string; pas?: number | string }
@@ -44,7 +51,19 @@ export interface Relation {
   noms?: Partial<Record<"a" | "b" | "c", Situation>>;
 }
 
-export interface VarDef { grandeur: Grandeur }
+export interface VarDef {
+  grandeur: Grandeur;
+  /** Unité affichée (grandeur « mesure »), ou mot du contexte entre crochets : « [unite] ». */
+  unite?: string;
+  /** Constante (grandeur « facteur ») : sa valeur, sinon le facteur de conversion du contexte. */
+  valeur?: number;
+  /** Fraction : variable qui donne le dénominateur d'affichage (« 6⁄8 » plutôt que « 3⁄4 »). */
+  den?: string;
+  /** Variable calculée qu'on peut citer dans l'énoncé (« combien coûtent 8 cahiers ? » avec 8 = 3 + 5). */
+  visible?: boolean;
+  /** Probabilité : variables [cas favorables, cas possibles] pour l'affichage « 3 chances sur 10 ». */
+  ratio?: [string, string];
+}
 
 export type Monde = Record<string, Q>;
 
@@ -57,6 +76,8 @@ export interface AideTirage {
 /** Une étape du tirage : plage (surchargée par le contexte) ou fonction des valeurs déjà connues. */
 export interface Tirage {
   v: string;
+  /** Nom de la plage à chercher dans le contexte, s'il diffère du nom de la variable. */
+  cle?: string;
   plage?: Plage;
   f?: (w: Monde, aide: AideTirage) => Q;
 }
@@ -91,8 +112,31 @@ export interface Gabarit {
   reponses: Record<string, Texte>;
 }
 
+/** Tableau ou graphique inséré dans l'énoncé. Chaque case est une variable, un leurre tiré au hasard, ou un texte. */
+export type CaseVisuel = string | { leurre: Plage } | { texte: string };
+export interface SpecVisuel {
+  type: "tableau" | "barres" | "courbe" | "secteurs";
+  titre: string;
+  /** En-têtes des colonnes (gabarits). */
+  colonnes: string[];
+  lignes: { label: string; cases: CaseVisuel[] }[];
+  /** Unité des valeurs (graphiques). */
+  unite?: string;
+}
+export interface Visuel {
+  type: SpecVisuel["type"];
+  titre: string;
+  colonnes: string[];
+  lignes: { label: string; valeurs: { texte: string; nombre: number | null }[] }[];
+  unite?: string;
+}
+
 export interface Schema {
   id: string;
+  /** Réutilise l'habillage d'un autre schéma (ou d'une « facette ») du contexte : mots et plages. */
+  herite?: string;
+  /** Tableau ou graphique de l'énoncé. */
+  visuel?: (niveau: Niveau) => SpecVisuel;
   titre: string;
   notion: string;
   /** Mots que le contexte doit fournir (A, B, ressource…). */
@@ -129,6 +173,8 @@ export interface Parasite {
 export interface Contexte {
   id: string;
   titre: string;
+  /** Thème d'une semaine de synthèse (« noel »…) : le contexte n'est utilisé que pour ce thème. */
+  theme?: string;
   schemas: Record<string, ContexteSchema>;
   parasites: Parasite[];
 }
@@ -161,6 +207,8 @@ export interface Probleme {
   resultat: string;
   reponse: string;
   situations: Situation[];
+  /** Tableau ou graphique de l'énoncé. */
+  visuel?: Visuel;
   /** Valeurs exactes du monde, pour un nouveau contrôle. */
   monde: Record<string, string>;
   essais: number;
