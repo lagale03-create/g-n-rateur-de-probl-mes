@@ -18,6 +18,17 @@ npm run exemple -- 5 MAGRAINE   # écrit la semaine 5 en texte dans docs/exemple
 npm run docx -- 5 MAGRAINE      # écrit la semaine 5 en Word dans docs/S05_Problemes_a_etapes_mixtes.docx
 ```
 
+## Mise en ligne (GitHub Pages)
+
+À chaque envoi sur la branche `main`, le fichier `.github/workflows/pages.yml` lance les tests, construit
+l'application et la publie. À faire une seule fois sur GitHub : **Settings → Pages → Source : GitHub Actions**.
+
+- Lien enseignant : `https://VOTRE-COMPTE.github.io/generateur-problemes/`
+- Lien à donner aux élèves : `https://VOTRE-COMPTE.github.io/generateur-problemes/#eleve`
+
+L'application reste entièrement dans le navigateur : la page est hébergée par GitHub, mais aucune donnée
+(préparation, verrous, textes modifiés) n'est envoyée ; tout reste dans le navigateur de chaque utilisateur.
+
 ## Interface
 
 Trois espaces, accessibles en haut de la page :
