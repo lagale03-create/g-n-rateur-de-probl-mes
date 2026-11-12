@@ -1,0 +1,32 @@
+module.exports = {
+  periode: 2, semaine: 3,
+  generateurs: { dir: require('path').join(__dirname, '..', '..', 'gen', 'p2s3'), tables: { Lundi: '6 et 9', Mardi: '6 et 9', Jeudi: '6 et 9', Vendredi: '6 à 9' } },
+  dates: '16-20 novembre 2026', dossier: 'Periode_2/Semaine_03_16-20_novembre',
+  planning: {
+    lead: "Semaine du groupe nominal, des fractions plus grandes que 1 et des droits de l'enfant (20 novembre). Lecture suivie : Le mystère de Lucy Lost, pivot 3 (semaine de lecture en classe). Verbes du jour : trouver, venir, rentrer, regarder. Son de la semaine : [ɛ] (fiche 7).",
+    rows: [
+      ['Verbe du jour (8h30)', 'trouver (avoir)', 'venir (être)', 'rentrer (être)', 'regarder (avoir)'],
+      ['Dictée réflexive · vocabulaire (8h40)', 'GN ; PP avec avoir', 'PP avec être et avoir', 'Son [ɛ] 3/4 : la trace à l\'épreuve', 'Voc : mer et île, un mot plusieurs sens'],
+      ['Calcul mental (8h55)', 'Calcul réfléchi : × et : 10, 100, 1 000 sur les décimaux', 'Série tables de 6 et 9 + 5 procédures', 'Furet, ardoise, flash fractions', 'Bilan : tables de 6 à 9 + procédures'],
+      ["Écrit · langue (9h10)", '« Il perdit pied. »', 'Grammaire : le GN (3/4), institutionnalisation', '« Tout s\'éteignit. »', 'Réécriture de lundi'],
+      ['Problème du jour (9h55)', 'Proportionnalité simple (anticipation) : jour 1, problème 1', 'Jour 1, problème 2', 'Jour 2 : inconnue à l\'envers', 'Évaluation, nouveau contexte'],
+      ['Mathématiques (10h30)', 'Fractions > 1 : situation des bandes', 'Fractions et unité : institutionnalisation', 'Géom : droites perpendiculaires (reconnaître)', 'Fractions : entraînement et bilan'],
+      ['Lecture (11h10)', 'Pivot 3, temps 1 à 3 · chasse', 'Documentaire : lire un schéma · chasse', 'Fluence + lecture offerte · chasse', 'Dictée bilan (11h10) ; pivot 3, temps 4 à 6 + commande (14h15)'],
+      ['Anglais', 'Rituel : I like / I don\'t like (15 min)', 'Do you like…? intonation, chanson (30 min)', 'Class survey, notebook (30 min)', 'Présenter un camarade (15 min)'],
+      ['Orthographe [ɛ]', '1/4 repérer graphèmes et intrus (14h15)', '2/4 régularités, trace (13h30)', '3/4 en dictée réflexive', '4/4 entraînement (13h30)'],
+      ['Conjugaison', 'Présent : construire les catégories (14h30)', 'Présent : entraînement (15h45)', '—', '—'],
+      ['Sciences', 'Météo ; conducteurs/isolants : hypothèses, protocole', '—', 'Expérience, comparaison des groupes, conclusion', '—'],
+      ['Histoire · EMC', 'H : l\'école de Jules Ferry, sources (loi de 1882, Geoffroy)', '—', 'EMC : droits de l\'enfant, débat réglé', 'H : trace, frise · conseil et affiche du 20 novembre'],
+      ['EPS', 'Parcours : allure régulière', 'Lutte : règles, arbitrage (70 min)', 'Parcours : obstacles', 'Parcours : bilan'],
+      ['Arts', '—', 'AP : matières et textures (Courbet, La Vague)', 'Musique : Pierre et le loup', 'Lecture à voix haute (13h45)'],
+    ],
+    objectifs: [
+      ['Français', 'Identifier le nom noyau, le déterminant et l\'adjectif d\'un GN et les accorder ; CM2 : complément du nom et préposition. Accorder le participe passé avec être, ne pas l\'accorder avec avoir. Classer les verbes au présent selon leurs terminaisons.'],
+      ['Orthographe et vocabulaire', 'Choisir la graphie de [ɛ] (ai, ait, ais, ei, er) selon sa place ; reconnaître les intrus. Trouver le sens d\'un mot polysémique de la mer d\'après la phrase.'],
+      ['Écriture et lecture', 'Choisir un sens (propre ou figuré) d\'une phrase inductrice et le tenir. Relier ce que pensent et font les personnages. Relier un texte documentaire et son schéma.'],
+      ['Mathématiques', 'Comparer une fraction à 1, l\'encadrer entre deux entiers, la placer sur une droite graduée ; CM2 : 11/4 = 2 + 3/4. Reconnaître des droites perpendiculaires à l\'équerre. Multiplier et diviser un décimal par 10 (CM2 : 100, 1 000).'],
+      ['Autres', 'Distinguer conducteurs et isolants par l\'expérience ; expliquer l\'instruction obligatoire et laïque à partir de la loi de 1882 ; connaître 4 droits de l\'enfant ; reconnaître les familles d\'instruments ; arbitrer une rencontre de lutte.'],
+    ],
+  },
+  days: [require('./lundi'), require('./mardi'), require('./jeudi'), require('./vendredi')],
+};

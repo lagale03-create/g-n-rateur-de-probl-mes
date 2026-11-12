@@ -1,0 +1,332 @@
+{
+ "numero": 10,
+ "titre": "Proportionnalité simple",
+ "graine": "CJ-P2S3",
+ "Lundi": {
+  "1": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "Au centre équestre, 5 paquets de friandises coûtent 10 €. Mila achète 10 paquets de friandises.",
+    "question": "Combien Mila va-t-elle payer ?",
+    "guidees": [
+     "Combien de fois plus de paquets de friandises Mila achète-t-elle ?",
+     "Combien Mila va-t-elle payer ?"
+    ],
+    "situations": [
+     "Linéarité multiplicative"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 10 ÷ 5 = 2 (nombre de fois plus)",
+     "Linéarité multiplicative : 10 × 2 = 20 € (prix des 10 paquets de friandises)"
+    ],
+    "reponse": "Mila va payer 20 €.",
+    "parasites": []
+   }
+  ],
+  "2": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "Au centre équestre, 3 paquets de friandises coûtent 7,20 €. Mila achète 9 paquets de friandises et une brosse à 13,50 €. Elle paie avec un billet de 100 €. Les cours commencent à 10 h.",
+    "question": "Combien d'argent doit-on rendre à Mila ?",
+    "guidees": [],
+    "situations": [
+     "Linéarité multiplicative",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 9 ÷ 3 = 3 (nombre de fois plus)",
+     "Linéarité multiplicative : 7,20 × 3 = 21,60 € (prix des 9 paquets de friandises)",
+     "Union : 21,60 + 13,50 = 35,10 € (prix total)",
+     "Retrait : 100 − 35,10 = 64,90 € (monnaie rendue)"
+    ],
+    "reponse": "On doit rendre 64,90 € à Mila.",
+    "parasites": [
+     "Les cours commencent à 10 h."
+    ]
+   }
+  ],
+  "3": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "Au centre équestre, deux paquets de friandises coûtent 3,30 €. Un cheval adulte pèse environ 510 kg. Mila achète douze paquets de friandises et une brosse à 3,50 €. Elle paie avec un billet de 50 €.",
+    "question": "Combien d'argent doit-on rendre à Mila ?",
+    "guidees": [],
+    "situations": [
+     "Linéarité multiplicative",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 12 ÷ 2 = 6 (nombre de fois plus)",
+     "Linéarité multiplicative : 3,30 × 6 = 19,80 € (prix des 12 paquets de friandises)",
+     "Union : 19,80 + 3,50 = 23,30 € (prix total)",
+     "Retrait : 50 − 23,30 = 26,70 € (monnaie rendue)"
+    ],
+    "reponse": "On doit rendre 26,70 € à Mila.",
+    "parasites": [
+     "Un cheval adulte pèse environ 510 kg."
+    ]
+   }
+  ]
+ },
+ "Mardi": {
+  "1": [
+   {
+    "contexte": "Les confitures",
+    "enonce": "Au marché, sur le stand du producteur, 5 pots de confiture d'abricots coûtent 15 €. Timéo achète 20 pots de confiture d'abricots.",
+    "question": "Combien Timéo va-t-il payer ?",
+    "guidees": [
+     "Combien de fois plus de pots de confiture d'abricots Timéo achète-t-il ?",
+     "Combien Timéo va-t-il payer ?"
+    ],
+    "situations": [
+     "Linéarité multiplicative"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 20 ÷ 5 = 4 (nombre de fois plus)",
+     "Linéarité multiplicative : 15 × 4 = 60 € (prix des 20 pots de confiture d'abricots)"
+    ],
+    "reponse": "Timéo va payer 60 €.",
+    "parasites": []
+   }
+  ],
+  "2": [
+   {
+    "contexte": "Les confitures",
+    "enonce": "Au marché, sur le stand du producteur, 6 pots de confiture d'abricots coûtent 24 €. Timéo achète 24 pots de confiture d'abricots et un pot de miel à 5,50 €. Il paie avec un billet de 200 €.",
+    "question": "Combien d'argent doit-on rendre à Timéo ?",
+    "guidees": [],
+    "situations": [
+     "Linéarité multiplicative",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 24 ÷ 6 = 4 (nombre de fois plus)",
+     "Linéarité multiplicative : 24 × 4 = 96 € (prix des 24 pots de confiture d'abricots)",
+     "Union : 96 + 5,50 = 101,50 € (prix total)",
+     "Retrait : 200 − 101,50 = 98,50 € (monnaie rendue)"
+    ],
+    "reponse": "On doit rendre 98,50 € à Timéo.",
+    "parasites": []
+   }
+  ],
+  "3": [
+   {
+    "contexte": "Les confitures",
+    "enonce": "Au marché, sur le stand du producteur, 6 pots de confiture d'abricots coûtent 35,40 €. Timéo achète trente pots de confiture d'abricots et un pot de miel à 12 €. Il paie avec un billet de 200 €. Le stand ouvre à 8 h 30.",
+    "question": "Combien d'argent doit-on rendre à Timéo ?",
+    "guidees": [],
+    "situations": [
+     "Linéarité multiplicative",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 30 ÷ 6 = 5 (nombre de fois plus)",
+     "Linéarité multiplicative : 35,40 × 5 = 177 € (prix des 30 pots de confiture d'abricots)",
+     "Union : 177 + 12 = 189 € (prix total)",
+     "Retrait : 200 − 189 = 11 € (monnaie rendue)"
+    ],
+    "reponse": "On doit rendre 11 € à Timéo.",
+    "parasites": [
+     "Le stand ouvre à 8 h 30."
+    ]
+   }
+  ]
+ },
+ "Jeudi": {
+  "1": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "Au centre équestre, tous les paquets de friandises ont le même prix. Mila paie 16 € pour 8 paquets de friandises.",
+    "question": "Combien coûtent 4 paquets de friandises ?",
+    "guidees": [
+     "Combien de fois plus de paquets de friandises Mila achète-t-elle ?",
+     "Combien coûtent 4 paquets de friandises ?"
+    ],
+    "situations": [
+     "Linéarité multiplicative",
+     "Partage"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 8 ÷ 4 = 2 (nombre de fois plus)",
+     "Partage : 16 ÷ 2 = 8 € (prix de 4 paquets de friandises)"
+    ],
+    "reponse": "4 paquets de friandises coûtent 8 €.",
+    "parasites": []
+   },
+   {
+    "contexte": "Les confitures",
+    "enonce": "Au marché, sur le stand du producteur, tous les pots de confiture d'abricots ont le même prix. Timéo paie 27 € pour 9 pots de confiture d'abricots.",
+    "question": "Combien coûtent 3 pots de confiture d'abricots ?",
+    "guidees": [
+     "Combien de fois plus de pots de confiture d'abricots Timéo achète-t-il ?",
+     "Combien coûtent 3 pots de confiture d'abricots ?"
+    ],
+    "situations": [
+     "Linéarité multiplicative",
+     "Partage"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 9 ÷ 3 = 3 (nombre de fois plus)",
+     "Partage : 27 ÷ 3 = 9 € (prix de 3 pots de confiture d'abricots)"
+    ],
+    "reponse": "3 pots de confiture d'abricots coûtent 9 €.",
+    "parasites": []
+   }
+  ],
+  "2": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "Au centre équestre, tous les paquets de friandises ont le même prix. Mila achète 40 paquets de friandises et une brosse à 10 €. Elle paie avec un billet de 200 € et on lui rend 74 €.",
+    "question": "Combien coûtent 4 paquets de friandises ?",
+    "guidees": [],
+    "situations": [
+     "Linéarité multiplicative",
+     "Différence",
+     "Partage"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 40 ÷ 4 = 10 (nombre de fois plus)",
+     "Différence : 200 − 74 = 126 € (prix total)",
+     "Différence : 126 − 10 = 116 € (prix des 40 paquets de friandises)",
+     "Partage : 116 ÷ 10 = 11,60 € (prix de 4 paquets de friandises)"
+    ],
+    "reponse": "4 paquets de friandises coûtent 11,60 €.",
+    "parasites": []
+   },
+   {
+    "contexte": "Les confitures",
+    "enonce": "Au marché, sur le stand du producteur, tous les pots de confiture d'abricots ont le même prix. Timéo achète 16 pots de confiture d'abricots et un pot de miel à 9 €. Il paie avec un billet de 100 € et on lui rend 9,40 €. Le stand ouvre à 8 h.",
+    "question": "Combien coûtent 2 pots de confiture d'abricots ?",
+    "guidees": [],
+    "situations": [
+     "Linéarité multiplicative",
+     "Différence",
+     "Partage"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 16 ÷ 2 = 8 (nombre de fois plus)",
+     "Différence : 100 − 9,40 = 90,60 € (prix total)",
+     "Différence : 90,60 − 9 = 81,60 € (prix des 16 pots de confiture d'abricots)",
+     "Partage : 81,60 ÷ 8 = 10,20 € (prix de 2 pots de confiture d'abricots)"
+    ],
+    "reponse": "2 pots de confiture d'abricots coûtent 10,20 €.",
+    "parasites": [
+     "Le stand ouvre à 8 h."
+    ]
+   }
+  ],
+  "3": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "Au centre équestre, tous les paquets de friandises ont le même prix. Le centre équestre a été créé en 1995. Mila achète 8 paquets de friandises et une brosse à 5,50 €. Elle paie avec un billet de 50 € et on lui rend 27,70 €. Les cours commencent à 9 h 30.",
+    "question": "Combien coûtent deux paquets de friandises ?",
+    "guidees": [],
+    "situations": [
+     "Linéarité multiplicative",
+     "Différence",
+     "Partage"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 8 ÷ 2 = 4 (nombre de fois plus)",
+     "Différence : 50 − 27,70 = 22,30 € (prix total)",
+     "Différence : 22,30 − 5,50 = 16,80 € (prix des 8 paquets de friandises)",
+     "Partage : 16,80 ÷ 4 = 4,20 € (prix de 2 paquets de friandises)"
+    ],
+    "reponse": "2 paquets de friandises coûtent 4,20 €.",
+    "parasites": [
+     "Les cours commencent à 9 h 30.",
+     "Le centre équestre a été créé en 1995."
+    ]
+   },
+   {
+    "contexte": "Les confitures",
+    "enonce": "Au marché, sur le stand du producteur, tous les pots de confiture d'abricots ont le même prix. Chaque pot pèse 330 g. Timéo achète 18 pots de confiture d'abricots et un pot de miel à 5 €. Il paie avec un billet de 200 € et on lui rend 87,90 €.",
+    "question": "Combien coûtent six pots de confiture d'abricots ?",
+    "guidees": [],
+    "situations": [
+     "Linéarité multiplicative",
+     "Différence",
+     "Partage"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 18 ÷ 6 = 3 (nombre de fois plus)",
+     "Différence : 200 − 87,90 = 112,10 € (prix total)",
+     "Différence : 112,10 − 5 = 107,10 € (prix des 18 pots de confiture d'abricots)",
+     "Partage : 107,10 ÷ 3 = 35,70 € (prix de 6 pots de confiture d'abricots)"
+    ],
+    "reponse": "6 pots de confiture d'abricots coûtent 35,70 €.",
+    "parasites": [
+     "Chaque pot pèse 330 g."
+    ]
+   }
+  ]
+ },
+ "Vendredi": {
+  "1": [
+   {
+    "contexte": "La randonnée",
+    "enonce": "À l'office de tourisme, 3 sachets de fruits secs coûtent 3 €. Jade achète 12 sachets de fruits secs.",
+    "question": "Combien Jade va-t-elle payer ?",
+    "guidees": [],
+    "situations": [
+     "Linéarité multiplicative"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 12 ÷ 3 = 4 (nombre de fois plus)",
+     "Linéarité multiplicative : 3 × 4 = 12 € (prix des 12 sachets de fruits secs)"
+    ],
+    "reponse": "Jade va payer 12 €.",
+    "parasites": []
+   }
+  ],
+  "2": [
+   {
+    "contexte": "La randonnée",
+    "enonce": "À l'office de tourisme, 2 sachets de fruits secs coûtent 5,60 €. Jade achète 20 sachets de fruits secs et une carte de randonnée à 11 €. Elle paie avec un billet de 100 €.",
+    "question": "Combien d'argent doit-on rendre à Jade ?",
+    "guidees": [],
+    "situations": [
+     "Linéarité multiplicative",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 20 ÷ 2 = 10 (nombre de fois plus)",
+     "Linéarité multiplicative : 5,60 × 10 = 56 € (prix des 20 sachets de fruits secs)",
+     "Union : 56 + 11 = 67 € (prix total)",
+     "Retrait : 100 − 67 = 33 € (monnaie rendue)"
+    ],
+    "reponse": "On doit rendre 33 € à Jade.",
+    "parasites": []
+   }
+  ],
+  "3": [
+   {
+    "contexte": "La randonnée",
+    "enonce": "À l'office de tourisme, 2 sachets de fruits secs coûtent 3,60 €. Jade achète seize sachets de fruits secs et une carte de randonnée à 9 €. Le sommet culmine à 2 000 m d'altitude. Le départ est prévu à 9 h. Elle paie avec un billet de 50 €.",
+    "question": "Combien d'argent doit-on rendre à Jade ?",
+    "guidees": [],
+    "situations": [
+     "Linéarité multiplicative",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 16 ÷ 2 = 8 (nombre de fois plus)",
+     "Linéarité multiplicative : 3,60 × 8 = 28,80 € (prix des 16 sachets de fruits secs)",
+     "Union : 28,80 + 9 = 37,80 € (prix total)",
+     "Retrait : 50 − 37,80 = 12,20 € (monnaie rendue)"
+    ],
+    "reponse": "On doit rendre 12,20 € à Jade.",
+    "parasites": [
+     "Le sommet culmine à 2 000 m d'altitude.",
+     "Le départ est prévu à 9 h."
+    ]
+   }
+  ]
+ }
+}
