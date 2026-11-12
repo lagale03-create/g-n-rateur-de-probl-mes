@@ -11,7 +11,7 @@ const F = {
 };
 // fiche par semaine : les sons riches en graphies prennent 2 ou 3 semaines
 const ORDRE = [1, 2, 2, 3, 3, 4, 5, 5, 6, 7, 8, 9, 10, 11, 11, 11, 12, 12, 13, 14, 15, 16, 16, 17, 17, 18, 19, 19, 20, 21, 22, 23, 23, 23, 24, 25];
-const PERIODES = [[1, 7], [8, 14], [15, 21], [22, 28], [29, 36]];
+const PERIODES = [[1, 7], [8, 14], [15, 20], [21, 26], [27, 36]]; // calendrier zone A 2026-2027 : P3 et P4 = 6 semaines, P5 = 10
 const sonDeLaSemaine = n => {
   const f = F[ORDRE[n - 1]];
   const rang = ORDRE.slice(0, n).filter(x => x === f.fiche).length;

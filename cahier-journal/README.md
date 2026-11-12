@@ -14,6 +14,7 @@ Outils qui fabriquent le cahier journal de la classe, semaine par semaine : plan
 | `src/progression_sons.js` | Les 25 fiches de sons réparties sur les 36 semaines (`node src/progression_sons.js`) |
 | `src/p2s3/` | Semaine modèle P2 S3 (16-20 novembre) : un fichier par jour, `commun.js` (verbe du jour, chasse au mot), `ortho.js` (son de la semaine), `semaine.js` (planning) |
 | `lucy-lost/plan_P2.md` | Plan de lecture de Lucy Lost en période 2 : chapitres et pivot de chaque semaine, débat, activités, écrits, vigilance, corpus de grammaire. Le dossier de Pierre (textes adaptés, fiches de compréhension) reste hors du dépôt ; le cahier journal y renvoie comme fichiers séparés |
+| `cheval-de-guerre/plan_P3.md` | Plan de lecture de Cheval de guerre en période 3 (à valider) |
 | `img/` | Figures dessinées pour la classe (droites, droites graduées, schéma de circuit) |
 | `gen/p2s3/` | Sorties du générateur et du calcul mental pour la semaine modèle |
 | `referentiel/` | Référentiel des progressions en PDF et son script (`python3 referentiel/build_ref.py && node referentiel/topdf.js`) |
@@ -27,3 +28,7 @@ Outils qui fabriquent le cahier journal de la classe, semaine par semaine : plan
 4. `node src/build.js pXsY`, puis convertir en PDF et vérifier chaque page.
 
 Prérequis : Node (dépendance `docx` du dépôt), Python 3, Playwright pour le PDF du référentiel.
+
+## Calendrier
+
+Zone A 2026-2027 : P1 = S1-S7, P2 = S8-S14 (2 nov.-18 déc.), P3 = S15-S20 (4 janv.-12 févr.), P4 = S21-S26 (1er mars-9 avr.), P5 = S27-S36 (26 avr.-2 juil.). Les progressions de maths et de géométrie du cadrage, écrites sur 7 + 7 + 8 semaines pour P3 à P5, se lisent comme une suite continue : « P3 S7 » se fait en P4 S1, « P4 S1-S5 » en P4 S2-S6, « P4 S6-S7 » en P5 S1-S2, « P5 S1-S8 » en P5 S3-S10.

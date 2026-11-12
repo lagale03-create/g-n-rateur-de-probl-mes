@@ -58,11 +58,11 @@ cadre = (
     + h2('Découpage de l\'année')
     + t(['Période', 'Semaines', 'Repères'], [
         ['P1', 'S1 à S7', 'Rentrée, réactivation ; P1 faite au moment de ce référentiel'],
-        ['P2', 'S8 à S14', 'Semaine modèle du cahier journal : P2 S3 (16-20 novembre) ; droits de l\'enfant le 20 novembre ; laïcité le 9 décembre'],
-        ['P3', 'S15 à S21', 'Dès février : élire, la Ve République (préparation de l\'élection présidentielle)'],
-        ['P4', 'S22 à S28', 'Piscine à partir du 19 mars ; élection présidentielle le 18 avril et le 2 mai 2027'],
-        ['P5', 'S29 à S36', 'Piscine jusqu\'au 4 juin ; rugby toucher ensuite ; spectacle tiré de Lucy Lost autour du 22 juin']], [12, 16, 72])
-    + note('La numérotation S1 à S36 est celle de la progression des sons et du générateur de problèmes ; dans les tableaux par période, les semaines sont numérotées S1 à S7 (ou S8) à l\'intérieur de chaque période.')
+        ['P2', 'S8 à S14 (2 nov.-18 déc.)', 'Semaine modèle du cahier journal : P2 S3 (16-20 novembre) ; droits de l\'enfant le 20 novembre ; laïcité le 9 décembre'],
+        ['P3', 'S15 à S20 (4 janv.-12 févr.)', 'Dès février : élire, la Ve République (préparation de l\'élection présidentielle)'],
+        ['P4', 'S21 à S26 (1er mars-9 avr.)', 'Piscine à partir du 19 mars ; élection présidentielle le 18 avril et le 2 mai 2027'],
+        ['P5', 'S27 à S36 (26 avr.-2 juil.)', 'Piscine jusqu\'au 4 juin ; rugby toucher ensuite ; spectacle tiré de Lucy Lost autour du 22 juin']], [12, 16, 72])
+    + note('Calendrier de la zone A : P3 et P4 durent 6 semaines, P5 en dure 10. La numérotation S1 à S36 (sons, générateur de problèmes) suit les semaines réelles. Les tableaux de mathématiques et de géométrie, écrits sur 7 + 7 + 8 semaines, se lisent comme une suite continue : la semaine « P3 S7 » se fait en P4 S1, « P4 S1 à S5 » en P4 S2 à S6, « P4 S6 et S7 » en P5 S1 et S2, « P5 S1 à S8 » en P5 S3 à S10.')
     + h2('Ce que contient chaque semaine du cahier journal')
     + ul(['Un planning synthétique (une ligne par domaine, une colonne par jour) et les notions visées en fin de semaine.',
           'Pour chaque jour : les séances détaillées (compétence, objectif, critères de réussite, matériel, appui didactique, phases enseignant / élèves, différenciation, trace écrite, corrigé) et les fiches élèves prêtes à imprimer, une par page.',
@@ -91,7 +91,7 @@ lecture = (
     + t(['Période', 'Œuvre longue', 'Support du mardi', 'Entrée littéraire', 'Focus de compréhension'], [
         ['P1', '<i>Charlie et la chocolaterie</i> (Dahl)', 'Albums (texte et image, implicite)', 'Héros et héroïnes', 'Représentation mentale ; reformuler'],
         ['P2', '<i>Le Mystère de Lucy Lost</i> (Morpurgo), étude par passages pour tenir dans la période', 'Textes documentaires (électricité, République)', 'Le merveilleux et l\'étrange', 'États mentaux des personnages'],
-        ['P3', '<i>Cheval de guerre</i> (Morpurgo)', 'Nouvelles et récits courts en réseau (la guerre, l\'animal compagnon)', 'Imaginer et vivre d\'autres vies', 'Inférences, implicite'],
+        ['P3', '<i>Cheval de guerre</i> (Morpurgo), 21 chapitres en 6 semaines, un pivot par semaine (chapitres 1, 4, 8, 12, 15, 19)', 'Nouvelles et récits courts en réseau (la guerre, l\'animal compagnon)', 'Imaginer et vivre d\'autres vies', 'Inférences, implicite'],
         ['P4', '<i>Le Bon Gros Géant</i> (Dahl)', 'Bande dessinée', 'Comprendre et interroger la morale', 'Chronologie, retours en arrière'],
         ['P5', '<i>L\'Enfant Océan</i> (Mourlevat)', 'Poésie et théâtre', 'Se découvrir dans le rapport aux autres', 'Narrateur et point de vue']], [8, 28, 24, 20, 20])
     + p('<b>Fluence</b> : repères de fin d\'année, 110 mots par minute en CM1, 120 en CM2 ; binômes, trois lectures d\'une minute, graphique personnel par période.')
