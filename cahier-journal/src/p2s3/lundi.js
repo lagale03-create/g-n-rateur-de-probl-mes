@@ -5,7 +5,7 @@ const PHRASE = 'Ce matin, les pêcheurs ont trouvé une petite fille endormie su
 
 module.exports = {
   jour: 'Lundi', date: '16 novembre', num: '01',
-  lead: 'Ouverture de la semaine : verbe trouver, groupe nominal et participe passé avec avoir en dictée, phrase inductrice « Il perdit pied. », situation de recherche sur les fractions plus grandes que 1, pivot 3 de Lucy Lost, conducteurs et isolants, l\'école de Jules Ferry par les sources.',
+  lead: 'Ouverture de la semaine : verbe trouver, groupe nominal et participe passé avec avoir en dictée, phrase inductrice « Il perdit pied. », situation de recherche sur les fractions plus grandes que 1, chapitre 5 de Lucy Lost (pivot), conducteurs et isolants, l\'école de Jules Ferry par les sources.',
   seances: [
     verbeDuJour(verbeEr('trouver', 'avoir'), PHRASE,
       'Fait lire le passé composé : « ils ont trouvé ». Avoir bloque l\'accord : trouvé ne prend pas de s, même si le sujet est au pluriel. Compare le passé simple (il trouva) avec le futur (il trouvera) : le -r- du futur.'),
@@ -63,20 +63,22 @@ module.exports = {
       note: 'Erreur attendue : croire qu\'on ne peut pas prendre 5 quarts d\'une bande partagée en 4. La garder pour la mise en commun : on prend plusieurs bandes unité.',
     },
     {
-      h: '11h10-11h45', dom: 'Lecture', titre: 'Lucy Lost, pivot 3, temps 1 à 3',
+      h: '11h10-11h45', dom: 'Lecture', titre: 'Lucy Lost, chapitre 5 « Une simple idée » (pivot de la semaine), temps 1 à 3',
       comp: 'Comprendre un texte littéraire et l\'interpréter (Goigoux et Cèbe, Lector et Lectrix)',
-      obj: 'Relier ce que pensent les îliens et ce qu\'ils font envers Lucy ; justifier chaque réponse par une citation.',
-      crit: ['chaque réponse du QCM est justifiée par une phrase et une page', 'au débat, l\'élève appuie son avis sur le texte'],
-      mat: 'Livre ; carnet de chasse ; fiches QCM N1, N2, N3 du pivot 3 (en attente du chapitre)',
-      fiche: 'Carnet de chasse (tous) ; QCM en attente',
+      obj: 'Comprendre ce que ressentent Alfie et Mary et pourquoi ils agissent ainsi ; justifier chaque réponse du QCM par une citation et une page.',
+      crit: ['chaque réponse du QCM est justifiée par une phrase et une page', 'au débat, l\'élève appuie son avis sur sa citation'],
+      mat: 'Textes adaptés du chapitre 5 (●, ●●, ●●●) et QCM N1, N2, N3 : fichier 05_Lucy-Lost_chapitre.docx du dossier Lucy Lost ; livre ; audio pour les N1 ; carnet de chasse',
+      ref: 'Dossier Lucy Lost de la classe, version enseignant du chapitre 5 ; Giasson ; Goigoux et Cèbe',
+      fiche: 'Carnet de chasse (tous) ; QCM N1, N2, N3 (fichier séparé)',
       phases: [
-        ['Chasse au mot', '2 min', chasse('Lundi'), 'Cherchent, notent le mot, la page et leurs critères'],
-        ['Temps 1 · rappel', '4 min', 'Deux élèves racontent les chapitres lus la semaine dernière ; la classe complète.', 'Racontent, corrigent'],
-        ['Temps 2 · lecture', '10 min', 'Lecture magistrale pour les N1, texte sous les yeux.', 'N2 : silencieuse puis relecture du passage clé ; N3 : autonome'],
-        ['Temps 3 · QCM', '11 min', 'Rappelle : une réponse = une citation + une page.', 'Répondent seuls puis comparent en binômes'],
-        ['Débat', '8 min', 'Part de la question où deux réponses se défendent.', 'Confrontent leurs citations'],
+        ['Chasse au mot', '2 min', chasse('Lundi'), 'Cherchent dans les chapitres 1 à 4, notent le mot, la page et leurs critères'],
+        ['Temps 1 · rappel', '4 min', 'Rappel du chapitre 4 : les rumeurs, Jack Brody, la bagarre avec Zeb, les « yeux vides » de Lucy.', 'Racontent, complètent'],
+        ['Temps 2 · lecture', '10 min', 'Première partie du chapitre, jusqu\'au mot « Wilhelm ». N1 : lecture magistrale ou audio, texte ● sous les yeux.', 'N2 : lecture silencieuse du texte ●●, puis relecture du passage clé ; N3 : texte ●●● en autonomie'],
+        ['Temps 3 · QCM', '9 min', 'Rappelle : une réponse = une citation + une page.', 'Répondent seuls, puis comparent en binômes de même niveau'],
+        ['Débat', '10 min', 'Question : « Alfie a-t-il raison de garder le mot « Wilhelm » secret, même devant Mary et le docteur ? » Fait défendre chaque position par une citation.', 'Débattent à partir des désaccords'],
       ],
-      note: 'Point sensible : la méfiance envers une enfant inconnue en temps de guerre ; la nommer et la relier à la journée contre le harcèlement du 5 novembre.',
+      corrige: ['Corrigés complets des QCM N1, N2, N3 : version enseignant du fichier 05_Lucy-Lost_chapitre.docx. Question à débat : N1 n° 4, N2 n° 4, N3 n° 6 (protéger Lucy des soupçons ; ou garder un lien à deux : les deux se défendent).'],
+      note: 'Vigilance : l\'histoire de Billy évoque la mort d\'une femme en couches et d\'un bébé (pudeur, élèves en deuil) ; les mots « fou », « asile de fous » sont ceux de l\'époque : les expliquer, dire qu\'aujourd\'hui on soigne autrement ; Lucy n\'est pas « folle », elle a vécu un choc. Ne pas dévoiler son origine. Avant la lecture, si possible vendredi 13 ou en début de séance : activité « Les mots du chapitre » du dossier (jumeau, phonographe, Chopin, chagrin, culpabilité, traumatisé).',
     },
     {
       h: '11h45-12h00', dom: 'Anglais', titre: 'rituel et réactivation : I like… / I don\'t like…',
@@ -152,7 +154,7 @@ module.exports = {
       note: 'Sources : loi du 28 mars 1882, articles 1, 2 et 4, texte intégral : https://snes.edu/wp-content/uploads/loi_1882.pdf (également sur Légifrance et Gallica). Tableau : Jean Geoffroy, « En classe, le travail des petits », 1889 ; reproduction : https://eclecticlight.co/2019/01/07/jean-geoffroy-the-world-of-the-child/ . La gratuité vient de la loi du 16 juin 1881 : la citer à l\'oral.',
     },
   ],
-  attente: [['Lecture', 'QCM du pivot 3 (la méfiance des îliens)', 'N1, N2, N3']],
+  externes: [['Lecture', 'Lucy Lost, chapitre 5 : textes adaptés et QCM N1, N2, N3 (fichier 05_Lucy-Lost_chapitre.docx du dossier Lucy Lost)', '● ●● ●●●']],
   fiches: [
     {
       dom: "Production d'écrits", niv: 'Version aménagée', n1: true, titre: 'Ma phrase : « Il perdit pied. »', b: [

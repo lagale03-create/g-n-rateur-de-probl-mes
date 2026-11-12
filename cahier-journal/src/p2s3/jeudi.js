@@ -64,13 +64,14 @@ module.exports = {
     {
       h: '11h10-11h30', dom: 'Lecture', titre: 'fluence et lecture offerte',
       comp: 'Lire avec fluidité ; comprendre un texte lu par l\'adulte',
-      obj: 'Améliorer sa vitesse et sa précision sur un passage du pivot ; écouter la suite du roman (semaine de lecture en classe).',
+      obj: 'Améliorer sa vitesse et sa précision sur un passage du chapitre 5 ; entrer dans le chapitre 6 (New York, mars 1915), qui ouvre la seconde histoire du roman.',
       crit: ['score de la meilleure lecture reporté sur le graphique', 'repères : 110 mots par minute en CM1, 120 en CM2'],
-      mat: 'Livre ; chronomètres ; graphique de fluence de la période (distribué en semaine 1) ; carnet de chasse',
+      mat: 'Textes adaptés des chapitres 5 et 6 (dossier Lucy Lost) ; livre ; audio pour les N1 ; chronomètres ; graphique de fluence ; carnet de chasse',
+      note: 'Chapitres 6 à 9 cette semaine (semaine de lecture en classe) : le chapitre 6 est commencé ici ; la suite des chapitres 6 à 9 est lue en classe dans les textes adaptés pendant les temps d\'autonomie (audio pour les N1), avec un rappel collectif lundi 23 novembre. Le chapitre 6 ouvre l\'histoire de Merry à New York : la nommer comme une seconde histoire.',
       phases: [
         ['Chasse au mot', '2 min', chasse('Jeudi'), 'Cherchent, notent'],
-        ['Fluence', '8 min', 'Passage du pivot 3 délimité (environ 150 mots). Binômes : un lit 1 minute, l\'autre compte les mots justes ; 3 lectures, on échange.', 'Lisent, comptent, reportent le meilleur score'],
-        ['Lecture offerte', '10 min', 'Lit à voix haute le chapitre suivant le pivot (semaine en classe : tous l\'entendent, audio pour les N1).', 'Écoutent, suivent dans le livre'],
+        ['Fluence', '8 min', 'Passage du chapitre 5 : la scène du piano, à la fin du chapitre, dans le texte de son niveau (environ 150 mots). Binômes : un lit 1 minute, l\'autre compte les mots justes ; 3 lectures, on échange.', 'Lisent, comptent, reportent le meilleur score'],
+        ['Lecture offerte', '10 min', 'Lit le début du chapitre 6 : changement de lieu et d\'époque (New York, mars 1915). Fait repérer le titre et la date : « Où sommes-nous ? Quand ? »', 'Écoutent, suivent dans le texte adapté, complètent le tableau « Où ? Quand ? »'],
       ],
     },
     {

@@ -132,7 +132,7 @@ function integrer(day, dir, tables, fichierProblemes) {
   const autres = day.fiches.filter(f => f.dom !== 'Calcul mental' && f.dom !== 'Problème du jour');
   const iConj = autres.filter(f => f.dom === 'Vocabulaire').length;
   day.fiches = [...autres.slice(0, iConj), ...fichesCalcul(dir, day.jour, tables), ...autres.slice(iConj)];
-  day.externes = [['Problème du jour', `Fichier ${fichierProblemes} (générateur de problèmes)`, '★ ★★ ★★★']];
+  day.externes = [...(day.externes || []), ['Problème du jour', `Fichier ${fichierProblemes} (générateur de problèmes)`, '★ ★★ ★★★']];
   return day;
 }
 

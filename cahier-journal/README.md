@@ -13,6 +13,7 @@ Outils qui fabriquent le cahier journal de la classe, semaine par semaine : plan
 | `src/procedures.py` | Procédures et faits usuels par période, fractions d'une quantité (P3-P5), pourcentages (P4-P5), vérifiés en arithmétique exacte : `python3 src/procedures.py <graine> <période> <CM1\|CM2> <n>` |
 | `src/progression_sons.js` | Les 25 fiches de sons réparties sur les 36 semaines (`node src/progression_sons.js`) |
 | `src/p2s3/` | Semaine modèle P2 S3 (16-20 novembre) : un fichier par jour, `commun.js` (verbe du jour, chasse au mot), `ortho.js` (son de la semaine), `semaine.js` (planning) |
+| `lucy-lost/plan_P2.md` | Plan de lecture de Lucy Lost en période 2 : chapitres et pivot de chaque semaine, débat, activités, écrits, vigilance, corpus de grammaire. Le dossier de Pierre (textes adaptés, fiches de compréhension) reste hors du dépôt ; le cahier journal y renvoie comme fichiers séparés |
 | `img/` | Figures dessinées pour la classe (droites, droites graduées, schéma de circuit) |
 | `gen/p2s3/` | Sorties du générateur et du calcul mental pour la semaine modèle |
 | `referentiel/` | Référentiel des progressions en PDF et son script (`python3 referentiel/build_ref.py && node referentiel/topdf.js`) |

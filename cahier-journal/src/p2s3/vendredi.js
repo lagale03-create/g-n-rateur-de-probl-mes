@@ -6,7 +6,7 @@ const DICTEE_CM1 = [DICTEE_CM2[0], DICTEE_CM2[1], DICTEE_CM2[2], 'La fillette re
 
 module.exports = {
   jour: 'Vendredi', date: '20 novembre', num: '04',
-  lead: 'Journée bilan et journée internationale des droits de l\'enfant : dictée bilan qui réunit les verbes du jour, le groupe nominal et le son [ɛ] ; réécriture ; fractions et unité ; pivot 3, temps 4 à 6 ; trace écrite d\'histoire ; conseil et affiche du 20 novembre.',
+  lead: 'Journée bilan et journée internationale des droits de l\'enfant : dictée bilan qui réunit les verbes du jour, le groupe nominal et le son [ɛ] ; réécriture ; fractions et unité ; chapitre 5 de Lucy Lost, temps 4 à 6 ; trace écrite d\'histoire ; conseil et affiche du 20 novembre.',
   seances: [
     verbeDuJour(verbeEr('regarder', 'avoir'), DICTEE_CM2[4],
       'Fait relire l\'imparfait : « elle regardait » (-ait, comme le son [ɛ] de la semaine). Récapitule les quatre verbes de la semaine : trouver et regarder avec avoir, venir et rentrer avec être.'),
@@ -100,18 +100,21 @@ module.exports = {
       ],
     },
     {
-      h: '14h15-14h45', dom: 'Lecture', titre: 'Lucy Lost, pivot 3, temps 4 à 6 ; commande de natures',
+      h: '14h15-14h45', dom: 'Lecture', titre: 'Lucy Lost, chapitre 5, temps 4 à 6 ; commande de natures',
       comp: 'Comprendre un texte littéraire et l\'interpréter ; identifier les classes de mots',
-      obj: 'Rituels (chaînes anaphoriques, tableau « Où ? Quand ? Dans quel monde ? »), activité sur ce que pensent et font les îliens, écrit d\'appropriation ; commande de 5 natures.',
-      crit: ['les désignations de Lucy par les îliens sont relevées', 'la commande : 5 natures justes avec la page'],
-      mat: 'Livre ; carnet de chasse ; fiches rituels et activités N1, N2, N3 (en attente du chapitre)',
-      fiche: 'Carnet de chasse ; fiches du pivot en attente',
+      obj: 'Seconde partie du chapitre 5 (le docteur, le phonographe, le mot « Piano ») ; rituels, activité de lecture selon le niveau, écrit d\'appropriation ; commande de 5 natures.',
+      crit: ['chaînes anaphoriques justes (piège : « Jim, mon gars » désigne Alfie)', 'l\'activité de son niveau est réussie', 'la commande : 5 natures justes avec la page'],
+      mat: 'Fichier 05_Lucy-Lost_chapitre.docx (rituels, activités N1, N2, N3) ; affiche « Où ? Quand ? Dans quel monde ? » ; carnet de chasse',
+      ref: 'Dossier Lucy Lost, version enseignant du chapitre 5 : Giasson (remise en ordre, carte des personnages) ; Goigoux et Cèbe (qui sait quoi ?)',
+      fiche: 'Carnet de chasse ; fiches du chapitre 5 (fichier séparé)',
       phases: [
-        ['Commande', '5 min', chasse('Vendredi'), 'Cherchent dans le pivot, notent page et critères'],
-        ['Temps 4 · rituels', '7 min', 'Chaîne anaphorique : toutes les façons dont les îliens désignent Lucy.', 'Relèvent selon leur niveau'],
-        ['Temps 5 · activité', '10 min', 'Commence avec les N1.', 'N2, N3 en autonomie, citations'],
-        ['Temps 6 · mise en commun et écrit', '8 min', 'Synthèse : « Comment a-t-on compris ce que pensaient les îliens ? » Lance l\'écrit d\'appropriation.', 'Commencent l\'écrit, terminé en autonomie lundi'],
+        ['Commande', '5 min', chasse('Vendredi'), 'Cherchent dans le chapitre 5, notent page et critères'],
+        ['Temps 4 · rituels', '7 min', 'Chaînes anaphoriques (N1 : relier ; N2 : passage délimité ; N3 : tout le chapitre) ; le tableau « Où ? Quand ? Dans quel monde ? » est reporté sur l\'affiche.', 'Relèvent selon leur niveau'],
+        ['Temps 5 · activités', '12 min', 'Commence avec les N1 : remettre dans l\'ordre la vie d\'oncle Billy.', 'N2 : « Qui sait quoi ? Le secret de Wilhelm » ; N3 : « Billy et Lucy, deux êtres perdus » (carte comparative)'],
+        ['Temps 6 · mise en commun et écrit', '6 min', 'Synthèse : on a compris ce que ressent Mary devant le mot « hôpital » en reliant ce chapitre à l\'histoire de Billy. Lance l\'écrit d\'appropriation (sujet au choix : ce que pense Lucy en entendant le piano ; le journal d\'Alfie « Aujourd\'hui, Lucy a parlé ! » ; Alfie raconte à Billy les progrès de Lucy).', 'Choisissent un sujet ; l\'écrit est terminé lundi en autonomie'],
       ],
+      corrige: ['Rituels, attendus des activités et critères des écrits : version enseignant du fichier 05_Lucy-Lost_chapitre.docx.'],
+      note: 'La seconde partie du chapitre est lue en début de temps 4 si elle ne l\'a pas été lundi (lecture offerte, 5 min prises sur le temps 5).',
     },
     {
       h: '14h45-15h00', dom: 'EPS', titre: 'parcours athlétique : bilan de la semaine',
@@ -145,7 +148,7 @@ module.exports = {
       ],
     },
   ],
-  attente: [['Lecture', 'Rituels et activités du pivot 3 (temps 4 à 6)', 'N1, N2, N3']],
+  externes: [['Lecture', 'Lucy Lost, chapitre 5 : rituels et activités N1, N2, N3 (fichier 05_Lucy-Lost_chapitre.docx)', '● ●● ●●●']],
   fiches: [
     {
       dom: 'Vocabulaire', niv: 'Tous', titre: 'Un mot, plusieurs sens', b: [
