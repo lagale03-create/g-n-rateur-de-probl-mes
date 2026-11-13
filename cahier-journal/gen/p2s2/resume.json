@@ -1,0 +1,340 @@
+{
+ "numero": 9,
+ "titre": "Longueurs",
+ "graine": "CJ-P2S2",
+ "Lundi": {
+  "1": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "La monitrice parcourt d'abord 600 m du centre jusqu'à la forêt. Ensuite, elle parcourt 600 m dans la forêt. Pour arriver à la ferme, le parcours complet mesure 1 500 m.",
+    "question": "Combien de mètres reste-t-il à parcourir pour arriver à la ferme ?",
+    "guidees": [
+     "Quelle distance la monitrice a-t-elle déjà parcourue ?",
+     "Combien de mètres reste-t-il à parcourir pour arriver à la ferme ?"
+    ],
+    "situations": [
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Union : 600 + 600 = 1 200 m (distance déjà parcourue)",
+     "Retrait : 1 500 − 1 200 = 300 m (distance qui reste)"
+    ],
+    "reponse": "Il reste 300 m à parcourir.",
+    "parasites": []
+   }
+  ],
+  "2": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "La monitrice parcourt d'abord 3 km du centre jusqu'à la forêt. Ensuite, elle parcourt 500 m dans la forêt. Puis elle parcourt 1 450 m le long de la rivière. Pour arriver à la ferme, le parcours complet mesure 6 km.",
+    "question": "Combien de mètres reste-t-il à parcourir pour arriver à la ferme ?",
+    "guidees": [],
+    "situations": [
+     "Conversion",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Conversion : 3 km = 3 000 m (première étape en mètres)",
+     "Union : 3 000 + 500 = 3 500 m (distance des deux premières étapes)",
+     "Union : 3 500 + 1 450 = 4 950 m (distance déjà parcourue)",
+     "Conversion : 6 km = 6 000 m (parcours complet en mètres)",
+     "Retrait : 6 000 − 4 950 = 1 050 m (distance qui reste)"
+    ],
+    "reponse": "Il reste 1 050 m à parcourir.",
+    "parasites": []
+   }
+  ],
+  "3": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "La monitrice parcourt d'abord 5,1 km du centre jusqu'à la forêt. Les prairies du centre couvrent 7 hectares. Ensuite, elle parcourt 1 090 m dans la forêt. Puis elle parcourt 2 490 m le long de la rivière. Pour arriver à la ferme, le parcours complet mesure 13 km.",
+    "question": "Combien de mètres reste-t-il à parcourir pour arriver à la ferme ?",
+    "guidees": [],
+    "situations": [
+     "Conversion",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Conversion : 5,1 km = 5 100 m (première étape en mètres)",
+     "Union : 5 100 + 1 090 = 6 190 m (distance des deux premières étapes)",
+     "Union : 6 190 + 2 490 = 8 680 m (distance déjà parcourue)",
+     "Conversion : 13 km = 13 000 m (parcours complet en mètres)",
+     "Retrait : 13 000 − 8 680 = 4 320 m (distance qui reste)"
+    ],
+    "reponse": "Il reste 4 320 m à parcourir.",
+    "parasites": [
+     "Les prairies du centre couvrent 7 hectares."
+    ]
+   }
+  ]
+ },
+ "Mardi": {
+  "1": [
+   {
+    "contexte": "Les confitures",
+    "enonce": "Le producteur roule d'abord 700 m de la ferme jusqu'au village. Ensuite, il roule 350 m du village jusqu'à la ville. Pour arriver au marché, le parcours complet mesure 1 350 m.",
+    "question": "Combien de mètres reste-t-il à parcourir pour arriver au marché ?",
+    "guidees": [
+     "Quelle distance le producteur a-t-il déjà parcourue ?",
+     "Combien de mètres reste-t-il à parcourir pour arriver au marché ?"
+    ],
+    "situations": [
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Union : 700 + 350 = 1 050 m (distance déjà parcourue)",
+     "Retrait : 1 350 − 1 050 = 300 m (distance qui reste)"
+    ],
+    "reponse": "Il reste 300 m à parcourir.",
+    "parasites": []
+   }
+  ],
+  "2": [
+   {
+    "contexte": "Les confitures",
+    "enonce": "Le producteur roule d'abord 4 km de la ferme jusqu'au village. Ensuite, il roule 1 400 m du village jusqu'à la ville. Puis il roule 2 450 m dans la ville. Le stand ouvre à 8 h 30. Pour arriver au marché, le parcours complet mesure 11 km.",
+    "question": "Combien de mètres reste-t-il à parcourir pour arriver au marché ?",
+    "guidees": [],
+    "situations": [
+     "Conversion",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Conversion : 4 km = 4 000 m (première étape en mètres)",
+     "Union : 4 000 + 1 400 = 5 400 m (distance des deux premières étapes)",
+     "Union : 5 400 + 2 450 = 7 850 m (distance déjà parcourue)",
+     "Conversion : 11 km = 11 000 m (parcours complet en mètres)",
+     "Retrait : 11 000 − 7 850 = 3 150 m (distance qui reste)"
+    ],
+    "reponse": "Il reste 3 150 m à parcourir.",
+    "parasites": [
+     "Le stand ouvre à 8 h 30."
+    ]
+   }
+  ],
+  "3": [
+   {
+    "contexte": "Les confitures",
+    "enonce": "Le producteur roule d'abord 3,6 km de la ferme jusqu'au village. Le stand ouvre à 8 h 30. Chaque pot pèse 270 g. Ensuite, il roule 1 600 m du village jusqu'à la ville. Puis il roule 2 430 m dans la ville. Pour arriver au marché, le parcours complet mesure 11 km.",
+    "question": "Combien de mètres reste-t-il à parcourir pour arriver au marché ?",
+    "guidees": [],
+    "situations": [
+     "Conversion",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Conversion : 3,6 km = 3 600 m (première étape en mètres)",
+     "Union : 3 600 + 1 600 = 5 200 m (distance des deux premières étapes)",
+     "Union : 5 200 + 2 430 = 7 630 m (distance déjà parcourue)",
+     "Conversion : 11 km = 11 000 m (parcours complet en mètres)",
+     "Retrait : 11 000 − 7 630 = 3 370 m (distance qui reste)"
+    ],
+    "reponse": "Il reste 3 370 m à parcourir.",
+    "parasites": [
+     "Le stand ouvre à 8 h 30.",
+     "Chaque pot pèse 270 g."
+    ]
+   }
+  ]
+ },
+ "Jeudi": {
+  "1": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "La monitrice parcourt d'abord 800 m du centre jusqu'à la forêt. Pour arriver à la ferme, le parcours complet mesure 2 150 m : il reste 600 m à parcourir.",
+    "question": "Quelle distance la monitrice a-t-elle parcourue dans la forêt ?",
+    "guidees": [
+     "Quelle distance la monitrice a-t-elle déjà parcourue ?",
+     "Quelle distance la monitrice a-t-elle parcourue dans la forêt ?"
+    ],
+    "situations": [
+     "Différence"
+    ],
+    "etapes": [
+     "Différence : 2 150 − 600 = 1 550 m (distance déjà parcourue)",
+     "Différence : 1 550 − 800 = 750 m (deuxième étape)"
+    ],
+    "reponse": "La monitrice a parcouru 750 m dans la forêt.",
+    "parasites": []
+   },
+   {
+    "contexte": "Les confitures",
+    "enonce": "Le producteur roule d'abord 800 m de la ferme jusqu'au village. Pour arriver au marché, le parcours complet mesure 1 550 m : il reste 200 m à parcourir.",
+    "question": "Quelle distance le producteur a-t-il parcourue du village jusqu'à la ville ?",
+    "guidees": [
+     "Quelle distance le producteur a-t-il déjà parcourue ?",
+     "Quelle distance le producteur a-t-il parcourue du village jusqu'à la ville ?"
+    ],
+    "situations": [
+     "Différence"
+    ],
+    "etapes": [
+     "Différence : 1 550 − 200 = 1 350 m (distance déjà parcourue)",
+     "Différence : 1 350 − 800 = 550 m (deuxième étape)"
+    ],
+    "reponse": "Le producteur a parcouru 550 m du village jusqu'à la ville.",
+    "parasites": []
+   }
+  ],
+  "2": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "La monitrice parcourt d'abord 4 km du centre jusqu'à la forêt. Ensuite, elle parcourt 1 050 m dans la forêt. Pour arriver à la ferme, le parcours complet mesure 11 km : il reste 4 500 m à parcourir.",
+    "question": "Quelle distance la monitrice a-t-elle parcourue le long de la rivière ?",
+    "guidees": [],
+    "situations": [
+     "Conversion",
+     "Union",
+     "Différence"
+    ],
+    "etapes": [
+     "Conversion : 4 km = 4 000 m (première étape en mètres)",
+     "Union : 4 000 + 1 050 = 5 050 m (distance des deux premières étapes)",
+     "Conversion : 11 km = 11 000 m (parcours complet en mètres)",
+     "Différence : 11 000 − 4 500 = 6 500 m (distance déjà parcourue)",
+     "Différence : 6 500 − 5 050 = 1 450 m (troisième étape)"
+    ],
+    "reponse": "La monitrice a parcouru 1 450 m le long de la rivière.",
+    "parasites": []
+   },
+   {
+    "contexte": "Les confitures",
+    "enonce": "Le producteur roule d'abord 2 km de la ferme jusqu'au village. Ensuite, il roule 1 300 m du village jusqu'à la ville. Pour arriver au marché, le parcours complet mesure 9 km : il reste 4 400 m à parcourir.",
+    "question": "Quelle distance le producteur a-t-il parcourue dans la ville ?",
+    "guidees": [],
+    "situations": [
+     "Conversion",
+     "Union",
+     "Différence"
+    ],
+    "etapes": [
+     "Conversion : 2 km = 2 000 m (première étape en mètres)",
+     "Union : 2 000 + 1 300 = 3 300 m (distance des deux premières étapes)",
+     "Conversion : 9 km = 9 000 m (parcours complet en mètres)",
+     "Différence : 9 000 − 4 400 = 4 600 m (distance déjà parcourue)",
+     "Différence : 4 600 − 3 300 = 1 300 m (troisième étape)"
+    ],
+    "reponse": "Le producteur a parcouru 1 300 m dans la ville.",
+    "parasites": []
+   }
+  ],
+  "3": [
+   {
+    "contexte": "Au centre équestre",
+    "enonce": "La monitrice parcourt d'abord 2,6 km du centre jusqu'à la forêt. Ensuite, elle parcourt 1 120 m dans la forêt. Pour arriver à la ferme, le parcours complet mesure 11 km : il reste 4 830 m à parcourir. Un cheval adulte pèse environ 520 kg.",
+    "question": "Quelle distance la monitrice a-t-elle parcourue le long de la rivière ?",
+    "guidees": [],
+    "situations": [
+     "Conversion",
+     "Union",
+     "Différence"
+    ],
+    "etapes": [
+     "Conversion : 2,6 km = 2 600 m (première étape en mètres)",
+     "Union : 2 600 + 1 120 = 3 720 m (distance des deux premières étapes)",
+     "Conversion : 11 km = 11 000 m (parcours complet en mètres)",
+     "Différence : 11 000 − 4 830 = 6 170 m (distance déjà parcourue)",
+     "Différence : 6 170 − 3 720 = 2 450 m (troisième étape)"
+    ],
+    "reponse": "La monitrice a parcouru 2 450 m le long de la rivière.",
+    "parasites": [
+     "Un cheval adulte pèse environ 520 kg."
+    ]
+   },
+   {
+    "contexte": "Les confitures",
+    "enonce": "Le producteur roule d'abord 1,8 km de la ferme jusqu'au village. Le marché a lieu tous les samedis depuis 1998. Ensuite, il roule 240 m du village jusqu'à la ville. Pour arriver au marché, le parcours complet mesure 7 km : il reste 3 440 m à parcourir.",
+    "question": "Quelle distance le producteur a-t-il parcourue dans la ville ?",
+    "guidees": [],
+    "situations": [
+     "Conversion",
+     "Union",
+     "Différence"
+    ],
+    "etapes": [
+     "Conversion : 1,8 km = 1 800 m (première étape en mètres)",
+     "Union : 1 800 + 240 = 2 040 m (distance des deux premières étapes)",
+     "Conversion : 7 km = 7 000 m (parcours complet en mètres)",
+     "Différence : 7 000 − 3 440 = 3 560 m (distance déjà parcourue)",
+     "Différence : 3 560 − 2 040 = 1 520 m (troisième étape)"
+    ],
+    "reponse": "Le producteur a parcouru 1 520 m dans la ville.",
+    "parasites": [
+     "Le marché a lieu tous les samedis depuis 1998."
+    ]
+   }
+  ]
+ },
+ "Vendredi": {
+  "1": [
+   {
+    "contexte": "À la bibliothèque",
+    "enonce": "Le bibliobus roule d'abord 550 m jusqu'au premier village. Ensuite, il roule 700 m jusqu'à l'école du hameau. Pour arriver au dernier arrêt, le parcours complet mesure 1 750 m.",
+    "question": "Combien de mètres reste-t-il à parcourir pour arriver au dernier arrêt ?",
+    "guidees": [],
+    "situations": [
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Union : 550 + 700 = 1 250 m (distance déjà parcourue)",
+     "Retrait : 1 750 − 1 250 = 500 m (distance qui reste)"
+    ],
+    "reponse": "Il reste 500 m à parcourir.",
+    "parasites": []
+   }
+  ],
+  "2": [
+   {
+    "contexte": "À la bibliothèque",
+    "enonce": "Le bibliobus roule d'abord 3 km jusqu'au premier village. Ensuite, il roule 750 m jusqu'à l'école du hameau. Puis il roule 1 800 m jusqu'à la maison de retraite. Pour arriver au dernier arrêt, le parcours complet mesure 10 km.",
+    "question": "Combien de mètres reste-t-il à parcourir pour arriver au dernier arrêt ?",
+    "guidees": [],
+    "situations": [
+     "Conversion",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Conversion : 3 km = 3 000 m (première étape en mètres)",
+     "Union : 3 000 + 750 = 3 750 m (distance des deux premières étapes)",
+     "Union : 3 750 + 1 800 = 5 550 m (distance déjà parcourue)",
+     "Conversion : 10 km = 10 000 m (parcours complet en mètres)",
+     "Retrait : 10 000 − 5 550 = 4 450 m (distance qui reste)"
+    ],
+    "reponse": "Il reste 4 450 m à parcourir.",
+    "parasites": []
+   }
+  ],
+  "3": [
+   {
+    "contexte": "À la bibliothèque",
+    "enonce": "Le bibliobus roule d'abord 3,3 km jusqu'au premier village. Ensuite, il roule 1 550 m jusqu'à l'école du hameau. Puis il roule 1 130 m jusqu'à la maison de retraite. Pour arriver au dernier arrêt, le parcours complet mesure 7 km. La bibliothèqu'a été construite en 1989.",
+    "question": "Combien de mètres reste-t-il à parcourir pour arriver au dernier arrêt ?",
+    "guidees": [],
+    "situations": [
+     "Conversion",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Conversion : 3,3 km = 3 300 m (première étape en mètres)",
+     "Union : 3 300 + 1 550 = 4 850 m (distance des deux premières étapes)",
+     "Union : 4 850 + 1 130 = 5 980 m (distance déjà parcourue)",
+     "Conversion : 7 km = 7 000 m (parcours complet en mètres)",
+     "Retrait : 7 000 − 5 980 = 1 020 m (distance qui reste)"
+    ],
+    "reponse": "Il reste 1 020 m à parcourir.",
+    "parasites": [
+     "La bibliothèqu'a été construite en 1989."
+    ]
+   }
+  ]
+ }
+}
