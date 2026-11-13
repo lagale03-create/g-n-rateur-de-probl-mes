@@ -92,8 +92,8 @@ lecture = (
         ['P1', '<i>Charlie et la chocolaterie</i> (Dahl)', 'Albums (texte et image, implicite)', 'Héros et héroïnes', 'Représentation mentale ; reformuler'],
         ['P2', '<i>Le Mystère de Lucy Lost</i> (Morpurgo), étude par passages pour tenir dans la période', 'Textes documentaires (électricité, République)', 'Le merveilleux et l\'étrange', 'États mentaux des personnages'],
         ['P3', '<i>Cheval de guerre</i> (Morpurgo), 21 chapitres en 6 semaines, un pivot par semaine (chapitres 1, 4, 8, 12, 15, 19)', 'Nouvelles et récits courts en réseau (la guerre, l\'animal compagnon)', 'Imaginer et vivre d\'autres vies', 'Inférences, implicite'],
-        ['P4', '<i>Le Bon Gros Géant</i> (Dahl)', 'Bande dessinée', 'Comprendre et interroger la morale', 'Chronologie, retours en arrière'],
-        ['P5', '<i>L\'Enfant Océan</i> (Mourlevat)', 'Poésie et théâtre', 'Se découvrir dans le rapport aux autres', 'Narrateur et point de vue']], [8, 28, 24, 20, 20])
+        ['P4', '<i>Matilda</i> (Dahl), 21 chapitres en 6 semaines, un pivot par semaine (chapitres 1, 3, 8, 11, 14, 17)', 'Bande dessinée', 'Comprendre et interroger la morale', 'Chronologie, retours en arrière'],
+        ['P5', '<i>L\'Enfant Océan</i> (Mourlevat), récits de témoins, un pivot par semaine (S1 à S9), bilan en S10', 'Poésie et théâtre', 'Se découvrir dans le rapport aux autres', 'Narrateur et point de vue']], [8, 28, 24, 20, 20])
     + p('<b>Fluence</b> : repères de fin d\'année, 110 mots par minute en CM1, 120 en CM2 ; binômes, trois lectures d\'une minute, graphique personnel par période.')
     + p('<b>Chasse au mot</b> (lien lecture et grammaire) : chaque jour, 2 min au début du créneau de lecture, trouver dans le roman un mot selon des critères (ex. : un nom masculin singulier). Le vendredi, commande de 5 natures différentes en 5 min sur le chapitre pivot. Consignes CM1 et CM2 alignées sur la progression des natures. Support : un carnet de chasse d\'une page par semaine (consigne, mot trouvé, page, et une case où l\'élève écrit ses critères de choix).')
 )
@@ -156,7 +156,7 @@ conj = (
     + '</div>'
     + note('Points de vigilance : ouvrir, offrir, couvrir, souffrir et cueillir se conjuguent au singulier du présent comme les verbes en -er (j\'ouvre) : à ajouter à la colonne ⚠ quand ils apparaissent. Les futurs à radical irrégulier (viendr-, ser-, aur-, ir-, fer-, verr-, pourr-) relèvent des cas particuliers de la période 5.')
 )
-SONS = [l.split('\t') for l in subprocess.run(['node', os.path.join(OUT, '..', 'src', 'progression_sons.js')], capture_output=True, text=True).stdout.strip().split('\n')]
+SONS = [l.split('\t') for l in subprocess.run(['node', '/home/claude/cj/src/progression_sons.js'], capture_output=True, text=True).stdout.strip().split('\n')]
 SONS = [[a, b, c.replace('fiche ', ''), d, e] for a, b, c, d, e in SONS]
 ortho = (
     h2('1.5 Orthographe lexicale')
@@ -200,7 +200,7 @@ dictee = (
         ['P1', 'Les émotions (répertoire de la classe, <i>Charlie et la chocolaterie</i>)', 'Synonymes et nuances d\'intensité'],
         ['P2', 'Les mots de la mer et de l\'île (<i>Lucy Lost</i>)', 'Polysémie, sens propre et sens figuré'],
         ['P3', 'Voir, entendre, percevoir (<i>Cheval de guerre</i>)', 'Verbes de perception, précision du lexique'],
-        ['P4', 'Les mots inventés du <i>Bon Gros Géant</i>', 'Formation des mots : préfixes, suffixes, mots composés'],
+        ['P4', 'Les mots de <i>Matilda</i> : inventés, déformés, composés', 'Formation des mots : préfixes, suffixes, mots composés'],
         ['P5', 'Dire et raconter (<i>L\'Enfant Océan</i>, plusieurs narrateurs)', 'Verbes de parole, registres de langue']], [10, 50, 40])
 )
 francais = lecture + ecrit + gram + conj + ortho + dictee

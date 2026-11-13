@@ -101,7 +101,7 @@ async function save(doc, file) {
 async function planning(week, file) {
   const pl = week.planning;
   const wDom = 2200; const wDay = Math.floor((WL - wDom) / 4); const widths = [wDom, wDay, wDay, wDay, WL - wDom - 3 * wDay];
-  const rows = [['Domaine', ...week.days.map(d => d.jour + ' ' + d.date)]];
+  const rows = [['Domaine', ...(pl.jours || week.days.map(d => d.jour + ' ' + d.date))]];
   const fills = [null];
   pl.rows.forEach(r => { rows.push([r[0], r[1], r[2], r[3], r[4]]); fills.push(null); });
   const kids = [
@@ -157,7 +157,7 @@ function blocSeance(s, idx) {
 }
 async function seances(week, day, file) {
   const kids = [
-    P(`${day.jour} ${day.date} 2026`, { size: 40, bold: true, color: C.bleu, after: 40 }),
+    P(`${day.jour} ${day.date} ${day.annee || 2026}`, { size: 40, bold: true, color: C.bleu, after: 40 }),
     P(`Période ${week.periode} · Semaine ${week.semaine} · Cahier journal détaillé`, { size: 20, color: '595959', after: 80, rule: true }),
     P(day.lead, { size: 20, after: 160 }),
   ];

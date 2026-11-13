@@ -1,3 +1,6 @@
 out/
 __pycache__/
 referentiel/referentiel.html
+gen/annee/
+gen/annee_json/
+annee/__pycache__/
