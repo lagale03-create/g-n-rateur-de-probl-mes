@@ -3,11 +3,12 @@
 const LISTE = ['la laine', 'le pain', 'jamais', 'manger', 'la neige', 'l\'ail', 'la mer', 'il parlait', 'plein', 'une aile',
   'le maïs', 'seize', 'du lait', 'la main', 'l\'hiver', 'la fontaine', 'parler', 'la baleine', 'un marais', 'la paille',
   'maigre', 'la faim', 'une reine', 'épais', 'le boulanger', 'la craie', 'naïf', 'un souhait', 'la peinture', 'le fer'];
+const DIX_MOTS = ['la semaine', 'jamais', 'la neige', 'un éclair', 'il venait', 'épais', 'la mer', 'la baleine', 'du lait', 'la reine'];
 const COMP = 'Orthographe lexicale : correspondances phonème-graphèmes, régularités de position (programme cycle 3)';
 const REF = 'Démarche inductive en orthographe (Brissaud et Cogis : observer, classer, formuler, éprouver) ; Catach (graphèmes et valeurs de position)';
 
 module.exports = {
-  son: '[ɛ]', fiche: 7,
+  son: '[ɛ]', fiche: 7, dixMots: DIX_MOTS,
   Lundi: {
     avant: 'Histoire',
     seance: {
@@ -91,11 +92,11 @@ module.exports = {
     seance: {
       h: '14h45-15h00', dom: 'Orthographe', titre: 'le son [ɛ] (4/4) : entraînement',
       comp: COMP, obj: 'Choisir la bonne graphie de [ɛ] en s\'appuyant sur la trace ; écrire sous la dictée des mots de la semaine.',
-      crit: ['8 graphies justes sur 10 à l\'exercice 1', '6 mots justes sur 8 à la dictée'],
+      crit: ['8 graphies justes sur 10 à l\'exercice 1', '8 mots justes sur 10 à la dictée'],
       mat: 'Fiche « Le son [ɛ] : je m\'entraîne » ; trace écrite ajustée', ref: REF, fiche: 'Tous',
       phases: [
         ['Exercices', '8 min', 'Laisse la trace visible ; aide les CM1 fragiles sur l\'exercice 1.', 'Exercices 1 à 3'],
-        ['Dictée de mots', '5 min', 'Dicte : la semaine, jamais, la neige, un éclair, il venait, épais, la mer, la baleine.', 'Écrivent, puis vérifient avec la trace'],
+        ['Dictée de mots', '5 min', 'Dicte les dix mots de la semaine : ' + DIX_MOTS.join(', ') + '.', 'Écrivent, puis vérifient avec la trace'],
         ['Bilan', '2 min', '« Quelle graphie te pose encore problème ? » Note les mots à revoir en dictée réflexive la semaine prochaine.', 'Le disent'],
       ],
       diff: [['CM1 fragiles', 'exercice 1 avec deux choix proposés'], ['CM2', 'exercice 2 : justifier ait ou ais par un mot de la famille ou par la conjugaison']],
@@ -108,8 +109,8 @@ module.exports = {
       { t: 'calc', cols: 2, x: ['du l……', 'je chant……', 'il dorm……', 'un bal……', 'jam……', 'le pal……', 'un souh……', 'ép……'] },
       { t: 'consigne', n: 3, x: 'Barre l\'intrus : le mot où l\'on n\'entend pas [ɛ].' },
       { t: 'p', x: ['la laine – le pain – la reine – seize', 'la mer – le boulanger – l\'hiver – le fer', 'la paille – la craie – la fontaine – maigre'] },
-      { t: 'consigne', n: 4, x: 'Dictée de mots.' },
-      { t: 'lignes', n: 4 },
+      { t: 'consigne', n: 4, x: 'Dictée des dix mots de la semaine.' },
+      { t: 'lignes', n: 5 },
     ] }],
   },
 };

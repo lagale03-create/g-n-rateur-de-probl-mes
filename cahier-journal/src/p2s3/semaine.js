@@ -27,6 +27,31 @@ module.exports = {
       ['Mathématiques', 'Comparer une fraction à 1, l\'encadrer entre deux entiers, la placer sur une droite graduée ; CM2 : 11/4 = 2 + 3/4. Reconnaître des droites perpendiculaires à l\'équerre. Multiplier et diviser un décimal par 10 (CM2 : 100, 1 000).'],
       ['Autres', 'Distinguer conducteurs et isolants par l\'expérience ; expliquer l\'instruction obligatoire et laïque à partir de la loi de 1882 ; connaître 4 droits de l\'enfant ; reconnaître les familles d\'instruments ; arbitrer une rencontre de lutte.'],
     ],
+    son: {
+      titre: "Son [ɛ] (fiche 7) : ai, ait, ais, ei, er",
+      seq: "Séquence inductive en 4 temps : lundi repérer graphèmes et intrus ; mardi régularités de position et première trace ; jeudi la trace à l'épreuve de 16 nouveaux mots (dictée réflexive) ; vendredi entraînement et dictée des dix mots (8 sur 10 attendus).",
+      mots: require('./ortho').dixMots,
+      note: "Pièges signalés : ain, aim, ein font [ɛ̃] (pain, faim, plein) ; ail fait [aj] ; er des verbes fait [e] (manger) ; è et ê (la fête, la mère) viennent la semaine prochaine.",
+    },
+    verbes: [
+      ['Lundi', 'trouver', 'avoir', '1er groupe, colonne -er ; passé composé avec avoir : pas d\'accord (« ont trouvé »)', 'Phrase : « Ce matin, les pêcheurs ont trouvé une petite fille endormie sur les rochers gris. »'],
+      ['Mardi', 'venir', 'être', '⚠ radical qui change au présent (vien- / ven- / vienn-) ; futur viendr- (cas particulier vu en P5) ; passé simple en -in (je vins) ; « sont venues » s\'accorde', 'Phrase : « Les femmes de l\'île sont venues voir l\'enfant ; elles ont apporté des couvertures chaudes. »'],
+      ['Jeudi', 'rentrer', 'être', '1er groupe ; ⚠ passé composé avec être : accord avec le sujet (« sont rentrés »)', 'Phrase : « Cette semaine, les marins sont rentrés au port juste avant l\'orage. »'],
+      ['Vendredi', 'regarder', 'avoir', '1er groupe ; imparfait « regardait » (-ait, lien avec le son [ɛ]) ; récapitulatif des quatre verbes avant la dictée bilan', 'Phrase de la dictée bilan : « La fillette regardait les vagues sans dire un mot. »'],
+    ],
+    materiel: [
+      ['Lundi', 'Bandes unité de 12 cm cartonnées et bandes vierges par groupe, ciseaux, colle (fractions) ; circuit testeur par groupe (pile 4,5 V, lampe, 3 fils, 2 pinces) et les 12 objets à tester ; instruments météo ; tableau de Jean Geoffroy (1889) à projeter ; plots, haies basses, chronomètre ; flashcards food, hobbies, animals.'],
+      ['Mardi', 'Affiche du corpus de GN (Lucy Lost ch. 1 à 4) et étiquettes de classes de mots ; droite graduée en quarts au tableau ; salle polyvalente, tapis, chronomètres (lutte) ; gouaches, colle vinylique, sable, papiers, tissus, couteaux à peindre, supports cartonnés A4 ; reproduction de La Vague (Courbet) ; chanson « Do You Like Broccoli Ice Cream? » (Super Simple Songs).'],
+      ['Jeudi', 'Équerres, règles, papier calque, figure agrandie (droites perpendiculaires) ; circuits testeurs et fils dénudés ; haies basses, cerceaux, plots (repli en salle si pluie) ; enregistrement de Pierre et le loup et photos des instruments ; cartes de rôles du débat ; chronomètres et graphique de fluence.'],
+      ['Vendredi', 'Fiches bilan fractions CM1 et CM2 ; version aménagée de la dictée (texte à trous) ; affiche A2 et cahier du conseil (20 novembre, droits de l\'enfant) ; frise de classe.'],
+      ['Toute la semaine', 'Fiches élèves de chaque jour imprimées (fichiers « fiches_eleves » du cahier journal du jour) ; carnet de chasse au mot ; affiche « avoir bloque, être laisse passer » ; tableau du présent de la classe.'],
+    ],
+    fournir: [
+      ['Lecture suivie, pivot', 'Chapitre 5 « Une simple idée » : 1_Textes_adaptes/05_Lucy-Lost_chapitre.docx (●, ●●, ●●●) et 2_Comprehension/05_Lucy-Lost_chapitre.docx (QCM N1-N3, activités du temps 5, version enseignant) — lundi et vendredi.'],
+      ['Lecture en classe', 'Textes adaptés des chapitres 6 à 9 (06 à 09_Lucy-Lost_chapitre.docx) pour la lecture en autonomie à partir de jeudi ; le livre ; l\'audio pour les lecteurs N1.'],
+      ['Supports à réunir', 'Enregistrement de Pierre et le loup (Prokofiev) ; reproduction de La Vague (Courbet) ; image du tableau de Jean Geoffroy ; les 12 objets de l\'expérience conducteurs / isolants et le matériel de circuit.'],
+      ['Vigilance chapitre 5', 'Histoire d\'oncle Billy (deuil d\'une mère et d\'un bébé) et mots de l\'époque (« fou », « asile ») : à présenter avec pudeur (voir la version enseignant).'],
+    ],
   },
   days: [require('./lundi'), require('./mardi'), require('./jeudi'), require('./vendredi')],
 };

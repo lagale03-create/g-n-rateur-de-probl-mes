@@ -116,6 +116,30 @@ async function planning(week, file) {
     const w2 = [2200, WL - 2200];
     kids.push(table(w2, [['Domaine', 'Ce que les élèves savent faire vendredi'], ...pl.objectifs], { head: true, size: 15 }));
   }
+  const titre = t => P(t, { bold: true, size: 22, color: C.bleu, after: 60, before: 160, keepNext: true });
+  if (pl.son || pl.verbes) kids.push(saut());
+  if (pl.son) {
+    kids.push(titre(`Orthographe : ${pl.son.titre}`));
+    if (pl.son.seq) kids.push(P(pl.son.seq, { size: 18, after: 60 }));
+    const n = pl.son.mots.length; const wm = Math.floor(WL / 5);
+    const lignes = []; for (let i = 0; i < n; i += 5) lignes.push(pl.son.mots.slice(i, i + 5).map((m, j) => `${i + j + 1}. ${m}`));
+    kids.push(P('Les dix mots de la semaine', { bold: true, size: 18, after: 40, keepNext: true }));
+    kids.push(table([wm, wm, wm, wm, WL - 4 * wm], lignes, { size: 22, fills: lignes.map(() => C.creme) }));
+    if (pl.son.note) kids.push(P(pl.son.note, { size: 17, italics: true, before: 60, after: 60 }));
+  }
+  if (pl.verbes) {
+    kids.push(titre('Verbes du jour (8h30)'));
+    kids.push(table([1500, 1500, 1200, 6300, WL - 10500], [['Jour', 'Verbe', 'Auxiliaire', 'Repères et pièges (⚠)', 'Phrase d\'où il est tiré'], ...pl.verbes], { head: true, size: 16 }));
+  }
+  if (pl.materiel) {
+    kids.push(saut());
+    kids.push(titre('Matériel à préparer'));
+    kids.push(table([2200, WL - 2200], [['Jour', 'Matériel'], ...pl.materiel], { head: true, size: 16 }));
+  }
+  if (pl.fournir) {
+    kids.push(titre('Ce que Pierre doit fournir'));
+    kids.push(table([2200, WL - 2200], [['Quoi', 'Détail'], ...pl.fournir], { head: true, size: 16, headFill: C.orange }));
+  }
   const doc = new Document({ styles: styles('Arial', 18), numbering: numbering(), sections: [{
     properties: { page: { size: { width: A4.width, height: A4.height, orientation: PageOrientation.LANDSCAPE }, margin: { top: MARG, bottom: MARG, left: MARG, right: MARG } } },
     footers: footer(`Planning P${week.periode} S${week.semaine}`), children: kids }] });

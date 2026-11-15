@@ -85,7 +85,7 @@ module.exports = {
     },
     { ...O.Vendredi.seance, h: '13h30-13h45', phases: [
       ['Exercices', '9 min', 'Laisse la trace visible ; aide les CM1 fragiles sur l\'exercice 1.', 'Exercices 1 à 3'],
-      ['Dictée de mots', '4 min', 'Dicte : la semaine, jamais, la neige, un éclair, il venait, épais, la mer, la baleine.', 'Écrivent, vérifient avec la trace'],
+      ['Dictée de mots', '4 min', 'Dicte les dix mots de la semaine : ' + O.dixMots.join(', ') + '.', 'Écrivent, vérifient avec la trace'],
       ['Bilan', '2 min', '« Quelle graphie te pose encore problème ? » Note les mots à revoir.', 'Le disent'],
     ] },
     {
