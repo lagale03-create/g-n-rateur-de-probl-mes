@@ -1,0 +1,3926 @@
+{
+ "1": [
+  {
+   "son": "[i]",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "i",
+     "mots": 97.2,
+     "occurrences": 98.5,
+     "places": {
+      "début": 4,
+      "fin": 15,
+      "milieu": 81
+     },
+     "apres": {
+      "autre consonne": 84,
+      "m, b, p": 7,
+      "voyelle e, i, y": 5
+     },
+     "exemples": [
+      "qui",
+      "lui",
+      "ils",
+      "dit",
+      "aussi",
+      "suis"
+     ]
+    },
+    {
+     "g": "y",
+     "mots": 2.0,
+     "occurrences": 1.1,
+     "places": {
+      "fin": 8,
+      "milieu": 84,
+      "début": 9
+     },
+     "apres": {
+      "autre consonne": 81,
+      "m, b, p": 14,
+      "fin du mot": 4
+     },
+     "exemples": [
+      "pays",
+      "type",
+      "paysage",
+      "style",
+      "rythme",
+      "système"
+     ]
+    }
+   ],
+   "corpus": [
+    "qui",
+    "lui",
+    "ils",
+    "dit",
+    "aussi",
+    "suis",
+    "puis",
+    "dire",
+    "vie",
+    "petit",
+    "nuit",
+    "depuis",
+    "petite",
+    "visage",
+    "ici",
+    "dis",
+    "fit",
+    "ainsi",
+    "fille",
+    "disait",
+    "vite",
+    "pris",
+    "lit",
+    "celui",
+    "silence",
+    "ville",
+    "histoire",
+    "petits",
+    "fils",
+    "suite",
+    "envie",
+    "mis",
+    "rire",
+    "milieu",
+    "famille",
+    "pays",
+    "idée",
+    "sourire",
+    "bruit",
+    "partie",
+    "dix",
+    "possible",
+    "plaisir",
+    "venir",
+    "vivre",
+    "aussitôt",
+    "vide",
+    "type",
+    "paysage"
+   ]
+  }
+ ],
+ "2": [
+  {
+   "son": "[o]",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "o",
+     "mots": 83.9,
+     "occurrences": 68.0,
+     "places": {
+      "milieu": 85,
+      "début": 11,
+      "fin": 4
+     },
+     "apres": {
+      "autre consonne": 82,
+      "m, b, p": 16,
+      "fin du mot": 2
+     },
+     "exemples": [
+      "comme",
+      "encore",
+      "alors",
+      "homme",
+      "trop",
+      "chose"
+     ]
+    },
+    {
+     "g": "au",
+     "mots": 9.6,
+     "occurrences": 24.1,
+     "places": {
+      "début": 30,
+      "fin": 18,
+      "milieu": 51
+     },
+     "apres": {
+      "autre consonne": 91,
+      "m, b, p": 7,
+      "fin du mot": 2
+     },
+     "exemples": [
+      "aux",
+      "autre",
+      "aussi",
+      "faut",
+      "aurait",
+      "autres"
+     ]
+    },
+    {
+     "g": "eau",
+     "mots": 3.8,
+     "occurrences": 4.6,
+     "places": {
+      "milieu": 3,
+      "début": 2,
+      "fin": 95
+     },
+     "apres": {
+      "fin du mot": 57,
+      "autre consonne": 43
+     },
+     "exemples": [
+      "beaucoup",
+      "eau",
+      "nouveau",
+      "beau",
+      "peau",
+      "bureau"
+     ]
+    },
+    {
+     "g": "ô",
+     "mots": 2.1,
+     "occurrences": 3.0,
+     "places": {
+      "milieu": 64,
+      "fin": 17,
+      "début": 19
+     },
+     "apres": {
+      "autre consonne": 84,
+      "m, b, p": 14,
+      "fin du mot": 2
+     },
+     "exemples": [
+      "côté",
+      "plutôt",
+      "aussitôt",
+      "bientôt",
+      "hôtel",
+      "tôt"
+     ]
+    }
+   ],
+   "corpus": [
+    "comme",
+    "aux",
+    "encore",
+    "autre",
+    "aussi",
+    "alors",
+    "homme",
+    "trop",
+    "chose",
+    "notre",
+    "faut",
+    "porte",
+    "moment",
+    "aurait",
+    "nos",
+    "hommes",
+    "mort",
+    "côté",
+    "corps",
+    "beaucoup",
+    "personne",
+    "votre",
+    "comment",
+    "eau",
+    "coeur",
+    "choses",
+    "bonne",
+    "nouveau",
+    "soleil",
+    "mots",
+    "sorte",
+    "plutôt",
+    "fort",
+    "mot",
+    "gros",
+    "sommes",
+    "force",
+    "donner",
+    "dos",
+    "possible",
+    "lorsque",
+    "bord",
+    "aussitôt",
+    "vos",
+    "ordre",
+    "propre",
+    "odeur",
+    "donné",
+    "bonheur",
+    "sortir",
+    "donne"
+   ]
+  }
+ ],
+ "3": [
+  {
+   "son": "[u]",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "ou",
+     "mots": 97.8,
+     "occurrences": 95.7,
+     "places": {
+      "milieu": 91,
+      "fin": 5,
+      "début": 4
+     },
+     "apres": {
+      "autre consonne": 83,
+      "m, b, p": 9,
+      "voyelle e, i, y": 6
+     },
+     "exemples": [
+      "pour",
+      "tout",
+      "nous",
+      "vous",
+      "tous",
+      "toujours"
+     ]
+    },
+    {
+     "g": "oû",
+     "mots": 1.8,
+     "occurrences": 0.6,
+     "places": {
+      "fin": 23,
+      "milieu": 77
+     },
+     "apres": {
+      "autre consonne": 100
+     },
+     "exemples": [
+      "goût",
+      "août",
+      "dégoût",
+      "goûter",
+      "coûte",
+      "voûte"
+     ]
+    }
+   ],
+   "corpus": [
+    "pour",
+    "tout",
+    "nous",
+    "vous",
+    "tous",
+    "toujours",
+    "sous",
+    "jour",
+    "toute",
+    "coup",
+    "toutes",
+    "jours",
+    "pourquoi",
+    "beaucoup",
+    "pouvait",
+    "bout",
+    "pourtant",
+    "amour",
+    "autour",
+    "doute",
+    "nouveau",
+    "surtout",
+    "souvent",
+    "tour",
+    "bouche",
+    "rouge",
+    "soudain",
+    "route",
+    "sourire",
+    "voulait",
+    "pouvoir",
+    "coups",
+    "trouver",
+    "cours",
+    "partout",
+    "voulu",
+    "nouvelle",
+    "trouve",
+    "pourrait",
+    "debout",
+    "retour",
+    "cour",
+    "trouvait",
+    "souvenir",
+    "journée",
+    "trouvé",
+    "goût",
+    "août",
+    "dégoût"
+   ]
+  },
+  {
+   "son": "[y]",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "u",
+     "mots": 97.5,
+     "occurrences": 96.7,
+     "places": {
+      "début": 4,
+      "fin": 16,
+      "milieu": 79
+     },
+     "apres": {
+      "autre consonne": 58,
+      "voyelle e, i, y": 22,
+      "m, b, p": 12
+     },
+     "exemples": [
+      "une",
+      "sur",
+      "plus",
+      "lui",
+      "suis",
+      "puis"
+     ]
+    },
+    {
+     "g": "û",
+     "mots": 2.1,
+     "occurrences": 1.7,
+     "places": {
+      "milieu": 81,
+      "fin": 19
+     },
+     "apres": {
+      "autre consonne": 93,
+      "m, b, p": 5,
+      "fin du mot": 2
+     },
+     "exemples": [
+      "sûr",
+      "fût",
+      "sûrement",
+      "sûre",
+      "pût",
+      "brûlant"
+     ]
+    }
+   ],
+   "corpus": [
+    "une",
+    "sur",
+    "plus",
+    "lui",
+    "suis",
+    "puis",
+    "nuit",
+    "depuis",
+    "fut",
+    "rue",
+    "sûr",
+    "celui",
+    "surtout",
+    "plutôt",
+    "juste",
+    "suite",
+    "lumière",
+    "bruit",
+    "voiture",
+    "plusieurs",
+    "aucune",
+    "vue",
+    "entendu",
+    "voulu",
+    "mur",
+    "fût",
+    "ensuite",
+    "venu",
+    "murs",
+    "perdu",
+    "minutes",
+    "puisque",
+    "bureau",
+    "début",
+    "habitude",
+    "cuisine",
+    "mesure",
+    "rues",
+    "pluie",
+    "brusquement",
+    "musique",
+    "nature",
+    "cru",
+    "huit",
+    "connu",
+    "situation",
+    "devenu",
+    "dur",
+    "figure",
+    "sûrement"
+   ]
+  }
+ ],
+ "4": [
+  {
+   "son": "[a]",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "a",
+     "mots": 97.1,
+     "occurrences": 96.7,
+     "places": {
+      "fin": 9,
+      "début": 21,
+      "milieu": 70
+     },
+     "apres": {
+      "autre consonne": 76,
+      "m, b, p": 15,
+      "fin du mot": 7
+     },
+     "exemples": [
+      "pas",
+      "avait",
+      "avec",
+      "par",
+      "jamais",
+      "alors"
+     ]
+    },
+    {
+     "g": "â",
+     "mots": 2.1,
+     "occurrences": 1.0,
+     "places": {
+      "début": 14,
+      "milieu": 80,
+      "fin": 6
+     },
+     "apres": {
+      "autre consonne": 90,
+      "m, b, p": 7,
+      "voyelle e, i, y": 3
+     },
+     "exemples": [
+      "âge",
+      "âme",
+      "grâce",
+      "pâle",
+      "théâtre",
+      "château"
+     ]
+    }
+   ],
+   "corpus": [
+    "pas",
+    "avait",
+    "avec",
+    "par",
+    "jamais",
+    "alors",
+    "après",
+    "avais",
+    "avoir",
+    "cela",
+    "avant",
+    "avaient",
+    "mal",
+    "visage",
+    "bras",
+    "chaque",
+    "car",
+    "place",
+    "assez",
+    "matin",
+    "aller",
+    "amour",
+    "allait",
+    "tard",
+    "regard",
+    "parler",
+    "ailleurs",
+    "table",
+    "avez",
+    "part",
+    "fallait",
+    "passé",
+    "savoir",
+    "passer",
+    "parfois",
+    "quatre",
+    "général",
+    "demanda",
+    "face",
+    "façon",
+    "avons",
+    "bas",
+    "travers",
+    "années",
+    "famille",
+    "savait",
+    "sera",
+    "âge",
+    "âme",
+    "grâce"
+   ]
+  }
+ ],
+ "5": [
+  {
+   "son": "[ø] [œ] [ə]",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "e",
+     "mots": 70.7,
+     "occurrences": 83.8,
+     "places": {
+      "fin": 0,
+      "milieu": 99,
+      "début": 0
+     },
+     "apres": {
+      "autre consonne": 63,
+      "m, b, p": 37,
+      "fin du mot": 0
+     },
+     "exemples": [
+      "que",
+      "devant",
+      "petit",
+      "cela",
+      "depuis",
+      "maintenant"
+     ]
+    },
+    {
+     "g": "eu",
+     "mots": 26.5,
+     "occurrences": 15.0,
+     "places": {
+      "fin": 22,
+      "milieu": 75,
+      "début": 3
+     },
+     "apres": {
+      "autre consonne": 92,
+      "voyelle e, i, y": 3,
+      "fin du mot": 3
+     },
+     "exemples": [
+      "peu",
+      "deux",
+      "yeux",
+      "leurs",
+      "seul",
+      "peut"
+     ]
+    }
+   ],
+   "corpus": [
+    "que",
+    "peu",
+    "deux",
+    "yeux",
+    "leurs",
+    "devant",
+    "petit",
+    "cela",
+    "depuis",
+    "maintenant",
+    "petite",
+    "seul",
+    "peut",
+    "eux",
+    "heures",
+    "jeune",
+    "heure",
+    "mieux",
+    "leur",
+    "vieux",
+    "seulement",
+    "serait",
+    "regard",
+    "première",
+    "premier",
+    "celui",
+    "devait",
+    "venait",
+    "petits",
+    "demanda",
+    "cheveux",
+    "besoin",
+    "demande",
+    "sera",
+    "regarde",
+    "fenêtre",
+    "chemin",
+    "venir",
+    "tenait",
+    "tellement",
+    "regarder",
+    "regardait",
+    "petites",
+    "debout",
+    "venu",
+    "lentement",
+    "demain"
+   ]
+  }
+ ],
+ "6": [
+  {
+   "son": "[e] [ɛ] (é, è)",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "é",
+     "mots": 40.3,
+     "occurrences": 20.5,
+     "places": {
+      "début": 15,
+      "fin": 41,
+      "milieu": 44
+     },
+     "apres": {
+      "autre consonne": 52,
+      "fin du mot": 23,
+      "voyelle e, i, y": 12
+     },
+     "exemples": [
+      "était",
+      "été",
+      "été",
+      "étaient",
+      "déjà",
+      "étais"
+     ]
+    },
+    {
+     "g": "e",
+     "mots": 21.8,
+     "occurrences": 19.4,
+     "places": {
+      "début": 14,
+      "milieu": 83,
+      "fin": 2
+     },
+     "apres": {
+      "autre consonne": 94,
+      "voyelle e, i, y": 4,
+      "m, b, p": 2
+     },
+     "exemples": [
+      "elle",
+      "avec",
+      "cette",
+      "vers",
+      "quelques",
+      "quelque"
+     ]
+    },
+    {
+     "g": "ai",
+     "mots": 18.0,
+     "occurrences": 21.7,
+     "places": {
+      "fin": 70,
+      "début": 3,
+      "milieu": 26
+     },
+     "apres": {
+      "autre consonne": 78,
+      "voyelle e, i, y": 16,
+      "fin du mot": 5
+     },
+     "exemples": [
+      "était",
+      "avait",
+      "mais",
+      "fait",
+      "faire",
+      "jamais"
+     ]
+    },
+    {
+     "g": "er",
+     "mots": 9.5,
+     "occurrences": 6.0,
+     "places": {
+      "fin": 100
+     },
+     "apres": {
+      "fin du mot": 93,
+      "autre consonne": 7
+     },
+     "exemples": [
+      "aller",
+      "parler",
+      "premier",
+      "passer",
+      "donner",
+      "dernier"
+     ]
+    },
+    {
+     "g": "è",
+     "mots": 4.1,
+     "occurrences": 4.4,
+     "places": {
+      "fin": 4,
+      "milieu": 95,
+      "début": 1
+     },
+     "apres": {
+      "autre consonne": 93,
+      "m, b, p": 7
+     },
+     "exemples": [
+      "très",
+      "après",
+      "mère",
+      "père",
+      "derrière",
+      "près"
+     ]
+    },
+    {
+     "g": "ê",
+     "mots": 1.6,
+     "occurrences": 2.7,
+     "places": {
+      "milieu": 91,
+      "début": 3,
+      "fin": 6
+     },
+     "apres": {
+      "autre consonne": 93,
+      "m, b, p": 7
+     },
+     "exemples": [
+      "même",
+      "être",
+      "tête",
+      "êtes",
+      "fenêtre",
+      "mêmes"
+     ]
+    },
+    {
+     "g": "ez",
+     "mots": 1.0,
+     "occurrences": 1.1,
+     "places": {
+      "fin": 100
+     },
+     "apres": {
+      "fin du mot": 100
+     },
+     "exemples": [
+      "chez",
+      "assez",
+      "avez",
+      "nez",
+      "allez",
+      "savez"
+     ]
+    }
+   ],
+   "corpus": [
+    "elle",
+    "était",
+    "avait",
+    "mais",
+    "avec",
+    "cette",
+    "même",
+    "fait",
+    "faire",
+    "être",
+    "jamais",
+    "très",
+    "vers",
+    "été",
+    "après",
+    "étaient",
+    "avais",
+    "tête",
+    "mère",
+    "quelques",
+    "déjà",
+    "avaient",
+    "chez",
+    "quelque",
+    "étais",
+    "elles",
+    "cet",
+    "côté",
+    "presque",
+    "personne",
+    "assez",
+    "aller",
+    "parler",
+    "avez",
+    "premier",
+    "passé",
+    "passer",
+    "général",
+    "années",
+    "idée",
+    "donner",
+    "état",
+    "malgré",
+    "présent",
+    "épaules",
+    "café",
+    "donné",
+    "intérieur"
+   ]
+  }
+ ],
+ "7": [
+  {
+   "son": "[e] [ɛ] (é, è)",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "é",
+     "mots": 40.3,
+     "occurrences": 20.5,
+     "places": {
+      "début": 15,
+      "fin": 41,
+      "milieu": 44
+     },
+     "apres": {
+      "autre consonne": 52,
+      "fin du mot": 23,
+      "voyelle e, i, y": 12
+     },
+     "exemples": [
+      "était",
+      "été",
+      "été",
+      "étaient",
+      "déjà",
+      "étais"
+     ]
+    },
+    {
+     "g": "e",
+     "mots": 21.8,
+     "occurrences": 19.4,
+     "places": {
+      "début": 14,
+      "milieu": 83,
+      "fin": 2
+     },
+     "apres": {
+      "autre consonne": 94,
+      "voyelle e, i, y": 4,
+      "m, b, p": 2
+     },
+     "exemples": [
+      "elle",
+      "avec",
+      "cette",
+      "vers",
+      "quelques",
+      "quelque"
+     ]
+    },
+    {
+     "g": "ai",
+     "mots": 18.0,
+     "occurrences": 21.7,
+     "places": {
+      "fin": 70,
+      "début": 3,
+      "milieu": 26
+     },
+     "apres": {
+      "autre consonne": 78,
+      "voyelle e, i, y": 16,
+      "fin du mot": 5
+     },
+     "exemples": [
+      "était",
+      "avait",
+      "mais",
+      "fait",
+      "faire",
+      "jamais"
+     ]
+    },
+    {
+     "g": "er",
+     "mots": 9.5,
+     "occurrences": 6.0,
+     "places": {
+      "fin": 100
+     },
+     "apres": {
+      "fin du mot": 93,
+      "autre consonne": 7
+     },
+     "exemples": [
+      "aller",
+      "parler",
+      "premier",
+      "passer",
+      "donner",
+      "dernier"
+     ]
+    },
+    {
+     "g": "è",
+     "mots": 4.1,
+     "occurrences": 4.4,
+     "places": {
+      "fin": 4,
+      "milieu": 95,
+      "début": 1
+     },
+     "apres": {
+      "autre consonne": 93,
+      "m, b, p": 7
+     },
+     "exemples": [
+      "très",
+      "après",
+      "mère",
+      "père",
+      "derrière",
+      "près"
+     ]
+    },
+    {
+     "g": "ê",
+     "mots": 1.6,
+     "occurrences": 2.7,
+     "places": {
+      "milieu": 91,
+      "début": 3,
+      "fin": 6
+     },
+     "apres": {
+      "autre consonne": 93,
+      "m, b, p": 7
+     },
+     "exemples": [
+      "même",
+      "être",
+      "tête",
+      "êtes",
+      "fenêtre",
+      "mêmes"
+     ]
+    },
+    {
+     "g": "ez",
+     "mots": 1.0,
+     "occurrences": 1.1,
+     "places": {
+      "fin": 100
+     },
+     "apres": {
+      "fin du mot": 100
+     },
+     "exemples": [
+      "chez",
+      "assez",
+      "avez",
+      "nez",
+      "allez",
+      "savez"
+     ]
+    }
+   ],
+   "corpus": [
+    "elle",
+    "était",
+    "avait",
+    "mais",
+    "avec",
+    "cette",
+    "même",
+    "fait",
+    "faire",
+    "être",
+    "jamais",
+    "très",
+    "vers",
+    "été",
+    "après",
+    "étaient",
+    "avais",
+    "tête",
+    "mère",
+    "quelques",
+    "déjà",
+    "avaient",
+    "chez",
+    "quelque",
+    "étais",
+    "elles",
+    "cet",
+    "côté",
+    "presque",
+    "personne",
+    "assez",
+    "aller",
+    "parler",
+    "avez",
+    "premier",
+    "passé",
+    "passer",
+    "général",
+    "années",
+    "idée",
+    "donner",
+    "état",
+    "malgré",
+    "présent",
+    "épaules",
+    "café",
+    "donné",
+    "intérieur"
+   ]
+  }
+ ],
+ "8": [
+  {
+   "son": "[e] [ɛ] (é, è)",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "é",
+     "mots": 40.3,
+     "occurrences": 20.5,
+     "places": {
+      "début": 15,
+      "fin": 41,
+      "milieu": 44
+     },
+     "apres": {
+      "autre consonne": 52,
+      "fin du mot": 23,
+      "voyelle e, i, y": 12
+     },
+     "exemples": [
+      "était",
+      "été",
+      "été",
+      "étaient",
+      "déjà",
+      "étais"
+     ]
+    },
+    {
+     "g": "e",
+     "mots": 21.8,
+     "occurrences": 19.4,
+     "places": {
+      "début": 14,
+      "milieu": 83,
+      "fin": 2
+     },
+     "apres": {
+      "autre consonne": 94,
+      "voyelle e, i, y": 4,
+      "m, b, p": 2
+     },
+     "exemples": [
+      "elle",
+      "avec",
+      "cette",
+      "vers",
+      "quelques",
+      "quelque"
+     ]
+    },
+    {
+     "g": "ai",
+     "mots": 18.0,
+     "occurrences": 21.7,
+     "places": {
+      "fin": 70,
+      "début": 3,
+      "milieu": 26
+     },
+     "apres": {
+      "autre consonne": 78,
+      "voyelle e, i, y": 16,
+      "fin du mot": 5
+     },
+     "exemples": [
+      "était",
+      "avait",
+      "mais",
+      "fait",
+      "faire",
+      "jamais"
+     ]
+    },
+    {
+     "g": "er",
+     "mots": 9.5,
+     "occurrences": 6.0,
+     "places": {
+      "fin": 100
+     },
+     "apres": {
+      "fin du mot": 93,
+      "autre consonne": 7
+     },
+     "exemples": [
+      "aller",
+      "parler",
+      "premier",
+      "passer",
+      "donner",
+      "dernier"
+     ]
+    },
+    {
+     "g": "è",
+     "mots": 4.1,
+     "occurrences": 4.4,
+     "places": {
+      "fin": 4,
+      "milieu": 95,
+      "début": 1
+     },
+     "apres": {
+      "autre consonne": 93,
+      "m, b, p": 7
+     },
+     "exemples": [
+      "très",
+      "après",
+      "mère",
+      "père",
+      "derrière",
+      "près"
+     ]
+    },
+    {
+     "g": "ê",
+     "mots": 1.6,
+     "occurrences": 2.7,
+     "places": {
+      "milieu": 91,
+      "début": 3,
+      "fin": 6
+     },
+     "apres": {
+      "autre consonne": 93,
+      "m, b, p": 7
+     },
+     "exemples": [
+      "même",
+      "être",
+      "tête",
+      "êtes",
+      "fenêtre",
+      "mêmes"
+     ]
+    },
+    {
+     "g": "ez",
+     "mots": 1.0,
+     "occurrences": 1.1,
+     "places": {
+      "fin": 100
+     },
+     "apres": {
+      "fin du mot": 100
+     },
+     "exemples": [
+      "chez",
+      "assez",
+      "avez",
+      "nez",
+      "allez",
+      "savez"
+     ]
+    }
+   ],
+   "corpus": [
+    "elle",
+    "était",
+    "avait",
+    "mais",
+    "avec",
+    "cette",
+    "même",
+    "fait",
+    "faire",
+    "être",
+    "jamais",
+    "très",
+    "vers",
+    "été",
+    "après",
+    "étaient",
+    "avais",
+    "tête",
+    "mère",
+    "quelques",
+    "déjà",
+    "avaient",
+    "chez",
+    "quelque",
+    "étais",
+    "elles",
+    "cet",
+    "côté",
+    "presque",
+    "personne",
+    "assez",
+    "aller",
+    "parler",
+    "avez",
+    "premier",
+    "passé",
+    "passer",
+    "général",
+    "années",
+    "idée",
+    "donner",
+    "état",
+    "malgré",
+    "présent",
+    "épaules",
+    "café",
+    "donné",
+    "intérieur"
+   ]
+  }
+ ],
+ "9": [
+  {
+   "son": "[ɑ̃]",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "en",
+     "mots": 50.7,
+     "occurrences": 50.9,
+     "places": {
+      "début": 18,
+      "fin": 40,
+      "milieu": 42
+     },
+     "apres": {
+      "autre consonne": 100,
+      "fin du mot": 0
+     },
+     "exemples": [
+      "encore",
+      "entre",
+      "moment",
+      "pendant",
+      "enfin",
+      "comment"
+     ]
+    },
+    {
+     "g": "an",
+     "mots": 40.2,
+     "occurrences": 41.9,
+     "places": {
+      "fin": 45,
+      "début": 3,
+      "milieu": 51
+     },
+     "apres": {
+      "autre consonne": 98,
+      "fin du mot": 2,
+      "m, b, p": 0
+     },
+     "exemples": [
+      "dans",
+      "sans",
+      "quand",
+      "devant",
+      "avant",
+      "grand"
+     ]
+    },
+    {
+     "g": "em",
+     "mots": 5.8,
+     "occurrences": 5.2,
+     "places": {
+      "fin": 2,
+      "milieu": 51,
+      "début": 47
+     },
+     "apres": {
+      "m, b, p": 100
+     },
+     "exemples": [
+      "temps",
+      "longtemps",
+      "semblait",
+      "ensemble",
+      "semble",
+      "exemple"
+     ]
+    },
+    {
+     "g": "am",
+     "mots": 2.7,
+     "occurrences": 1.9,
+     "places": {
+      "milieu": 75,
+      "fin": 5,
+      "début": 20
+     },
+     "apres": {
+      "m, b, p": 100
+     },
+     "exemples": [
+      "chambre",
+      "jambes",
+      "campagne",
+      "camp",
+      "lampe",
+      "champs"
+     ]
+    }
+   ],
+   "corpus": [
+    "dans",
+    "sans",
+    "encore",
+    "quand",
+    "temps",
+    "entre",
+    "devant",
+    "avant",
+    "grand",
+    "moment",
+    "ans",
+    "maintenant",
+    "pendant",
+    "enfin",
+    "tant",
+    "comment",
+    "gens",
+    "seulement",
+    "grande",
+    "enfant",
+    "chambre",
+    "pourtant",
+    "prendre",
+    "enfants",
+    "longtemps",
+    "silence",
+    "sens",
+    "français",
+    "instant",
+    "souvent",
+    "vraiment",
+    "demanda",
+    "envie",
+    "semblait",
+    "demande",
+    "autant",
+    "vent",
+    "ensemble",
+    "argent",
+    "présent",
+    "entendu",
+    "pense",
+    "jambes",
+    "sentait",
+    "campagne"
+   ]
+  }
+ ],
+ "10": [
+  {
+   "son": "[ɑ̃]",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "en",
+     "mots": 50.7,
+     "occurrences": 50.9,
+     "places": {
+      "début": 18,
+      "fin": 40,
+      "milieu": 42
+     },
+     "apres": {
+      "autre consonne": 100,
+      "fin du mot": 0
+     },
+     "exemples": [
+      "encore",
+      "entre",
+      "moment",
+      "pendant",
+      "enfin",
+      "comment"
+     ]
+    },
+    {
+     "g": "an",
+     "mots": 40.2,
+     "occurrences": 41.9,
+     "places": {
+      "fin": 45,
+      "début": 3,
+      "milieu": 51
+     },
+     "apres": {
+      "autre consonne": 98,
+      "fin du mot": 2,
+      "m, b, p": 0
+     },
+     "exemples": [
+      "dans",
+      "sans",
+      "quand",
+      "devant",
+      "avant",
+      "grand"
+     ]
+    },
+    {
+     "g": "em",
+     "mots": 5.8,
+     "occurrences": 5.2,
+     "places": {
+      "fin": 2,
+      "milieu": 51,
+      "début": 47
+     },
+     "apres": {
+      "m, b, p": 100
+     },
+     "exemples": [
+      "temps",
+      "longtemps",
+      "semblait",
+      "ensemble",
+      "semble",
+      "exemple"
+     ]
+    },
+    {
+     "g": "am",
+     "mots": 2.7,
+     "occurrences": 1.9,
+     "places": {
+      "milieu": 75,
+      "fin": 5,
+      "début": 20
+     },
+     "apres": {
+      "m, b, p": 100
+     },
+     "exemples": [
+      "chambre",
+      "jambes",
+      "campagne",
+      "camp",
+      "lampe",
+      "champs"
+     ]
+    }
+   ],
+   "corpus": [
+    "dans",
+    "sans",
+    "encore",
+    "quand",
+    "temps",
+    "entre",
+    "devant",
+    "avant",
+    "grand",
+    "moment",
+    "ans",
+    "maintenant",
+    "pendant",
+    "enfin",
+    "tant",
+    "comment",
+    "gens",
+    "seulement",
+    "grande",
+    "enfant",
+    "chambre",
+    "pourtant",
+    "prendre",
+    "enfants",
+    "longtemps",
+    "silence",
+    "sens",
+    "français",
+    "instant",
+    "souvent",
+    "vraiment",
+    "demanda",
+    "envie",
+    "semblait",
+    "demande",
+    "autant",
+    "vent",
+    "ensemble",
+    "argent",
+    "présent",
+    "entendu",
+    "pense",
+    "jambes",
+    "sentait",
+    "campagne"
+   ]
+  }
+ ],
+ "11": [
+  {
+   "son": "[ɔ̃]",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "on",
+     "mots": 85.4,
+     "occurrences": 90.2,
+     "places": {
+      "début": 1,
+      "fin": 55,
+      "milieu": 44
+     },
+     "apres": {
+      "autre consonne": 68,
+      "fin du mot": 32,
+      "m, b, p": 0
+     },
+     "exemples": [
+      "son",
+      "mon",
+      "non",
+      "sont",
+      "dont",
+      "ont"
+     ]
+    },
+    {
+     "g": "om",
+     "mots": 13.5,
+     "occurrences": 9.5,
+     "places": {
+      "fin": 3,
+      "milieu": 96,
+      "début": 1
+     },
+     "apres": {
+      "m, b, p": 96,
+      "autre consonne": 2,
+      "fin du mot": 1
+     },
+     "exemples": [
+      "nom",
+      "compte",
+      "ombre",
+      "comprendre",
+      "compris",
+      "tomber"
+     ]
+    },
+    {
+     "g": "llon",
+     "mots": 1.0,
+     "occurrences": 0.3,
+     "places": {
+      "fin": 100
+     },
+     "apres": {
+      "fin du mot": 59,
+      "autre consonne": 41
+     },
+     "exemples": [
+      "bataillon",
+      "pavillon",
+      "tourbillon",
+      "papillon",
+      "bataillons",
+      "papillons"
+     ]
+    }
+   ],
+   "corpus": [
+    "son",
+    "mon",
+    "non",
+    "sont",
+    "dont",
+    "ont",
+    "monde",
+    "contre",
+    "bon",
+    "maison",
+    "ton",
+    "donc",
+    "fond",
+    "longtemps",
+    "nom",
+    "long",
+    "façon",
+    "avons",
+    "raison",
+    "compte",
+    "question",
+    "ombre",
+    "garçon",
+    "avions",
+    "font",
+    "front",
+    "longue",
+    "comprendre",
+    "impression",
+    "compris",
+    "attention",
+    "étions",
+    "contraire",
+    "tomber",
+    "allons",
+    "oncle",
+    "seconde",
+    "vont",
+    "maisons",
+    "selon",
+    "combien",
+    "répondit",
+    "direction",
+    "répondre",
+    "monter",
+    "situation",
+    "questions",
+    "patron",
+    "bataillon",
+    "pavillon",
+    "tourbillon"
+   ]
+  },
+  {
+   "son": "[ɛ̃]",
+   "voyelle": true,
+   "graphemes": [
+    {
+     "g": "in",
+     "mots": 59.7,
+     "occurrences": 23.3,
+     "places": {
+      "fin": 21,
+      "début": 63,
+      "milieu": 16
+     },
+     "apres": {
+      "autre consonne": 88,
+      "fin du mot": 12
+     },
+     "exemples": [
+      "enfin",
+      "matin",
+      "fin",
+      "instant",
+      "cinq",
+      "chemin"
+     ]
+    },
+    {
+     "g": "en",
+     "mots": 13.4,
+     "occurrences": 17.9,
+     "places": {
+      "fin": 65,
+      "milieu": 35
+     },
+     "apres": {
+      "autre consonne": 78,
+      "fin du mot": 22
+     },
+     "exemples": [
+      "bien",
+      "rien",
+      "vient",
+      "bientôt",
+      "tiens",
+      "viens"
+     ]
+    },
+    {
+     "g": "ain",
+     "mots": 10.9,
+     "occurrences": 12.7,
+     "places": {
+      "fin": 68,
+      "milieu": 31,
+      "début": 1
+     },
+     "apres": {
+      "autre consonne": 60,
+      "fin du mot": 40
+     },
+     "exemples": [
+      "main",
+      "maintenant",
+      "ainsi",
+      "mains",
+      "train",
+      "soudain"
+     ]
+    },
+    {
+     "g": "im",
+     "mots": 8.3,
+     "occurrences": 3.8,
+     "places": {
+      "début": 85,
+      "milieu": 15
+     },
+     "apres": {
+      "m, b, p": 100
+     },
+     "exemples": [
+      "importe",
+      "impression",
+      "simplement",
+      "simple",
+      "impossible",
+      "importance"
+     ]
+    },
+    {
+     "g": "ein",
+     "mots": 4.7,
+     "occurrences": 2.7,
+     "places": {
+      "fin": 45,
+      "début": 2,
+      "milieu": 52
+     },
+     "apres": {
+      "autre consonne": 86,
+      "fin du mot": 14
+     },
+     "exemples": [
+      "plein",
+      "hein",
+      "peinture",
+      "seins",
+      "pleins",
+      "atteindre"
+     ]
+    },
+    {
+     "g": "un",
+     "mots": 1.6,
+     "occurrences": 38.9,
+     "places": {
+      "début": 13,
+      "fin": 53,
+      "milieu": 33
+     },
+     "apres": {
+      "autre consonne": 67,
+      "fin du mot": 33
+     },
+     "exemples": [
+      "aucun",
+      "chacun",
+      "uns",
+      "commun",
+      "brun",
+      "lundi"
+     ]
+    }
+   ],
+   "corpus": [
+    "bien",
+    "rien",
+    "main",
+    "maintenant",
+    "ainsi",
+    "mains",
+    "enfin",
+    "matin",
+    "fin",
+    "instant",
+    "train",
+    "aucun",
+    "plein",
+    "cinq",
+    "vient",
+    "chemin",
+    "chacun",
+    "bientôt",
+    "vingt",
+    "intérieur",
+    "importe",
+    "jardin",
+    "impression",
+    "tiens",
+    "simplement",
+    "simple",
+    "viens",
+    "vin",
+    "quinze",
+    "vint",
+    "hein",
+    "intérêt",
+    "revint",
+    "cinquante",
+    "prince",
+    "mince",
+    "uns",
+    "destin",
+    "instants",
+    "printemps",
+    "médecin",
+    "peinture",
+    "intention",
+    "juin",
+    "inconnu",
+    "magasin",
+    "linge",
+    "voisin",
+    "chagrin",
+    "inquiétude"
+   ]
+  }
+ ],
+ "12": [
+  {
+   "son": "[j]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "i",
+     "mots": 83.7,
+     "occurrences": 82.1,
+     "places": {
+      "milieu": 100,
+      "début": 0
+     },
+     "apres": {
+      "voyelle a, o, u": 45,
+      "voyelle e, i, y": 42,
+      "autre consonne": 13
+     },
+     "exemples": [
+      "bien",
+      "rien",
+      "derrière",
+      "mieux",
+      "vieux",
+      "dieu"
+     ]
+    },
+    {
+     "g": "y",
+     "mots": 8.4,
+     "occurrences": 9.0,
+     "places": {
+      "début": 2,
+      "milieu": 98
+     },
+     "apres": {
+      "voyelle a, o, u": 57,
+      "voyelle e, i, y": 43
+     },
+     "exemples": [
+      "yeux",
+      "voyait",
+      "ayant",
+      "voyage",
+      "voyais",
+      "voyez"
+     ]
+    },
+    {
+     "g": "l",
+     "mots": 4.4,
+     "occurrences": 4.2,
+     "places": {
+      "milieu": 100
+     },
+     "apres": {
+      "autre consonne": 100
+     },
+     "exemples": [
+      "fille",
+      "famille",
+      "filles",
+      "juillet",
+      "grille",
+      "familles"
+     ]
+    },
+    {
+     "g": "il",
+     "mots": 1.8,
+     "occurrences": 4.1,
+     "places": {
+      "fin": 100
+     },
+     "apres": {
+      "fin du mot": 83,
+      "autre consonne": 17
+     },
+     "exemples": [
+      "soleil",
+      "oeil",
+      "travail",
+      "sommeil",
+      "pareil",
+      "fauteuil"
+     ]
+    },
+    {
+     "g": "ill",
+     "mots": 1.4,
+     "occurrences": 0.6,
+     "places": {
+      "milieu": 100
+     },
+     "apres": {
+      "voyelle e, i, y": 97,
+      "voyelle a, o, u": 3
+     },
+     "exemples": [
+      "failli",
+      "faillit",
+      "taillis",
+      "accueillir",
+      "vieilli",
+      "bouillie"
+     ]
+    }
+   ],
+   "corpus": [
+    "bien",
+    "rien",
+    "yeux",
+    "derrière",
+    "mieux",
+    "fille",
+    "vieux",
+    "dieu",
+    "première",
+    "ailleurs",
+    "premier",
+    "soleil",
+    "ciel",
+    "monsieur",
+    "oeil",
+    "pied",
+    "milieu",
+    "famille",
+    "lumière",
+    "pieds",
+    "question",
+    "vieille",
+    "travail",
+    "plusieurs",
+    "lieu",
+    "vient",
+    "dernier",
+    "pièce",
+    "voyait",
+    "filles",
+    "bientôt",
+    "dernière",
+    "avions",
+    "intérieur",
+    "ayant",
+    "impression",
+    "papier",
+    "attention",
+    "étions",
+    "tiens",
+    "manière",
+    "viens",
+    "escalier",
+    "arrière",
+    "pierre",
+    "chien",
+    "voyage",
+    "combien",
+    "oreille",
+    "failli",
+    "faillit",
+    "taillis"
+   ]
+  }
+ ],
+ "13": [
+  {
+   "son": "[wa] [wɛ̃]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "oi",
+     "mots": 70.9,
+     "occurrences": 80.5,
+     "places": {
+      "fin": 26,
+      "milieu": 73,
+      "début": 1
+     },
+     "apres": {
+      "autre consonne": 90,
+      "voyelle e, i, y": 5,
+      "fin du mot": 4
+     },
+     "exemples": [
+      "moi",
+      "fois",
+      "avoir",
+      "voir",
+      "trois",
+      "voix"
+     ]
+    },
+    {
+     "g": "o",
+     "mots": 16.7,
+     "occurrences": 6.9,
+     "places": {
+      "milieu": 100
+     },
+     "apres": {
+      "voyelle e, i, y": 100
+     },
+     "exemples": [
+      "voyait",
+      "voyage",
+      "voyais",
+      "voyez",
+      "moyen",
+      "croyait"
+     ]
+    },
+    {
+     "g": "oin",
+     "mots": 8.8,
+     "occurrences": 11.5,
+     "places": {
+      "fin": 51,
+      "milieu": 49
+     },
+     "apres": {
+      "autre consonne": 85,
+      "fin du mot": 15
+     },
+     "exemples": [
+      "moins",
+      "loin",
+      "point",
+      "besoin",
+      "coin",
+      "moindre"
+     ]
+    },
+    {
+     "g": "oua",
+     "mots": 1.5,
+     "occurrences": 0.3,
+     "places": {
+      "fin": 38,
+      "milieu": 50,
+      "début": 12
+     },
+     "apres": {
+      "autre consonne": 62,
+      "fin du mot": 38
+     },
+     "exemples": [
+      "secoua",
+      "douane",
+      "avoua",
+      "joua",
+      "douanier",
+      "escouade"
+     ]
+    }
+   ],
+   "corpus": [
+    "moi",
+    "fois",
+    "avoir",
+    "moins",
+    "voir",
+    "trois",
+    "voix",
+    "quoi",
+    "soir",
+    "pourquoi",
+    "loin",
+    "toi",
+    "point",
+    "voilà",
+    "bois",
+    "soit",
+    "crois",
+    "mois",
+    "histoire",
+    "savoir",
+    "parfois",
+    "noir",
+    "vois",
+    "besoin",
+    "droit",
+    "doit",
+    "voiture",
+    "pouvoir",
+    "droite",
+    "voyait",
+    "doigts",
+    "croire",
+    "froid",
+    "voit",
+    "noire",
+    "joie",
+    "voyage",
+    "endroit",
+    "noirs",
+    "mémoire",
+    "voyais",
+    "voyez",
+    "moyen",
+    "croyait",
+    "moyens",
+    "croyais",
+    "secoua",
+    "douane",
+    "avoua"
+   ]
+  }
+ ],
+ "14": [
+  {
+   "son": "[p]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "p",
+     "mots": 92.7,
+     "occurrences": 96.4,
+     "places": {
+      "début": 54,
+      "milieu": 44,
+      "fin": 2
+     },
+     "apres": {
+      "voyelle a, o, u": 39,
+      "autre consonne": 34,
+      "voyelle e, i, y": 27
+     },
+     "exemples": [
+      "pas",
+      "pour",
+      "plus",
+      "par",
+      "peu",
+      "puis"
+     ]
+    },
+    {
+     "g": "pp",
+     "mots": 7.3,
+     "occurrences": 3.6,
+     "places": {
+      "milieu": 93,
+      "fin": 7
+     },
+     "apres": {
+      "voyelle a, o, u": 39,
+      "autre consonne": 33,
+      "voyelle e, i, y": 28
+     },
+     "exemples": [
+      "appelle",
+      "appelait",
+      "appris",
+      "rapport",
+      "appartement",
+      "apprendre"
+     ]
+    }
+   ],
+   "corpus": [
+    "pas",
+    "pour",
+    "plus",
+    "par",
+    "peu",
+    "puis",
+    "après",
+    "petit",
+    "père",
+    "depuis",
+    "porte",
+    "petite",
+    "peut",
+    "pourquoi",
+    "presque",
+    "pendant",
+    "personne",
+    "place",
+    "pouvait",
+    "près",
+    "peine",
+    "pourtant",
+    "première",
+    "parler",
+    "point",
+    "prendre",
+    "pris",
+    "part",
+    "premier",
+    "peur",
+    "passé",
+    "passer",
+    "parfois",
+    "plutôt",
+    "petits",
+    "pied",
+    "peux",
+    "pays",
+    "pieds",
+    "partie",
+    "plein",
+    "plusieurs",
+    "possible",
+    "plaisir",
+    "appelle",
+    "appelait",
+    "appris",
+    "rapport"
+   ]
+  },
+  {
+   "son": "[b]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "b",
+     "mots": 99.8,
+     "occurrences": 99.9,
+     "places": {
+      "début": 42,
+      "milieu": 56,
+      "fin": 3
+     },
+     "apres": {
+      "autre consonne": 43,
+      "voyelle a, o, u": 37,
+      "voyelle e, i, y": 21
+     },
+     "exemples": [
+      "bien",
+      "bon",
+      "bras",
+      "beaucoup",
+      "bout",
+      "chambre"
+     ]
+    }
+   ],
+   "corpus": [
+    "bien",
+    "bon",
+    "bras",
+    "beaucoup",
+    "bout",
+    "chambre",
+    "table",
+    "bonne",
+    "bois",
+    "beau",
+    "bouche",
+    "semblait",
+    "besoin",
+    "bas",
+    "belle",
+    "bruit",
+    "blanc",
+    "possible",
+    "ensemble",
+    "bord",
+    "ombre",
+    "jambes",
+    "bientôt",
+    "debout",
+    "bonheur",
+    "blanche",
+    "semble",
+    "bleu",
+    "arbres",
+    "tomber",
+    "libre",
+    "bureau",
+    "début",
+    "habitude",
+    "robe",
+    "brusquement",
+    "combien",
+    "boire",
+    "impossible",
+    "bête",
+    "sombre",
+    "boîte",
+    "liberté",
+    "sable",
+    "oublié",
+    "beauté",
+    "immobile",
+    "herbe"
+   ]
+  }
+ ],
+ "15": [
+  {
+   "son": "[t]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "t",
+     "mots": 92.8,
+     "occurrences": 93.6,
+     "places": {
+      "milieu": 71,
+      "début": 15,
+      "fin": 14
+     },
+     "apres": {
+      "voyelle e, i, y": 53,
+      "voyelle a, o, u": 30,
+      "autre consonne": 17
+     },
+     "exemples": [
+      "était",
+      "tout",
+      "autre",
+      "temps",
+      "être",
+      "tous"
+     ]
+    },
+    {
+     "g": "tt",
+     "mots": 7.2,
+     "occurrences": 6.4,
+     "places": {
+      "fin": 40,
+      "milieu": 60
+     },
+     "apres": {
+      "voyelle e, i, y": 66,
+      "voyelle a, o, u": 24,
+      "autre consonne": 10
+     },
+     "exemples": [
+      "cette",
+      "mettre",
+      "attendre",
+      "attention",
+      "lettre",
+      "attendait"
+     ]
+    }
+   ],
+   "corpus": [
+    "était",
+    "tout",
+    "cette",
+    "autre",
+    "temps",
+    "être",
+    "tous",
+    "très",
+    "toujours",
+    "été",
+    "étaient",
+    "entre",
+    "tête",
+    "toute",
+    "trop",
+    "petit",
+    "notre",
+    "trois",
+    "étais",
+    "porte",
+    "contre",
+    "toutes",
+    "autres",
+    "maintenant",
+    "petite",
+    "cet",
+    "côté",
+    "toi",
+    "ton",
+    "tant",
+    "votre",
+    "terre",
+    "matin",
+    "pourtant",
+    "autour",
+    "tard",
+    "doute",
+    "vite",
+    "table",
+    "longtemps",
+    "reste",
+    "instant",
+    "mettre",
+    "attendre"
+   ]
+  },
+  {
+   "son": "[d]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "d",
+     "mots": 100.0,
+     "occurrences": 100.0,
+     "places": {
+      "début": 43,
+      "fin": 10,
+      "milieu": 47
+     },
+     "apres": {
+      "voyelle e, i, y": 66,
+      "voyelle a, o, u": 25,
+      "autre consonne": 8
+     },
+     "exemples": [
+      "des",
+      "dans",
+      "dit",
+      "deux",
+      "dont",
+      "dire"
+     ]
+    }
+   ],
+   "corpus": [
+    "des",
+    "dans",
+    "dit",
+    "deux",
+    "dont",
+    "dire",
+    "devant",
+    "monde",
+    "déjà",
+    "depuis",
+    "dis",
+    "pendant",
+    "derrière",
+    "donc",
+    "grande",
+    "dieu",
+    "doute",
+    "disait",
+    "prendre",
+    "devait",
+    "dès",
+    "demanda",
+    "soudain",
+    "droit",
+    "demande",
+    "idée",
+    "doit",
+    "donner",
+    "dos",
+    "dix",
+    "regarde",
+    "madame",
+    "droite",
+    "dernier",
+    "vide",
+    "entendu",
+    "ordre",
+    "doigts",
+    "dernière",
+    "regarder",
+    "entendre",
+    "regardait",
+    "odeur",
+    "debout",
+    "donné",
+    "demain"
+   ]
+  }
+ ],
+ "16": [
+  {
+   "son": "[k]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "c",
+     "mots": 76.7,
+     "occurrences": 63.2,
+     "places": {
+      "fin": 2,
+      "début": 54,
+      "milieu": 43
+     },
+     "apres": {
+      "voyelle a, o, u": 66,
+      "autre consonne": 32,
+      "fin du mot": 2
+     },
+     "exemples": [
+      "avec",
+      "comme",
+      "encore",
+      "coup",
+      "contre",
+      "côté"
+     ]
+    },
+    {
+     "g": "qu",
+     "mots": 18.7,
+     "occurrences": 34.6,
+     "places": {
+      "début": 11,
+      "fin": 43,
+      "milieu": 47
+     },
+     "apres": {
+      "voyelle e, i, y": 85,
+      "voyelle a, o, u": 15
+     },
+     "exemples": [
+      "qui",
+      "que",
+      "quand",
+      "quelques",
+      "quelques",
+      "quelque"
+     ]
+    },
+    {
+     "g": "cc",
+     "mots": 3.2,
+     "occurrences": 1.4,
+     "places": {
+      "milieu": 100
+     },
+     "apres": {
+      "voyelle a, o, u": 80,
+      "autre consonne": 20
+     },
+     "exemples": [
+      "accord",
+      "occasion",
+      "occuper",
+      "occupe",
+      "occupait",
+      "occupé"
+     ]
+    }
+   ],
+   "corpus": [
+    "qui",
+    "avec",
+    "comme",
+    "que",
+    "encore",
+    "quand",
+    "quelques",
+    "quelque",
+    "coup",
+    "contre",
+    "quoi",
+    "côté",
+    "pourquoi",
+    "car",
+    "corps",
+    "beaucoup",
+    "donc",
+    "comment",
+    "coeur",
+    "crois",
+    "compte",
+    "aucun",
+    "cas",
+    "aucune",
+    "cause",
+    "coups",
+    "chacun",
+    "cours",
+    "café",
+    "croire",
+    "coin",
+    "cour",
+    "comprendre",
+    "compris",
+    "contraire",
+    "école",
+    "calme",
+    "escalier",
+    "sac",
+    "accord",
+    "cuisine",
+    "oncle",
+    "seconde",
+    "couleur",
+    "écrire",
+    "occasion",
+    "occuper"
+   ]
+  }
+ ],
+ "17": [
+  {
+   "son": "[g]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "g",
+     "mots": 84.2,
+     "occurrences": 84.0,
+     "places": {
+      "début": 48,
+      "milieu": 52,
+      "fin": 0
+     },
+     "apres": {
+      "voyelle a, o, u": 54,
+      "autre consonne": 44,
+      "m, b, p": 1
+     },
+     "exemples": [
+      "grand",
+      "grande",
+      "regard",
+      "gros",
+      "grands",
+      "gauche"
+     ]
+    },
+    {
+     "g": "gu",
+     "mots": 15.0,
+     "occurrences": 15.8,
+     "places": {
+      "début": 34,
+      "fin": 35,
+      "milieu": 31
+     },
+     "apres": {
+      "voyelle e, i, y": 97,
+      "voyelle a, o, u": 3,
+      "fin du mot": 1
+     },
+     "exemples": [
+      "guerre",
+      "longue",
+      "guère",
+      "gueule",
+      "langue",
+      "longues"
+     ]
+    }
+   ],
+   "corpus": [
+    "grand",
+    "grande",
+    "regard",
+    "guerre",
+    "gros",
+    "grands",
+    "gauche",
+    "regarde",
+    "malgré",
+    "garçon",
+    "regarder",
+    "regardait",
+    "longue",
+    "regarda",
+    "grandes",
+    "grâce",
+    "garde",
+    "goût",
+    "église",
+    "gouvernement",
+    "gris",
+    "guère",
+    "anglais",
+    "gueule",
+    "langue",
+    "figure",
+    "grosse",
+    "longues",
+    "groupe",
+    "gare",
+    "gorge",
+    "grave",
+    "vague",
+    "regardant",
+    "glace",
+    "cigarette",
+    "garçons",
+    "également",
+    "garder",
+    "regards",
+    "gagner",
+    "angoisse",
+    "glisser",
+    "gars",
+    "égard",
+    "grosses",
+    "grise"
+   ]
+  }
+ ],
+ "18": [
+  {
+   "son": "[f]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "f",
+     "mots": 79.9,
+     "occurrences": 88.2,
+     "places": {
+      "début": 60,
+      "milieu": 33,
+      "fin": 7
+     },
+     "apres": {
+      "voyelle a, o, u": 42,
+      "voyelle e, i, y": 32,
+      "autre consonne": 21
+     },
+     "exemples": [
+      "fait",
+      "faire",
+      "fois",
+      "femme",
+      "faut",
+      "faisait"
+     ]
+    },
+    {
+     "g": "ff",
+     "mots": 14.9,
+     "occurrences": 8.9,
+     "places": {
+      "milieu": 94,
+      "fin": 6
+     },
+     "apres": {
+      "voyelle e, i, y": 51,
+      "autre consonne": 30,
+      "voyelle a, o, u": 19
+     },
+     "exemples": [
+      "effet",
+      "affaire",
+      "souffle",
+      "affaires",
+      "difficile",
+      "effort"
+     ]
+    },
+    {
+     "g": "ph",
+     "mots": 5.1,
+     "occurrences": 3.0,
+     "places": {
+      "milieu": 54,
+      "début": 33,
+      "fin": 13
+     },
+     "apres": {
+      "voyelle e, i, y": 50,
+      "voyelle a, o, u": 47,
+      "autre consonne": 3
+     },
+     "exemples": [
+      "téléphone",
+      "phrase",
+      "photo",
+      "phrases",
+      "photos",
+      "physique"
+     ]
+    }
+   ],
+   "corpus": [
+    "fait",
+    "faire",
+    "fois",
+    "femme",
+    "faut",
+    "faisait",
+    "fit",
+    "fut",
+    "enfin",
+    "fille",
+    "enfant",
+    "fond",
+    "enfants",
+    "fin",
+    "femmes",
+    "fallait",
+    "français",
+    "parfois",
+    "fils",
+    "fort",
+    "face",
+    "façon",
+    "famille",
+    "force",
+    "fais",
+    "feu",
+    "fenêtre",
+    "filles",
+    "effet",
+    "chef",
+    "café",
+    "fût",
+    "froid",
+    "fini",
+    "font",
+    "affaire",
+    "front",
+    "forme",
+    "frère",
+    "forces",
+    "souffle",
+    "téléphone",
+    "affaires",
+    "difficile",
+    "effort",
+    "phrase",
+    "suffit",
+    "photo"
+   ]
+  },
+  {
+   "son": "[v]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "v",
+     "mots": 99.9,
+     "occurrences": 99.9,
+     "places": {
+      "milieu": 65,
+      "début": 28,
+      "fin": 7
+     },
+     "apres": {
+      "voyelle e, i, y": 61,
+      "voyelle a, o, u": 33,
+      "autre consonne": 6
+     },
+     "exemples": [
+      "avait",
+      "avec",
+      "vous",
+      "vers",
+      "avais",
+      "vie"
+     ]
+    }
+   ],
+   "corpus": [
+    "avait",
+    "avec",
+    "vous",
+    "vers",
+    "avais",
+    "vie",
+    "avoir",
+    "devant",
+    "avant",
+    "voir",
+    "avaient",
+    "voix",
+    "visage",
+    "pouvait",
+    "votre",
+    "vieux",
+    "veux",
+    "vite",
+    "avez",
+    "voilà",
+    "nouveau",
+    "ville",
+    "devait",
+    "savoir",
+    "souvent",
+    "vais",
+    "vraiment",
+    "venait",
+    "envie",
+    "cheveux",
+    "avons",
+    "vois",
+    "travers",
+    "savait",
+    "vieille",
+    "voulait",
+    "travail",
+    "voiture",
+    "veut",
+    "vent",
+    "vient",
+    "lèvres",
+    "pouvoir",
+    "vue",
+    "venir",
+    "trouver",
+    "vivre"
+   ]
+  }
+ ],
+ "19": [
+  {
+   "son": "[ʃ]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "ch",
+     "mots": 99.3,
+     "occurrences": 99.8,
+     "places": {
+      "début": 31,
+      "fin": 20,
+      "milieu": 49
+     },
+     "apres": {
+      "voyelle e, i, y": 57,
+      "voyelle a, o, u": 42,
+      "autre consonne": 1
+     },
+     "exemples": [
+      "chose",
+      "chez",
+      "chaque",
+      "chambre",
+      "choses",
+      "bouche"
+     ]
+    }
+   ],
+   "corpus": [
+    "chose",
+    "chez",
+    "chaque",
+    "chambre",
+    "choses",
+    "bouche",
+    "cheveux",
+    "gauche",
+    "chemin",
+    "chacun",
+    "chef",
+    "chercher",
+    "marche",
+    "blanche",
+    "chien",
+    "chance",
+    "chaleur",
+    "cher",
+    "cheval",
+    "chaud",
+    "poche",
+    "chair",
+    "dimanche",
+    "chaise",
+    "marcher",
+    "marché",
+    "chemise",
+    "proche",
+    "changé",
+    "chapeau",
+    "changer",
+    "coucher",
+    "empêcher",
+    "chevaux",
+    "cherche",
+    "toucher",
+    "château",
+    "blanches",
+    "chasse",
+    "branches",
+    "chat",
+    "machine",
+    "acheter",
+    "marches",
+    "chiens",
+    "approche"
+   ]
+  },
+  {
+   "son": "[ʒ]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "g",
+     "mots": 76.2,
+     "occurrences": 37.6,
+     "places": {
+      "fin": 31,
+      "début": 10,
+      "milieu": 59
+     },
+     "apres": {
+      "voyelle e, i, y": 100
+     },
+     "exemples": [
+      "visage",
+      "gens",
+      "général",
+      "rouge",
+      "âge",
+      "argent"
+     ]
+    },
+    {
+     "g": "j",
+     "mots": 23.8,
+     "occurrences": 62.4,
+     "places": {
+      "début": 68,
+      "milieu": 32
+     },
+     "apres": {
+      "voyelle a, o, u": 74,
+      "voyelle e, i, y": 26
+     },
+     "exemples": [
+      "jamais",
+      "toujours",
+      "jour",
+      "déjà",
+      "jours",
+      "jeune"
+     ]
+    }
+   ],
+   "corpus": [
+    "jamais",
+    "toujours",
+    "jour",
+    "déjà",
+    "jours",
+    "visage",
+    "jeune",
+    "gens",
+    "juste",
+    "général",
+    "rouge",
+    "âge",
+    "argent",
+    "geste",
+    "jambes",
+    "jeunes",
+    "genre",
+    "jardin",
+    "journée",
+    "manger",
+    "passage",
+    "image",
+    "village",
+    "voyage",
+    "large",
+    "genoux",
+    "gestes",
+    "davantage",
+    "étrange",
+    "rouges",
+    "gorge",
+    "agissait",
+    "neige",
+    "léger",
+    "visages",
+    "agit",
+    "changé",
+    "changer",
+    "plage",
+    "mariage",
+    "courage",
+    "images",
+    "étage",
+    "légèrement",
+    "imaginer",
+    "pages",
+    "étranger",
+    "page"
+   ]
+  }
+ ],
+ "20": [
+  {
+   "son": "[m]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "m",
+     "mots": 94.9,
+     "occurrences": 88.1,
+     "places": {
+      "début": 35,
+      "fin": 9,
+      "milieu": 57
+     },
+     "apres": {
+      "voyelle e, i, y": 62,
+      "voyelle a, o, u": 37,
+      "fin du mot": 1
+     },
+     "exemples": [
+      "mais",
+      "mon",
+      "même",
+      "même",
+      "moi",
+      "jamais"
+     ]
+    },
+    {
+     "g": "mm",
+     "mots": 5.1,
+     "occurrences": 11.9,
+     "places": {
+      "fin": 10,
+      "milieu": 90,
+      "début": 1
+     },
+     "apres": {
+      "voyelle e, i, y": 64,
+      "voyelle a, o, u": 36
+     },
+     "exemples": [
+      "comme",
+      "homme",
+      "femme",
+      "hommes",
+      "comment",
+      "femmes"
+     ]
+    }
+   ],
+   "corpus": [
+    "mais",
+    "comme",
+    "mon",
+    "même",
+    "moi",
+    "jamais",
+    "mes",
+    "homme",
+    "main",
+    "mère",
+    "moins",
+    "monde",
+    "femme",
+    "moment",
+    "mal",
+    "maintenant",
+    "mort",
+    "maison",
+    "mains",
+    "mieux",
+    "seulement",
+    "matin",
+    "amour",
+    "première",
+    "premier",
+    "mois",
+    "mots",
+    "monsieur",
+    "vraiment",
+    "demanda",
+    "mot",
+    "mis",
+    "aime",
+    "milieu",
+    "mer",
+    "demande",
+    "famille",
+    "lumière",
+    "mettre",
+    "madame",
+    "chemin",
+    "malgré",
+    "mit",
+    "mur",
+    "parmi",
+    "mille"
+   ]
+  },
+  {
+   "son": "[n]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "n",
+     "mots": 83.6,
+     "occurrences": 89.6,
+     "places": {
+      "fin": 18,
+      "début": 15,
+      "milieu": 67
+     },
+     "apres": {
+      "voyelle e, i, y": 57,
+      "voyelle a, o, u": 43,
+      "autre consonne": 0
+     },
+     "exemples": [
+      "une",
+      "nous",
+      "non",
+      "notre",
+      "nuit",
+      "nos"
+     ]
+    },
+    {
+     "g": "nn",
+     "mots": 16.4,
+     "occurrences": 10.4,
+     "places": {
+      "fin": 27,
+      "milieu": 73
+     },
+     "apres": {
+      "voyelle e, i, y": 65,
+      "voyelle a, o, u": 35
+     },
+     "exemples": [
+      "personne",
+      "bonne",
+      "années",
+      "donner",
+      "donné",
+      "donne"
+     ]
+    }
+   ],
+   "corpus": [
+    "une",
+    "nous",
+    "non",
+    "notre",
+    "nuit",
+    "nos",
+    "maintenant",
+    "personne",
+    "jeune",
+    "peine",
+    "bonne",
+    "nouveau",
+    "nom",
+    "noir",
+    "général",
+    "venait",
+    "années",
+    "donner",
+    "aucune",
+    "fenêtre",
+    "venir",
+    "dernier",
+    "tenait",
+    "nez",
+    "jeunes",
+    "dernière",
+    "nouvelle",
+    "fini",
+    "donné",
+    "venu",
+    "bonheur",
+    "donne",
+    "noire",
+    "souvenir",
+    "minutes",
+    "journée",
+    "pleine",
+    "manière",
+    "année",
+    "tenir",
+    "cuisine",
+    "journal",
+    "donnait",
+    "gouvernement",
+    "prenait",
+    "avenir",
+    "semaine",
+    "noirs"
+   ]
+  }
+ ],
+ "21": [
+  {
+   "son": "[l]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "l",
+     "mots": 90.3,
+     "occurrences": 90.5,
+     "places": {
+      "début": 12,
+      "fin": 24,
+      "milieu": 64
+     },
+     "apres": {
+      "voyelle e, i, y": 55,
+      "voyelle a, o, u": 34,
+      "fin du mot": 5
+     },
+     "exemples": [
+      "les",
+      "plus",
+      "lui",
+      "ils",
+      "alors",
+      "leurs"
+     ]
+    },
+    {
+     "g": "ll",
+     "mots": 9.7,
+     "occurrences": 9.5,
+     "places": {
+      "fin": 44,
+      "milieu": 56
+     },
+     "apres": {
+      "voyelle e, i, y": 76,
+      "voyelle a, o, u": 24,
+      "fin du mot": 1
+     },
+     "exemples": [
+      "elle",
+      "elles",
+      "aller",
+      "allait",
+      "ville",
+      "fallait"
+     ]
+    }
+   ],
+   "corpus": [
+    "les",
+    "elle",
+    "plus",
+    "lui",
+    "ils",
+    "alors",
+    "leurs",
+    "cela",
+    "quelques",
+    "quelque",
+    "elles",
+    "mal",
+    "seul",
+    "place",
+    "loin",
+    "leur",
+    "seulement",
+    "aller",
+    "allait",
+    "parler",
+    "table",
+    "lit",
+    "seule",
+    "longtemps",
+    "voilà",
+    "soleil",
+    "long",
+    "celui",
+    "silence",
+    "ville",
+    "ciel",
+    "plutôt",
+    "général",
+    "fils",
+    "quel",
+    "semblait",
+    "milieu",
+    "lumière",
+    "voulait",
+    "plein",
+    "plusieurs",
+    "lieu",
+    "blanc",
+    "possible",
+    "plaisir",
+    "lorsque",
+    "ensemble",
+    "lèvres"
+   ]
+  }
+ ],
+ "22": [
+  {
+   "son": "[ʀ]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "r",
+     "mots": 96.5,
+     "occurrences": 97.0,
+     "places": {
+      "fin": 20,
+      "début": 16,
+      "milieu": 64
+     },
+     "apres": {
+      "voyelle e, i, y": 45,
+      "voyelle a, o, u": 27,
+      "autre consonne": 20
+     },
+     "exemples": [
+      "pour",
+      "sur",
+      "par",
+      "encore",
+      "faire",
+      "rien"
+     ]
+    },
+    {
+     "g": "rr",
+     "mots": 3.5,
+     "occurrences": 3.0,
+     "places": {
+      "milieu": 91,
+      "fin": 9
+     },
+     "apres": {
+      "voyelle e, i, y": 65,
+      "voyelle a, o, u": 35
+     },
+     "exemples": [
+      "derrière",
+      "terre",
+      "guerre",
+      "verre",
+      "arrive",
+      "pourrait"
+     ]
+    }
+   ],
+   "corpus": [
+    "pour",
+    "sur",
+    "par",
+    "encore",
+    "faire",
+    "rien",
+    "autre",
+    "être",
+    "très",
+    "toujours",
+    "alors",
+    "vers",
+    "après",
+    "leurs",
+    "entre",
+    "dire",
+    "avoir",
+    "jour",
+    "trop",
+    "mère",
+    "voir",
+    "père",
+    "notre",
+    "air",
+    "trois",
+    "grand",
+    "porte",
+    "contre",
+    "aurait",
+    "autres",
+    "soir",
+    "jours",
+    "mort",
+    "bras",
+    "pourquoi",
+    "car",
+    "heures",
+    "corps",
+    "presque",
+    "personne",
+    "rue",
+    "derrière",
+    "près",
+    "heure",
+    "votre",
+    "leur",
+    "terre",
+    "guerre"
+   ]
+  }
+ ],
+ "23": [
+  {
+   "son": "[s]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "s",
+     "mots": 47.4,
+     "occurrences": 59.8,
+     "places": {
+      "début": 47,
+      "fin": 3,
+      "milieu": 51
+     },
+     "apres": {
+      "voyelle a, o, u": 34,
+      "autre consonne": 31,
+      "voyelle e, i, y": 24
+     },
+     "exemples": [
+      "sur",
+      "plus",
+      "son",
+      "ses",
+      "sans",
+      "tous"
+     ]
+    },
+    {
+     "g": "c",
+     "mots": 22.2,
+     "occurrences": 21.3,
+     "places": {
+      "début": 15,
+      "milieu": 57,
+      "fin": 29
+     },
+     "apres": {
+      "voyelle e, i, y": 100
+     },
+     "exemples": [
+      "cette",
+      "ces",
+      "cela",
+      "cet",
+      "ici",
+      "place"
+     ]
+    },
+    {
+     "g": "ss",
+     "mots": 19.4,
+     "occurrences": 11.5,
+     "places": {
+      "milieu": 80,
+      "fin": 20
+     },
+     "apres": {
+      "voyelle e, i, y": 64,
+      "voyelle a, o, u": 36,
+      "fin du mot": 0
+     },
+     "exemples": [
+      "aussi",
+      "assez",
+      "passé",
+      "passer",
+      "possible",
+      "passe"
+     ]
+    },
+    {
+     "g": "t",
+     "mots": 8.5,
+     "occurrences": 3.8,
+     "places": {
+      "milieu": 98,
+      "début": 2
+     },
+     "apres": {
+      "voyelle e, i, y": 100
+     },
+     "exemples": [
+      "question",
+      "attention",
+      "étions",
+      "tiens",
+      "direction",
+      "tient"
+     ]
+    },
+    {
+     "g": "ç",
+     "mots": 2.4,
+     "occurrences": 3.4,
+     "places": {
+      "début": 2,
+      "milieu": 98
+     },
+     "apres": {
+      "voyelle a, o, u": 100
+     },
+     "exemples": [
+      "français",
+      "façon",
+      "garçon",
+      "française",
+      "garçons",
+      "commençait"
+     ]
+    }
+   ],
+   "corpus": [
+    "sur",
+    "plus",
+    "son",
+    "ses",
+    "cette",
+    "sans",
+    "ces",
+    "aussi",
+    "tous",
+    "suis",
+    "sont",
+    "sous",
+    "cela",
+    "sais",
+    "soir",
+    "seul",
+    "cet",
+    "ici",
+    "ainsi",
+    "presque",
+    "personne",
+    "place",
+    "assez",
+    "seulement",
+    "serait",
+    "sûr",
+    "seule",
+    "soleil",
+    "celui",
+    "silence",
+    "ceux",
+    "reste",
+    "soit",
+    "ciel",
+    "passé",
+    "celle",
+    "français",
+    "passer",
+    "façon",
+    "question",
+    "possible",
+    "passe",
+    "laisser",
+    "aussitôt",
+    "garçon",
+    "assis",
+    "attention",
+    "étions",
+    "tiens"
+   ]
+  }
+ ],
+ "24": [
+  {
+   "son": "[z]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "s",
+     "mots": 94.9,
+     "occurrences": 95.6,
+     "places": {
+      "fin": 26,
+      "milieu": 74
+     },
+     "apres": {
+      "voyelle e, i, y": 73,
+      "voyelle a, o, u": 27
+     },
+     "exemples": [
+      "chose",
+      "faisait",
+      "visage",
+      "maison",
+      "choses",
+      "disait"
+     ]
+    },
+    {
+     "g": "z",
+     "mots": 5.1,
+     "occurrences": 4.4,
+     "places": {
+      "fin": 20,
+      "milieu": 58,
+      "début": 22
+     },
+     "apres": {
+      "voyelle e, i, y": 51,
+      "voyelle a, o, u": 36,
+      "autre consonne": 9
+     },
+     "exemples": [
+      "quinze",
+      "horizon",
+      "douze",
+      "bizarre",
+      "onze",
+      "zone"
+     ]
+    }
+   ],
+   "corpus": [
+    "chose",
+    "faisait",
+    "visage",
+    "maison",
+    "choses",
+    "disait",
+    "besoin",
+    "raison",
+    "plusieurs",
+    "plaisir",
+    "cause",
+    "présent",
+    "présence",
+    "cuisine",
+    "église",
+    "faisaient",
+    "mesure",
+    "hasard",
+    "faisant",
+    "française",
+    "maisons",
+    "musique",
+    "rose",
+    "désir",
+    "quinze",
+    "occasion",
+    "disant",
+    "troisième",
+    "désormais",
+    "phrase",
+    "chaise",
+    "visite",
+    "surprise",
+    "mise",
+    "prise",
+    "président",
+    "chemise",
+    "visages",
+    "poser",
+    "posé",
+    "mauvaise",
+    "disais",
+    "posa",
+    "oiseaux",
+    "prison",
+    "pose",
+    "assise",
+    "horizon",
+    "douze"
+   ]
+  }
+ ],
+ "25": [
+  {
+   "son": "[ɲ]",
+   "voyelle": false,
+   "graphemes": [
+    {
+     "g": "gn",
+     "mots": 100.0,
+     "occurrences": 100.0,
+     "places": {
+      "fin": 23,
+      "milieu": 77
+     },
+     "apres": {
+      "voyelle e, i, y": 60,
+      "voyelle a, o, u": 40
+     },
+     "exemples": [
+      "signe",
+      "ligne",
+      "campagne",
+      "compagnie",
+      "gagner",
+      "lignes"
+     ]
+    }
+   ],
+   "corpus": [
+    "signe",
+    "ligne",
+    "campagne",
+    "compagnie",
+    "gagner",
+    "lignes",
+    "seigneur",
+    "montagne",
+    "signes",
+    "gagné",
+    "poignée",
+    "soigneusement",
+    "compagnon",
+    "dignité",
+    "montagnes",
+    "champagne",
+    "compagnons",
+    "éloigner",
+    "poignet",
+    "digne",
+    "bagnole",
+    "ignorait",
+    "ignore",
+    "magnifique",
+    "règne",
+    "accompagner",
+    "accompagné",
+    "espagnol",
+    "régnait",
+    "craignait",
+    "gagne",
+    "éloigne",
+    "éloigna",
+    "signé",
+    "signal",
+    "soigner",
+    "renseignements",
+    "ignorer",
+    "éloignait",
+    "regagner",
+    "ignorance",
+    "éloigné",
+    "accompagnait",
+    "indignation",
+    "signification",
+    "signifiait",
+    "accompagne",
+    "poignets"
+   ]
+  }
+ ]
+}

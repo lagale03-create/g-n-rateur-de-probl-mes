@@ -158,6 +158,7 @@ function blocSeance(s, idx) {
   if (s.mat) info.push(['Matériel', s.mat]);
   if (s.ref) info.push(['Appui didactique', s.ref]);
   if (s.fiche) info.push(['Fiches élèves', s.fiche]);
+  if (s.coop) info.push(['Coopération', s.coop]);
   out.push(table(w2, info.map(r => [{ __cell: (w, j) => cell(P(r[0], { bold: true, size: 18 }), w[0], { fill: C.gris }) }, r[1]].map((c, j) => j === 0 ? c : c)), { size: 18 }));
   if (s.phases) {
     const wp = [1500, 700, (W - 2200) / 2, (W - 2200) / 2];
@@ -251,7 +252,7 @@ function pageFiche(f, day) {
     cell([P('Prénom : ……………………', { font, size: 20, after: 60 }), P('Date : ' + day.jour.toLowerCase() + ' ' + day.date, { font, size: 20, after: 0 })], wh[1], { fill: DOM_COL[f.dom] || C.gris }),
   ] })] }));
   kids.push(vide(120));
-  if (f.n1) kids.push(P('Version aménagée', { font, size: 18, color: '808080', after: 80 }));
+  if (f.n1) kids.push(P('Étayage au choix', { font, size: 18, color: '808080', after: 80 }));
   f.b.forEach(b => kids.push(...blocFiche(b, ff)));
   return kids;
 }
@@ -259,7 +260,7 @@ async function fiches(week, day, file) {
   const kids = [];
   // Sommaire d'impression
   kids.push(P(`${day.jour} ${day.date} · fiches élèves`, { size: 36, bold: true, color: C.bleu, after: 60 }));
-  kids.push(P('Récapitulatif d\'impression : une fiche par page, dans l\'ordre de la journée. Le nombre d\'exemplaires dépend de tes effectifs par niveau et du nombre d\'élèves en version aménagée.', { size: 18, after: 100 }));
+  kids.push(P('Récapitulatif d\'impression : une fiche par page, dans l\'ordre de la journée. Le nombre d\'exemplaires dépend de tes effectifs par niveau et des élèves qui choisissent l\'étayage.', { size: 18, after: 100 }));
   const wv = [700, 2300, 4600, 1500, W - 9100];
   const rec = day.fiches.map((f, i) => [String(i + 2), f.dom, f.titre, f.niv, f.ex || '']);
   (day.externes || []).forEach(a => rec.push(['—', a[0], a[1], a[2], 'fichier séparé']));

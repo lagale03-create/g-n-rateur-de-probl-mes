@@ -15,8 +15,35 @@ PERS = ['je', 'tu', 'il, elle, on', 'nous', 'vous', 'ils, elles']
 TEMPS_P = {1: ['Imparfait', 'Futur'], 2: ['Présent'], 3: ['Passé composé'], 4: ['Passé simple'], 5: ['Présent', 'Futur', 'Imparfait', 'Passé composé', 'Passé simple']}
 ETAPES_G = ['observation du corpus', 'affinement : critères et manipulations', 'institutionnalisation', 'entraînement et réinvestissement']
 
+COOP = {  # forme de coopération par domaine (Connac : aide, entraide, tutorat, travail en groupe ; table d'appui)
+ 'Conjugaison': "Entraide en binômes : on compare, on se met d'accord avec le tableau de la classe.",
+ 'Dictée réflexive': "Entraide : négociation à égalité en binômes (qui changent chaque semaine), puis confrontation collective.",
+ 'Calcul mental': "Temps individuel, puis entraide : comparer les procédures ; aide sur demande, sans donner la réponse.",
+ "Production d'écrits": "Pitch en binôme ; pendant l'écriture, aide sur demande et table d'appui (dictée à l'adulte pour qui la demande).",
+ 'Problème du jour': "Recherche seul d'abord, puis aide sur demande (règles de l'aide) ; table d'appui avec la version ★ en coup de pouce ; ceux qui ont fini passent au problème 2 ou deviennent aidants.",
+ 'Mathématiques': "Recherche seul (3 min), puis groupes de trois avec rôles (porte-parole, secrétaire, vérificateur) ; confrontation des désaccords ; table d'appui ; tuteurs volontaires CM1 et CM2.",
+ 'Géométrie': "Dyade : l'un trace, l'autre contrôle aux instruments, puis on inverse ; table d'appui avec gabarits.",
+ 'Lecture': "Recherche individuelle, groupes hétérogènes de quatre avec rôles (lecteur, gardien des citations, secrétaire, porte-parole), débat ; table d'appui pour lire avec l'enseignant.",
+ 'Lecture à voix haute': "Entraînement en binôme ; retours bienveillants du public.",
+ 'Grammaire': "Travail en groupe : tri du corpus à trois, chacun justifie un classement ; confrontation des critères.",
+ 'Orthographe': "Travail en groupe hétérogène sur le grand corpus ; chacun justifie un constat ; mémorisation en binôme.",
+ 'Sciences': "Travail en groupe avec rôles tournants (expérimentateur, mesureur, secrétaire, porte-parole).",
+ 'Histoire': "Travail en groupe sur les documents, rôles tournants ; mise en commun.",
+ 'Géographie': "Travail en groupe sur les documents, rôles tournants ; mise en commun.",
+ 'EMC': "Débat réglé avec rôles ; décisions prises en commun.",
+ 'Anglais': "Binômes : on joue, on se corrige, on s'aide à dire.",
+ 'Vocabulaire': "Travail en groupe : classer, justifier, enrichir la carte commune.",
+ 'Réécriture': "Relecture en binôme ; conférences d'écriture à la table d'appui.",
+ 'Dictée bilan': "Temps individuel ; relecture avec les outils de la classe.",
+ 'EPS': "Rôles sociaux (arbitre, observateur, chronométreur) ; équipes mixtes et changeantes.",
+ 'Arts plastiques': "Production individuelle, verbalisation collective.",
+ 'Éducation musicale': "Chant collectif, production en petits groupes.",
+}
 def S_(h, dom, titre, obj, **k):
-    d = {'h': h, 'dom': dom, 'titre': titre, 'obj': obj}; d.update({a: b for a, b in k.items() if b}); return d
+    d = {'h': h, 'dom': dom, 'titre': titre, 'obj': obj}; d.update({a: b for a, b in k.items() if b})
+    if 'coop' not in d and dom in COOP: d['coop'] = COOP[dom]
+    return d
+
 def F_(dom, niv, titre, b, n1=False, ex=''):
     return {'dom': dom, 'niv': niv, 'titre': titre, 'b': b, 'n1': n1, 'ex': ex}
 
@@ -64,7 +91,7 @@ def calcul(h, jour, w, cm):
                           ['Comparaison', '5 min', 'Affiche trois procédures d\'élèves, fait comparer et nommer la plus efficace.', 'Argumentent'],
                           ['Application', '7 min', 'Dicte les 12 calculs de chaque niveau.', 'Ardoise levée']] if jour == 'Lundi' else
                          [['Furet', '4 min', 'Furet sur la procédure de la période.', 'Enchaînent'], ['Ardoise', '7 min', 'Dicte les 12 calculs de chaque niveau.', 'Écrivent, lèvent l\'ardoise'], ['Flash', '4 min', 'Cartes de faits usuels (fractions, doubles, compléments).', 'Répondent à l\'oral']],
-                  diff=[['CM1 fragiles', 'tableau de numération ou table sous les yeux'], ['CM2 experts', 'inventer un calcul piège']],
+                  diff=[["Table d'appui", 'tableau de numération ou table sous les yeux, pour qui le demande'], ['Défi (ouvert à tous)', 'inventer un calcul piège']],
                   corrige=[f"CM1 ({p1}) : " + ' · '.join(f"{i + 1}) {x['q']} → {x['r']}" for i, x in enumerate(c1)), f"CM2 ({p2}) : " + ' · '.join(f"{i + 1}) {x['q']} → {x['r']}" for i, x in enumerate(c2))])
     s = cm['series'][jour]; bilan = jour == 'Vendredi'
     pr = cm['proc'][jour]
@@ -112,17 +139,17 @@ def ecrit(h, phrase, per, jour):
     return S_(h, "Production d'écrits", f"« {phrase} »", f"Intégrer la phrase inductrice dans un récit : {comp} ; faire voir une émotion sans dialogue.",
               comp="Produire des écrits en s'appropriant les dimensions de l'activité d'écriture (programmes 2025)",
               crit=['la phrase est intégrée à l\'endroit choisi', 'le récit est cohérent (chaîne de « pourquoi ? »)', 'une émotion est montrée par le corps, les gestes, les sens', 'pas de dialogue'],
-              mat="Carte d'écrivain ; version aménagée imprimée ; cahier de l'écrivain ; répertoires des émotions et des sens",
-              ref=f"Kervyn (écriture longue, réécriture différée, 4 points annotés) ; film mental (Cèbe et Goigoux) ; période {per} : {typ}", fiche='Version aménagée seulement',
+              mat="Carte d'écrivain ; fiche d'étayage imprimée, au choix ; cahier de l'écrivain ; répertoires des émotions et des sens",
+              ref=f"Kervyn (écriture longue, réécriture différée, 4 points annotés) ; film mental (Cèbe et Goigoux) ; période {per} : {typ}", fiche="Fiche d'étayage au choix",
               phases=[['Découverte orale', '8 min', f"Écrit « {phrase} ». « Que peut-il se passer ? » Fait émerger plusieurs situations et au moins trois émotions ; sens propre et figuré quand c'est possible.", 'Proposent, classent'],
                       ["Carte d'écrivain", '7 min', '« Où est la caméra ? Que voit-on, que ne voit-on pas (hors-champ) ? »', 'Remplissent la carte'],
                       ['Pitch', '5 min', 'Fait raconter trois pitchs ; relance « pourquoi ? ».', 'Racontent en trois phrases'],
-                      ['Écriture', '20 min', 'Circule ; dictée à l\'adulte pour le groupe fragile.', 'Écrivent'],
+                      ['Écriture', '20 min', "Tient la table d'appui : dictée à l'adulte, banque de mots, pour qui le demande.", 'Écrivent'],
                       ['Clôture', '5 min', 'Ramasse pour annoter (4 points au plus) avant la réécriture de vendredi.', 'Relisent : ma phrase est-elle dedans ?']],
-              diff=[['Version aménagée', 'amorces, banque de mots, longueur réduite'], ['CM2 experts', 'faire deviner l\'émotion sans la nommer']],
+              diff=[['Étayage au choix', 'fiche avec amorces et banque de mots, disponible pour tous'], ['Défi (ouvert à tous)', 'faire deviner l\'émotion sans la nommer']],
               corrige=['Émotions possibles : peur, joie, surprise, tristesse, colère, soulagement (répertoire de la classe).', 'Relances : « Pourquoi ? Où est-il ? Qui le voit ? Que ressent-il dans son corps ? Que se passe-t-il juste avant, juste après ? »'])
 def fiche_ecrit(phrase, per):
-    return F_("Production d'écrits", 'Version aménagée', f"« {phrase} »", [
+    return F_("Production d'écrits", 'Étayage au choix', f"« {phrase} »", [
         {'t': 'consigne', 'n': 1, 'x': 'Ma carte d\'écrivain'},
         {'t': 'table', 'head': ['Qui ?', 'Où ?', 'Quand ?', 'Quelle émotion ?'], 'rows': [['', '', '', '']], 'h': 1200},
         {'t': 'consigne', 'n': 2, 'x': 'Je commence mon histoire'},
@@ -141,16 +168,16 @@ def maths_seance(h, jour, w, m, seed):
                   phases=[['Rappels', '8 min', f"Calcul posé : CM1 {rap[0][0]} ; CM2 {rap[1][0]}. Flash géométrie.", 'Calculent'],
                           ['Situation', '3 min', SITUATION[kind], 'Écoutent, reformulent'], ['Recherche', '14 min', 'Ne valide pas ; observe les procédures ; relance.', 'Cherchent en binômes'],
                           ['Mise en commun', '10 min', 'Confronte les procédures (de la plus coûteuse à la plus experte) ; débat de validité.', 'Présentent, contestent'], ['Bilan', '5 min', 'Note ce qu\'on a découvert ; à institutionnaliser demain.', 'Recopient']],
-                  diff=[['CM1 fragiles', 'matériel manipulable, nombres plus petits'], ['CM2', ext or 'nombres plus grands']], corrige=[f"Rappels : {rap[0][0]} = {rap[0][1]} ; {rap[1][0]} = {rap[1][1]}.", 'CM1 : ' + ' · '.join(f'{q} → {r}' for q, r in ex1[:3]), 'CM2 : ' + ' · '.join(f'{q} → {r}' for q, r in ex2[:3])], **base)
+                  diff=[["Table d'appui", 'matériel manipulable pour démarrer, puis retour aux nombres de la classe'], ['CM2', ext or 'nombres plus grands']], corrige=[f"Rappels : {rap[0][0]} = {rap[0][1]} ; {rap[1][0]} = {rap[1][1]}.", 'CM1 : ' + ' · '.join(f'{q} → {r}' for q, r in ex1[:3]), 'CM2 : ' + ' · '.join(f'{q} → {r}' for q, r in ex2[:3])], **base)
     if jour == 'Mardi':
         return S_(h, 'Mathématiques', f"{titre} : institutionnalisation", "Formuler ce qu'on retient (trace écrite) et l'appliquer à des exercices simples.",
                   crit=['la trace est comprise et reformulée', '4 exercices justes sur 5'], mat='Fiche « Je retiens » CM1 et CM2',
                   phases=[['Rappels', '8 min', 'Numération et conversions (ardoise).', 'Ardoise'], ['Retour sur lundi', '7 min', 'Rappelle la procédure la plus efficace.', 'Reformulent'],
-                          ['Institutionnalisation', '10 min', 'Écrit la trace avec les élèves.', 'Copient la trace'], ['Exercices', '15 min', 'Exercices 1 à 5 ; aide les CM1 fragiles.', 'S\'entraînent']],
+                          ['Institutionnalisation', '10 min', 'Écrit la trace avec les élèves.', 'Copient la trace'], ['Exercices', '15 min', "Exercices 1 à 5 ; table d'appui ; aide entre élèves sur demande.", 'S\'entraînent']],
                   trace=[f"{titre} : ce que je retiens (procédure de la classe, exemple résolu, piège à éviter)."], corrige=['CM1 : ' + ' · '.join(f'{q} → {r}' for q, r in ex1[:5]), 'CM2 : ' + ' · '.join(f'{q} → {r}' for q, r in ex2[:5])], **base)
     return S_(h, 'Mathématiques', f"{titre} : entraînement et bilan", "S'entraîner en autonomie, puis réussir le bilan de la semaine.",
               crit=['6 exercices justes sur 8'], mat='Fiche d\'entraînement CM1 et CM2',
-              phases=[['Rappels', '8 min', 'Flash géométrie ; calcul posé.', 'Ardoise'], ['Entraînement', '22 min', 'Plan de travail différencié ; les CM2 tutorent.', 'S\'entraînent'], ['Bilan', '10 min', 'Exercices 7 et 8 en autonomie, corrigés ensemble.', 'Bilan']],
+              phases=[['Rappels', '8 min', 'Flash géométrie ; calcul posé.', 'Ardoise'], ['Entraînement', '22 min', "Fiche commune du niveau ; aide sur demande (règles de l'aide) ; tuteurs volontaires, CM1 comme CM2, selon les réussites de la semaine ; table d'appui.", 'S\'entraînent, s\'aident'], ['Bilan', '10 min', 'Exercices 7 et 8 en autonomie, corrigés ensemble.', 'Bilan']],
               corrige=['CM1 : ' + ' · '.join(f'{i + 1}) {r}' for i, (q, r) in enumerate(ex1)), 'CM2 : ' + ' · '.join(f'{i + 1}) {r}' for i, (q, r) in enumerate(ex2))], **base)
 def fiches_maths(jour, m, seed):
     titre, ext, kind = m; out = []
@@ -169,7 +196,7 @@ def geometrie(h, g):
               ref=f"{appui} ; Duval et Perrin-Glorian (vision des surfaces → lignes → points)", fiche='CM1 et CM2',
               phases=[['Prédire', '5 min', 'Présente la figure ou la situation ; « que va-t-il se passer ? »', 'Prédisent'], ['Vérifier', '15 min', sit + ' : en dyade, avec les instruments.', 'Construisent, vérifient'],
                       ['Formuler', '10 min', 'Fait formuler ce qui permet de réussir ; l\'instrument contredit la perception.', 'Formulent'], ['Institutionnaliser', '5 min', 'Trace et vocabulaire.', 'Copient'], ['Réinvestir', '5 min', f'CM2 : {cm2}.', 'Réinvestissent']],
-              diff=[['CM1 fragiles', 'gabarits, figure amorcée'], ['CM2', cm2]])
+              diff=[["Table d'appui", 'gabarits, figure amorcée, pour qui le demande'], ['CM2', cm2]])
 def fiche_geo(g):
     _, _, titre, sit, cm2, _ = g
     return [F_('Géométrie', 'CM1 et CM2', titre, [{'t': 'texte', 'x': sit}, {'t': 'consigne', 'n': 1, 'x': 'Je prédis, puis je vérifie avec mes instruments'}, {'t': 'cadre', 'h': 6200, 'x': 'Espace de construction'},
@@ -180,14 +207,14 @@ def lecture_pivot(h, w, L, temps):
     t13 = temps == '1-3'
     if t13:
         ph = [['1. Rappel', '5 min', 'Un ou deux élèves racontent l\'épisode précédent ; la classe complète.', 'Racontent'],
-              ['2. Lecture', '10 min', 'N1 : lecture magistrale ou audio, texte ● sous les yeux ; N2 : silencieuse puis relecture d\'un passage clé ; N3 : autonome.', 'Lisent'],
+              ['2. Lecture', '10 min', "Texte adapté au choix (●, ●●, ●●●) : l'élève choisit, l'enseignant conseille, le choix change d'un chapitre à l'autre. Lecture avec l'enseignant ou audio à la table d'appui, ouverte à tous.", 'Lisent'],
               ['3. Questions → débat', '20 min', f"Réponse individuelle, binômes, débat à partir des désaccords : « {L.get('deb', '…')} » Chaque réponse s'appuie sur une phrase du texte et sa page.", 'Répondent, justifient, débattent']]
     else:
         ph = [['4. Rituels', '8 min', 'Chaînes anaphoriques ; tableau « Où ? Quand ? Dans quel monde ? ».', 'Relèvent, complètent'], ['5. Activités', '12 min', 'Activités différenciées (fiche) ; l\'enseignant commence avec les N1.', 'Travaillent'],
               ['6. Mise en commun → écrit', '10 min', 'Synthèse « comment on a compris » ; lancement de l\'écrit d\'appropriation.', 'Formulent, écrivent']]
     corr = []
     if L.get('q'):
-        corr += [f"{n} : {q} → {a}" for n, (q, a) in zip(['N1 ●', 'N2 ●●', 'N3 ●●●'], L['q'])]
+        corr += [f"{n} : {q} → {a}" for n, (q, a) in zip(['Sens général', 'Pensées des personnages', 'Pour aller plus loin'], L['q'])]
     if L.get('act'): corr.append('Activités : ' + ' ; '.join(f"{n} {a}" for n, a in zip(['●', '●●', '●●●'], L['act'])))
     if L.get('ecr'): corr.append('Écrits : ' + ' ; '.join(L['ecr']))
     return S_(h, 'Lecture', f"{COURT[per]}, pivot {piv} (temps {temps})", ("Comprendre le sens général et les pensées des personnages ; justifier par le texte ; débattre." if t13 else "Automatiser les rituels (chaînes, contexte), mener l'activité de lecture du chapitre et écrire pour s'approprier le texte."),
@@ -386,14 +413,14 @@ def fiche_reecr():
 def dictee_bilan(h, w, ph):
     txt = ' '.join(p for p, v, a in ph)
     return S_(h, 'Dictée bilan', 'les verbes, la notion et le son de la semaine', 'Écrire un texte qui réunit les verbes du jour, la notion de grammaire et le son de la semaine ; relire avec ses outils.',
-              comp='Orthographe : réinvestir en dictée (programmes 2025)', crit=['accords justes', 'verbes du jour justes', 'mots du son justes'], mat='Version courte CM1 ; texte à trous en version aménagée', fiche='Version aménagée',
+              comp='Orthographe : réinvestir en dictée (programmes 2025)', crit=['accords justes', 'verbes du jour justes', 'mots du son justes'], mat='Version courte CM1 ; texte à trous en étayage au choix', fiche='Étayage au choix',
               phases=[['Dictée', '20 min', f"Dicte : « {txt} » (CM1 : les trois premières phrases).", 'Écrivent'], ['Relecture', '10 min', 'Relecture guidée : verbes, accords, son.', 'Relisent'], ['Ramassage', '5 min', 'Correction lundi en dictée réflexive.', '—']],
               corrige=[txt])
 def fiche_dictee(ph, mots):
     txt = ' '.join(p for p, v, a in ph)
     for m in mots:
         txt = txt.replace(m, '……', 1)
-    return F_('Dictée bilan', 'Version aménagée', 'Dictée bilan : texte à compléter', [{'t': 'texte', 'x': txt}, {'t': 'p', 'x': 'Je relis : ☐ les verbes  ☐ les accords  ☐ le son de la semaine'}], n1=True)
+    return F_('Dictée bilan', 'Étayage au choix', 'Dictée bilan : texte à compléter', [{'t': 'texte', 'x': txt}, {'t': 'p', 'x': 'Je relis : ☐ les verbes  ☐ les accords  ☐ le son de la semaine'}], n1=True)
 
 def lecture_fluence(h, w, L):
     return S_(h, 'Lecture', 'fluence et lecture offerte', f"Lire avec fluidité un passage du pivot ({L['piv']}) ; écouter la lecture offerte des chapitres de la semaine.", comp='Lire à voix haute avec fluidité (repères : 110 mots/min CM1, 120 CM2)',
@@ -454,10 +481,13 @@ def jour_seances(w, j, ctx):
 
 def build():
     W = semaines(); index = []
+    want = [int(x) for x in sys.argv[1:]]
     for w in W:
+        if want and w['S'] not in want: continue
         S, per, k = w['S'], w['P'], w['k']
         L = LECT[S]; fiche = FICHE[S - 1]; part, nparts = PART[S - 1]
         mots, intr = mots_semaine(fiche, part, nparts); ss = SONS_TXT[f'S{S}']; son, graph = ss[3], ss[4]
+        if S >= 11: son, graph, mots = son_semaine(fiche, part, nparts)
         inv = INVAR[per][((k - 1) * 2) % len(INVAR[per]):((k - 1) * 2) % len(INVAR[per]) + 4]
         while len(inv) < 4: inv += INVAR[per][:4 - len(inv)]
         t = TABLES[(S - 1) % len(TABLES)]
@@ -467,7 +497,7 @@ def build():
         for J in ('Lundi', 'Mardi', 'Jeudi', 'Vendredi'):
             cm['proc'][J] = {n: json.loads(subprocess.run(['python3', os.path.join(ROOT, 'src', 'procedures.py'), f'CJ{S}{J}', str(per), n, '12'], capture_output=True, text=True).stdout) for n in ('CM1', 'CM2')}
         ctx = {'L': L, 'ph': D[S - 1], 'verbes': [(v, a) for p, v, a in D[S - 1]], 'pe': PHRASES[per][(k - 1) % len(PHRASES[per])], 'm': MATHS[S - 1], 'cm': cm,
-               'gdir': os.path.join(ROOT, 'gen', 'annee', f's{S:02d}'), 'o': (mots, inv, f'fiche {fiche}', son, graph), 'intr': intr, 'lundi_off': bool(w['jours'][0]['off'])}
+               'gdir': os.path.join(ROOT, 'gen', 'annee2' if S >= 11 else 'annee', f's{S:02d}'), 'o': (mots, inv, f'fiche {fiche}', son, graph), 'intr': intr, 'lundi_off': bool(w['jours'][0]['off'])}
         ctx['verbes'] = [(v, a) for p, v, a in D[S - 1]]
         days = []
         for j in w['jours']:
@@ -475,7 +505,7 @@ def build():
             s, f = jour_seances(w, j, ctx)
             lead = f"{j['jour']} {j['date']} : verbe {ctx['verbes'][{'Lundi': 0, 'Mardi': 1, 'Jeudi': 2, 'Vendredi': 3}[j['jour']]][0]} ; son {son} ; {MATHS[S - 1][0].lower()} ; lecture : {COURT[per]}, pivot {L['piv']}."
             ext = [['Problème du jour', f"Fichier {j['num']}_{j['jour']}_{j['date'].replace(' ', '_')}_probleme_du_jour.docx (générateur)", '★ ★★ ★★★']]
-            if L.get('dos') and (j['jour'] == 'Vendredi' or (j['jour'] == 'Lundi') or (j['jour'] == 'Mardi' and ctx['lundi_off'])): ext.append(['Lecture', f"Dossier de compréhension : {L['dos']}", 'N1, N2, N3'])
+            if L.get('dos') and (j['jour'] == 'Vendredi' or (j['jour'] == 'Lundi') or (j['jour'] == 'Mardi' and ctx['lundi_off'])): ext.append(['Lecture', f"Dossier de compréhension : {L['dos']}", 'Étayages au choix ; fiches par niveau en intersession'])
             days.append({'jour': j['jour'], 'date': j['date'], 'annee': j['d'].year, 'num': j['num'], 'lead': lead, 'seances': s, 'fiches': f, 'externes': ext})
         offs = [f"{j['jour']} {j['date']} ({j['off']})" for j in w['jours'] if j['off']]
         notion, st, nn = gram_step(per, k); g = geom(S)
@@ -508,5 +538,153 @@ def build():
         index.append((S, per, k, w['dates'], len(days)))
         print('ok', S, per, k, w['dates'], len(days), flush=True)
     return index
+# ---------------------------------------------------------------- révision du 18 novembre 2026 (S11-S36)
+from data3 import HG3, SCI3, SRC, A3
+SONSJ = json.load(open(os.path.join(ROOT, 'sons', 'sons.json')))
+CUR = {}
+def son_semaine(fiche, part, nparts):
+    """Son de la semaine d'après l'analyse de corpus (é et è regroupés). Renvoie (son, graphèmes, dix mots)."""
+    sons = SONSJ[str(fiche)]
+    if fiche in (6, 7, 8): sons = sons[:1]
+    i = min(part, len(sons)) - 1 if len(sons) > 1 else 0
+    cible = sons if (len(sons) > 1 and part > len(sons)) else [sons[i]]
+    label = ' et '.join(x['son'] for x in cible)
+    graph = ', '.join(g['g'] for x in cible for g in x['graphemes'])
+    corpus = [w for x in cible for w in x['corpus']]
+    # dix mots : 6 mots fréquents, un par graphème d'abord
+    mots, vus = [], set()
+    for x in cible:
+        for g in x['graphemes']:
+            for e in g['exemples']:
+                if e not in mots and len(e) > 3 and g['g'] not in vus: mots.append(e); vus.add(g['g']); break
+    for w in corpus:
+        if len(mots) >= 6: break
+        if w not in mots and len(w) > 3: mots.append(w)
+    CUR.clear(); CUR.update({'cible': cible, 'corpus': corpus[:60], 'label': label})
+    return label, graph, mots[:6]
+
+def _stats_txt():
+    out = []
+    for x in CUR['cible']:
+        out.append(f"{x['son']} : " + ' ; '.join(f"{g['g']} {g['mots']} % des mots (début {g['places'].get('début', 0)} %, milieu {g['places'].get('milieu', 0)} %, fin {g['places'].get('fin', 0)} % ; après : " + ', '.join(f'{k} {v} %' for k, v in g['apres'].items()) + ')' for g in x['graphemes']))
+    return out
+
+_ortho_old, _fiche_ortho_old = ortho, fiche_ortho
+def ortho(h, w, j, mots, inv, fiche, son, graph):
+    if not CUR: return _ortho_old(h, w, j, mots, inv, fiche, son, graph)
+    per = w['P']
+    T = {1: ('le grand corpus : chercher et classer', "Classer librement un grand corpus de mots fréquents où l'on entend le son, en groupes hétérogènes, sans liste de graphèmes donnée.",
+             [['Remémoration', '2 min', 'Dictée flash de trois mots des semaines précédentes.', 'Écrivent'], ['Recherche en groupes', '13 min', f"Distribue à chaque groupe de quatre le corpus de {len(CUR['corpus'])} mots (étiquettes) : « Classez ces mots comme vous voulez, puis donnez un nom à chaque groupe de mots. » Ne donne ni le son ni les graphèmes.", 'Classent, nomment leurs catégories']]),
+         2: ('des constats à la règle', "Formuler des constats (quels graphèmes, lequel est le plus fréquent, à quelle place, devant quelles lettres), les confronter, les valider, écrire la trace.",
+             [['Constats en groupes', '8 min', 'Chaque groupe écrit trois constats sur son classement : le plus fréquent, la place dans le mot, la lettre qui suit.', 'Formulent'], ['Confrontation', '7 min', 'Recueille les constats, fait chercher des contre-exemples dans le corpus et dans le roman ; ne garde que ce qui résiste.', 'Argumentent'], ['Trace', '5 min', 'Trace dans le répertoire ; présentation des dix mots.', 'Copient']]),
+         4: ('mémoriser et dicter les dix mots', "Mémoriser les dix mots en s'appuyant sur les constats de la semaine.",
+             [['Entraînement', '8 min', "Copie flash, copie retournée en binôme : l'un épelle, l'autre écrit.", "S'entraînent"], ['Dictée', '5 min', 'Dicte les dix mots.', 'Écrivent'], ['Bilan', '2 min', 'Les mots ratés vont dans la liste personnelle.', 'Notent']])}[j]
+    return S_(h, 'Orthographe', f"son {CUR['label']} – jour {j} : {T[0]}", T[1] + f" Point de morphologie de la période : {MORPHO[per]}.",
+              comp='Écrire correctement les mots fréquents en s\'appuyant sur les régularités (programmes 2025)', crit=['le classement est justifié', 'les constats s\'appuient sur le corpus', '8 mots sur 10 justes à la dictée'],
+              mat='Corpus en étiquettes (un jeu par groupe) ; répertoire orthographique', ref='Analyse de fréquence (FrequencyWords, 20 000 mots les plus fréquents, segmentation LireCouleur) ; Brissaud et Cogis ; Catach ; Connac (groupes hétérogènes)', fiche='Tous', phases=T[2],
+              corrige=['Constats attendus (analyse des 20 000 mots les plus fréquents de la liste FrequencyWords) :'] + _stats_txt() + ['Dix mots : ' + ', '.join(mots + inv[:2]) + ' (CM2 : + ' + ', '.join(inv[2:4]) + ').'],
+              note="é et è sont regroupés : on étudie toutes les graphies de [e] et [ɛ] ensemble." if 'é, è' in CUR['label'] else None)
+def fiche_ortho(j, mots, intr, inv, son, graph):
+    if not CUR: return _fiche_ortho_old(j, mots, intr, inv, son, graph)
+    if j == 1:
+        l = list(CUR['corpus']); random.Random(CUR['label']).shuffle(l)
+        return F_('Orthographe', 'Groupe', f"Le grand corpus : {len(l)} mots", [{'t': 'consigne', 'n': 1, 'x': 'Classez ces mots comme vous le voulez. Donnez un nom à chacun de vos groupes de mots.'}, {'t': 'calc', 'cols': 4, 'x': l},
+                  {'t': 'consigne', 'n': 2, 'x': 'Notre classement'}, {'t': 'cadre', 'h': 4200}])
+    if j == 2:
+        return F_('Orthographe', 'Groupe puis tous', 'Nos constats', [{'t': 'table', 'head': ['Ce qu\'on écrit', 'Combien de mots ?', 'Où dans le mot ?', 'Quelle lettre après ?'], 'rows': [['', '', '', ''] for _ in range(6)], 'h': 520},
+                  {'t': 'consigne', 'x': 'Nos trois constats'}, {'t': 'lignes', 'n': 3}, {'t': 'consigne', 'x': 'Les dix mots de la semaine'}, {'t': 'calc', 'cols': 5, 'x': mots + inv[:4]}])
+    return _fiche_ortho_old(4, mots, intr, inv, son, graph)
+
+def probleme(h, jour, gdir):
+    r = json.load(open(os.path.join(gdir, 'resume.json'))); d = r[jour]; ev = jour == 'Vendredi'
+    corr = []
+    for n in ('1', '2', '3'):
+        for i, p in enumerate(d.get(n, [])):
+            lab = ('évaluation' if ev and i == 0 else 'problème 2' if i else 'problème 1')
+            corr.append(f"**{ETOILES[n]} · {lab}** ({p['contexte']}) : {' ; '.join(p['etapes'])}. {p['reponse']}" + (f" Données inutiles : {' '.join(p['parasites'])}" if p['parasites'] else ''))
+    sit = ', '.join(sorted({s for ps in d.values() for p in ps for s in p['situations']}))
+    p2 = 'même histoire, une étape de plus' if ev else 'même histoire, données changées, on cherche autre chose (état initial, transformation ou état final)'
+    return S_(h, 'Problème du jour', f"{r['titre']} (générateur, semaine {r['numero']}) : problème 1 et problème 2", ("Résoudre seul un problème dans un nouveau contexte ; problème 2 pour ceux qui ont fini." if ev else f"Résoudre un problème à étapes, puis un second plus complexe ({p2}). Situations : {sit}."),
+              comp='Résoudre des problèmes à étapes ; nommer les situations (Vergnaud, Houdement)', crit=['les étapes sont écrites', 'la phrase réponse répond à la question', 'problème 2 : ce que l\'on cherche est identifié avant de calculer'],
+              mat=f"Fichier du générateur : deux problèmes par niveau (★★ objectif CM1, ★★★ objectif CM2 ; ★ coup de pouce de la table d'appui). Problème 2 : {p2}.", fiche='Fichier séparé du générateur',
+              phases=([['Consigne', '2 min', 'Distribue la fiche ; pas d\'aide sur la démarche.', 'Lisent'], ['Évaluation', '13 min', 'Observe ; note qui schématise.', 'Résolvent seuls'], ['Problème 2', '5 min', 'Ceux qui ont fini cherchent le problème 2 (une étape de plus).', 'Cherchent']] if ev else
+                      [['Lecture', '2 min', 'Lit l\'énoncé.', 'Surlignent la question'], ['Recherche', '10 min', "Problème 1 seul ; table d'appui (version ★) pour qui le demande ; ceux qui ont fini passent au problème 2.", 'Cherchent, écrivent les étapes'],
+                       ['Mise en commun', '8 min', "Fait nommer les situations ; compare deux procédures ; montre ce qui change dans le problème 2 : ce que l'on cherche.", 'Expliquent, corrigent']]),
+              diff=[['Coup de pouce ★', "questions guidées, à la table d'appui, sur demande"], ['Problème 2', 'pour les nombreux élèves qui finissent vite : ce que l\'on cherche change, ou une étape de plus']], corrige=corr)
+
+_hg_old, _fiche_hg_old, _sci_old, _fsci_old = hg, fiche_hg, sciences, fiche_sciences
+def _src(k): return f"{SRC[k][0]} : {SRC[k][1]}" if k else None
+def hg(h, w, jour):
+    if w['S'] < 11: return _hg_old(h, w, jour)
+    tg, th, q, s1, s2, trace = HG3[w['S']]; dom = 'Histoire' if tg == 'H' else 'Géographie'
+    res = ' ; '.join(x for x in (_src(s1), _src(s2)) if x)
+    if jour == 'Lundi':
+        return S_(h, dom, f"{th} : {q}", f"Répondre à la question « {q} » en étudiant des documents, en groupes.", comp=f"{dom} : se repérer dans le temps et l'espace ; comprendre un document",
+                  crit=['les informations sont prélevées dans les documents', 'la source est identifiée (auteur, date, nature)', 'la réponse est argumentée'], mat=f"Documents de la séquence retenue : {res}",
+                  ref='Démarche par question et documents (Audigier) ; séquence existante choisie pour ses documents et sa trace écrite', fiche='Tous',
+                  phases=[['Question', '10 min', f"Pose la question : {q} Recueille les hypothèses (affiche).", 'Proposent'], ['Documents en groupes', '30 min', 'Un ou deux documents par groupe : qui ? quand ? que montre-t-il ? que répond-il à la question ?', 'Prélèvent, confrontent'],
+                          ['Mise en commun', '20 min', 'Construit la réponse avec la classe ; on vérifie les hypothèses de départ.', 'Argumentent']],
+                  note='Ne jamais reproduire de photographie de personne réelle : lien seulement.')
+    return S_(h, dom, f"{th} : trace écrite et repère", 'Écrire la trace validée et placer le repère (frise ou carte).', comp=f'{dom} : construire des repères', crit=['la trace répond à la question', 'le repère est placé'],
+              mat=f"Trace de la séquence retenue ({SRC[s1][0]}) adaptée à notre question ; frise ou fond de carte", fiche='Tous', trace=[trace],
+              phases=[['Rappel', '5 min', 'Rappel de lundi.', 'Rappellent'], ['Trace', '15 min', 'Rédaction collective à partir de la trace de la séquence.', 'Copient'], ['Repère', '10 min', 'Frise ou carte.', 'Placent']])
+def fiche_hg(w, jour):
+    if w['S'] < 11: return _fiche_hg_old(w, jour)
+    tg, th, q, s1, s2, trace = HG3[w['S']]; dom = 'Histoire' if tg == 'H' else 'Géographie'
+    if jour == 'Lundi':
+        return F_(dom, 'Groupe', q, [{'t': 'table', 'head': ['Document', 'Qui l\'a produit ?', 'Quand ?', 'Ce qu\'il nous apprend'], 'rows': [['1', '', '', ''], ['2', '', '', '']], 'h': 1400},
+                 {'t': 'consigne', 'x': 'Notre réponse à la question'}, {'t': 'lignes', 'n': 4}, {'t': 'p', 'x': 'Rôles : lecteur · gardien des sources · secrétaire · porte-parole'}])
+    return F_(dom, 'Tous', f"{th} : je retiens", [{'t': 'texte', 'x': trace}, {'t': 'consigne', 'x': 'Je place le repère' + (' sur la frise' if tg == 'H' else ' sur la carte')}, {'t': 'cadre', 'h': 3600}])
+def sciences(h, w, jour):
+    if w['S'] < 11: return _sci_old(h, w, jour)
+    th, q, xp, concl, sk = SCI3[w['S']]; res = _src(sk) or 'Livret Éduscol EVAR (cycle 3)'
+    if jour == 'Lundi':
+        return S_(h, 'Sciences', f"{th} : {q}", f"Formuler conceptions et hypothèses, concevoir un protocole pour répondre à : « {q} »", comp='Pratiquer des démarches scientifiques (programme de sciences et technologie)',
+                  crit=['une hypothèse est formulée', 'le protocole ne change qu\'une variable'], mat=f"Séquence retenue : {res}", ref='Démarche d\'investigation (La main à la pâte) ; séquence existante choisie pour ses fiches et sa trace', fiche='Tous',
+                  phases=[['Météo', '5 min', 'Relevé hebdomadaire.', 'Relèvent'], ['Situation', '10 min', f"Question : « {q} »", 'Écrivent leurs conceptions'], ['Hypothèses', '15 min', 'Recueille et classe les hypothèses.', 'Proposent'], ['Protocole', '15 min', 'Groupes : protocole et matériel pour jeudi.', 'Rédigent']])
+    return S_(h, 'Sciences', f"{th} : expérimentation", f"Mener l'expérience ({xp}), comparer les résultats des groupes et conclure.", comp='Pratiquer des démarches scientifiques', crit=['les résultats sont notés', 'la conclusion répond à la question'],
+              mat=f"{xp} ; fiches de la séquence : {res}", fiche='Tous', trace=[concl],
+              phases=[['Expérience', '35 min', 'Rôles tournants dans les groupes ; mesures.', 'Expérimentent'], ['Comparaison', '20 min', 'Compare les résultats des groupes.', 'Présentent'], ['Conclusion', '20 min', 'Rédige la conclusion avec la classe (trace de la séquence).', 'Copient']])
+def fiche_sciences(w, jour):
+    if w['S'] < 11: return _fsci_old(w, jour)
+    th, q, xp, concl, sk = SCI3[w['S']]
+    if jour == 'Lundi':
+        return F_('Sciences', 'Groupe', f"{th} : {q}", [{'t': 'consigne', 'n': 1, 'x': 'Ce que je pense'}, {'t': 'cadre', 'h': 1800}, {'t': 'consigne', 'n': 2, 'x': 'Notre hypothèse'}, {'t': 'lignes', 'n': 2}, {'t': 'consigne', 'n': 3, 'x': 'Notre protocole (matériel, étapes, ce qu\'on mesure)'}, {'t': 'cadre', 'h': 3000}])
+    return F_('Sciences', 'Groupe', f"{th} : résultats et conclusion", [{'t': 'texte', 'x': f"Expérience : {xp}"}, {'t': 'consigne', 'n': 1, 'x': 'Nos résultats'}, {'t': 'cadre', 'h': 3000}, {'t': 'consigne', 'n': 2, 'x': 'Conclusion'}, {'t': 'texte', 'x': concl}])
+
+_lp_old, _fp_old = lecture_pivot, fiches_pivot
+def lecture_pivot(h, w, L, temps):
+    s = _lp_old(h, w, L, temps)
+    if w['S'] < 11: return s
+    if temps == '1-3':
+        s['fiche'] = "Dossier de compréhension : ses fiches ●, ●● et ●●● servent d'étayages au choix, pas de groupes fixes" if L.get('dos') else 'Fiche commune, coups de pouce sur demande'
+        return s
+    acts = A3[w['S']]
+    s['titre'] = f"{COURT[w['P']]}, pivot {L['piv']} : activité en groupes hétérogènes"
+    s['obj'] = "Approfondir la compréhension du chapitre pivot en classe entière, en groupes hétérogènes de quatre (rôles), par une activité au choix de l'enseignant parmi trois."
+    s['phases'] = [['Rituels', '5 min', 'Chaînes anaphoriques ; tableau « Où ? Quand ? Dans quel monde ? ».', 'Complètent'], ['Activité en groupes', '15 min', f"Activité retenue (une des trois) : {acts[0][0]}. Rôles : lecteur, gardien des citations, secrétaire, porte-parole.", 'Lisent, cherchent, justifient'],
+                   ['Mise en commun → écrit', '10 min', 'Les porte-parole présentent ; synthèse « comment on a compris » ; lancement de l\'écrit d\'appropriation.', 'Présentent, écrivent']]
+    s['corrige'] = [f"Activité {i + 1} – {a} : {b}" for i, (a, b) in enumerate(acts)] + (['Écrits : ' + ' ; '.join(L['ecr'])] if L.get('ecr') else [])
+    s['note'] = ("Intersessions (APC, ateliers) : activités construites et adaptées au niveau des élèves — " + ' ; '.join(L['act'])) if L.get('act') else "Intersessions (APC, ateliers) : fiches ●, ●● et ●●● du dossier de compréhension."
+    s['fiche'] = 'Fiche de groupe'
+    return s
+def fiches_pivot(w, L, temps):
+    if w['S'] < 11: return _fp_old(w, L, temps)
+    if temps == '1-3':
+        if L.get('dos') or not L.get('q'): return []
+        q = L['q']
+        return [F_('Lecture', 'Pour tous', f"{COURT[w['P']]} – pivot {L['piv']}", [
+            {'t': 'p', 'x': "Je lis le texte que j'ai choisi (●, ●●, ●●●). Je cherche seul d'abord ; si je bloque, je demande un coup de pouce à la table d'appui."},
+            {'t': 'consigne', 'n': 1, 'x': 'Je comprends ce qui se passe'}, {'t': 'p', 'x': q[0][0]}, {'t': 'lignes', 'n': 2}, {'t': 'p', 'x': 'La phrase qui le prouve : …………………………………… page …'},
+            {'t': 'consigne', 'n': 2, 'x': 'Je comprends ce que pense ou veut un personnage'}, {'t': 'p', 'x': q[1][0]}, {'t': 'lignes', 'n': 2}, {'t': 'p', 'x': 'La phrase qui le prouve : …………………………………… page …'},
+            {'t': 'consigne', 'n': 3, 'x': '★ Question à débattre : ' + L['deb']}, {'t': 'lignes', 'n': 3},
+            {'t': 'consigne', 'n': 4, 'x': 'Pour aller plus loin (pour tous)'}, {'t': 'p', 'x': q[2][0]}, {'t': 'lignes', 'n': 2}])]
+    acts = A3[w['S']]
+    return [F_('Lecture', 'Groupe', f"{COURT[w['P']]} – pivot {L['piv']} : activité de groupe", [
+        {'t': 'table', 'head': ['Lecteur', 'Gardien des citations', 'Secrétaire', 'Porte-parole'], 'rows': [['', '', '', '']], 'h': 600},
+        {'t': 'consigne', 'n': 1, 'x': 'Notre activité'}, {'t': 'liste', 'x': [f"☐ {a} : {b}" for a, b in acts]},
+        {'t': 'consigne', 'n': 2, 'x': 'Ce que nous avons trouvé (avec les phrases du texte et les pages)'}, {'t': 'cadre', 'h': 4200},
+        {'t': 'consigne', 'n': 3, 'x': "J'écris seul (au choix)"}, {'t': 'liste', 'x': L.get('ecr') or ['Raconte le chapitre du point de vue d\'un personnage.']}, {'t': 'lignes', 'n': 5}])]
+
 if __name__ == '__main__':
     build()
