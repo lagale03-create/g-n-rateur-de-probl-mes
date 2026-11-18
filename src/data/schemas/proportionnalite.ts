@@ -57,7 +57,7 @@ export const lineariteMult: Schema = {
       rendu: "Combien d'argent doit-on rendre à [prenom] ?",
       prix1: [{ vars: ["n1"], t: "Combien coûtent {n1} [artA:n1] ?" }],
     },
-    guidees: { k: "Combien de fois plus de [artA:pl] [prenom] achète-t-[il:prenom] ?" },
+    guidees: { k: "Combien de fois {n1} [artA:n1] faut-il pour avoir {n2} [artA:n2] ?" },
     libelles: { k: "nombre de fois plus", prix2: "prix des {n2} [artA:n2]", total: "prix total", rendu: "monnaie rendue", prix1: "prix de {n1} [artA:n1]", n2: "nombre de [artA:pl]" },
     reponses: { prix2: "[prenom] va payer {prix2}.", rendu: "On doit rendre {rendu} à [prenom].", prix1: "{n1} [artA:n1] coûtent {prix1}." },
   },

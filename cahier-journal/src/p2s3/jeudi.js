@@ -3,23 +3,29 @@ const O = require('./ortho');
 
 const PHRASE = 'Cette semaine, les marins sont rentrés au port juste avant l\'orage.';
 const J3 = O.Jeudi.seance;
+const [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10] = O.dixMots; // la semaine (dans la phrase), jamais, la neige, un éclair, il venait, épais, la mer, la baleine, du lait, la reine
 
 module.exports = {
   jour: 'Jeudi', date: '19 novembre', num: '03',
-  lead: 'Journée de mise à l\'épreuve : la trace du son [ɛ] face à de nouveaux mots, les hypothèses de sciences face à l\'expérience. Phrase inductrice « Tout s\'éteignit. », droites perpendiculaires, préparation de la journée des droits de l\'enfant.',
+  lead: 'Journée de mise à l\'épreuve : la trace du son [ɛ] face à de nouveaux mots, les hypothèses de sciences face à l\'expérience. Phrase inductrice « Tout s\'éteignit. », droites perpendiculaires, préparation de la journée des droits de l\'enfant. Organisation du 18 novembre : table d\'appui ouverte, étayages au choix, coopération précisée à chaque séance.',
+  externes: [['Lecture', 'Textes adaptés des chapitres 5 (passage de fluence) et 6 : dossier Lucy Lost, 05 et 06_Lucy-Lost_chapitre.docx', 'En attente : texte non disponible ici']],
   seances: [
-    verbeDuJour(verbeEr('rentrer', 'être'), PHRASE,
-      'Passé composé avec être : « ils sont rentrés » prend un s ; « elle est rentrée » prend un e. Compare avec trouver (avoir) : « ils ont trouvé ». Fait remarquer que rentrer se conjugue comme trouver à tous les autres temps.'),
+    {
+      ...verbeDuJour(verbeEr('rentrer', 'être'), PHRASE,
+        'Passé composé avec être : « ils sont rentrés » prend un s ; « elle est rentrée » prend un e. Compare avec trouver (avoir) : « ils ont trouvé ». Fait remarquer que rentrer se conjugue comme trouver à tous les autres temps.'),
+      mat: 'Ardoises (support du jeudi) ; affichage des corpus de conjugaison',
+      coop: 'On compare son ardoise avec son voisin avant la correction',
+    },
     {
       ...J3, h: '8h40-8h55', dom: 'Dictée réflexive', titre: 'le son [ɛ] (3/4) : mettre la trace à l\'épreuve',
       mat: 'Cahier d\'essai ; fiche « Le son [ɛ] : ma trace résiste-t-elle ? » ; trace de mardi',
       phases: [
-        ['Dictée', '4 min', `Dicte la phrase : « ${PHRASE} », puis 6 mots : un balai, le rocher, la peine, il venait, la fête, le désert.`, 'Écrivent seuls en s\'aidant de la trace'],
-        ['Binômes', '3 min', '« Comparez. Pour chaque mot, quelle partie de la trace vous a aidés ? »', 'Comparent, justifient'],
-        ['Mise à l\'épreuve', '5 min', 'Distribue la fiche ; repère qui hésite sur balai, rocher, cahier, fête, mère.', 'Classent les 16 mots, notent la règle utilisée'],
-        ['Ajustement', '3 min', 'Fait émerger : ai aussi à la fin (balai) ; er en fin de nom fait souvent [e] (rocher) ; è et ê écrivent aussi [ɛ]. Corrige la trace. Rappel PP : « sont rentrés », être laisse passer l\'accord.', 'Complètent la trace ajustée'],
+        ['Dictée', '5 min', `Dicte la phrase : « ${PHRASE} », puis les neuf autres mots de la semaine : ${[M2, M3, M4, M5, M6, M7, M8, M9, M10].join(', ')}. CM2 : deux mots de plus, seize et l\'hiver. À la table d\'appui, six mots au choix : ${[M2, M3, M5, M7, M9, M10].join(', ')}.`, 'Écrivent seuls en s\'aidant de la trace'],
+        ['Binômes', '2 min', '« Comparez. Pour chaque mot, quelle partie de la trace vous a aidés ? »', 'Comparent, justifient'],
+        ['Mise à l\'épreuve', '5 min', 'Distribue la fiche. Pas de tri à l\'oreille entre é et è : on s\'appuie sur la graphie et sur le r entendu ou non. Repère qui hésite sur balai, rocher, cahier, fête, mère.', 'Classent les 16 mots, notent la règle utilisée'],
+        ['Ajustement', '3 min', 'Fait émerger : ai aussi à la fin (balai) ; er final sans r entendu (rocher, cahier) ; è et ê écrivent le même son. Corrige la trace. Rappel PP : « sont rentrés », être laisse passer l\'accord.', 'Complètent la trace ajustée'],
       ],
-      corrige: [PHRASE + ' (semaine : ai au milieu ; rentrés : accord avec marins, auxiliaire être).', 'Mots dictés : un balai, le rocher, la peine, il venait, la fête, le désert.', ...J3.corrige],
+      corrige: [PHRASE + ' (semaine : ai au milieu ; rentrés : accord avec marins, auxiliaire être).', `Mots dictés : ${O.dixMots.slice(1).join(', ')} ; CM2 : seize, l\'hiver.`, ...J3.corrige],
     },
     { h: '8h55-9h10', dom: 'Calcul mental' },
     {
@@ -27,17 +33,18 @@ module.exports = {
       comp: 'Produire des écrits en s\'appropriant les différentes dimensions de l\'activité d\'écriture (programmes 2025)',
       obj: 'Choisir un sens (propre ou figuré) de la phrase et faire exister ce qui se passe juste avant et juste après.',
       crit: ['la phrase est intégrée', 'le sens choisi est tenu jusqu\'au bout', 'une émotion est montrée, sans dialogue'],
-      mat: 'Carte d\'écrivain ; version aménagée imprimée ; cahier de l\'écrivain ; répertoires des émotions et des sens',
+      mat: 'Carte d\'écrivain ; fiche d\'étayage imprimée (au choix) ; cahier de l\'écrivain ; répertoires des émotions et des sens',
       ref: 'Kervyn ; film mental (Cèbe et Goigoux) ; compétence « phrases inductrices », période 2',
-      fiche: 'Version aménagée seulement',
+      fiche: 'Étayage au choix seulement',
+      coop: 'Pitch raconté à un camarade, qui dit ce qu\'il a vu et ce qui manque, avant d\'écrire',
       phases: [
         ['Découverte orale', '8 min', 'Écrit « Tout s\'éteignit. » Sens propre : panne, tempête, bougie soufflée, phare éteint. Sens figuré : un espoir, une joie, des rires qui s\'arrêtent d\'un coup. Deux cartes au tableau.', 'Proposent, classent'],
         ['Carte d\'écrivain', '7 min', '« Que voit la caméra quand tout s\'éteint ? Que reste-t-il : un son, une odeur, une lueur ? »', 'Remplissent la carte'],
         ['Pitch', '5 min', 'Fait raconter trois pitchs.', 'Racontent en trois phrases'],
-        ['Écriture', '20 min', 'Circule ; dictée à l\'adulte pour le groupe en grande difficulté.', 'Écrivent'],
+        ['Écriture', '20 min', 'Circule, puis table d\'appui : dictée à l\'adulte pour qui en a besoin.', 'Écrivent'],
         ['Clôture', '5 min', 'Ramasse pour annoter.', 'Relisent'],
       ],
-      diff: [['Version aménagée', 'amorces, banque de mots'], ['CM2 experts', 'écrire la scène en deux plans : un plan large, puis un gros plan']],
+      diff: [['Étayage au choix', 'amorces, banque de mots'], ['Pour aller plus loin', 'écrire la scène en deux plans : un plan large, puis un gros plan']],
       corrige: ['Pistes : un soir de tempête, le phare de l\'île s\'éteint (sens propre, peur) ; une fête d\'anniversaire, on éteint pour la surprise (sens propre, joie, excitation) ; une enfant apprend que son ami déménage (sens figuré, tristesse, déception).', 'Émotions possibles : peur, angoisse, surprise, joie, tristesse, déception.', 'Hors-champ : ce qui a provoqué le noir, ce qu\'on entend dans l\'obscurité, qui est là.', 'Relances : « Qu\'est-ce qui s\'éteint ? Pourquoi ? Que fait ton personnage dans le noir ? Que sent-il, qu\'entend-il ? »'],
     },
     { h: '9h55-10h15', dom: 'Problème du jour' },
@@ -49,6 +56,7 @@ module.exports = {
       mat: 'Équerres ; règles ; fiche « Droites perpendiculaires » ; figure agrandie au tableau ; papier calque',
       ref: 'Perrin-Glorian et Duval : passer de la vision des surfaces à la vision des lignes ; l\'instrument contredit la perception',
       fiche: 'CM1 et CM2 (encadré CM2 : symbole ⊥)',
+      coop: 'Dyades mêlant CM1 et CM2 : l\'un place l\'équerre, l\'autre contrôle, on échange à chaque paire',
       phases: [
         ['Prédire', '5 min', '« À l\'œil, quelles paires de droites sont perpendiculaires ? » Pas d\'instrument.', 'Cochent la colonne « je pense »'],
         ['Vérifier', '15 min', 'En dyades avec l\'équerre. Relance pour la paire 3 : « Elles ne se coupent pas ici : peut-on quand même savoir ? »', 'Vérifient, prolongent à la règle, cochent « j\'ai vérifié »'],
@@ -56,9 +64,9 @@ module.exports = {
         ['Institutionnaliser', '5 min', 'Écrit la trace ; CM2 : le symbole ⊥ et le codage de l\'angle droit.', 'Complètent la trace'],
         ['Réinvestir', '5 min', 'Figure de la maison et du cerf-volant : retrouver les angles droits.', 'Codent les angles droits'],
       ],
-      diff: [['CM1 fragiles', 'gabarit d\'angle droit en papier plié, puis équerre'], ['CM2', 'écrire les perpendicularités avec le symbole ⊥ : (AB) ⊥ (AE)']],
+      diff: [['Table d\'appui', 'au choix : gabarit d\'angle droit en papier plié, puis équerre'], ['CM2', 'écrire les perpendicularités avec le symbole ⊥ : (AB) ⊥ (AE)']],
       trace: ['Deux droites perpendiculaires se coupent en formant un angle droit ; elles forment alors quatre angles droits. Pour le vérifier, j\'utilise l\'équerre, en prolongeant les droites si besoin.', 'CM2 : on écrit (d1) ⊥ (d2). On code l\'angle droit par un petit carré.'],
-      corrige: ['Perpendiculaires : 1, 3 (une fois prolongées), 5, 7. Non perpendiculaires : 2 (84°), 4 (60°), 6 (97°), 8 (130°).', 'Maison : angles droits en A et en B ; la porte forme deux angles droits avec le sol (AB). Les pans du toit ne sont pas perpendiculaires (angle d\'environ 100° en D).', 'Cerf-volant : les diagonales (FH) et (IG) sont perpendiculaires en O ; aucun angle droit entre les côtés.'],
+      corrige: ['Perpendiculaires : 1, 3 (une fois prolongées), 5, 7. Non perpendiculaires : 2 (84°), 4 (60°), 6 (97°), 8 (130°).', 'Maison : angles droits en A et en B ; la porte a quatre angles droits, dont deux avec le sol (AB). Les pans du toit ne sont pas perpendiculaires (angle d\'environ 100° en D).', 'Cerf-volant : les diagonales (FH) et (IG) sont perpendiculaires en O ; aucun angle droit entre les côtés.'],
       note: 'Routine flash de géométrie lundi et vendredi : une paire de droites projetée, « angle droit ou non ? ». Séance suivante : tracer une perpendiculaire sur quadrillage, puis sur papier uni.',
     },
     {
@@ -66,12 +74,13 @@ module.exports = {
       comp: 'Lire avec fluidité ; comprendre un texte lu par l\'adulte',
       obj: 'Améliorer sa vitesse et sa précision sur un passage du chapitre 5 ; entrer dans le chapitre 6 (New York, mars 1915), qui ouvre la seconde histoire du roman.',
       crit: ['score de la meilleure lecture reporté sur le graphique', 'repères : 110 mots par minute en CM1, 120 en CM2'],
-      mat: 'Textes adaptés des chapitres 5 et 6 (dossier Lucy Lost) ; livre ; audio pour les N1 ; chronomètres ; graphique de fluence ; carnet de chasse',
-      note: 'Chapitres 6 à 9 cette semaine (semaine de lecture en classe) : le chapitre 6 est commencé ici ; la suite des chapitres 6 à 9 est lue en classe dans les textes adaptés pendant les temps d\'autonomie (audio pour les N1), avec un rappel collectif lundi 23 novembre. Le chapitre 6 ouvre l\'histoire de Merry à New York : la nommer comme une seconde histoire.',
+      mat: 'Textes adaptés des chapitres 5 et 6 (dossier Lucy Lost) ; livre ; audio au choix ; chronomètres ; graphique de fluence ; carnet de chasse',
+      note: 'Chapitres 6 à 9 cette semaine (semaine de lecture en classe) : le chapitre 6 est commencé ici ; la suite des chapitres 6 à 9 est lue en classe dans les textes adaptés pendant les temps d\'autonomie (audio au choix), avec un rappel collectif lundi 23 novembre. Le chapitre 6 ouvre l\'histoire de Merry à New York : la nommer comme une seconde histoire. En attente : le passage de fluence et le début du chapitre 6 sont à prendre dans ton dossier (texte non disponible ici, repères non revérifiés).',
+      coop: 'Binômes de fluence mêlant les niveaux de lecture : l\'un lit, l\'autre compte et encourage',
       phases: [
         ['Chasse au mot', '2 min', chasse('Jeudi'), 'Cherchent, notent'],
         ['Fluence', '8 min', 'Passage du chapitre 5 : la scène du piano, à la fin du chapitre, dans le texte de son niveau (environ 150 mots). Binômes : un lit 1 minute, l\'autre compte les mots justes ; 3 lectures, on échange.', 'Lisent, comptent, reportent le meilleur score'],
-        ['Lecture offerte', '10 min', 'Lit le début du chapitre 6 : changement de lieu et d\'époque (New York, mars 1915). Fait repérer le titre et la date : « Où sommes-nous ? Quand ? »', 'Écoutent, suivent dans le texte adapté, complètent le tableau « Où ? Quand ? »'],
+        ['Lecture offerte', '10 min', 'Lit le début du chapitre 6 : changement de lieu et d\'époque (New York, mars 1915). Fait repérer le titre et la date : « Où sommes-nous ? Quand ? »', 'Écoutent, suivent dans le texte adapté, notent « Où ? Quand ? » sur l\'ardoise'],
       ],
     },
     {
@@ -81,6 +90,7 @@ module.exports = {
       crit: ['question avec intonation montante, réponses courtes justes', 'deux phrases écrites correctement'],
       mat: 'Fiche « My English notebook · week 3 »',
       fiche: 'Tous',
+      coop: 'Enquête en binômes qui changent : au moins un camarade de l\'autre niveau',
       phases: [
         ['Modélisation', '5 min', 'Joue le dialogue avec un élève.', 'Répètent la question et les deux réponses'],
         ['Enquête', '15 min', 'Chacun interroge 4 camarades, dont un de l\'autre niveau.', 'Se déplacent, remplissent la grille'],
@@ -95,15 +105,16 @@ module.exports = {
       mat: 'Par groupe : circuit testeur, les 12 objets ; fiches de lundi ; fils électriques dénudés ; fiche « Ce que nous avons appris »',
       ref: 'La main à la pâte ; nouveau programme : reproductibilité vérifiée en comparant les groupes',
       fiche: 'Tous',
+      coop: 'Groupes hétérogènes de quatre, rôles tournants : monteur, testeur, secrétaire, porte-parole',
       phases: [
-        ['Rappel du protocole', '5 min', 'Fait relire le protocole ; rôles de la semaine.', 'Se répartissent les rôles'],
+        ['Rappel du protocole', '5 min', 'Fait relire le protocole ; rôles de la semaine. Chaque groupe vérifie son testeur : pinces en contact, la lampe brille.', 'Se répartissent les rôles, testent le circuit'],
         ['Expérience', '25 min', 'Circule, vérifie que la boucle est fermée ; signale le cas du crayon (tester la mine, puis le bois).', 'Testent, notent la colonne « résultat »'],
         ['Comparaison entre groupes', '15 min', 'Tableau collectif : un groupe a-t-il trouvé autre chose ? Pourquoi ? On refait le test devant tous.', 'Comparent, refont les tests litigieux'],
         ['Conclusion', '20 min', 'Montre un fil coupé : « Pourquoi du métal dedans et du plastique autour ? » Construit la conclusion.', 'Complètent la fiche'],
         ['Réinvestissement', '10 min', '« Quel manche pour le tournevis d\'un électricien ? » CM2 : l\'énergie de la pile devient lumière et chaleur dans la lampe.', 'Répondent par écrit'],
       ],
       corrige: ['Conducteurs : clé, trombone, pièce, papier aluminium, cuillère en métal ; la mine du crayon conduit un peu. Isolants : gomme, règle en plastique, bouchon, verre, ficelle, feuille de papier, bois du crayon.', 'Fiche : conducteurs ; métal ; isolants ; plastique, bois, verre ; conducteur ; isolante ; protège. Question 2 : un manche en plastique, isolant.'],
-      note: 'Sécurité : piles uniquement.',
+      note: 'Sécurité : piles uniquement. Si les hypothèses de lundi n\'ont pas été écrites, les faire remplir à l\'oral en début de séance, sur la fiche « Conducteur ou isolant ? ».',
     },
     {
       h: '14h45-15h00', dom: 'EPS', titre: 'parcours athlétique : obstacles',
@@ -118,6 +129,7 @@ module.exports = {
       crit: ['5 associations justes sur 7'],
       mat: 'Enregistrement de Pierre et le loup (présentation des personnages) ; photos des instruments ; fiche d\'écoute',
       fiche: 'Tous',
+      coop: 'Écoute 2 : on confronte ses réponses avec son voisin avant la vérification',
       phases: [
         ['Écoute 1', '5 min', 'Fait écouter la présentation des personnages sans les images.', 'Imaginent le personnage'],
         ['Écoute 2', '13 min', 'Arrête après chaque thème ; montre l\'instrument.', 'Complètent la fiche'],
@@ -134,6 +146,7 @@ module.exports = {
       mat: 'Fiche « Quatre droits de l\'enfant » ; rôles du débat (président, reformulateur, gardien du temps, secrétaire)',
       ref: 'Débat réglé (Tozzi) ; appui sur des connaissances plutôt que sur des opinions',
       fiche: 'Tous',
+      coop: 'Étude de cas en binômes ; débat avec rôles tournants (président, reformulateur, gardien du temps, secrétaire)',
       phases: [
         ['Lecture', '7 min', 'Lit les 4 articles reformulés, explique les mots.', 'Suivent'],
         ['Étude de cas', '8 min', '', 'Associent les situations aux articles en binômes'],
@@ -146,7 +159,7 @@ module.exports = {
   fiches: [
     ...O.Jeudi.fiches,
     {
-      dom: "Production d'écrits", niv: 'Version aménagée', n1: true, titre: 'Ma phrase : « Tout s\'éteignit. »', b: [
+      dom: "Production d'écrits", niv: 'Étayage au choix', n1: true, titre: 'Ma phrase : « Tout s\'éteignit. »', b: [
         { t: 'texte', x: '**Tout s\'éteignit.**', fill: 'FFF2CC' },
         { t: 'consigne', n: 1, x: 'Je choisis un sens. Je coche.' },
         { t: 'p', x: ['☐  La lumière s\'arrêta : il fit tout noir.', '☐  La joie ou l\'espoir s\'arrêta d\'un coup.'] },

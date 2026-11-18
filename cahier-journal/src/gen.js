@@ -11,20 +11,42 @@ const RUBS = ['Produit', 'Facteur manquant', 'Quotient', 'Diviseur manquant', 'D
 function seanceProbleme(dir, jour, h) {
   const r = JSON.parse(fs.readFileSync(path.join(dir, 'resume.json'), 'utf8'));
   const d = r[jour];
+  const deux = !!(d['1'] && d['1'][0] && d['1'][0].rang); // format « deux problèmes par jour » (scripts/cahier2.ts)
+  const graine = (r.graines && r.graines[jour]) || r.graine;
   const corr = [];
   for (const n of ['1', '2', '3']) {
     (d[n] || []).forEach((p, i) => {
-      corr.push(`**${ETOILES[n]}${d[n].length > 1 ? ' · problème ' + (i + 1) : ''}** (${p.contexte}) : ${p.etapes.join(' ; ')}. ${p.reponse}${p.parasites.length ? ' Données inutiles : ' + p.parasites.join(' ') : ''}`);
+      corr.push(`**${ETOILES[n]}${d[n].length > 1 ? ' · problème ' + (i + 1) : ''}${deux ? ' · ' + p.type : ''}** (${p.contexte}) : ${p.etapes.join(' ; ')}. ${p.reponse}${p.parasites.length ? ' Données inutiles : ' + p.parasites.join(' ') : ''}`);
     });
   }
   const sit = [...new Set(Object.values(d).flat().flatMap(p => p.situations))].join(', ');
   const eval_ = jour === 'Vendredi';
+  if (deux) {
+    const anticipe = /proportionnalit/i.test(r.titre);
+    return {
+      h, dom: 'Problème du jour', titre: `${r.titre} (générateur, semaine ${r.numero})`,
+      comp: 'Résoudre des problèmes à étapes (programmes 2025) ; nommer les situations (Vergnaud, Houdement)',
+      obj: `Résoudre le problème du jour ; pour ceux qui ont fini, la même histoire avec une autre inconnue. Situations en jeu : ${sit}.`,
+      crit: ['chaque étape est nommée et calculée', 'la phrase réponse répond à la question', '★★★ : les données inutiles sont surlignées'],
+      mat: `Fichier « problème du jour » du générateur (graine ${graine}) : ★★ objectif CM1, ★★★ objectif CM2, ★ coup de pouce de la table d'appui (questions guidées)`,
+      ref: 'Vergnaud (structures des problèmes) ; Houdement (problèmes à étapes) ; Connac (personnalisation)',
+      fiche: 'Fichier séparé du générateur : imprimer la section de chaque niveau',
+      coop: 'Recherche seul, puis comparaison à deux ; qui a fini aide sans donner la réponse ou passe au problème suivant',
+      phases: [
+        ['Lecture', '3 min', 'Lit l\'histoire à voix haute : tous les niveaux travaillent le même contexte.', 'Surlignent la question ; ★★★ surlignent les données utiles'],
+        ['Recherche', '10 min', 'S\'installe à la table d\'appui (questions guidées ★, on y vient au besoin). Ceux qui ont fini passent au problème 2 : même histoire, on cherche autre chose ; les ★★★ ont un problème 3.', 'Cherchent, écrivent les étapes'],
+        ['Mise en commun', '7 min', `Fait nommer les situations et compare deux procédures sur le problème 1.${anticipe ? ' Pas de règle à institutionnaliser : le problème anticipe la proportionnalité, étudiée en période 3 ; garder la formule « combien de fois plus ? ».' : ''}`, 'Expliquent, corrigent'],
+      ],
+      diff: [['★', 'coup de pouce au choix : questions guidées, une ligne de réponse par étape'], ['★★★', 'données parasites à éliminer, problème 3']],
+      corrige: corr,
+    };
+  }
   return {
     h, dom: 'Problème du jour', titre: `${r.titre} (générateur, semaine ${r.numero})`,
     comp: 'Résoudre des problèmes à étapes (programmes 2025) ; nommer les situations (Vergnaud, Houdement)',
     obj: eval_ ? `Résoudre seul un problème du même type que ceux de la semaine, dans un nouveau contexte.` : `Résoudre un problème à étapes : ${MOMENT[jour]}. Situations en jeu : ${sit}.`,
     crit: eval_ ? ['les étapes sont écrites', 'la phrase réponse est juste'] : ['chaque étape est nommée et calculée', 'la phrase réponse répond à la question', '★★★ : les données inutiles sont surlignées'],
-    mat: `Fichier « problème du jour » du générateur (graine ${r.graine}) : ★ CM1 fragiles (questions guidées), ★★ CM1, ★★★ CM2`,
+    mat: `Fichier « problème du jour » du générateur (graine ${graine}) : ★ CM1 fragiles (questions guidées), ★★ CM1, ★★★ CM2`,
     fiche: 'Fichier séparé du générateur : imprimer la section de chaque niveau',
     phases: eval_ ? [
       ['Consigne', '2 min', 'Distribue la fiche de chaque niveau ; pas d\'aide sur la démarche.', 'Lisent'],
@@ -76,7 +98,8 @@ function seanceCalcul(dir, jour, h, tables) {
         ['Ardoise', '6 min', 'Dicte les 12 calculs de chaque niveau (liste ci-dessous), en alternant CM1 et CM2.', 'Écrivent, lèvent l\'ardoise'],
         ['Flash fractions', '4 min', 'Montre les cartes ½, ¼, ¾, 1/10, 0,5, 0,25, 0,75, 0,1 : « Donne une autre écriture. »', 'Répondent à l\'oral'],
       ],
-      diff: [['CM1 fragiles', 'tableau de numération individuel sous les yeux'], ['CM2 experts', 'inventer un calcul piège et l\'expliquer']],
+      coop: 'On compare son ardoise avec son voisin avant de la lever ; on explique sa procédure, pas seulement le résultat',
+      diff: [['Table d\'appui', 'tableau de numération individuel sous les yeux, au choix'], ['Pour aller plus loin', 'inventer un calcul piège et l\'expliquer']],
       corrige: [`CM1 (${PROC_P2.CM1}) : ${enonces(c1)}.`, `Réponses CM1 : ${lig(c1)}.`, `CM2 (${PROC_P2.CM2}) : ${enonces(c2)}.`, `Réponses CM2 : ${lig(c2)}.`],
       note: 'Calculs générés par le générateur de procédures de la classe, chacun vérifié en arithmétique exacte.' };
   }

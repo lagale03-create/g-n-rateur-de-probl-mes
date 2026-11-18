@@ -139,128 +139,150 @@
  "Jeudi": {
   "1": [
    {
-    "contexte": "Au centre équestre",
-    "enonce": "Au centre équestre, tous les paquets de friandises ont le même prix. Mila paie 16 € pour 8 paquets de friandises.",
-    "question": "Combien coûtent 4 paquets de friandises ?",
-    "guidees": [
-     "Combien de fois plus de paquets de friandises Mila achète-t-elle ?",
-     "Combien coûtent 4 paquets de friandises ?"
-    ],
+    "rang": 1,
+    "type": "objectif du jour",
+    "contexte": "À la cantine",
+    "enonce": "À la mairie, 6 tickets de cantine coûtent 18 €. Mila achète 12 tickets de cantine.",
+    "question": "Combien Mila va-t-elle payer ?",
     "situations": [
-     "Linéarité multiplicative",
-     "Partage"
+     "Linéarité multiplicative"
     ],
     "etapes": [
-     "Linéarité multiplicative : 8 ÷ 4 = 2 (nombre de fois plus)",
-     "Partage : 16 ÷ 2 = 8 € (prix de 4 paquets de friandises)"
+     "Linéarité multiplicative : 12 ÷ 6 = 2 (nombre de fois plus)",
+     "Linéarité multiplicative : 18 × 2 = 36 € (prix des 12 tickets de cantine)"
     ],
-    "reponse": "4 paquets de friandises coûtent 8 €.",
+    "reponse": "Mila va payer 36 €.",
     "parasites": []
    },
    {
-    "contexte": "Les confitures",
-    "enonce": "Au marché, sur le stand du producteur, tous les pots de confiture d'abricots ont le même prix. Timéo paie 27 € pour 9 pots de confiture d'abricots.",
-    "question": "Combien coûtent 3 pots de confiture d'abricots ?",
-    "guidees": [
-     "Combien de fois plus de pots de confiture d'abricots Timéo achète-t-il ?",
-     "Combien coûtent 3 pots de confiture d'abricots ?"
-    ],
+    "rang": 2,
+    "type": "autre inconnue",
+    "contexte": "À la cantine",
+    "enonce": "À la mairie, tous les tickets de cantine ont le même prix. Mila paie 40 € pour 8 tickets de cantine.",
+    "question": "Combien coûtent 2 tickets de cantine ?",
     "situations": [
      "Linéarité multiplicative",
      "Partage"
     ],
     "etapes": [
-     "Linéarité multiplicative : 9 ÷ 3 = 3 (nombre de fois plus)",
-     "Partage : 27 ÷ 3 = 9 € (prix de 3 pots de confiture d'abricots)"
+     "Linéarité multiplicative : 8 ÷ 2 = 4 (nombre de fois plus)",
+     "Partage : 40 ÷ 4 = 10 € (prix de 2 tickets de cantine)"
     ],
-    "reponse": "3 pots de confiture d'abricots coûtent 9 €.",
+    "reponse": "2 tickets de cantine coûtent 10 €.",
     "parasites": []
    }
   ],
   "2": [
    {
-    "contexte": "Au centre équestre",
-    "enonce": "Au centre équestre, tous les paquets de friandises ont le même prix. Mila achète 40 paquets de friandises et une brosse à 10 €. Elle paie avec un billet de 200 € et on lui rend 74 €.",
-    "question": "Combien coûtent 4 paquets de friandises ?",
-    "guidees": [],
+    "rang": 1,
+    "type": "objectif du jour",
+    "contexte": "À la cantine",
+    "enonce": "À la mairie, 2 tickets de cantine coûtent 6,60 €. Mila achète 16 tickets de cantine et un repas adulte à 6,50 €. Elle paie avec un billet de 100 €. La salle mesure 27 m de long.",
+    "question": "Combien d'argent doit-on rendre à Mila ?",
     "situations": [
      "Linéarité multiplicative",
-     "Différence",
-     "Partage"
-    ],
-    "etapes": [
-     "Linéarité multiplicative : 40 ÷ 4 = 10 (nombre de fois plus)",
-     "Différence : 200 − 74 = 126 € (prix total)",
-     "Différence : 126 − 10 = 116 € (prix des 40 paquets de friandises)",
-     "Partage : 116 ÷ 10 = 11,60 € (prix de 4 paquets de friandises)"
-    ],
-    "reponse": "4 paquets de friandises coûtent 11,60 €.",
-    "parasites": []
-   },
-   {
-    "contexte": "Les confitures",
-    "enonce": "Au marché, sur le stand du producteur, tous les pots de confiture d'abricots ont le même prix. Timéo achète 16 pots de confiture d'abricots et un pot de miel à 9 €. Il paie avec un billet de 100 € et on lui rend 9,40 €. Le stand ouvre à 8 h.",
-    "question": "Combien coûtent 2 pots de confiture d'abricots ?",
-    "guidees": [],
-    "situations": [
-     "Linéarité multiplicative",
-     "Différence",
-     "Partage"
+     "Union",
+     "Retrait"
     ],
     "etapes": [
      "Linéarité multiplicative : 16 ÷ 2 = 8 (nombre de fois plus)",
-     "Différence : 100 − 9,40 = 90,60 € (prix total)",
-     "Différence : 90,60 − 9 = 81,60 € (prix des 16 pots de confiture d'abricots)",
-     "Partage : 81,60 ÷ 8 = 10,20 € (prix de 2 pots de confiture d'abricots)"
+     "Linéarité multiplicative : 6,60 × 8 = 52,80 € (prix des 16 tickets de cantine)",
+     "Union : 52,80 + 6,50 = 59,30 € (prix total)",
+     "Retrait : 100 − 59,30 = 40,70 € (monnaie rendue)"
     ],
-    "reponse": "2 pots de confiture d'abricots coûtent 10,20 €.",
+    "reponse": "On doit rendre 40,70 € à Mila.",
     "parasites": [
-     "Le stand ouvre à 8 h."
+     "La salle mesure 27 m de long."
     ]
+   },
+   {
+    "rang": 2,
+    "type": "autre inconnue",
+    "contexte": "À la cantine",
+    "enonce": "À la mairie, tous les tickets de cantine ont le même prix. Mila achète 30 tickets de cantine et un repas adulte à 7,50 €. Elle paie avec un billet de 200 € et on lui rend 87,50 €.",
+    "question": "Combien coûtent 3 tickets de cantine ?",
+    "situations": [
+     "Linéarité multiplicative",
+     "Différence",
+     "Partage"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 30 ÷ 3 = 10 (nombre de fois plus)",
+     "Différence : 200 − 87,50 = 112,50 € (prix total)",
+     "Différence : 112,50 − 7,50 = 105 € (prix des 30 tickets de cantine)",
+     "Partage : 105 ÷ 10 = 10,50 € (prix de 3 tickets de cantine)"
+    ],
+    "reponse": "3 tickets de cantine coûtent 10,50 €.",
+    "parasites": []
    }
   ],
   "3": [
    {
-    "contexte": "Au centre équestre",
-    "enonce": "Au centre équestre, tous les paquets de friandises ont le même prix. Le centre équestre a été créé en 1995. Mila achète 8 paquets de friandises et une brosse à 5,50 €. Elle paie avec un billet de 50 € et on lui rend 27,70 €. Les cours commencent à 9 h 30.",
-    "question": "Combien coûtent deux paquets de friandises ?",
-    "guidees": [],
+    "rang": 1,
+    "type": "objectif du jour",
+    "contexte": "À la cantine",
+    "enonce": "À la mairie, deux tickets de cantine coûtent 8,70 €. Mila achète huit tickets de cantine et un repas adulte à 4,50 €. Le restaurant scolaire a été rénové en 2020. Elle paie avec un billet de 100 €.",
+    "question": "Combien d'argent doit-on rendre à Mila ?",
     "situations": [
      "Linéarité multiplicative",
-     "Différence",
-     "Partage"
+     "Union",
+     "Retrait"
     ],
     "etapes": [
      "Linéarité multiplicative : 8 ÷ 2 = 4 (nombre de fois plus)",
-     "Différence : 50 − 27,70 = 22,30 € (prix total)",
-     "Différence : 22,30 − 5,50 = 16,80 € (prix des 8 paquets de friandises)",
-     "Partage : 16,80 ÷ 4 = 4,20 € (prix de 2 paquets de friandises)"
+     "Linéarité multiplicative : 8,70 × 4 = 34,80 € (prix des 8 tickets de cantine)",
+     "Union : 34,80 + 4,50 = 39,30 € (prix total)",
+     "Retrait : 100 − 39,30 = 60,70 € (monnaie rendue)"
     ],
-    "reponse": "2 paquets de friandises coûtent 4,20 €.",
+    "reponse": "On doit rendre 60,70 € à Mila.",
     "parasites": [
-     "Les cours commencent à 9 h 30.",
-     "Le centre équestre a été créé en 1995."
+     "Le restaurant scolaire a été rénové en 2020."
     ]
    },
    {
-    "contexte": "Les confitures",
-    "enonce": "Au marché, sur le stand du producteur, tous les pots de confiture d'abricots ont le même prix. Chaque pot pèse 330 g. Timéo achète 18 pots de confiture d'abricots et un pot de miel à 5 €. Il paie avec un billet de 200 € et on lui rend 87,90 €.",
-    "question": "Combien coûtent six pots de confiture d'abricots ?",
-    "guidees": [],
+    "rang": 2,
+    "type": "autre inconnue",
+    "contexte": "À la cantine",
+    "enonce": "À la mairie, tous les tickets de cantine ont le même prix. Le restaurant scolaire a été rénové en 2017. La cantine accueille les élèves à partir de 11 h 45. Mila achète six tickets de cantine et un repas adulte à 7,50 €. Elle paie avec un billet de 100 € et on lui rend 67,60 €.",
+    "question": "Combien coûtent deux tickets de cantine ?",
     "situations": [
      "Linéarité multiplicative",
      "Différence",
      "Partage"
     ],
     "etapes": [
-     "Linéarité multiplicative : 18 ÷ 6 = 3 (nombre de fois plus)",
-     "Différence : 200 − 87,90 = 112,10 € (prix total)",
-     "Différence : 112,10 − 5 = 107,10 € (prix des 18 pots de confiture d'abricots)",
-     "Partage : 107,10 ÷ 3 = 35,70 € (prix de 6 pots de confiture d'abricots)"
+     "Linéarité multiplicative : 6 ÷ 2 = 3 (nombre de fois plus)",
+     "Différence : 100 − 67,60 = 32,40 € (prix total)",
+     "Différence : 32,40 − 7,50 = 24,90 € (prix des 6 tickets de cantine)",
+     "Partage : 24,90 ÷ 3 = 8,30 € (prix de 2 tickets de cantine)"
     ],
-    "reponse": "6 pots de confiture d'abricots coûtent 35,70 €.",
+    "reponse": "2 tickets de cantine coûtent 8,30 €.",
     "parasites": [
-     "Chaque pot pèse 330 g."
+     "La cantine accueille les élèves à partir de 11 h 45.",
+     "Le restaurant scolaire a été rénové en 2017."
+    ]
+   },
+   {
+    "rang": 3,
+    "type": "CM2 : proportionnalité (linéarité)",
+    "contexte": "À la piscine",
+    "enonce": "À l'accueil de la piscine, quatre bonnets de bain coûtent 13,20 €. L'eau est à 29 °C. Hugo achète 28 bonnets de bain et une paire de lunettes à 10,50 €. Il paie avec un billet de 200 €. La piscine a ouvert ses portes en 1986.",
+    "question": "Combien d'argent doit-on rendre à Hugo ?",
+    "situations": [
+     "Linéarité multiplicative",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 28 ÷ 4 = 7 (nombre de fois plus)",
+     "Linéarité multiplicative : 13,20 × 7 = 92,40 € (prix des 28 bonnets de bain)",
+     "Union : 92,40 + 10,50 = 102,90 € (prix total)",
+     "Retrait : 200 − 102,90 = 97,10 € (monnaie rendue)"
+    ],
+    "reponse": "On doit rendre 97,10 € à Hugo.",
+    "parasites": [
+     "La piscine a ouvert ses portes en 1986.",
+     "L'eau est à 29 °C."
     ]
    }
   ]
@@ -328,5 +350,8 @@
     ]
    }
   ]
+ },
+ "graines": {
+  "Jeudi": "CJ-P2S3-J"
  }
 }
