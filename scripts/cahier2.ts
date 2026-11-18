@@ -20,6 +20,15 @@ const sem = genererSemaine({
   schemas: prog.schemas.map(schemaParId), principal: prog.principal ? schemaParId(prog.principal) : undefined,
 });
 const N: any = sem.niveaux;
+// CM2 (★★★) : chaque semaine, fraction d'une quantité, pourcentage, proportionnalité (problème 3 du jour)
+const cm2 = (id: string, g: string) => (genererSemaine({ numero: num, titre: prog.titre, graine: `${graine}-cm2-${g}`, nbProblemes: 1,
+  contextes: contextesPour(undefined), schemas: [schemaParId(id)] }).niveaux as any)[3].jour1[0];
+const CM2: Record<string, [any, string]> = {
+  Lundi: [cm2("fraction-quantite", "L"), "CM2 : fraction d'une quantité"],
+  Mardi: [cm2("pourcentage", "M"), "CM2 : pourcentage"],
+  Jeudi: [cm2("linearite-mult", "J"), "CM2 : proportionnalité (linéarité)"],
+  Vendredi: [cm2(num % 2 ? "achat-unite" : "linearite-add", "V"), "CM2 : proportionnalité (passage à l'unité ou linéarité additive)"],
+};
 const plus = (n: number, i: number) => (n < 3 ? N[n + 1].jour1[i] : N[n].jour2[i]);
 const choix: Record<string, (n: number) => [any, any, string]> = {
   Lundi: (n) => [N[n].jour1[0], N[n].jour2[0], "autre inconnue"],
@@ -32,8 +41,10 @@ for (const [jour, f] of Object.entries(choix)) {
   const niveaux: any = {}; const r: any = {};
   for (const n of [1, 2, 3]) {
     const [p1, p2, type] = f(n);
-    niveaux[n] = { jour1: [p1, p2], jour2: [], evaluation: undefined };
-    r[n] = [p1, p2].map((p: any, i: number) => ({ rang: i + 1, type: i ? type : "objectif du jour", contexte: p.titreContexte, enonce: p.enonce, question: p.question,
+    const liste = n === 3 ? [p1, p2, CM2[jour][0]] : [p1, p2];
+    const types = ["objectif du jour", type, CM2[jour][1]];
+    niveaux[n] = { jour1: liste, jour2: [], evaluation: undefined };
+    r[n] = liste.map((p: any, i: number) => ({ rang: i + 1, type: types[i], contexte: p.titreContexte, enonce: p.enonce, question: p.question,
       situations: p.situations, etapes: p.etapes.map((e: any) => e.texte), reponse: p.reponse, parasites: p.parasites }));
   }
   const s: Semaine = { ...sem, niveaux };

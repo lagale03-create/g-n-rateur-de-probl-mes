@@ -600,13 +600,13 @@ def probleme(h, jour, gdir):
     corr = []
     for n in ('1', '2', '3'):
         for i, p in enumerate(d.get(n, [])):
-            lab = ('évaluation' if ev and i == 0 else 'problème 2' if i else 'problème 1')
+            lab = ('évaluation' if ev and i == 0 else 'problème 3 (CM2 : ' + p['type'].split(': ', 1)[-1] + ')' if i == 2 else 'problème 2' if i else 'problème 1')
             corr.append(f"**{ETOILES[n]} · {lab}** ({p['contexte']}) : {' ; '.join(p['etapes'])}. {p['reponse']}" + (f" Données inutiles : {' '.join(p['parasites'])}" if p['parasites'] else ''))
     sit = ', '.join(sorted({s for ps in d.values() for p in ps for s in p['situations']}))
     p2 = 'même histoire, une étape de plus' if ev else 'même histoire, données changées, on cherche autre chose (état initial, transformation ou état final)'
     return S_(h, 'Problème du jour', f"{r['titre']} (générateur, semaine {r['numero']}) : problème 1 et problème 2", ("Résoudre seul un problème dans un nouveau contexte ; problème 2 pour ceux qui ont fini." if ev else f"Résoudre un problème à étapes, puis un second plus complexe ({p2}). Situations : {sit}."),
               comp='Résoudre des problèmes à étapes ; nommer les situations (Vergnaud, Houdement)', crit=['les étapes sont écrites', 'la phrase réponse répond à la question', 'problème 2 : ce que l\'on cherche est identifié avant de calculer'],
-              mat=f"Fichier du générateur : deux problèmes par niveau (★★ objectif CM1, ★★★ objectif CM2 ; ★ coup de pouce de la table d'appui). Problème 2 : {p2}.", fiche='Fichier séparé du générateur',
+              mat=f"Fichier du générateur : deux problèmes par niveau (★★ objectif CM1, ★★★ objectif CM2 ; ★ coup de pouce de la table d'appui). Problème 2 : {p2}. CM2 (★★★) : un problème 3 chaque jour, fraction d'une quantité (lundi), pourcentage (mardi), proportionnalité (jeudi, vendredi).", fiche='Fichier séparé du générateur',
               phases=([['Consigne', '2 min', 'Distribue la fiche ; pas d\'aide sur la démarche.', 'Lisent'], ['Évaluation', '13 min', 'Observe ; note qui schématise.', 'Résolvent seuls'], ['Problème 2', '5 min', 'Ceux qui ont fini cherchent le problème 2 (une étape de plus).', 'Cherchent']] if ev else
                       [['Lecture', '2 min', 'Lit l\'énoncé.', 'Surlignent la question'], ['Recherche', '10 min', "Problème 1 seul ; table d'appui (version ★) pour qui le demande ; ceux qui ont fini passent au problème 2.", 'Cherchent, écrivent les étapes'],
                        ['Mise en commun', '8 min', "Fait nommer les situations ; compare deux procédures ; montre ce qui change dans le problème 2 : ce que l'on cherche.", 'Expliquent, corrigent']]),

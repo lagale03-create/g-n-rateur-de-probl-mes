@@ -72,6 +72,7 @@ function structureFraction(niveau: Niveau, sens: "part" | "tout"): Structure {
     contraintes: (w) => {
       if (w.aden.cmp(1) <= 0 || (w.bden && w.bden.cmp(1) <= 0)) return "dénominateur invalide";
       if (w.anum.cmp(w.aden) >= 0) return "fraction ≥ 1";
+      for (const k of ["partA", "reste", "partB", "reste2"]) if (w[k] && w[k].cmp(2) < 0) return "part trop petite (accord au singulier)";
       if (w.total.cmp(niveau === 1 ? 60 : niveau === 2 ? 400 : 2000) > 0) return "total trop grand";
       return null;
     },
