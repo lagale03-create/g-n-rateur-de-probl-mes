@@ -48,13 +48,13 @@ export const partageFrais: Schema = {
 
   textes: {
     phrases: [
-      [{ t: "[occasion], [qui] fait les dépenses suivantes." }],
-      [{ vars: ["pA"], t: "[depA] coûte {pA}." }],
+      [{ t: "[occasion], voici les dépenses à régler." }],
+      [{ vars: ["pA"], t: "[depA] : {pA}." }],
       [
-        { vars: ["pB"], t: "[depB] coûte {pB}." },
+        { vars: ["pB"], t: "[depB] : {pB}." },
         { t: "Il faut aussi payer [depB]." },
       ],
-      [{ vars: ["pC"], t: "[depC] coûte {pC}." }],
+      [{ vars: ["pC"], t: "[depC] : {pC}." }],
       [{ vars: ["aide"], t: "[aide] {aide}." }],
       [
         { vars: ["n", "part"], t: "La somme à payer est partagée en parts égales entre {n} [parts:n] : chacun paie {part}." },
@@ -63,10 +63,10 @@ export const partageFrais: Schema = {
     ],
     questions: {
       part: "Combien chacun doit-il payer ?",
-      pB: "Combien coûte [depB] ?",
+      pB: "Combien faut-il payer pour [depB] ?",
     },
     guidees: { apartager: "Quelle somme faut-il partager ?" },
     libelles: { pAB: "deux premières dépenses", total: "total des dépenses", apartager: "somme à partager", part: "part de chacun", pB: "prix [de:depB]" },
-    reponses: { part: "Chacun doit payer {part}.", pB: "[depB] coûte {pB}." },
+    reponses: { part: "Chacun doit payer {part}.", pB: "Pour [depB], il faut payer {pB}." },
   },
 };
