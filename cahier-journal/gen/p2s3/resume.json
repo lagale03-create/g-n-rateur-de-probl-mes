@@ -290,68 +290,157 @@
  "Vendredi": {
   "1": [
    {
-    "contexte": "La randonnée",
-    "enonce": "À l'office de tourisme, 3 sachets de fruits secs coûtent 3 €. Jade achète 12 sachets de fruits secs.",
-    "question": "Combien Jade va-t-elle payer ?",
-    "guidees": [],
+    "rang": 1,
+    "type": "objectif du jour",
+    "contexte": "Au jardin de l'école",
+    "enonce": "À la jardinerie, 4 pots de fleurs coûtent 12 €. Aya achète 12 pots de fleurs.",
+    "question": "Combien Aya va-t-elle payer ?",
     "situations": [
      "Linéarité multiplicative"
     ],
     "etapes": [
-     "Linéarité multiplicative : 12 ÷ 3 = 4 (nombre de fois plus)",
-     "Linéarité multiplicative : 3 × 4 = 12 € (prix des 12 sachets de fruits secs)"
+     "Linéarité multiplicative : 12 ÷ 4 = 3 (nombre de fois plus)",
+     "Linéarité multiplicative : 12 × 3 = 36 € (prix des 12 pots de fleurs)"
     ],
-    "reponse": "Jade va payer 12 €.",
+    "reponse": "Aya va payer 36 €.",
+    "parasites": []
+   },
+   {
+    "rang": 2,
+    "type": "une étape de plus",
+    "contexte": "À la boulangerie",
+    "enonce": "À la boulangerie, 3 pains au chocolat coûtent 2,70 €. Léa achète 12 pains au chocolat et une tarte aux pommes à 12 €. Elle paie avec un billet de 50 €.",
+    "question": "Combien d'argent doit-on rendre à Léa ?",
+    "situations": [
+     "Linéarité multiplicative",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 12 ÷ 3 = 4 (nombre de fois plus)",
+     "Linéarité multiplicative : 2,70 × 4 = 10,80 € (prix des 12 pains au chocolat)",
+     "Union : 10,80 + 12 = 22,80 € (prix total)",
+     "Retrait : 50 − 22,80 = 27,20 € (monnaie rendue)"
+    ],
+    "reponse": "On doit rendre 27,20 € à Léa.",
     "parasites": []
    }
   ],
   "2": [
    {
-    "contexte": "La randonnée",
-    "enonce": "À l'office de tourisme, 2 sachets de fruits secs coûtent 5,60 €. Jade achète 20 sachets de fruits secs et une carte de randonnée à 11 €. Elle paie avec un billet de 100 €.",
-    "question": "Combien d'argent doit-on rendre à Jade ?",
-    "guidees": [],
+    "rang": 1,
+    "type": "objectif du jour",
+    "contexte": "Au jardin de l'école",
+    "enonce": "À la jardinerie, 6 pots de fleurs coûtent 10,20 €. Aya achète 18 pots de fleurs et un sac de terreau à 7 €. Elle paie avec un billet de 50 €.",
+    "question": "Combien d'argent doit-on rendre à Aya ?",
     "situations": [
      "Linéarité multiplicative",
      "Union",
      "Retrait"
     ],
     "etapes": [
-     "Linéarité multiplicative : 20 ÷ 2 = 10 (nombre de fois plus)",
-     "Linéarité multiplicative : 5,60 × 10 = 56 € (prix des 20 sachets de fruits secs)",
-     "Union : 56 + 11 = 67 € (prix total)",
-     "Retrait : 100 − 67 = 33 € (monnaie rendue)"
+     "Linéarité multiplicative : 18 ÷ 6 = 3 (nombre de fois plus)",
+     "Linéarité multiplicative : 10,20 × 3 = 30,60 € (prix des 18 pots de fleurs)",
+     "Union : 30,60 + 7 = 37,60 € (prix total)",
+     "Retrait : 50 − 37,60 = 12,40 € (monnaie rendue)"
     ],
-    "reponse": "On doit rendre 33 € à Jade.",
+    "reponse": "On doit rendre 12,40 € à Aya.",
     "parasites": []
+   },
+   {
+    "rang": 2,
+    "type": "une étape de plus",
+    "contexte": "À la boulangerie",
+    "enonce": "À la boulangerie, trois pains au chocolat coûtent 3,90 €. Une baguette mesure environ 61 cm. Léa achète 27 pains au chocolat et une tarte aux pommes à 6,50 €. Elle paie avec un billet de 100 €.",
+    "question": "Combien d'argent doit-on rendre à Léa ?",
+    "situations": [
+     "Linéarité multiplicative",
+     "Union",
+     "Retrait"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 27 ÷ 3 = 9 (nombre de fois plus)",
+     "Linéarité multiplicative : 3,90 × 9 = 35,10 € (prix des 27 pains au chocolat)",
+     "Union : 35,10 + 6,50 = 41,60 € (prix total)",
+     "Retrait : 100 − 41,60 = 58,40 € (monnaie rendue)"
+    ],
+    "reponse": "On doit rendre 58,40 € à Léa.",
+    "parasites": [
+     "Une baguette mesure environ 61 cm."
+    ]
    }
   ],
   "3": [
    {
-    "contexte": "La randonnée",
-    "enonce": "À l'office de tourisme, 2 sachets de fruits secs coûtent 3,60 €. Jade achète seize sachets de fruits secs et une carte de randonnée à 9 €. Le sommet culmine à 2 000 m d'altitude. Le départ est prévu à 9 h. Elle paie avec un billet de 50 €.",
-    "question": "Combien d'argent doit-on rendre à Jade ?",
-    "guidees": [],
+    "rang": 1,
+    "type": "objectif du jour",
+    "contexte": "Au jardin de l'école",
+    "enonce": "À la jardinerie, cinq pots de fleurs coûtent 19 €. Les élèves arrosent le jardin à 10 h. Aya achète vingt-cinq pots de fleurs et un sac de terreau à 9 €. Elle paie avec un billet de 200 €.",
+    "question": "Combien d'argent doit-on rendre à Aya ?",
     "situations": [
      "Linéarité multiplicative",
      "Union",
      "Retrait"
     ],
     "etapes": [
-     "Linéarité multiplicative : 16 ÷ 2 = 8 (nombre de fois plus)",
-     "Linéarité multiplicative : 3,60 × 8 = 28,80 € (prix des 16 sachets de fruits secs)",
-     "Union : 28,80 + 9 = 37,80 € (prix total)",
-     "Retrait : 50 − 37,80 = 12,20 € (monnaie rendue)"
+     "Linéarité multiplicative : 25 ÷ 5 = 5 (nombre de fois plus)",
+     "Linéarité multiplicative : 19 × 5 = 95 € (prix des 25 pots de fleurs)",
+     "Union : 95 + 9 = 104 € (prix total)",
+     "Retrait : 200 − 104 = 96 € (monnaie rendue)"
     ],
-    "reponse": "On doit rendre 12,20 € à Jade.",
+    "reponse": "On doit rendre 96 € à Aya.",
     "parasites": [
-     "Le sommet culmine à 2 000 m d'altitude.",
-     "Le départ est prévu à 9 h."
+     "Les élèves arrosent le jardin à 10 h."
+    ]
+   },
+   {
+    "rang": 2,
+    "type": "autre inconnue",
+    "contexte": "À la boulangerie",
+    "enonce": "À la boulangerie, tous les pains au chocolat ont le même prix. La boulangerie existe depuis 1975. La boulangerie ouvre à 7 h. Léa achète trente-six pains au chocolat et une tarte aux pommes à 9,50 €. Elle paie avec un billet de 50 € et on lui rend 4,50 €.",
+    "question": "Combien coûtent quatre pains au chocolat ?",
+    "situations": [
+     "Linéarité multiplicative",
+     "Différence",
+     "Partage"
+    ],
+    "etapes": [
+     "Linéarité multiplicative : 36 ÷ 4 = 9 (nombre de fois plus)",
+     "Différence : 50 − 4,50 = 45,50 € (prix total)",
+     "Différence : 45,50 − 9,50 = 36 € (prix des 36 pains au chocolat)",
+     "Partage : 36 ÷ 9 = 4 € (prix de 4 pains au chocolat)"
+    ],
+    "reponse": "4 pains au chocolat coûtent 4 €.",
+    "parasites": [
+     "La boulangerie ouvre à 7 h.",
+     "La boulangerie existe depuis 1975."
+    ]
+   },
+   {
+    "rang": 3,
+    "type": "CM2 : proportionnalité (passage à l'unité ou linéarité additive)",
+    "contexte": "Au centre équestre",
+    "enonce": "Au centre équestre, 2 paquets de friandises coûtent 6,20 €. Le centre équestre a été créé en 1996. 7 paquets de friandises coûtent 21,70 €. Gabriel achète 18 paquets de friandises et paie avec un billet de 100 €.",
+    "question": "Combien d'argent doit-on rendre à Gabriel ?",
+    "situations": [
+     "Linéarité additive",
+     "Linéarité multiplicative",
+     "Retrait"
+    ],
+    "etapes": [
+     "Linéarité additive : 6,20 + 21,70 = 27,90 € (prix de 9 paquets de friandises)",
+     "Linéarité multiplicative : 27,90 × 2 = 55,80 € (prix de 18 paquets de friandises)",
+     "Retrait : 100 − 55,80 = 44,20 € (rendu)"
+    ],
+    "reponse": "On doit rendre 44,20 € à Gabriel.",
+    "parasites": [
+     "Le centre équestre a été créé en 1996."
     ]
    }
   ]
  },
  "graines": {
-  "Jeudi": "CJ-P2S3-J"
+  "Jeudi": "CJ-P2S3-J",
+  "Vendredi": "CJ-P2S3-V3"
  }
 }

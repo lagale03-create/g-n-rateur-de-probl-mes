@@ -21,6 +21,25 @@ function seanceProbleme(dir, jour, h) {
   }
   const sit = [...new Set(Object.values(d).flat().flatMap(p => p.situations))].join(', ');
   const eval_ = jour === 'Vendredi';
+  if (deux && eval_) {
+    return {
+      h, dom: 'Problème du jour', titre: `évaluation : ${r.titre.toLowerCase()} (générateur, semaine ${r.numero})`,
+      comp: 'Résoudre des problèmes à étapes (programmes 2025) ; nommer les situations (Vergnaud, Houdement)',
+      obj: `Résoudre seul un problème du même type que ceux de la semaine, dans un nouveau contexte ; pour ceux qui ont fini, un problème avec une étape de plus (★★★ : autre inconnue). Situations en jeu : ${sit}.`,
+      crit: ['les étapes sont écrites et nommées', 'la phrase réponse est juste', '★★★ : les données inutiles sont surlignées'],
+      mat: `Fichier « problème du jour » du générateur (graine ${graine}) : pour chaque niveau, page « Évaluation » puis page « Pour aller plus loin » ; ★★ objectif CM1, ★★★ objectif CM2, ★ énoncé plus court`,
+      ref: 'Vergnaud (structures des problèmes) ; Houdement (problèmes à étapes) ; évaluation sans étayage sur la démarche',
+      fiche: 'Fichier séparé du générateur : imprimer les deux pages de chaque niveau',
+      coop: 'Évaluation individuelle ; ceux qui ont fini passent à la page « Pour aller plus loin » et peuvent la comparer à deux, à voix basse',
+      phases: [
+        ['Consigne', '2 min', 'Distribue la page « Évaluation » de chaque niveau ; lit les énoncés à voix haute à qui le demande (lecture seulement, pas d\'aide sur la démarche).', 'Lisent, surlignent la question'],
+        ['Évaluation', '18 min', 'Observe sans intervenir ; note qui schématise, qui nomme les étapes, qui oublie une étape. Donne la page « Pour aller plus loin » à ceux qui ont fini.', 'Résolvent seuls, puis le problème suivant'],
+      ],
+      diff: [['★', 'énoncé à deux étapes, lu par l\'enseignant sur demande'], ['★★★', 'données parasites à éliminer ; problème 3 (proportionnalité) pour aller plus loin']],
+      corrige: corr,
+      eval: 'Évaluation de la semaine : les étapes et la phrase réponse du problème 1 ; noter sur la liste de classe qui réussit seul. La page « Pour aller plus loin » n\'est pas évaluée. Correction collective lundi 23 novembre.',
+    };
+  }
   if (deux) {
     const anticipe = /proportionnalit/i.test(r.titre);
     return {

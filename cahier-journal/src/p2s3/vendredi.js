@@ -3,13 +3,18 @@ const O = require('./ortho');
 
 const DICTEE_CM2 = ['Cette semaine, les marins sont rentrés tard.', 'Ils ont trouvé une petite fille endormie sur les rochers gris.', 'Les femmes de l\'île sont venues avec des couvertures épaisses.', 'Jamais la mer n\'avait paru aussi froide.', 'La fillette regardait les vagues sans dire un mot.'];
 const DICTEE_CM1 = [DICTEE_CM2[0], DICTEE_CM2[1], DICTEE_CM2[2], 'La fillette regardait les vagues.'];
+const [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10] = O.dixMots;
 
 module.exports = {
   jour: 'Vendredi', date: '20 novembre', num: '04',
-  lead: 'Journée bilan et journée internationale des droits de l\'enfant : dictée bilan qui réunit les verbes du jour, le groupe nominal et le son [ɛ] ; réécriture ; fractions et unité ; chapitre 5 de Lucy Lost, temps 4 à 6 ; trace écrite d\'histoire ; conseil et affiche du 20 novembre.',
+  lead: 'Journée bilan et journée internationale des droits de l\'enfant : dictée bilan qui réunit les verbes du jour, le groupe nominal et le son [ɛ] ; réécriture ; fractions et unité ; chapitre 5 de Lucy Lost, temps 4 à 6 ; trace écrite d\'histoire ; conseil et affiche du 20 novembre. Organisation du 18 novembre : table d\'appui ouverte, étayages au choix, coopération précisée à chaque séance ; problème du jour en évaluation, suivi d\'un problème pour aller plus loin.',
   seances: [
-    verbeDuJour(verbeEr('regarder', 'avoir'), DICTEE_CM2[4],
-      'Fait relire l\'imparfait : « elle regardait » (-ait, comme le son [ɛ] de la semaine). Récapitule les quatre verbes de la semaine : trouver et regarder avec avoir, venir et rentrer avec être.'),
+    {
+      ...verbeDuJour(verbeEr('regarder', 'avoir'), DICTEE_CM2[4],
+        'Fait relire l\'imparfait : « elle regardait » (-ait, comme le son de la semaine). Récapitule les quatre verbes de la semaine : trouver et regarder avec avoir, venir et rentrer avec être.'),
+      mat: 'Fiche du verbe du jour (support du vendredi) ; affichage des corpus de conjugaison',
+      coop: 'On compare sa fiche avec son voisin avant la correction ; on se dit ce qui change entre « a regardé » et « sont rentrés »',
+    },
     {
       h: '8h40-8h55', dom: 'Vocabulaire', titre: 'les mots de la mer et de l\'île : un mot, plusieurs sens',
       comp: 'Enrichir son lexique ; comprendre qu\'un mot peut avoir plusieurs sens, propre ou figuré, selon le contexte (programmes 2025)',
@@ -18,9 +23,10 @@ module.exports = {
       mat: 'Fiche « Un mot, plusieurs sens » ; carte du réseau « la mer et l\'île » du cahier de lexique',
       ref: 'Picoche (polysémie, réseau lexical) ; Sardier ; réseau de la période 2, semaine 3 : structuration',
       fiche: 'Tous',
+      coop: 'Entraide à deux, à égalité : on se met d\'accord sur le sens avant de l\'écrire ; les désaccords vont à la mise en commun',
       phases: [
         ['Découverte', '3 min', 'Écrit « Le courant a emporté la barque » et « Le courant ne passe plus » : « Est-ce le même courant ? »', 'Expliquent les deux sens'],
-        ['Recherche', '8 min', 'Accompagne les CM1 fragiles (une phrase à la fois).', 'Exercices 1 et 2'],
+        ['Recherche', '8 min', 'S\'installe à la table d\'appui : une phrase à la fois, pour qui en a besoin.', 'Exercices 1 et 2, seul puis à deux'],
         ['Mise en commun', '4 min', 'Ajoute les sens nouveaux sur la carte du réseau.', 'Complètent leur carte'],
       ],
       corrige: ['courant : mouvement de l\'eau / électricité / « être au courant » = savoir (figuré). côte : bord de mer / os de la poitrine / route qui monte. banc : groupe de poissons / siège / amas de sable. lame : grosse vague / partie coupante d\'un couteau. marée : mouvement de la mer / une marée de touristes = une foule (figuré). se noyer : mourir dans l\'eau / se noyer dans ses devoirs = être débordé (figuré).'],
@@ -33,9 +39,10 @@ module.exports = {
       crit: ['chaque point annoté est traité', 'le sens choisi reste clair', 'le texte réécrit est plus long ou plus précis'],
       mat: 'Cahier de l\'écrivain annoté (codes de la classe) ; répertoires des émotions et des sens ; pas de fiche',
       ref: 'Kervyn (réécriture différée, annotations ciblées, pas de critère de langue imposé)',
+      coop: 'Avant de réécrire, on lit ses annotations à un camarade, qui reformule ce qu\'il faut changer ; au partage, l\'auditeur dit ce qui a changé',
       phases: [
         ['Lecture des annotations', '5 min', 'Rappelle les codes ; montre un exemple de passage amélioré (avec l\'accord de l\'élève).', 'Lisent leurs annotations'],
-        ['Réécriture', '30 min', 'Conférences de 3 minutes avec les élèves qui en ont besoin.', 'Réécrivent les passages annotés'],
+        ['Réécriture', '30 min', 'Table d\'appui : conférences de 3 minutes avec qui le demande ou qui en a besoin ; étayages au choix (répertoires, amorces).', 'Réécrivent les passages annotés'],
         ['Partage', '10 min', 'Deux élèves lisent l\'avant et l\'après d\'un passage.', 'Repèrent ce qui a changé'],
       ],
       eval: 'Évaluation continue sur le cahier de l\'écrivain : nombre de points traités.',
@@ -48,12 +55,13 @@ module.exports = {
       crit: ['CM1 : 12 réponses justes sur 16', 'CM2 : 14 réponses justes sur 19'],
       mat: 'Fiches bilan CM1 et CM2 ; trace de mardi visible',
       fiche: 'CM1 et CM2',
+      coop: 'Seul d\'abord ; qui a fini et réussi devient tuteur sur l\'exercice 1 (montrer avec les bandes, sans donner la réponse)',
       phases: [
         ['Rappels', '8 min', 'Calcul posé : CM1 345 × 6 ; CM2 2 856 : 7. Flash géométrie : deux droites projetées, perpendiculaires ou non ?', 'Calculent, répondent'],
-        ['Entraînement', '25 min', 'Commence avec les CM1 fragiles (bandes, exercice 1) ; les CM2 en autonomie.', 'Fiches bilan'],
+        ['Entraînement', '25 min', 'S\'installe à la table d\'appui (bandes, exercice 1) ; on y vient au besoin. Les CM2 en autonomie.', 'Fiches bilan'],
         ['Correction', '7 min', 'Corrige l\'exercice 2 collectivement ; relève les élèves à reprendre lundi.', 'Corrigent au vert'],
       ],
-      diff: [['CM1 fragiles', 'bandes et trace sous les yeux'], ['Experts', 'défi : trouver trois fractions comprises entre 1 et 2 avec le dénominateur 5']],
+      diff: [['Table d\'appui', 'au choix : bandes et trace sous les yeux'], ['Pour aller plus loin', 'défi : trouver trois fractions comprises entre 1 et 2 avec le dénominateur 5']],
       corrige: ['Rappels : 2 070 ; 408.', 'CM1 : ex. 1 : 7/4, 5/3, 12/10, 6/5 (2/2 est égale à 1) ; ex. 2 : 1 et 2 ; 4 et 5 ; 1 et 2 ; 1 et 2 ; 3 et 4 ; ex. 3 : A = 3/4, B = 6/4, C = 9/4 ; ex. 4 : non, 5/4 c\'est plus qu\'une tarte entière (une tarte et un quart).', 'CM2 : ex. 1 : 11/4 = 2 + 3/4 ; 7/3 = 2 + 1/3 ; 13/5 = 2 + 3/5 ; 9/2 = 4 + 1/2 ; ex. 2 : 7/5 ; 13/4 ; 7/2 ; ex. 3 : D = 4/3 = 1 + 1/3 ; E = 7/3 = 2 + 1/3 ; ex. 4 : 3/4 < 1 < 5/4 < 7/4 < 2.', 'Défi : 6/5, 7/5, 8/5, 9/5.'],
     },
     {
@@ -61,15 +69,16 @@ module.exports = {
       comp: 'Orthographe grammaticale et lexicale : réinvestir les accords et les graphies travaillés dans la semaine',
       obj: 'Écrire sous la dictée un texte qui réunit les verbes du jour, les accords dans le GN, le participe passé avec être et avoir, et des mots en [ɛ].',
       crit: ['sont rentrés, sont venues accordés ; ont trouvé sans accord', 'petite, endormie, gris, épaisses accordés', 'semaine, jamais, regardait, épaisses : graphie de [ɛ] juste'],
-      mat: 'Cahier du jour ; version aménagée (texte à trous) pour les élèves qui en ont besoin',
-      fiche: 'Version aménagée',
+      mat: 'Cahier du jour ; fiche d\'étayage (texte à trous) au choix',
+      fiche: 'Étayage au choix',
+      coop: 'Bilan individuel ; la coopération porte sur la préparation : à deux, on se redit les outils (auxiliaires, flèches d\'accord, graphies du son)',
       phases: [
         ['Préparation', '5 min', 'Rappelle les outils : affiche « avoir bloque, être laisse passer », trace du son [ɛ].', 'Relisent les affiches'],
         ['Dictée', '15 min', 'CM1 : 4 phrases ; CM2 : 5 phrases. Lit le texte entier, puis phrase par phrase, puis relecture.', 'Écrivent'],
         ['Relecture guidée', '10 min', '« Entoure les auxiliaires, trace les flèches d\'accord, vérifie les mots en [ɛ]. »', 'Relisent avec les codes'],
         ['Ramassage', '5 min', 'Ramasse ; la correction se fait lundi en dictée réflexive.', ''],
       ],
-      corrige: ['CM2 : ' + DICTEE_CM2.join(' '), 'CM1 : ' + DICTEE_CM1.join(' '), 'Points observés (10) : rentrés, trouvé, venues, petite, endormie, gris, épaisses, semaine, jamais, regardait.'],
+      corrige: ['CM2 : ' + DICTEE_CM2.join(' '), 'CM1 : ' + DICTEE_CM1.join(' '), 'Points observés (10) : rentrés, trouvé, venues, petite, endormie, gris, épaisses, semaine, jamais, regardait.', 'Fiche d\'étayage : semaine, rentrés, trouvé, petite, endormie, gris, venues, épaisses, regardait.'],
     },
     {
       h: '11h45-12h00', dom: 'Anglais', titre: 'mini-production : présenter un camarade',
@@ -77,6 +86,7 @@ module.exports = {
       obj: 'Présenter un résultat d\'enquête : « Léo likes cats but he doesn\'t like pizza. »',
       crit: ['une phrase à la 3e personne, correcte (-s de likes, doesn\'t)'],
       mat: 'My English notebook de jeudi ; pas de fiche',
+      coop: 'On prépare sa phrase avec le camarade interrogé jeudi, qui vérifie qu\'elle est juste',
       phases: [
         ['Préparation', '4 min', 'Rappelle he / she + likes, doesn\'t like.', 'Choisissent une phrase dans leur notebook'],
         ['Présentations', '9 min', 'Interroge une dizaine d\'élèves ; la classe devine de qui on parle.', 'Présentent, devinent'],
@@ -84,8 +94,8 @@ module.exports = {
       ],
     },
     { ...O.Vendredi.seance, h: '13h30-13h45', phases: [
-      ['Exercices', '9 min', 'Laisse la trace visible ; aide les CM1 fragiles sur l\'exercice 1.', 'Exercices 1 à 3'],
-      ['Dictée de mots', '4 min', 'Dicte les dix mots de la semaine : ' + O.dixMots.join(', ') + '.', 'Écrivent, vérifient avec la trace'],
+      ['Exercices', '9 min', 'Laisse la trace visible ; table d\'appui pour l\'exercice 1 (deux choix proposés), au besoin.', 'Exercices 1 à 3'],
+      ['Dictée de mots', '4 min', `Dicte les dix mots de la semaine : ${O.dixMots.join(', ')}. CM2 : deux mots de plus, seize et l\'hiver. À la table d\'appui, six mots au choix : ${[M2, M3, M5, M7, M9, M10].join(', ')}.`, 'Écrivent, vérifient avec la trace'],
       ['Bilan', '2 min', '« Quelle graphie te pose encore problème ? » Note les mots à revoir.', 'Le disent'],
     ] },
     {
@@ -94,6 +104,7 @@ module.exports = {
       obj: 'Lire son texte réécrit en rendant perceptible l\'émotion choisie.',
       crit: ['lecture fluide, volume adapté', 'l\'auditoire retrouve le sens choisi (propre ou figuré)'],
       mat: 'Cahier de l\'écrivain ; affiche des critères d\'écoute ; pas de fiche',
+      coop: 'Répétition à deux, à voix basse : l\'auditeur donne un conseil (volume, pause, regard) avant la lecture à la classe',
       phases: [
         ['Préparation', '5 min', 'Rappelle les critères : volume, pauses, regard.', 'Relisent à voix basse'],
         ['Lectures', '25 min', '6 lecteurs ; après chaque lecture : « Quel sens a-t-il choisi ? Quelle émotion ? Quel passage t\'a plu ? »', 'Lisent, écoutent, commentent'],
@@ -104,22 +115,24 @@ module.exports = {
       comp: 'Comprendre un texte littéraire et l\'interpréter ; identifier les classes de mots',
       obj: 'Seconde partie du chapitre 5 (le docteur, le phonographe, le mot « Piano ») ; rituels, activité de lecture selon le niveau, écrit d\'appropriation ; commande de 5 natures.',
       crit: ['chaînes anaphoriques justes (piège : « Jim, mon gars » désigne Alfie)', 'l\'activité de son niveau est réussie', 'la commande : 5 natures justes avec la page'],
-      mat: 'Fichier 05_Lucy-Lost_chapitre.docx (rituels, activités N1, N2, N3) ; affiche « Où ? Quand ? Dans quel monde ? » ; carnet de chasse',
+      mat: 'Fichier 05_Lucy-Lost_chapitre.docx (rituels et trois activités, utilisées en groupes hétérogènes) ; affiche « Où ? Quand ? Dans quel monde ? » ; carnet de chasse',
       ref: 'Dossier Lucy Lost, version enseignant du chapitre 5 : Giasson (remise en ordre, carte des personnages) ; Goigoux et Cèbe (qui sait quoi ?)',
-      fiche: 'Carnet de chasse ; fiches du chapitre 5 (fichier séparé)',
+      fiche: 'Carnet de chasse ; fiches du chapitre 5 (fichier séparé), en étayages au choix',
+      coop: 'Groupes hétérogènes de quatre, rôles tournants : lecteur, gardien des citations, secrétaire, porte-parole ; recherche seul, puis en groupe, puis confrontation',
       phases: [
         ['Commande', '5 min', chasse('Vendredi'), 'Cherchent dans le chapitre 5, notent page et critères'],
-        ['Temps 4 · rituels', '7 min', 'Chaînes anaphoriques (N1 : relier ; N2 : passage délimité ; N3 : tout le chapitre) ; le tableau « Où ? Quand ? Dans quel monde ? » est reporté sur l\'affiche.', 'Relèvent selon leur niveau'],
-        ['Temps 5 · activités', '12 min', 'Commence avec les N1 : remettre dans l\'ordre la vie d\'oncle Billy.', 'N2 : « Qui sait quoi ? Le secret de Wilhelm » ; N3 : « Billy et Lucy, deux êtres perdus » (carte comparative)'],
-        ['Temps 6 · mise en commun et écrit', '6 min', 'Synthèse : on a compris ce que ressent Mary devant le mot « hôpital » en reliant ce chapitre à l\'histoire de Billy. Lance l\'écrit d\'appropriation (sujet au choix : ce que pense Lucy en entendant le piano ; le journal d\'Alfie « Aujourd\'hui, Lucy a parlé ! » ; Alfie raconte à Billy les progrès de Lucy).', 'Choisissent un sujet ; l\'écrit est terminé lundi en autonomie'],
+        ['Temps 4 · rituels', '7 min', 'Chaînes anaphoriques : chacun choisit son support (relier, passage délimité ou tout le chapitre) ; le tableau « Où ? Quand ? Dans quel monde ? » est reporté sur l\'affiche.', 'Relèvent, comparent à deux'],
+        ['Temps 5 · activité en groupes', '12 min', 'Une activité par groupe, choisie parmi les trois du dossier (remettre dans l\'ordre la vie d\'oncle Billy ; « Qui sait quoi ? Le secret de Wilhelm » ; « Billy et Lucy, deux êtres perdus », carte comparative) : chaque activité est confiée à deux groupes, pour confronter. Table d\'appui : relecture du passage avec qui en a besoin.', 'Cherchent seuls, puis en groupe ; le gardien des citations note les pages'],
+        ['Temps 6 · mise en commun et écrit', '6 min', 'Les porte-parole présentent, les deux groupes d\'une même activité confrontent. Synthèse : on a compris ce que ressent Mary devant le mot « hôpital » en reliant ce chapitre à l\'histoire de Billy. Lance l\'écrit d\'appropriation (sujet au choix : ce que pense Lucy en entendant le piano ; le journal d\'Alfie « Aujourd\'hui, Lucy a parlé ! » ; Alfie raconte à Billy les progrès de Lucy).', 'Choisissent un sujet ; l\'écrit est terminé lundi en autonomie'],
       ],
       corrige: ['Rituels, attendus des activités et critères des écrits : version enseignant du fichier 05_Lucy-Lost_chapitre.docx.'],
-      note: 'La seconde partie du chapitre est lue en début de temps 4 si elle ne l\'a pas été lundi (lecture offerte, 5 min prises sur le temps 5).',
+      note: 'La seconde partie du chapitre est lue en début de temps 4 si elle ne l\'a pas été lundi (lecture offerte, 5 min prises sur le temps 5). Organisation du 18 novembre : les fiches N1, N2, N3 du dossier deviennent des étayages au choix en classe ; leur version par niveau sert en intersession (APC, ateliers).',
     },
     {
       h: '14h45-15h00', dom: 'EPS', titre: 'parcours athlétique : bilan de la semaine',
       obj: 'Tenir l\'allure cible sur trois tours avec obstacles.',
       mat: 'Parcours de la semaine ; chronomètre ; pas de fiche',
+      coop: 'Binômes coureur / observateur : l\'observateur note l\'écart au temps cible et encourage, puis on échange',
       phases: [['Parcours', '15 min', 'Chronomètre trois tours ; les binômes notent l\'écart au temps cible.', 'Courent, observent leur binôme']],
     },
     {
@@ -127,8 +140,10 @@ module.exports = {
       comp: 'Se repérer dans le temps ; mémoriser des repères ; distinguer écrit de travail et écrit validé',
       obj: 'Formuler ce qu\'on a appris lundi à partir des sources et placer les dates sur la frise.',
       crit: ['trace complétée sans aide', 'les 5 dates placées dans l\'ordre'],
-      mat: 'Fiche « Ce que je retiens » ; frise de classe',
+      mat: 'Fiche « Ce que je retiens » ; frise de classe ; documents de lundi (loi de 1882, tableau de Geoffroy) affichés',
       fiche: 'CM1 et CM2',
+      coop: 'Rappel à deux avant la mise en commun ; la trace est complétée seul, puis vérifiée avec son voisin',
+      diff: [['Table d\'appui', 'au choix : relire l\'article 4 de la loi avec l\'enseignant avant de compléter'], ['Pour aller plus loin', 'CM2 : expliquer en une phrase pourquoi la loi parle de « filles et garçons »']],
       phases: [
         ['Rappel', '5 min', '« Que dit l\'article 4 de la loi de 1882 ? Qu\'avons-nous vu sur le tableau de Geoffroy ? »', 'Rappellent'],
         ['Trace', '15 min', 'Fait compléter, puis lire à voix haute.', 'Complètent la fiche'],
@@ -142,13 +157,14 @@ module.exports = {
       obj: 'Réaliser l\'affiche de la journée internationale des droits de l\'enfant à partir des notes du débat ; tenir le conseil de la semaine.',
       crit: ['l\'affiche cite l\'article 28 et une idée du débat', 'le conseil suit l\'ordre du jour'],
       mat: 'Notes du secrétaire (débat de jeudi) ; affiche A2 ; cahier du conseil',
+      coop: 'Affiche en groupes hétérogènes (rédacteur, illustrateur, vérificateur, porte-parole) ; conseil avec rôles tournants',
       phases: [
         ['Affiche du 20 novembre', '12 min', 'Le secrétaire relit les notes ; la classe choisit trois phrases.', 'Rédigent et illustrent l\'affiche en groupes'],
         ['Conseil', '18 min', 'Ordre du jour : félicitations, critiques, propositions ; suivi des décisions de la semaine précédente.', 'Président, secrétaire et gardien du temps tiennent leur rôle'],
       ],
     },
   ],
-  externes: [['Lecture', 'Lucy Lost, chapitre 5 : rituels et activités N1, N2, N3 (fichier 05_Lucy-Lost_chapitre.docx)', '● ●● ●●●']],
+  externes: [['Lecture', 'Lucy Lost, chapitre 5 : rituels et activités (fichiers 1_Textes_adaptes/05_Lucy-Lost_chapitre.docx et 2_Comprehension/05_Lucy-Lost_chapitre.docx)', 'Étayages au choix ; fiches par niveau en intersession']],
   fiches: [
     {
       dom: 'Vocabulaire', niv: 'Tous', titre: 'Un mot, plusieurs sens', b: [
@@ -195,7 +211,7 @@ module.exports = {
       ],
     },
     {
-      dom: 'Dictée bilan', niv: 'Version aménagée', n1: true, titre: 'Dictée bilan', b: [
+      dom: 'Dictée bilan', niv: 'Étayage au choix', n1: true, titre: 'Dictée bilan', b: [
         { t: 'p', x: 'J\'écoute la dictée. Je complète les mots.' },
         { t: 'texte', fill: 'FFF8E7', x: ['Cette sem………… , les marins sont rentr………… tard.', 'Ils ont trouv………… une pet………… fille endorm………… sur les rochers gr………… .', 'Les femmes de l\'île sont ven………… avec des couvertures ép………………… .', 'La fillette regard………… les vagues.'] },
         { t: 'consigne', n: 1, x: 'J\'entoure les auxiliaires être et avoir.' },

@@ -17,7 +17,7 @@ type Images = Map<string, Uint8Array>;
 let IMAGES: Images = new Map();
 
 /** Ce que l'export accepte : une semaine complète, ou en cours (Jour 2 / évaluation pas encore créés). */
-export interface NiveauExport { jour1: readonly Probleme[]; jour2: readonly Probleme[]; evaluation?: Probleme }
+export interface NiveauExport { jour1: readonly Probleme[]; jour2: readonly Probleme[]; evaluation?: Probleme; /** après l'évaluation, pour ceux qui ont fini (cahier journal) */ apres?: readonly Probleme[] }
 export interface SemaineExport {
   numero: number;   // 0 = notion libre ou problème isolé
   titre: string;
@@ -30,7 +30,7 @@ type Semaine = SemaineExport;
 export const libelleSemaine = (sem: SemaineExport) => (sem.numero > 0 ? `Semaine ${sem.numero}` : sem.titre);
 const titreComplet = (sem: SemaineExport) => (sem.numero > 0 ? `Semaine ${sem.numero} : ${sem.titre}` : sem.titre);
 const jours = (ns: NiveauExport) =>
-  ([["Jour 1", ns.jour1], ["Jour 2", ns.jour2], ["Évaluation", ns.evaluation ? [ns.evaluation] : []]] as const)
+  ([["Jour 1", ns.jour1], ["Jour 2", ns.jour2], ["Évaluation", ns.evaluation ? [ns.evaluation] : []], ["Pour aller plus loin", ns.apres ?? []]] as const)
     .filter(([, l]) => l.length > 0);
 
 // ---------- constantes de mise en page (en DXA : 1 cm = 567) ----------
@@ -44,7 +44,7 @@ const TAILLE = 24; // 12 pt (demi-points)
 export const CONSIGNE_3 = "Attention : certaines informations ne servent à rien ! Surligne d'abord les données utiles.";
 
 type Bloc = Paragraph | Table;
-type NomJour = "Jour 1" | "Jour 2" | "Évaluation";
+type NomJour = "Jour 1" | "Jour 2" | "Évaluation" | "Pour aller plus loin";
 
 /** Nom de fichier : « S08_Decimaux_et_monnaie.docx ». */
 export function nomFichier(numero: number, titre: string, ext = "docx"): string {
@@ -286,7 +286,7 @@ export function documentSemaine(sem: Semaine, o: OptionsExport = {}): Document {
   for (const n of niveaux) {
     const ns = sem.niveaux[n]!;
     for (const [nom, liste] of jours(ns)) {
-      const guide = n === 1 && nom !== "Évaluation";
+      const guide = n === 1 && (nom === "Jour 1" || nom === "Jour 2");
       sections.push({
         properties: proprietes,
         footers: { default: pied },
@@ -319,7 +319,7 @@ export function documentSemaine(sem: Semaine, o: OptionsExport = {}): Document {
 async function preparerImages(sem: Semaine): Promise<Images> {
   const m: Images = new Map();
   for (const ns of Object.values(sem.niveaux)) {
-    for (const p of [...ns!.jour1, ...ns!.jour2, ...(ns!.evaluation ? [ns!.evaluation] : [])]) {
+    for (const p of [...ns!.jour1, ...ns!.jour2, ...(ns!.evaluation ? [ns!.evaluation] : []), ...(ns!.apres ?? [])]) {
       if (p.visuel && p.visuel.type !== "tableau") m.set(p.id, await pngDuVisuel(p.visuel));
     }
   }
