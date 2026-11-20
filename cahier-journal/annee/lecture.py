@@ -29,7 +29,7 @@ LECT = {
  8: L(ch='1 et 2', piv='1 – Soyez de gentils poissons !', classe=True, dos='Lucy-Lost/2_Comprehension/01_Lucy-Lost_chapitre.docx (et 00_Lucy-Lost_seance0.docx)'),
  9: L(ch='3 et 4', piv='3', classe=False, dos='Lucy-Lost/2_Comprehension/03_Lucy-Lost_chapitre.docx'),
  10: L(ch='5 à 9', piv='5 – Une simple idée', classe=True, deb="Alfie a-t-il raison de garder le mot « Wilhelm » secret, même devant Mary et le docteur ?", dos='Lucy-Lost/2_Comprehension/05_Lucy-Lost_chapitre.docx'),
- 11: L(ch='10 à 14', piv='10 – Il faut toujours garder espoir', classe=False, deb="Qu'est-ce qui a le plus aidé Lucy à guérir ?", dos='Lucy-Lost/2_Comprehension/10_Lucy-Lost_chapitre.docx'),
+ 11: L(ch='10 à 14', piv='10 – Il faut toujours garder espoir', classe=False, rap="Rappel collectif des chapitres 6 à 9 (le chapitre 8 a été lu à la maison le week-end du 21-22 novembre) : récit à plusieurs voix, puis frise des deux histoires (Lucy sur l'île, l'histoire de New York) ; on accueille les liens entre les deux histoires sans les confirmer.", deb="Qu'est-ce qui a le plus aidé Lucy à guérir ?", dos='Lucy-Lost/2_Comprehension/10_Lucy-Lost_chapitre.docx'),
  12: L(ch='15 à 19', piv='15 – Océan Atlantique, mai 1915 : Torpille ! Torpille !', classe=True, deb="Merry a-t-elle raison de crier à sa mère : « Ce sera ta faute » ?", dos='Lucy-Lost/2_Comprehension/15_Lucy-Lost_chapitre.docx'),
  13: L(ch='20 à 24', piv='20 – La maison des Pestiférés', classe=False, deb="Lucy dit « Wasser. Gut. » : est-elle allemande ?", dos='Lucy-Lost/2_Comprehension/20_Lucy-Lost_chapitre.docx'),
  14: L(ch='25 à 28', piv='25 – Vilain petit canard', classe=True, deb="Qui est le « vilain petit canard » de ce chapitre ?", dos='Lucy-Lost/2_Comprehension/25_Lucy-Lost_chapitre.docx'),

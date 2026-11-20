@@ -658,6 +658,9 @@ def lecture_pivot(h, w, L, temps):
     if w['S'] < 11: return s
     if temps == '1-3':
         s['fiche'] = "Dossier de compréhension : ses fiches ●, ●● et ●●● servent d'étayages au choix, pas de groupes fixes" if L.get('dos') else 'Fiche commune, coups de pouce sur demande'
+        if L.get('rap'):  # rappel particulier (ex. chapitre lu à la maison) : 10 min, pris sur la lecture
+            s['phases'][0] = ['1. Rappel', '10 min', L['rap'], 'Racontent, complètent la frise']
+            s['phases'][1] = [s['phases'][1][0], '5 min', s['phases'][1][2] + ' Début du chapitre lu en classe, la suite en lecture à la maison.', s['phases'][1][3]]
         return s
     acts = A3[w['S']]
     s['titre'] = f"{COURT[w['P']]}, pivot {L['piv']} : activité en groupes hétérogènes"

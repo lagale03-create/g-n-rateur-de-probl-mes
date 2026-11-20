@@ -11,5 +11,6 @@ Construit le 19 novembre 2026 au soir (tâche planifiée) avec `node src/build_j
 
 ## Mise à jour du 20 novembre (demande de Pierre)
 
-- Lecture 14h15-14h45 : le chapitre 8 devient le pivot du jour, à la place du chapitre 5 (temps 4 à 6), à replacer ou à laisser de côté. Il y a trois activités au choix en groupes hétérogènes (deux histoires, deux mondes ; questionner l'auteur ; enseignement réciproque), une fiche de groupe et des écrits au choix. Aucun passage du roman n'est cité. Les attendus précis sont dans la version enseignant de 08_Lucy-Lost_chapitre.docx, en attente.
-- PDF refaits : séances 9 pages, fiches 10 pages, pas de « undefined ».
+- Le chapitre 8 n'est pas fait en pivot : il est donné à lire à la maison ce week-end (texte adapté au choix). La séance de 14h15 revient au chapitre 5, temps 4 à 6 (temps 5 ramené à 11 min, 1 min de distribution du chapitre 8).
+- Suite de la période : plan_P2.md et annee/lecture.py (S11) prévoient, lundi 23 novembre, un rappel de 10 min sur les chapitres 6 à 9, dont le chapitre 8 lu à la maison.
+- PDF refaits : séances 9 pages, fiches 9 pages, pas de « undefined ».

@@ -14,11 +14,13 @@ Le dépôt ne contient ni le texte du roman ni les textes adaptés. Les groupes 
 - Activités du temps 5 : N1 ● – Remettre dans l'ordre la vie d'oncle Billy (Giasson, La compréhension en lecture) ; N2 ●● – Qui sait quoi ? Le secret de « Wilhelm » (Goigoux & Cèbe, Lector & Lectrix) ; N3 ●●● – Billy et Lucy : deux êtres « perdus » (Giasson, carte des personnages (comparaison)
 - Écrits d'appropriation : Ce que pense Lucy en entendant le piano. ; Le journal d'Alfie : « Aujourd'hui, Lucy a parlé ! » ; Alfie raconte à oncle Billy les progrès de Lucy.
 - Vigilance (extrait) : • L'histoire de Billy évoque la mort d'une femme en couches et d'un bébé : la présenter avec pudeur ; penser aux élèves concernés par un deuil. • Maladie mentale : le texte emploie « fou », « asile de fous » (mots de l'époque). Les expliquer et dire qu'aujourd'hui on soigne autrement, sans enfermer comme une prison. Insister sur la bienveillance de Mary et d'Alfie. • Le docteur parle de « traumati…
+- Changement du 20 novembre (Pierre) : le chapitre 8 est donné à lire à la maison le week-end du 21-22 novembre (texte adapté au choix) ; les chapitres 6, 7 et 9 restent lus en classe ; rappel collectif des chapitres 6 à 9 le lundi 23 novembre.
 - Corpus de grammaire (chapitres 1 à 4 déjà lus) : le meilleur repas de la semaine (1) ; une journée de pêche (1) ; la veste de son mari (1) ; un large mouvement de sa casquette (1) ; le pavillon noir (1) ; un petit bâtiment de pêche à trois mâts (1) ; ses casiers à homards (1) ; la seule plage de sable de l'île (1) ; leur belle cargaison de poissons (1) ; des regards noirs (2) ; une couverture grise (2) ; un visage blanc (2) ; le regard vide (3) ; cette étrange petite fille (3)
 
 ## P2 S4 (23-27 novembre) : chapitres 10 à 14, lecture à la maison
 
 - Pivot : Chapitre 10 – Il faut toujours garder espoir
+- Lundi 23 novembre : le rappel (temps 1) porte sur les chapitres 6 à 9, dont le chapitre 8 lu à la maison le week-end ; prévoir 10 min au lieu de 5 (récit à plusieurs voix, frise des deux histoires), pris sur la lecture du chapitre 10.
 - Organisation (dossier) : 1 séance. Tout le chapitre est un extrait du journal du docteur Crow : une seule journée, faite de bonnes et de mauvaises nouvelles.
 - Débat : « Qu'est-ce qui a le plus aidé Lucy à guérir ? »
 - Activités du temps 5 : N1 ● – Bonne ou mauvaise nouvelle ? (Giasson, organisateur graphique) ; N2 ●● – Ce que le docteur pense des autres (Giasson, carte des personnages) ; N3 ●●● – L'enquête continue : qui est Lucy ? (Tauveron, texte réticent et débat interprétatif préparé)
