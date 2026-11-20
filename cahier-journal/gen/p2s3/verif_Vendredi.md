@@ -8,3 +8,8 @@ Construit le 19 novembre 2026 au soir (tâche planifiée) avec `node src/build_j
 - Calculs refaits en arithmétique exacte : 25 étapes de problèmes, 30 calculs de tables, 10 procédures, rappels (345 × 6 = 2 070 ; 2 856 : 7 = 408), corrigés des fiches de fractions. Aucune erreur.
 - PDF (LibreOffice) : séances 9 pages, fiches 9 pages, problème du jour 7 pages ; pas de page blanche, pas de texte hors marges, pas de « undefined ».
 - En attente : rituels et activités du chapitre 5 (temps 4 à 6) et version enseignant, à prendre dans le dossier Lucy Lost ; chasse au mot non revérifiable ici, faute du texte.
+
+## Mise à jour du 20 novembre (demande de Pierre)
+
+- Lecture 14h15-14h45 : le chapitre 8 devient le pivot du jour, à la place du chapitre 5 (temps 4 à 6), à replacer ou à laisser de côté. Il y a trois activités au choix en groupes hétérogènes (deux histoires, deux mondes ; questionner l'auteur ; enseignement réciproque), une fiche de groupe et des écrits au choix. Aucun passage du roman n'est cité. Les attendus précis sont dans la version enseignant de 08_Lucy-Lost_chapitre.docx, en attente.
+- PDF refaits : séances 9 pages, fiches 10 pages, pas de « undefined ».

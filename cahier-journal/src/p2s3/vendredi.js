@@ -7,7 +7,7 @@ const [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10] = O.dixMots;
 
 module.exports = {
   jour: 'Vendredi', date: '20 novembre', num: '04',
-  lead: 'Journée bilan et journée internationale des droits de l\'enfant : dictée bilan qui réunit les verbes du jour, le groupe nominal et le son [ɛ] ; réécriture ; fractions et unité ; chapitre 5 de Lucy Lost, temps 4 à 6 ; trace écrite d\'histoire ; conseil et affiche du 20 novembre. Organisation du 18 novembre : table d\'appui ouverte, étayages au choix, coopération précisée à chaque séance ; problème du jour en évaluation, suivi d\'un problème pour aller plus loin.',
+  lead: 'Journée bilan et journée internationale des droits de l\'enfant : dictée bilan qui réunit les verbes du jour, le groupe nominal et le son [ɛ] ; réécriture ; fractions et unité ; chapitre 8 de Lucy Lost en pivot (changement du 20 novembre) ; trace écrite d\'histoire ; conseil et affiche du 20 novembre. Organisation du 18 novembre : table d\'appui ouverte, étayages au choix, coopération précisée à chaque séance ; problème du jour en évaluation, suivi d\'un problème pour aller plus loin.',
   seances: [
     {
       ...verbeDuJour(verbeEr('regarder', 'avoir'), DICTEE_CM2[4],
@@ -111,22 +111,28 @@ module.exports = {
       ],
     },
     {
-      h: '14h15-14h45', dom: 'Lecture', titre: 'Lucy Lost, chapitre 5, temps 4 à 6 ; commande de natures',
-      comp: 'Comprendre un texte littéraire et l\'interpréter ; identifier les classes de mots',
-      obj: 'Seconde partie du chapitre 5 (le docteur, le phonographe, le mot « Piano ») ; rituels, activité de lecture selon le niveau, écrit d\'appropriation ; commande de 5 natures.',
-      crit: ['chaînes anaphoriques justes (piège : « Jim, mon gars » désigne Alfie)', 'l\'activité de son niveau est réussie', 'la commande : 5 natures justes avec la page'],
-      mat: 'Fichier 05_Lucy-Lost_chapitre.docx (rituels et trois activités, utilisées en groupes hétérogènes) ; affiche « Où ? Quand ? Dans quel monde ? » ; carnet de chasse',
-      ref: 'Dossier Lucy Lost, version enseignant du chapitre 5 : Giasson (remise en ordre, carte des personnages) ; Goigoux et Cèbe (qui sait quoi ?)',
-      fiche: 'Carnet de chasse ; fiches du chapitre 5 (fichier séparé), en étayages au choix',
+      h: '14h15-14h45', dom: 'Lecture', titre: 'Lucy Lost, chapitre 8 en pivot ; commande de natures',
+      comp: 'Comprendre un texte littéraire et l\'interpréter ; mettre en relation les deux histoires du roman ; identifier les classes de mots',
+      obj: 'Comprendre le chapitre 8 et le situer dans la seconde histoire du roman (New York, 1915), ouverte jeudi avec le chapitre 6 ; relier, sans conclure, ce qu\'on apprend à l\'histoire de Lucy ; commande de 5 natures.',
+      crit: ['le tableau « Où ? Quand ? Qui ? » du chapitre est juste', 'chaque réponse du groupe s\'appuie sur une phrase du texte, avec la page', 'la commande : 5 natures justes avec la page'],
+      mat: 'Textes adaptés et fichier de compréhension du chapitre 8 (dossier Lucy Lost : 1_Textes_adaptes/08_Lucy-Lost_chapitre.docx et 2_Comprehension/08_Lucy-Lost_chapitre.docx) ; livre ; affiche « Où ? Quand ? Dans quel monde ? » complétée jeudi ; carnet de chasse ; une fiche de groupe par activité',
+      ref: 'Giasson (liens entre les parties du récit) ; Tauveron (le lecteur enquêteur, texte réticent) ; Beck et McKeown (questionner l\'auteur) ; Palincsar et Brown (enseignement réciproque) ; Connac (groupes hétérogènes)',
+      fiche: 'Carnet de chasse ; fichier du chapitre 8 (séparé), en étayages au choix ; fiche de groupe',
       coop: 'Groupes hétérogènes de quatre, rôles tournants : lecteur, gardien des citations, secrétaire, porte-parole ; recherche seul, puis en groupe, puis confrontation',
       phases: [
-        ['Commande', '5 min', chasse('Vendredi'), 'Cherchent dans le chapitre 5, notent page et critères'],
-        ['Temps 4 · rituels', '7 min', 'Chaînes anaphoriques : chacun choisit son support (relier, passage délimité ou tout le chapitre) ; le tableau « Où ? Quand ? Dans quel monde ? » est reporté sur l\'affiche.', 'Relèvent, comparent à deux'],
-        ['Temps 5 · activité en groupes', '12 min', 'Une activité par groupe, choisie parmi les trois du dossier (remettre dans l\'ordre la vie d\'oncle Billy ; « Qui sait quoi ? Le secret de Wilhelm » ; « Billy et Lucy, deux êtres perdus », carte comparative) : chaque activité est confiée à deux groupes, pour confronter. Table d\'appui : relecture du passage avec qui en a besoin.', 'Cherchent seuls, puis en groupe ; le gardien des citations note les pages'],
-        ['Temps 6 · mise en commun et écrit', '6 min', 'Les porte-parole présentent, les deux groupes d\'une même activité confrontent. Synthèse : on a compris ce que ressent Mary devant le mot « hôpital » en reliant ce chapitre à l\'histoire de Billy. Lance l\'écrit d\'appropriation (sujet au choix : ce que pense Lucy en entendant le piano ; le journal d\'Alfie « Aujourd\'hui, Lucy a parlé ! » ; Alfie raconte à Billy les progrès de Lucy).', 'Choisissent un sujet ; l\'écrit est terminé lundi en autonomie'],
+        ['Commande', '5 min', chasse('Vendredi') + ' Dans le chapitre 8.', 'Cherchent dans le chapitre 8, notent page et critères'],
+        ['Lecture', '8 min', 'Lecture offerte du chapitre 8 (ou de son passage central si le temps manque) ; rappel éclair : « Où sommes-nous ? Quand ? Qui raconte ? » On complète l\'affiche commencée jeudi.', 'Suivent dans le texte de leur choix (●, ●●, ●●●), complètent l\'affiche'],
+        ['Activité en groupes', '12 min', 'Une des trois activités ci-dessous, au choix ; si l\'on en garde deux, chacune est confiée à deux groupes pour confronter. Table d\'appui : relecture du passage avec qui en a besoin.', 'Cherchent seuls, puis en groupe ; le gardien des citations note les pages'],
+        ['Mise en commun et écrit', '5 min', 'Les porte-parole présentent ; synthèse « comment on a compris ». Accueille les liens que les élèves font entre les deux histoires sans les confirmer ni les démentir : ils restent des hypothèses à vérifier plus tard. Lance l\'écrit d\'appropriation.', 'Présentent ; choisissent un sujet d\'écrit, terminé lundi en autonomie'],
       ],
-      corrige: ['Rituels, attendus des activités et critères des écrits : version enseignant du fichier 05_Lucy-Lost_chapitre.docx.'],
-      note: 'La seconde partie du chapitre est lue en début de temps 4 si elle ne l\'a pas été lundi (lecture offerte, 5 min prises sur le temps 5). Organisation du 18 novembre : les fiches N1, N2, N3 du dossier deviennent des étayages au choix en classe ; leur version par niveau sert en intersession (APC, ateliers).',
+      corrige: [
+        'Activité 1 – Deux histoires, deux mondes (Giasson, liens entre les parties du récit ; Tauveron, lecteur enquêteur) : le groupe complète un tableau à deux colonnes, histoire de Lucy et histoire du chapitre 8 : où ? quand ? qui ? ce qu\'on sait, ce qu\'on se demande. Production : tableau du groupe, avec les pages.',
+        'Activité 2 – Questionner l\'auteur (Beck et McKeown) : trois arrêts dans le chapitre ; à chaque arrêt : « Que veut nous faire comprendre l\'auteur ? Pourquoi nous emmène-t-il loin de l\'île ? » Production : trois réponses justifiées par le texte.',
+        'Activité 3 – Enseignement réciproque (Palincsar et Brown) : sur un passage du chapitre, chaque membre a un rôle (prédire, questionner, clarifier, résumer) ; focus : ce que pense et ressent le personnage principal. Les rôles tournent au passage suivant. Production : fiche des rôles et résumé du groupe.',
+        'Écrits d\'appropriation au choix : carnet de lecteur « les indices qui pourraient relier les deux histoires » ; ce que pense le personnage principal à un moment du chapitre ; la suite que j\'imagine pour le chapitre 9.',
+        'Attendus précis, rituels et corrigés : version enseignant du fichier 08_Lucy-Lost_chapitre.docx (en attente : texte non disponible ici, les activités ci-dessus ne citent aucun passage).',
+      ],
+      note: 'Changement du 20 novembre (Pierre) : le chapitre 8 remplace aujourd\'hui le chapitre 5, temps 4 à 6. Ces temps sont à replacer (lundi 23, avant le pivot 10) ou à laisser de côté, l\'étude pouvant rester parcellaire. Débat possible lundi au rappel : « Quel lien peut-il y avoir entre les deux histoires ? » (hypothèses, sans réponse). Commande CM2 : si le chapitre n\'a pas de verbe au passé simple, accepter un verbe conjugué à un autre temps du passé. Intersessions : fiches par niveau du dossier.',
     },
     {
       h: '14h45-15h00', dom: 'EPS', titre: 'parcours athlétique : bilan de la semaine',
@@ -164,7 +170,7 @@ module.exports = {
       ],
     },
   ],
-  externes: [['Lecture', 'Lucy Lost, chapitre 5 : rituels et activités (fichiers 1_Textes_adaptes/05_Lucy-Lost_chapitre.docx et 2_Comprehension/05_Lucy-Lost_chapitre.docx)', 'Étayages au choix ; fiches par niveau en intersession']],
+  externes: [['Lecture', 'Lucy Lost, chapitre 8 : textes adaptés et compréhension (1_Textes_adaptes/08_Lucy-Lost_chapitre.docx et 2_Comprehension/08_Lucy-Lost_chapitre.docx)', 'Étayages au choix ; fiches par niveau en intersession']],
   fiches: [
     {
       dom: 'Vocabulaire', niv: 'Tous', titre: 'Un mot, plusieurs sens', b: [
@@ -219,6 +225,18 @@ module.exports = {
       ],
     },
     ...O.Vendredi.fiches,
+    {
+      dom: 'Lecture', niv: 'Groupe', titre: 'Lucy Lost, chapitre 8 : notre activité de groupe', b: [
+        { t: 'table', head: ['Lecteur', 'Gardien des citations', 'Secrétaire', 'Porte-parole'], rows: [['', '', '', '']], h: 600 },
+        { t: 'consigne', n: 1, x: 'Notre activité (cochez)' },
+        { t: 'liste', x: ['☐ Deux histoires, deux mondes : histoire de Lucy / histoire du chapitre 8 (où ? quand ? qui ? ce qu\'on sait, ce qu\'on se demande)', '☐ Questionner l\'auteur : à chaque arrêt, que veut-il nous faire comprendre ? pourquoi nous emmène-t-il loin de l\'île ?', '☐ Enseignement réciproque : prédire, questionner, clarifier, résumer ; ce que pense et ressent le personnage'] },
+        { t: 'consigne', n: 2, x: 'Ce que nous avons trouvé (avec les phrases du texte et les pages)' },
+        { t: 'cadre', h: 4600 },
+        { t: 'consigne', n: 3, x: 'J\'écris seul (au choix), à terminer lundi' },
+        { t: 'liste', x: ['Les indices qui pourraient relier les deux histoires.', 'Ce que pense le personnage principal à un moment du chapitre.', 'La suite que j\'imagine pour le chapitre 9.'] },
+        { t: 'lignes', n: 4 },
+      ],
+    },
     {
       dom: 'Histoire', niv: 'CM1 et CM2', titre: 'Ce que je retiens : l\'école de Jules Ferry', b: [
         { t: 'consigne', n: 1, x: 'Complète avec : 6 · 13 · 1881 · 1882 · gratuite · obligatoire · laïque · religion · Jules Ferry' },
