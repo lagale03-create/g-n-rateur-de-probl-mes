@@ -167,7 +167,7 @@ function fichesCalcul(dir, jour, tables) {
 // Remplace dans une journée les séances et fiches de calcul mental et de problème du jour.
 function integrer(day, dir, tables, fichierProblemes) {
   day.seances = day.seances.map(s => {
-    if (s.dom === 'Calcul mental') return seanceCalcul(dir, day.jour, s.h, tables);
+    if (s.dom === 'Calcul mental') return s.garder ? s : seanceCalcul(dir, day.jour, s.h, tables); // garder : séance écrite dans le fichier du jour
     if (s.dom === 'Problème du jour') return seanceProbleme(dir, day.jour, s.h);
     return s;
   });
