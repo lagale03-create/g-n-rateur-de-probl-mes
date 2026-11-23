@@ -9,3 +9,5 @@ Préparé le lundi 23 novembre 2026 vers 17 h (heure de Paris), tâche planifié
 - Corpus de grammaire : GN des chapitres 5 et 6 repris de lucy-lost/plan_P2.md (relevés déjà vérifiés) ; phrases d'exercice écrites pour la classe.
 - PDF (LibreOffice) : séances 10 pages, fiches élèves 13 pages (le document de lecture et ses questions sur deux pages, à imprimer en recto verso, version aménagée de même), problème du jour 3 pages ; chaque page contrôlée : pas de débordement, pas de page blanche, pas de « undefined ».
 - En attente : formes en -endre / -ondre relevées dans Lucy Lost ; album Stick Man ; image de Dubuffet (Texturologies) à choisir et lien à vérifier si Pierre la retient.
+
+Contrôle du lundi 23 novembre, 17 h 50 (seconde passe, tâche planifiée) : la fiche d'orthographe débordait de quelques lignes et laissait une page blanche (page 12 des fiches). Question 3 ramenée à une ligne, guillemets insécables dans la question 2 ; fiches élèves : 12 pages, sans page blanche. Calculs du problème du jour refaits (1 600 − 900 = 700 ; 12 000 − 7 450 = 4 550 ; 13 000 − 8 990 = 4 010).
