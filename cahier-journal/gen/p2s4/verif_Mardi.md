@@ -1,0 +1,11 @@
+# Mardi 24 novembre 2026 (P2 S4) : vérifications
+
+Préparé le lundi 23 novembre 2026 vers 17 h (heure de Paris), tâche planifiée. Jour de classe confirmé : zone A, vacances de la Toussaint terminées le 2 novembre, vacances de Noël à partir du 19 décembre, aucun jour férié ni pont le 24 novembre (calendrier de annee/data.py, vérifié sur education.gouv.fr le 22 novembre).
+
+- Construit avec `node src/build_jour.js p2s4 Mardi` à partir de `src/p2s4/mardi.js` (nouveau) et de `gen/p2s4/` (générés dimanche, sans modification).
+- Cadrage (12 novembre) : mardi 8h30 verbe du jour, 8h40 dictée réflexive, 8h55 calcul mental (15 tables + 5 procédures), 9h10 grammaire (GN 4/4 : entraînement et réinvestissement), 9h55 problème du jour, 10h30 maths (formulation et institutionnalisation), 11h10-11h30 lecture documentaire (P2 : textes documentaires en lien avec l'électricité), 11h30 anglais 30 min (Stick Man, semaine 4), 13h30-13h50 orthographe (constats, trace), 13h50-15h00 EPS (parcours + lutte), 15h00-15h45 arts plastiques (paysage d'île), 15h45-16h00 conjugaison (entraînement). Conforme.
+- Calculs refaits en arithmétique exacte (fractions Python) : 36 égalités (rappels 3 727 ; 11 043 ; 523 centaines ; exercices CM1 et CM2 de dixièmes, centièmes, millièmes, positions sur la droite graduée) ; 54 calculs de la série et des procédures (CM1 et CM2) ; problème du jour (★ 700 m ; ★★ 4 550 m ; ★★★ 4 010 m). Aucune erreur.
+- Texte documentaire « La pile électrique » écrit pour la classe ; faits : pile de Volta (1800, cuivre et zinc, carton imbibé d'eau salée), volt, pile plate 4,5 V = 3 éléments de 1,5 V, collecte des piles usagées. Figures dessinées : img/pile_volta.png, img/droite_dixiemes_0_2.png.
+- Corpus de grammaire : GN des chapitres 5 et 6 repris de lucy-lost/plan_P2.md (relevés déjà vérifiés) ; phrases d'exercice écrites pour la classe.
+- PDF (LibreOffice) : séances 10 pages, fiches élèves 13 pages (le document de lecture et ses questions sur deux pages, à imprimer en recto verso, version aménagée de même), problème du jour 3 pages ; chaque page contrôlée : pas de débordement, pas de page blanche, pas de « undefined ».
+- En attente : formes en -endre / -ondre relevées dans Lucy Lost ; album Stick Man ; image de Dubuffet (Texturologies) à choisir et lien à vérifier si Pierre la retient.
