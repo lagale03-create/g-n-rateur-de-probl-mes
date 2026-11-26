@@ -1,0 +1,12 @@
+# Vendredi 27 novembre 2026 (P2 S4) : vérifications
+
+Préparé le jeudi 26 novembre 2026 vers 18 h (heure de Paris), tâche planifiée. Jour de classe confirmé : zone A, vacances de Noël à partir du samedi 19 décembre 2026 (education.gouv.fr, consulté le 26 novembre), aucun jour férié ni pont le 27 novembre.
+
+- Construit avec `node src/build_jour.js p2s4 Vendredi` à partir de `src/p2s4/vendredi.js` (nouveau) et de `gen/p2s4/` (générés dimanche, sans modification). Figures : `python3 src/p2s4/figures_vendredi.py` (img/droite_dixiemes_KLM.png, img/droite_centiemes_PQ.png), imprimer à 100 %.
+- Cadrage (12 novembre, relu le 26 novembre) : 8h30 verbe du jour (fiche le vendredi), 8h40 vocabulaire (réseau P2 « la mer et l'île », semaine 4 : structuration, intensité), 8h55 calcul mental (bilan sans pression, graphique personnel), 9h10 réécriture différée (Kervyn), 9h55 problème du jour en évaluation, 10h30 maths (vendredi : entraînement différencié et bilan, rappels + flash géométrie), 11h10 dictée bilan (grammaire + son), 11h45 anglais 15 min (mini-production, chant, étape de la tâche finale), 13h30-13h45 orthographe (dix mots dictés), 13h45-14h15 lecture à voix haute, 14h15-14h45 pivot temps 4 à 6 + commande de 5 natures, 14h45 parcours, 15h00-15h30 histoire (trace, frise), 15h30-16h00 conseil de classe. Conforme.
+- Calculs refaits par programme (fractions Python) : 54 calculs mentaux (30 de tables, 24 de procédures), aucune erreur ; 12 étapes du problème du jour (conversions km/m, sommes, différences) et les trois phrases réponses, aucune erreur ; 29 vérifications du bilan de mathématiques et des rappels (2 348 × 7 = 16 436 ; 9 432 : 24 = 393), aucune erreur.
+- Remarque : la série de tables du générateur (graine CJ-P2S4-Vendredi) mêle d'autres tables aux tables de 7 et 8 (titre de la séance), comme celle de mardi : non modifiée.
+- Orthographe : les mots des exercices du 4/4 ne reprennent pas les seize mots de la mise à l'épreuve de jeudi (vérifié).
+- Histoire : dates vérifiées (états généraux 5 mai 1789, Bastille 14 juillet, Déclaration 26 août 1789 ; article 1 vérifié sur Légifrance le 22 novembre).
+- PDF (LibreOffice) : séances 10 pages, fiches élèves 10 pages (récapitulatif + 9 fiches), problème du jour 3 pages ; chaque page contrôlée : pas de débordement, pas de page blanche, pas de « undefined ».
+- En attente : réponses de la commande de natures (chapitre 10) à valider dans le livre ; QCM, rituels et activités du chapitre 10 : fichier de Pierre ; chant du livret à choisir.
